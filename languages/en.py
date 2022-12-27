@@ -526,19 +526,12 @@ response_rps_winner = "Congratulations {user}! You won the Rock, Paper, Scissors
 response_host_information_failed = "Oops! Something went wrong while trying to retrieve host information!"
 response_host_information_timeout = "The host information reached a timeout!"
 response_ping_success = "Pong! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
-response_password_generated_to_user = "The password generated for you is: ```{password}``` **NOTE:** For privacy and security reasons, this message will be deleted in 60 seconds!"
-response_password_check_failed = "I am sorry! Something went wrong while trying to check the password!"
-response_password_check_found_to_user = "I have found the password: `{password}` with hash: `{hashed_passwd}`!\nYour password has been pwned! You should change the password for the accounts where this is used!\n\n**NOTE:** It is adviced to use a different password for all your accounts! This message will be deleted in 60 seconds!"
-response_password_check_not_found_to_user = "I didn't find the password: `{password}` with hash: `{hashed_passwd}`! **NOTE:** This message will be deleted in 60 seconds!"
 # Log Responses
 log_response_games_played = "`[{datetime}]` -- **{member}** played `{game}`!"
 log_response_games_played_rps = "`[{datetime}]` -- **{member}** played `{game}` against {opponent}! The winner is {winner}!"
 log_response_host_information_failed = "`[{datetime}]` -- **{member}** tried to retrieve host information! But something went wrong!"
 log_response_host_information = "`[{datetime}]` -- **{member}** requested host information!"
 log_response_ping_requested = "`[{datetime}]` -- **{member}** used `/ping`! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
-log_response_password_generate_used = "`[{datetime}]` -- **{member}** generated a new password!"
-log_response_password_check_used_failed = "`[{datetime}]` -- **{member}** tried to check if a password is pwned! But something went wrong! Got status code: {status_code} - {status_msg}"
-log_response_password_check_used_success = "`[{datetime}]` -- **{member}** checked if a password is pwned!"
 # Embeds
 rps_embed_title = "Rock, Paper, Scissors game"
 rps_embed_user_ones_turn = "{user_one} is choosing...\n {user_two} is waiting..."
@@ -565,18 +558,6 @@ host_embed_gateway_latency_description = "Latency is a measure of delay. In a ne
 host_embed_field_gateway_latency_high = "Gateway latency high:"
 host_embed_field_gateway_latency_avg = "Gateway latency average:"
 host_embed_field_gateway_latency_low = "Gateway latency low:"
-password_generate_started_embed_title = "Password generation started!"
-password_generate_started_embed_description = "Password generation has started. The password will be delivered to you shortly, please wait!"
-password_generate_embed_footer = "Command initialized by: {member}"
-password_generate_finished_embed_title = "Password generation finished!"
-password_generate_finished_embed_description = "The password generation has finished! Check your DM for your password!"
-password_generate_embed_footer = "Command initialized by: {member}"
-password_check_started_embed_title = "Checking password!"
-password_check_started_embed_description = "Checking your password. The result will be delivered to you shortly, please wait!"
-password_check_embed_footer = "Command initialized by: {member}"
-password_check_finished_embed_title = "Password checked!"
-password_check_finished_embed_description = "The password has been checked! Check your DM for the result!"
-password_check_embed_footer = "Command initialized by: {member}"
 
 # ------------------------------------------------------------------------- #
 # Mod_Server #
