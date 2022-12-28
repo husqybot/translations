@@ -3,6 +3,7 @@
 Hello! Thanks you for taking the time and effort to help translating Husqy! There a few contributing guidelines that you should follow, they are outlined in this document!
 <br><br>
 *NOTE: Throughout the translations you will find some variables, they will be outlined as follows: {variable_name}. It is mandatory that this variables stays the same at ALL times, changes in these variables will cause Husqy to break and any PR's changing these will NOT be merged!*
+*NOTE: Throughout the translations you will also find some special characters like, but not limited to: `, * and '. It is mandatory that this special characters stays the same at ALL times, changes in these special characters will cause Husqy to break and any PR's changing these will NOT be merged!*
 
 <br>
 
