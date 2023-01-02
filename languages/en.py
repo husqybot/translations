@@ -38,8 +38,6 @@ log_ban_create = "Bans"
 log_ban_delete = "Unbans"
 log_tempmute = "Tempmute command"
 log_temptimeout = "Temptimeout command"
-log_password_generate = "Password generated"
-log_password_check = "Password checked"
 log_games = "Games played"
 log_audio_join = "Bot joins channel"
 log_audio_leave = "Bot leaves channel"
@@ -147,6 +145,7 @@ CHANNEL_TYPES = {
     "GUILD_STORE": "Store channel",
     "GUILD_TEXT": "Text channel",
     "GUILD_VOICE": "Voice channel",
+    "GUILD_FORUM": "Forum channel",
 }
 
 # ------------------------------------------------------------------------- #
