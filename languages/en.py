@@ -147,6 +147,7 @@ CHANNEL_TYPES = {
     "GUILD_STORE": "Store channel",
     "GUILD_TEXT": "Text channel",
     "GUILD_VOICE": "Voice channel",
+    "GUILD_FORUM": "Forum channel",
 }
 
 # ------------------------------------------------------------------------- #
