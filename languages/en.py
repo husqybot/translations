@@ -1315,6 +1315,7 @@ module_socials_twitter_embed_description_remove = "Please enter the @-handle of 
 # ------------------------------------------------------------------------- #
 module_reaction_roles_delete_unrelated = "Delete unrelated emoji's"
 module_reaction_roles_remove_role_from_users_on_delete = "Remove role from users on reaction role delete"
+module_reaction_roles_configure_reaction_role = "Configure Reaction Role"
 module_reaction_roles_info = "Info"
 module_reaction_roles_add = "Add reaction role"
 module_reaction_roles_delete = "Delete reaction role"
