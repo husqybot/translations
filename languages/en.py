@@ -97,6 +97,7 @@ log_user_stream_stopped = "User stopped streaming"
 log_user_camera_stream_started = "User turned on camera"
 log_user_camera_stream_stopped = "User turned off camera"
 log_color_viewed = "Color viewed"
+log_audio_volume = "Audio volume changes"
 # Other
 all = "All"
 selection = "Selection"
