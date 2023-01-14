@@ -220,8 +220,13 @@ user_events_kick_embed_description = "You have been kicked from `{guild}`!\n\n[R
 # ------------------------------------------------------------------------- #
 # Log Responses
 log_response_user_left_voice_channel = "`[{datetime}]` -- **{member}** left {channel}!"
+log_response_user_left_voice_channel_tempchannel = "`[{datetime}]` -- **{member}** left a tempchannel named: `{channel}`!"
 log_response_user_moved_voice_channel = "`[{datetime}]` -- **{member}** moved from {from_channel} to {to_channel}!"
+log_response_user_moved_voice_channel_tempchannel_to = "`[{datetime}]` -- **{member}** moved from {from_channel} to a tempchannel named: `{to_channel}`!"
+log_response_user_moved_voice_channel_tempchannel_from = "`[{datetime}]` -- **{member}** moved from a tempchannel named `{from_channel}` to {to_channel}!"
+log_response_user_moved_voice_channel_tempchannel = "`[{datetime}]` -- **{member}** moved from a tempchannel named: `{from_channel}` to a tempchannel named `{to_channel}`!"
 log_response_user_joined_voice_channel = "`[{datetime}]` -- **{member}** joined {channel}!"
+log_response_user_joined_voice_channel_tempchannel = "`[{datetime}]` -- **{member}** joined a tempchannel named: `{channel}`!"
 log_response_user_guild_muted = "`[{datetime}]` -- **{member}** got server muted!"
 log_response_user_guild_unmuted = "`[{datetime}]` -- **{member}** got server unmuted!"
 log_response_user_guild_deafend = "`[{datetime}]` -- **{member}** got server deafend!"
