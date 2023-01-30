@@ -464,7 +464,7 @@ log_response_info_server_requested = "`[{datetime}]` -- **{member}** requested i
 log_response_info_user_requested = "`[{datetime}]` -- **{member}** requested information about {user}!"
 # Embeds
 info_bot_embed_title = "Welcome to {bot_name}! {version}"
-info_bot_embed_discription = "Hi! Welcome to the `{bot_name}` information panel! Here you will find all settings done for this server, the current version and some external links! Make sure to have a look around!"
+info_bot_embed_discription = "Hi! Welcome to the `{bot_name}` information panel! Here you will find all settings done for this server, the current version and some external links! Make sure to have a look around!\n\n *Note: Use the navigation buttons below to view system metrics.*"
 info_bot_embed_field_title_language = "Language:"
 info_bot_embed_field_title_gmt = "Timezone:"
 info_bot_embed_field_title_unit_system = "Unit system:"
