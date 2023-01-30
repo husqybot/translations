@@ -624,7 +624,7 @@ reason_default_channel_unlock = "**{member}** asked for channel unlock -> {reaso
 # Responses
 response_channel_create_success = "I have created the `{channel_type}`! -> {channel}."
 response_channel_create_failed = "I am sorry! Something went wrong while trying to create the channel!"
-response_channel_create_news_stage_failed = "I am sorry! Something went wrong while trying to create the channel! Does this server support this channel type?"
+response_channel_create_news_stage_forum_failed = "I am sorry! Something went wrong while trying to create the channel! Does this server support this channel type?"
 response_channel_delete_failed = "I am sorry! Something went wrong while trying to delete the `{channel}`!"
 response_channel_delete_success = "I have deleted `{channel}`!"
 response_clear_messages_failed_over_14_days = "I am sorry! I can't bulk delete messages that are over 14 days old!"
@@ -639,8 +639,8 @@ response_role_create_success = "I have created the `{role_name}` role! -> {role}
 response_role_delete_failed = "I am sorry! Something went wrong while trying to delete the `{role}`!"
 response_role_delete_success = "I have deleted `{role}`!"
 # Log Responses
-log_response_channel_create_failed = "`[{datetime}]` -- **{member}** tried to create a `{channel_type} channel`! But something went wrong!"
-log_response_channel_create_news_stage_failed = "`[{datetime}]` -- **{member}** tried to create a `{channel_type} channel`! But something went wrong! Does this server support this channel type?"
+log_response_channel_create_failed = "`[{datetime}]` -- **{member}** tried to create a `{channel_type}`! But something went wrong!"
+log_response_channel_create_news_stage_forum_failed = "`[{datetime}]` -- **{member}** tried to create a `{channel_type}`! But something went wrong! Does this server support this channel type?"
 log_response_channel_delete_failed = "`[{datetime}]` -- **{member}** tried deleting the channel `{channel}`! But something went wrong!"
 log_response_clear_messages_failed_over_14_days = "`[{datetime}]` -- **{member}** requested the deletion of `{amount}` messages in {channel}! But (some) messages are over 14 days old!"
 log_response_clear_messages_failed = "`[{datetime}]` -- **{member}** requested the deletion of `{amount}` messages in {channel}! But something went wrong!"
