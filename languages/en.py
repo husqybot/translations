@@ -175,7 +175,7 @@ error_response_not_a_valid_emoji = "Oops! It looks like that the given emoji is 
 error_response_settings_update_insert_at_least_1 = "You must give at least one parameter to change!"
 error_response_invalid_int_found_in_list = "Oops! It looks like that a value is not a valid integer/number!"
 error_response_not_a_url = "Oops! It looks like the given string is not a URL!"
-error_response_not_recognised = "Oops! I do not recogise this entity! If this issue keeps persisting, please contact our support!"
+error_response_not_recognised = "Oops! I do not recogise this entity! If this issue persists, please contact our support!"
 
 # ------------------------------------------------------------------------- #
 # EVENTS - FUNCTIONS #
@@ -1531,6 +1531,7 @@ module_tickets_change_custom_questions_popup = "Change custom questions popup"
 module_tickets_change_ticket_mode = "Change Ticket mode"
 module_tickets_change_ticket_support_role = "Change Ticket support role"
 # Responses
+response_ticket_module_enable_failed = "I am sorry! Something went wrong while trying to enable the `Tickets` module! Please try again later! If this issue persists, please contact our support!"
 response_ticket_module_enabled = "I have enabled the `Ticket Module`. To configure this module, please use `/settings module configure`!"
 response_ticket_module_configured = "I have changed the configuration of the `Tickets Module`!"
 response_ticket_module_configured_threat_mode_disabled = "I have `disabled` thread mode! A posts channel will be used!"
@@ -1561,3 +1562,52 @@ module_tickets_custom_ticket_creation_form = "Please insert the JSON of the form
 module_tickets_select_default_ticket_types = "Please select the default tickets you want to use.\nNOTE: You can't use more than 25 default types, if you have specified more, the first 25 will be used!"
 module_tickets_select_custom_ticket_types_validation = "Do you want to add custom ticket types?"
 module_tickets_select_custom_ticket_types = "Please insert the custom ticket types you want to use. If adding multiple values, please split by ,!\nNOTE: You can't use more than 25 custom types, if you have specified more, the first 25 will be used!"
+
+
+# ------------------------------------------------------------------------- #
+# SERVERSTATS #
+# ------------------------------------------------------------------------- #
+module_serverstats_default_category_name = "{bot_name} Counter Panel"
+module_serverstats_default_member_count = "Member Count"
+module_serverstats_default_member_count_name = "👥 Members: {value}"
+module_serverstats_default_online_member_count = "Online Member Count"
+module_serverstats_default_online_member_count_name = "🟢 Online: {value}"
+module_serverstats_default_online_member_count_with_role = "Online Member Count with Role"
+module_serverstats_default_online_member_count_with_role_name = "{role_name}: {value}"
+module_serverstats_default_boost_number = "Boost Number"
+module_serverstats_default_boost_number_name = "🚀 Boosters: {value}"
+module_serverstats_edit_counter_panel = "Edit Counter Panel"
+module_serverstats_add_counter_panel = "Add Panel"
+module_serverstats_delete_counter_panel = "Delete Panel"
+# Responses
+response_settings_module_enable_serverstats_failed = "I am sorry! Something went wrong while trying to enable the `ServerStats` module! Please try again later! If this issue persists, please contact our support!"
+response_settings_module_enable_serverstats_success = "I have enabled the `ServerStats` module. This can be configured via `/settings module configure`! You can also add custom counters here!"
+response_settings_module_serverstats_add_panel_member_count_failed_already_exists = "I am sorry! It looks like the `Member Count Panel` is already enabled!"
+response_settings_module_serverstats_add_panel_online_member_count_failed_already_exists = "I am sorry! It looks like the `Online Member Count Panel` is already enabled!"
+response_settings_module_serverstats_add_panel_server_boost_number_failed_already_exists = "I am sorry! It looks like the `Server Boost Number Panel` is already enabled!"
+response_settings_module_serverstats_add_panel_failed = "I am sorry! Something went wrong while trying to add the panel! If the panel channel is created, this can safely be removed!"
+response_settings_module_serverstats_add_panel_success = "I have added the panel!"
+response_settings_module_serverstats_delete_panel_failed = "I am sorry! Something went wrong while trying to delete the panel! Please try again later!"
+response_settings_module_serverstats_delete_panel_success = "I have deleted the panel!"
+response_settings_module_serverstats_delete_panel_failed_channel_not_found = "I am sorry! I didn't find a counter panel chanel with that ID!"
+# Log Responses
+log_response_settings_module_enable_serverstats_success = "`[{datetime}]` -- **{member}** has enabled the `ServerStats` module!"
+log_response_settings_module_serverstats_add_panel_member_count_failed_already_exists = "`[{datetime}]` -- **{member}** tried to enable the `Member Count Panel` of the `ServerStats` module! But this panel was already enabled!"
+log_response_settings_module_serverstats_add_panel_online_member_count_failed_already_exists = "`[{datetime}]` -- **{member}** tried to enable the `Online Member Count Panel` of the `ServerStats` module! But this panel was already enabled!"
+log_response_settings_module_serverstats_add_panel_server_boost_number_failed_already_exists = "`[{datetime}]` -- **{member}** tried to enable the `Server Boost Number Panel` of the `ServerStats` module! But this panel was already enabled!"
+log_response_settings_module_serverstats_add_panel_failed = "`[{datetime}]` -- **{member}** tried to add a counter panel of the `ServerStats` module! But something went wrong! If the counter panel channel is created, this can safely be removed!"
+log_response_settings_module_serverstats_add_panel_success = "`[{datetime}]` -- **{member}** has added a counter panel of the `ServerStats` module!"
+log_response_settings_module_serverstats_delete_panel_failed = "`[{datetime}]` -- **{member}** tried to delete a counter panel of the `ServerStats` module! But something went wrong!"
+log_response_settings_module_serverstats_delete_panel_success = "`[{datetime}]` -- **{member}** deleted a counter panel of the `ServerStats` module!"
+log_response_settings_module_serverstats_delete_panel_failed_channel_not_found = "`[{datetime}]` -- **{member}** tried to delete a counter panel of the `ServerStats` module! But I didn't find the counter panel channel with that ID!"
+# Embeds
+module_serverstats_validate_enable_description = "Do you want to enable or disable the `{target_component}`?"
+module_serverstats_validate_setup_mode_description = "Do you want to use the default setup or customize the setup?"
+module_serverstats_validate_select_create_description = "DO you want to select or create the `{target_component}`?"
+module_serverstats_select_channel_description = "Please tag the channel (or insert its ID) which you want to use as the {channel} channel."
+module_serverstats_select_counter_types = "Please select the counter types you want to add."
+module_serverstats_edit_counter_panel_description = "Which part of the Counter Panel do you want to edit?"
+module_serverstats_add_panel_description = "Please select the panel type to add."
+module_serverstats_select_channel_to_delete = "Please tag the channel (or insert its ID) which you want to delete from the counter panel."
+module_serverstats_select_role_description = "Please tag the role (or insert its ID) which you want to link to the Counter Panel."
+module_serverstats_select_name_description_custom_counter_panel = "Please insert the name you want to give to the channel (emojis are supported)."
