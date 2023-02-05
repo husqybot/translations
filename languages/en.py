@@ -140,6 +140,8 @@ no_url = "No URL available"
 no_author = "No author available"
 create = "Create"
 select = "Select"
+jump_to_message = "Jump to message!"
+message_id = "Message ID"
 # Dicts
 STATUS_CODES = {
     "200": "API Request OK!",
@@ -1577,9 +1579,16 @@ module_serverstats_default_online_member_count_with_role_name = "{role_name}: {v
 module_serverstats_default_boost_number = "Boost Number"
 module_serverstats_default_boost_number_name = "🚀 Boosters: {value}"
 module_serverstats_edit_counter_panel = "Edit Counter Panel"
+module_serverstats_change_category_id = "Change Panel Category"
 module_serverstats_add_counter_panel = "Add Panel"
 module_serverstats_delete_counter_panel = "Delete Panel"
+module_serverstats_edit_starboard_settings = "Edit Starboard Settings"
+module_serverstats_edit_starboard_setting_channel = "Edit starboard channel"
+module_serverstats_edit_starboard_settings_count = "Edit starboard count"
+starboard_message = "You're a ⭐! x{value}!"
 # Responses
+response_settings_module_serverstats_counter_panel_disabled = "I have disabled the `Counter Panel`!"
+response_settings_module_serverstats_change_category_success = "I have changed the `Counter Panel Category Channel` and moved existing panels to the new category!"
 response_settings_module_enable_serverstats_failed = "I am sorry! Something went wrong while trying to enable the `ServerStats` module! Please try again later! If this issue persists, please contact our support!"
 response_settings_module_enable_serverstats_success = "I have enabled the `ServerStats` module. This can be configured via `/settings module configure`! You can also add custom counters here!"
 response_settings_module_serverstats_add_panel_member_count_failed_already_exists = "I am sorry! It looks like the `Member Count Panel` is already enabled!"
@@ -1590,7 +1599,14 @@ response_settings_module_serverstats_add_panel_success = "I have added the panel
 response_settings_module_serverstats_delete_panel_failed = "I am sorry! Something went wrong while trying to delete the panel! Please try again later!"
 response_settings_module_serverstats_delete_panel_success = "I have deleted the panel!"
 response_settings_module_serverstats_delete_panel_failed_channel_not_found = "I am sorry! I didn't find a counter panel chanel with that ID!"
-# Log Responses
+response_settings_module_serverstats_starboard_disabled = "I have disabled the starboard!"
+response_settings_module_serverstats_starboard_channel_failed = "I am sorry! Something went wrong while trying to edit the Starboard Channel!"
+response_settings_module_serverstats_starboard_channel_success = "I have edited the Starboard Channel!"
+response_settings_module_serverstats_starboard_count_failed = "I am sorry! Something went wrong while trying to edit the Starboard Count!"
+response_settings_module_serverstats_starboard_count_success = "I have edited the Starboard Count!"
+#  Log Responses
+log_response_settings_module_serverstats_counter_panel_disabled = "`[{datetime}]` -- **{member}** has disabled the `Counter Panel` of the `ServerStats` module!"
+log_response_settings_module_serverstats_change_category_success = "`[{datetime}]` -- **{member}** has changed the `Counter Panel Category Channel` of the `ServerStats` module!"
 log_response_settings_module_enable_serverstats_success = "`[{datetime}]` -- **{member}** has enabled the `ServerStats` module!"
 log_response_settings_module_serverstats_add_panel_member_count_failed_already_exists = "`[{datetime}]` -- **{member}** tried to enable the `Member Count Panel` of the `ServerStats` module! But this panel was already enabled!"
 log_response_settings_module_serverstats_add_panel_online_member_count_failed_already_exists = "`[{datetime}]` -- **{member}** tried to enable the `Online Member Count Panel` of the `ServerStats` module! But this panel was already enabled!"
@@ -1600,7 +1616,13 @@ log_response_settings_module_serverstats_add_panel_success = "`[{datetime}]` -- 
 log_response_settings_module_serverstats_delete_panel_failed = "`[{datetime}]` -- **{member}** tried to delete a counter panel of the `ServerStats` module! But something went wrong!"
 log_response_settings_module_serverstats_delete_panel_success = "`[{datetime}]` -- **{member}** deleted a counter panel of the `ServerStats` module!"
 log_response_settings_module_serverstats_delete_panel_failed_channel_not_found = "`[{datetime}]` -- **{member}** tried to delete a counter panel of the `ServerStats` module! But I didn't find the counter panel channel with that ID!"
-# Embeds
+log_response_settings_module_serverstats_starboard_disabled = "`[{datetime}]` -- **{member}** has disabled the starboard of the `ServerStats` module!"
+log_response_settings_module_serverstats_starboard_channel_failed_not_a_text_channel = "`[{datetime}]` -- **{member}** tried to edit the starboard channel of the `ServerStats` module! But the given channel is not a text channel!"
+log_response_settings_module_serverstats_starboard_channel_failed = "`[{datetime}]` -- **{member}** tried to edit the starboard channel of the `ServerStats` module! But something went wrong!"
+log_response_settings_module_serverstats_starboard_channel_success = "`[{datetime}]` -- **{member}** edited the starboard channel of the `ServerStats` module!"
+log_response_settings_module_serverstats_starboard_count_failed = "`[{datetime}]` -- **{member}** tried to edit the starboard count of the `ServerStats` module! But something went wrong!"
+log_response_settings_module_serverstats_starboard_count_success = "`[{datetime}]` -- **{member}** edited the starboard count of the `ServerStats` module!"
+#  Embeds
 module_serverstats_validate_enable_description = "Do you want to enable or disable the `{target_component}`?"
 module_serverstats_validate_setup_mode_description = "Do you want to use the default setup or customize the setup?"
 module_serverstats_validate_select_create_description = "DO you want to select or create the `{target_component}`?"
@@ -1611,3 +1633,5 @@ module_serverstats_add_panel_description = "Please select the panel type to add.
 module_serverstats_select_channel_to_delete = "Please tag the channel (or insert its ID) which you want to delete from the counter panel."
 module_serverstats_select_role_description = "Please tag the role (or insert its ID) which you want to link to the Counter Panel."
 module_serverstats_select_name_description_custom_counter_panel = "Please insert the name you want to give to the channel (emojis are supported)."
+module_serverstats_edit_starboard_settings_options = "Please select the setting you want to change."
+module_serverstats_select_starboard_count_description = "Please insert the amount of star emoji's a message should have before sending it to the starboard."
