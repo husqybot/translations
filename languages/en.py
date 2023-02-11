@@ -333,6 +333,8 @@ response_music_remove_failed = "Oops! Something went wrong while trying to remov
 response_music_remove_removed_playlist = "I have removed the playlist from the queue!"
 response_music_remove_removed_song = "I have removed the song from the queue!"
 response_search_no_results_found = "I am sorry! I didn't find any results for the query: `{query}`!"
+response_music_playradio_failed = "I am sorry! Something went wrong while trying to play radio!"
+response_music_playradio_failed_already_playing = "I am sorry! It looks like there is already something playing, please stop this first to listing to radio!"
 # Log Responses
 log_response_join_failed_no_channel_given = "`[{datetime}]` -- **{member}** tried joining me but didn't gave me a channel to join!"
 log_response_join_failed_not_enough_privileges = "`[{datetime}]` -- **{member}** tried joining me to a channel where I don't have enough permissions for!"
@@ -408,6 +410,8 @@ log_response_music_remove_removed_playlist = "`[{datetime}]` -- **{member}** rem
 log_response_music_remove_removed_song = "`[{datetime}]` -- **{member}** removed a song from the queue!"
 log_response_search_no_results_found = "`[{datetime}]` -- **{member}** searched YouTube or SoundCloud with the query: `{query}`! But there were no results found!"
 log_response_platform_searched = "`[{datetime}]` -- **{member}** searched {platform}!"
+log_response_music_playradio_failed = "`[{datetime}]` -- **{member}** tried to listen to radio! But something went wrong!"
+log_response_music_playradio_failed_already_playing = "`[{datetime}]` -- **{member}** tried to listen to radio! But there was already something playing!"
 # Embeds
 nowplaying_embed_title = "Now playing"
 nowplaying_embed_field_title_radio = "Radiostation"
