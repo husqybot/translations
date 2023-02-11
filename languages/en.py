@@ -1073,7 +1073,7 @@ log_response_settings_module_configure_logging_events_failed = "`[{datetime}]` -
 log_response_settings_module_configure_logging_events_success = "`[{datetime}]` -- **{member}** changed the `{event}` for the `Logging` module!"
 # Embeds
 module_logging_configuration_enable_disable_validation_embed_description = "Would you like to `Enable` or `Disable` the events?"
-module_logging_configuration_logs_channel_embed_description = "Please tag the channel you want to use as the logs channel or insert its ID!"
+module_logging_configuration_logs_channel_embed_description = "Please select the channel you want to use as the logs channel! \nIf the channel is not there, please start typing for autocomplete!"
 module_logging_configuration_events_embed_description = "Please enter all events you would like to be `{status}`! \n**IMPORTANT NOTE: Split all modules by comma, f.e. 1,2,3 or 1, 2, 3!**"
 module_logging_configuration_events_embed_field_title_status = "Events that can be {status}:"
 
@@ -1110,11 +1110,11 @@ log_response_settings_module_configure_greetings_role_failed = "`[{datetime}]` -
 log_response_settings_module_configure_greetings_role_success = "`[{datetime}]` -- **{member}** changed the `{component}` role to {role} for the `Greetings` module!"
 # Embeds
 module_greetings_configuration_enable_disable_validation_embed_description = "Would you like to `Enable` or `Disable` the `{component}`?"
-module_greetings_configuration_channel_embed_description = "To what channel shoud the `{component}` messages be sent? Please tag the channel or insert its ID!"
+module_greetings_configuration_channel_embed_description = "To what channel shoud the `{component}` messages be sent? Please select the channel! \nIf the channel is not there, please start typing for autocomplete!"
 module_greetings_configuration_embed_embed_description = "Do you want to use an `Embed` or a `Message`?"
 module_greetings_configuration_content_embed_message_description = "What message should be sent? Please insert the content of the message to use!\n You can use the variables below for extra customization. If you want to use a multiline message, use `SHIFT + Enter`.\n\n **NOTE: The variables MUST be inside the `<>` without any space!**"
 module_greetings_configuration_content_embed_embed_description = "Which embed should be sent? Please insert the JSON of the embed you would like to use!\n You can use the variables below for extra customization. If you want to use a multiline message, use a `blackslash` and `n` without spaces in between.\n\n **NOTE: The variables MUST be inside the `<>` without any space!**"
-module_greetings_configuration_role_embed_description = "What role should be given to new members? Please tag the role or insert its ID!"
+module_greetings_configuration_role_embed_description = "What role should be given to new members? Please select the role! \nIf the role is not there, please start typing for autocomplete!"
 
 # ------------------------------------------------------------------------- #
 # TEMPCHANNELS #
@@ -1223,8 +1223,8 @@ log_response_tempchannel_edit_user_limit_off_success = "`[{datetime}]` -- **{mem
 # Embeds
 module_tempchannel_configuration_custom_default_validation_embed_description = "Do you want to configure the settings or do you want the default setup?"
 module_tempchannel_configuration_text_channel_validation_embed_description = "Do you want to link a text channel?"
-module_tempchannel_configuration_voice_category_embed_description = "Please insert the ID of the category channel where you want the voice channels to be created!"
-module_tempchannel_configuration_text_category_embed_description = "Please insert the ID of the category channel where you want the text channels to be created!"
+module_tempchannel_configuration_voice_category_embed_description = "Please select the category channel where you want the voice channels to be created! \nIf the channel is not there, please start typing for autocomplete!"
+module_tempchannel_configuration_text_category_embed_description = "Please select the category channel where you want the text channels to be created! \nIf the channel is not there, please start typing for autocomplete!"
 module_tempchannel_configuration_voice_channel_name_embed_description = "What name do you want to give to the voice channels?\n You can use the variables below for extra customization.\n\n **NOTE: They MUST be inside the `<>` without any space!**"
 module_tempchannel_configuration_text_channel_name_embed_description = "What name do you want to give to the text channels?\n You can use the variables below for extra customization.\n\n **NOTE: They MUST be inside the `<>` without any space!**"
 tempchannels_edit_embed_title = "Temporary Channel edit wizard"
@@ -1324,7 +1324,7 @@ log_response_module_socials_twitter_remove_success = "`[{datetime}]` -- **{membe
 # Embeds
 module_socials_configure_components_select_component_description = "Please select the component you want to update the entries for."
 module_socials_configuration_enable_disable_validation_embed_description = "Would you like to `Enable` or `Disable` the {target_component} monitor?"
-module_socials_configuration_target_channel_embed_description = "Please tag the channel you want to use as the {target_component} channel or insert its ID!"
+module_socials_configuration_target_channel_embed_description = "Please select the channel you want to use as the {target_component} channel! \nIf the role is not there, please start typing for autocomplete!"
 module_socials_configuration_mention_everyone_embed_description = "Do you want to mention everyone when a new post is made?"
 module_socials_reddit_embed_title = "Reddit configuration"
 module_socials_reddit_discription = "Please select what you want to do with the Reddit socials module."
@@ -1429,11 +1429,11 @@ reactionrole_info_embed_field_title_messageid = "Message ID:"
 reactionrole_info_embed_field_title_reaction = "Reactions:"
 reactionrole_info_embed_field_value_1 = "`Reaction:`"
 reactionrole_info_embed_field_value_2 = "`Role:`"
-module_reaction_roles_embed_description_channel_add = "Please tag the channel where the message you want to use as a reaction role is located or insert its ID!"
-module_reaction_roles_embed_description_channel_delete = "Please tag the channel where the reaction role message is located or insert its ID!"
-module_reaction_roles_embed_description_channel_info = "Please tag the channel where the reaction role message is located or insert its ID!"
-module_reaction_roles_embed_description_channel_change_role = "Please insert the ID of the channel where the reaction role message you wish to change a role to is located!"
-module_reaction_roles_embed_description_channel_change_emoji = "Please insert the ID of the channel where the reaction role message you wish to change an emoji for is located!"
+module_reaction_roles_embed_description_channel_add = "Please select the channel where the message you want to use as a reaction role is located! \nIf the role is not there, please start typing for autocomplete!"
+module_reaction_roles_embed_description_channel_delete = "Please select the channel where the reaction role message is located! \nIf the role is not there, please start typing for autocomplete!"
+module_reaction_roles_embed_description_channel_info = "Please select the channel where the reaction role message is located! \nIf the role is not there, please start typing for autocomplete!"
+module_reaction_roles_embed_description_channel_change_role = "Please select the channel where the reaction role message you wish to change a role to is located! \nIf the role is not there, please start typing for autocomplete!"
+module_reaction_roles_embed_description_channel_change_emoji = "Please select the channel where the reaction role message you wish to change an emoji for is located! \nIf the role is not there, please start typing for autocomplete!"
 module_reaction_roles_embed_description_message_add = "Please insert the ID of the message you want to use as the reaction role message!"
 module_reaction_roles_embed_description_message_delete = "Please insert the ID of the reaction role message!"
 module_reaction_roles_embed_description_message_info = "Please insert the ID of the reaction role message!"
@@ -1444,11 +1444,11 @@ module_reaction_roles_embed_description_emoji_delete = "Please insert the emoji 
 module_reaction_roles_embed_description_emoji_info = "Please insert the emoji you want the get the information off!"
 module_reaction_roles_embed_description_emoji_change_role = "Please insert the emoji you want to link to a new role!"
 module_reaction_roles_embed_description_emoji_change_emoji = "Please insert the new emoji you want to use for the role!"
-module_reaction_roles_embed_description_role_add = "Please tag the role you want to link to the emoji or insert its ID!"
-module_reaction_roles_embed_description_role_delete = "Please tag the role you want to delete from the reaction role message or insert its ID!"
-module_reaction_roles_embed_description_role_info = "Please tag the role you want information about or insert its ID!"
-module_reaction_roles_embed_description_role_change_role = "Please tag new role you wish to link the the emoji or insert its ID!"
-module_reaction_roles_embed_description_role_change_emoji = "Please tag role you wish to link a new emoji or insert its ID!"
+module_reaction_roles_embed_description_role_add = "Please select the role you want to link to the emoji! \nIf the role is not there, please start typing for autocomplete!"
+module_reaction_roles_embed_description_role_delete = "Please select the role you want to delete from the reaction role message! \nIf the role is not there, please start typing for autocomplete!"
+module_reaction_roles_embed_description_role_info = "Please select the role you want information about! \nIf the role is not there, please start typing for autocomplete!"
+module_reaction_roles_embed_description_role_change_role = "Please select the new role you wish to link the the emoji! \nIf the role is not there, please start typing for autocomplete!"
+module_reaction_roles_embed_description_role_change_emoji = "Please select the role you wish to link a new emoji! \nIf the role is not there, please start typing for autocomplete!"
 
 # ------------------------------------------------------------------------- #
 # AUTORESPONDER #
@@ -1552,8 +1552,8 @@ module_tickets_select_default_ticket_types = "Please select the default tickets 
 module_tickets_select_default_ticket_types_remove = "Please select the default tickets you want to remove."
 module_tickets_select_custom_ticket_types_remove = "Please insert the custom ticket types you want to remove. If adding multiple values, please split by ,!"
 module_tickets_validate_select_create_description = "Do you want to select or create the {target_component}s"
-module_tickets_select_role_description = "Please tag the role (or insert its ID) which you want to use as the {role} role!"
-module_tickets_select_channel_description = "Please tag the channel (or insert its ID) which you want to use as the {channel} channel"
+module_tickets_select_role_description = "Please select the role which you want to use as the {role} role! \nIf the role is not there, please start typing for autocomplete!"
+module_tickets_select_channel_description = "Please select the channel which you want to use as the {channel} channel! \nIf the channel is not there, please start typing for autocomplete!"
 module_tickets_validate_thread_mode_description = "Do you want to use thread mode? Thread mode will create a new thread for every new ticket.\nNOTE: If using thread mode, the ticket support team must be added to a ticket by server staff!"
 module_tickets_validate_setup_mode_description = "Please select the desired setup mode: Minimal Default, Complete Default or Custom."
 module_tickets_validate_embed_message = "Would you like to use the default Ticket creation message, use a custom message or an custom embed?"
