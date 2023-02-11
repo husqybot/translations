@@ -446,6 +446,7 @@ module_autoresponder = "Autoresponder module"
 module_tickets = "Tickets module"
 module_ticket_view_types = "View ticket types"
 module_ticket_view_generals_settings = "View settings"
+module_serverstats = "ServerStats module"
 # Responses
 response_info_bot_module_logging_disabled = "The `Logging` module is disabled!"
 response_info_bot_module_greetings_disabled = "The `Greetings` module is disabled!"
@@ -457,6 +458,7 @@ response_info_bot_module_reaction_roles_disabled = "The `Reaction Roles` module 
 response_invite_link_not_set = "The server has not set an invite link for users to use!"
 response_info_bot_module_tickets_disabled = "The `Tickets` module is disabled!"
 response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available!"
+response_info_bot_module_serverstats_disabled = "The `ServerStats` module is disabled!"
 # Log Responses
 log_response_module_socials_twitter_list = "`[{datetime}]` -- **{member}** requested the Twitter list!"
 log_response_module_socials_reddit_list = "`[{datetime}]` -- **{member}** requested the Subreddit list!"
@@ -576,6 +578,15 @@ info_user_embed_field_title_userisdeaf = "Is deafend:"
 info_user_embed_field_title_joinedat = "Joined Server at:"
 info_user_embed_field_title_createdat = "Joined Discord at:"
 info_user_embed_field_title_roles = "Roles:"
+info_bot_embed_field_title_serverstats_counter_panel_enabled = "Counter Panel:"
+info_bot_embed_field_title_serverstats_counter_panel_category = "Counter Panel Category:"
+info_bot_embed_field_title_serverstats_panel_member_count = "Member Count panel:"
+info_bot_embed_field_title_serverstats_panel_online_member_count = "Online Member Count panel:"
+info_bot_embed_field_title_serverstats_panel_online_members_with_role = "Online with role panel:"
+info_bot_embed_field_title_serverstats_panel_boost = "Boost panel"
+info_bot_embed_field_title_serverstats_starboard_enabled = "Starboard:"
+info_bot_embed_field_title_serverstats_starboard_channel = "Starboard Channel:"
+info_bot_embed_field_title_serverstats_starboard_count = "Starboard minimum stars:"
 
 # ------------------------------------------------------------------------- #
 # Misc #
