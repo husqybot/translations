@@ -142,6 +142,7 @@ create = "Create"
 select = "Select"
 jump_to_message = "Jump to message!"
 message_id = "Message ID"
+back = "Back"
 # Dicts
 STATUS_CODES = {
     "200": "API Request OK!",
@@ -437,6 +438,7 @@ search_sp_embed_field_title_top_5 = "Top five results:"
 # ------------------------------------------------------------------------- #
 # Info #
 # ------------------------------------------------------------------------- #
+bot_general = "General info"
 module_logging = "Logging module"
 module_greetings = "Greetings module"
 module_tempchannels = "Temporary Channels module"
@@ -447,6 +449,11 @@ module_tickets = "Tickets module"
 module_ticket_view_types = "View ticket types"
 module_ticket_view_generals_settings = "View settings"
 module_serverstats = "ServerStats module"
+bot_info = "Bot info"
+server_info = "Server info"
+channel_info = "Channel info"
+role_info = "Role info"
+user_info = "User info"
 # Responses
 response_info_bot_module_logging_disabled = "The `Logging` module is disabled!"
 response_info_bot_module_greetings_disabled = "The `Greetings` module is disabled!"
@@ -457,8 +464,9 @@ response_module_socials_reddit_list_empty = "I am not monitoring any Subreddits 
 response_info_bot_module_reaction_roles_disabled = "The `Reaction Roles` module is disabled!"
 response_invite_link_not_set = "The server has not set an invite link for users to use!"
 response_info_bot_module_tickets_disabled = "The `Tickets` module is disabled!"
-response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available!"
+response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available! For the status of the `Autoresponder` module, please check the General info page!"
 response_info_bot_module_serverstats_disabled = "The `ServerStats` module is disabled!"
+response_info_timeout = "The info command reached a timeout!"
 # Log Responses
 log_response_module_socials_twitter_list = "`[{datetime}]` -- **{member}** requested the Twitter list!"
 log_response_module_socials_reddit_list = "`[{datetime}]` -- **{member}** requested the Subreddit list!"
@@ -545,8 +553,6 @@ info_channel_embed_field_title_channel = "Channel:"
 info_channel_embed_field_title_channelid = "Channel ID:"
 info_channel_embed_field_title_channeltype = "Channel Type:"
 info_channel_embed_field_title_createdat = "Channel created at:"
-info_channel_embed_field_title_permissions = "Permissions you have in this channel:"
-info_channel_embed_field_value_permissions_1_value = "Permissions value: "
 invite_link_embed_title = "Server invite link"
 invite_link_embed_description = "Do you want to invite other friends? Please use the following invite link:\n {link}"
 info_role_embed_title = "Information about {role}"
@@ -587,6 +593,11 @@ info_bot_embed_field_title_serverstats_panel_boost = "Boost panel"
 info_bot_embed_field_title_serverstats_starboard_enabled = "Starboard:"
 info_bot_embed_field_title_serverstats_starboard_channel = "Starboard Channel:"
 info_bot_embed_field_title_serverstats_starboard_count = "Starboard minimum stars:"
+info_embed_title = "Info"
+info_embed_description = "Please select the component you want info about."
+info_embed_description_select_channel = "Please select the channel you want info about."
+info_embed_description_select_role = "Please select the role you want info about."
+info_embed_description_select_user = "Please select the user you want info about."
 
 # ------------------------------------------------------------------------- #
 # Misc #
@@ -1584,6 +1595,7 @@ module_serverstats_edit_starboard_settings = "Edit Starboard Settings"
 module_serverstats_edit_starboard_setting_channel = "Edit starboard channel"
 module_serverstats_edit_starboard_settings_count = "Edit starboard count"
 starboard_message = "You're a ⭐! x{value}!"
+module_serverstats_edit_stats_command_usage = "Edit Command Usage statistics"
 # Responses
 response_settings_module_serverstats_counter_panel_disabled = "I have disabled the `Counter Panel`!"
 response_settings_module_serverstats_change_category_success = "I have changed the `Counter Panel Category Channel` and moved existing panels to the new category!"
@@ -1602,6 +1614,8 @@ response_settings_module_serverstats_starboard_channel_failed = "I am sorry! Som
 response_settings_module_serverstats_starboard_channel_success = "I have edited the Starboard Channel!"
 response_settings_module_serverstats_starboard_count_failed = "I am sorry! Something went wrong while trying to edit the Starboard Count!"
 response_settings_module_serverstats_starboard_count_success = "I have edited the Starboard Count!"
+response_settings_module_serverstats_stats_command_usage_enabled_failed = "I am sorry! Something went wrong while trying to `{status}` the Command Usage Statistics!"
+response_settings_module_serverstats_stats_command_usage_enabled_succes = "I have `{status}` the Command Usage Statistics!"
 #  Log Responses
 log_response_settings_module_serverstats_counter_panel_disabled = "`[{datetime}]` -- **{member}** has disabled the `Counter Panel` of the `ServerStats` module!"
 log_response_settings_module_serverstats_change_category_success = "`[{datetime}]` -- **{member}** has changed the `Counter Panel Category Channel` of the `ServerStats` module!"
@@ -1622,6 +1636,7 @@ log_response_settings_module_serverstats_starboard_count_failed = "`[{datetime}]
 log_response_settings_module_serverstats_starboard_count_success = "`[{datetime}]` -- **{member}** edited the starboard count of the `ServerStats` module!"
 #  Embeds
 module_serverstats_validate_enable_description = "Do you want to enable or disable the `{target_component}`?"
+module_serverstats_validate_enable_description_stats_command_usage = "Do you want to keep track of `Command Usage` statistics?"
 module_serverstats_validate_setup_mode_description = "Do you want to use the default setup or customize the setup?"
 module_serverstats_validate_select_create_description = "DO you want to select or create the `{target_component}`?"
 module_serverstats_select_channel_description = "Please tag the channel (or insert its ID) which you want to use as the {channel} channel."
