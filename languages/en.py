@@ -143,6 +143,8 @@ select = "Select"
 jump_to_message = "Jump to message!"
 message_id = "Message ID"
 back = "Back"
+website = "Website"
+support_server = "Support Server"
 # Dicts
 STATUS_CODES = {
     "200": "API Request OK!",
@@ -900,17 +902,11 @@ log_response_settings_update_invite_link_set_failed_not_a_discord_invite_link_ur
 # Support #
 # ------------------------------------------------------------------------- #
 # Responses
-response_support_server = "You can find the **Official Husqy Support Server** [here]({server_link} 'Join our Support Server!')!"
-response_support_website = "You can find the **Official Husqy Website** [here]({website_link} 'Visit our website!')!"
-response_support_submit_failed_denied = "I am sorry! One of the admins in my support server blocked you from submitting issues! If you don't agree with this decision, please go to our support channel and ask for this block to be revoked!"
-response_support_submit_failed = "Oops! Something went wrong while trying to submit the issue!"
-response_support_submit_success_no_channel = "Your issue has been submitted!"
-response_support_submit_success = "Your issue has been submitted! Your issue will also be visible in the **Official Husqy Support Server**!"
 # Log Responses
-log_response_support_server = "{datetime} -- **{member}** requested the **Official Husqy Support Server** link!"
-log_response_support_website = "{datetime} -- **{member}** requested the **Official Husqy Website** link!"
-log_response_support_submit_failed = "{datetime} -- **{member}** tried submitting an issue with Husqy! But something went wrong!"
-log_response_support_submit_success = "{datetime} -- **{member}** submitted an issue with Husqy!"
+log_response_support = "{datetime} -- **{member}** has requested information regarding my support!"
+# Embeds
+support_embed_title = "{bot_name} Support"
+support_embed_description = "If you are in need of support, please follow one of the links below and contact us! We would like to help you!"
 
 # ------------------------------------------------------------------------- #
 # Tags #
