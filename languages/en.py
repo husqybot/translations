@@ -1563,6 +1563,7 @@ response_ticket_module_configured_threat_mode_disabled = "I have `disabled` thre
 response_ticket_module_configured_threat_mode_enabled = "I have `enabled` thread mode! The posts channel can be safely removed!"
 response_ticket_module_configuration_all_types_already_in_use = "It looks like you are already using all default ticket types!"
 response_ticket_module_configuration_max_limit_reached = "It looks like you have reached the maximum amount of custom ticket types!"
+response_ticket_module_configuration_went_over_max_limit = "It looks like you have went over the maximum amount of custom ticket types! Not making any changes to prevent issues!"
 response_ticket_module_configuration_no_default_ticket_types_used = "You are not using any default ticket types!"
 response_ticket_module_configuration_no_custom_ticket_types_used = "You are not using any custom ticket types!"
 # Log Responses
