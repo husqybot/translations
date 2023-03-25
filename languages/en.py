@@ -876,6 +876,44 @@ reminder_list_embed_description = "You have {reminders} reminders! Showing your 
 reminder_list_embed_field_reminders = "Your reminders:"
 
 # ------------------------------------------------------------------------- #
+# Giveaway #
+# ------------------------------------------------------------------------- #
+# Responses
+response_giveaway_create_failed_not_a_valid_time = "The given time duration is not in the valid format, please use the format {delay}{h/m/s} - f.e. 1h or 20m"
+response_giveaway_created = "I have created the giveaway!"
+giveaway_ended_winner = "Congratulations <@{winner}>! You have won the giveaway! Your prize: `{prize}`"
+response_giveaway_ended_no_winner = "The giveaway with the prize: `{prize}` has ended! Sadly there were no participants and thus no winners."
+response_giveaway_delete_failed_no_giveaway_found = "There is no giveaway with that ID."
+response_giveaway_delete_failed_not_owner = "You can't delete the giveaway because you are not the owner."
+response_giveaway_delete = "I have deleted the giveaway!"
+response_giveaway_list_no_giveaways = "You don't have any active giveaways in this server!"
+response_giveaway_reroll_failed_no_giveaway_found = "There is no giveaway with that ID."
+response_giveaway_reroll_failed_not_owner = "You can't reroll a winner for this giveaway because you are not the owner."
+response_giveaway_reroll = "I have chosen a new winner!"
+response_giveaway_reroll_failed_no_winner_yet = "You can't reroll this giveaway because there is no winner yet!"
+# Log Responses
+log_response_giveaway_create_failed_not_a_valid_time = "{datetime} -- **{member}** tried to create a timed poll! But they gave an invalid time duration!"
+log_response_giveaway_created = "{datetime} -- **{member}** has created a giveaway!"
+log_response_giveaway_delete_failed_no_giveaway_found = "{datetime} -- **{member}** tried to delete a giveaway! But there is no giveaway with the given ID!"
+log_response_giveaway_delete_failed_not_owner = "{datetime} -- **{member}** tried to delete a giveaway! But they are not the owner!"
+log_response_giveaway_delete = "{datetime} -- **{member}** has deleted a giveaway!"
+log_response_giveaway_list_no_giveaways = "{datetime} -- **{member}** tried to list their giveaways in this server! But they don't have any!"
+log_response_giveaway_list_requested = "{datetime} -- **{member}** has requested their giveaways in this server!"
+log_response_giveaway_reroll_failed_no_giveaway_found = "{datetime} -- **{member}** tried to reroll a winner for a giveaway! But there is no giveaway with the given ID!"
+log_response_giveaway_reroll_failed_not_owner = "{datetime} -- **{member}** tried to reroll a winner for a giveaway! But they are not the owner!"
+log_response_giveaway_reroll = "{datetime} -- **{member}** has rerolled a winner for a giveaway!"
+log_response_giveaway_reroll_failed_no_winner_yet = "{datetime} -- **{member}** tried to reroll a winner for a giveaway! But there is no winner yet!"
+# Embeds
+giveaway_embed_title = "Active giveaway: {prize}!"
+giveaway_embed_title_finished = "Finished giveaway: {prize}!"
+giveaway_embed_footer = "Giveaway ID: {giveaway_id} - Giveaway by: {owner}"
+giveaway_embed_details_field_title = "Giveaway details:"
+giveaway_embed_details_field_value = "Giveaway is active for: {countdown}\n Giveaway participants: {participants}\n Giveaway winner count: {winner_count}"
+giveaway_list_embed_title = "Your giveaways"
+giveaway_list_embed_description = "You have {giveaways} giveaways! Showing your active giveaways:"
+giveaway_list_embed_field_giveaways = "Your giveways (Active/Finished):"
+
+# ------------------------------------------------------------------------- #
 # Settings Update #
 # ------------------------------------------------------------------------- #
 # Responses
