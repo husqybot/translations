@@ -1056,6 +1056,9 @@ response_custom_modal_preview = "By pressing Continue I will show the preview of
 response_custom_modal_preview_failed = "The custom modal preview reached a timeout!"
 response_custom_modal_preview_failed_canceled = "The custom modal preview was canceled!"
 response_custom_modal_preview_success = "Custom modal has been previewed!"
+response_domain_validate_safety_success_is_safe = "🟩 The domain is safe!"
+response_domain_validate_safety_success_not_safe = "🟥 The domain is NOT safe!"
+response_domain_validate_safety_failed_http_code = "Something went wrong while checking the domain, got HTTP error: {http_code}! Please try again later! If this issue persists, please contact our support!"
 # Log Responses
 log_response_color_viewed_failed_no_values_given = "{datetime} -- **{member}** tried to view a color! But didn't insert a HEX or RGB value!"
 log_response_color_viewed_failed_only_one_value_allowed = "{datetime} -- **{member}** tried to view a color! But inserted both a HEX and RGB value!"
@@ -1074,6 +1077,9 @@ log_response_custom_modal_create = "{datetime} -- **{member}** started creating 
 log_response_custom_modal_preview_failed = "{datetime} -- **{member}** tried to preview a custom modal! But a timeout was reached!"
 log_response_custom_modal_preview_failed_canceled = "{datetime} -- **{member}** tried to preview a custom modal! But canceled it!"
 log_response_custom_modal_preview_success = "{datetime} -- **{member}** previewed a custom modal!"
+log_response_domain_validate_safety_failed_http_code = "{datetime} -- **{member}** tried to check the safety of `{domain}`! But got HTTP error: {http_code}!"
+log_response_domain_validate_safety_success_is_safe = "{datetime} -- **{member}** checked the safety of `{domain}`! It is a safe URL!"
+log_response_domain_validate_safety_success_not_safe = "{datetime} -- **{member}** checked the safety of `{domain}`! It is NOT a safe URL!"
 # Embeds
 color_view_embed_title = "Color"
 color_view_embed_description = "Here is the color you requested, with color value: `{color}`"
