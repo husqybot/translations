@@ -102,6 +102,7 @@ log_giveaway_create = "Giveaway create"
 log_giveaway_delete = "Giveaway delete"
 log_giveaway_list = "Giveaway list"
 log_giveaway_reroll = "Giveaway reroll"
+log_domain_validated = "Domain validated"
 # Other
 all = "All"
 selection = "Selection"
