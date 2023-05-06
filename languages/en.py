@@ -980,6 +980,7 @@ response_tag_edit_fetch_message = "Please send the new content of the tag. Note:
 response_tag_edit_failed = "Something went wrong while trying to edit the tag!"
 response_tag_edit_success = "The tag is edited!"
 response_tag_send_failed_no_such_tag = "There is no tag with that name!"
+response_tags_list_empty = "There are currently no tags available in this server!"
 # Log Responses
 log_response_tag_create_failed_already_exists = "{datetime} -- **{member}** tried to create a tag named `{tag_name}`! But that name already exists!"
 log_response_tag_create_success = "{datetime} -- **{member}** has created a tag named `{tag_name}`!"
@@ -991,6 +992,12 @@ log_response_tag_edit_failed = "{datetime} -- **{member}** tried to edit a tag n
 log_response_tag_edit_success = "{datetime} -- **{member}** edited a tag named `{tag_name}`!"
 log_response_tag_send_failed_no_such_tag = "{datetime} -- **{member}** tried to send a tag with the name `{tag_name}`! But it does not exist!"
 log_response_tag_send_success = "{datetime} -- **{member}** used the tag `{tag_name}`!"
+log_response_tags_list_empty = "{datetime} -- **{member}** tried to view the list of tags! But there are no tags available in this server!"
+log_response_tags_list_requested = "{datetime} -- **{member}** viewed the list of tags!"
+# Embeds
+tag_list_embed_title = "Tags"
+tag_list_embed_description = "There are {tags} tags available! Showing availble tags:"
+tag_list_embed_field_tags = "Available tags:"
 
 # ------------------------------------------------------------------------- #
 # Utils #
