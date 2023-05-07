@@ -667,6 +667,7 @@ log_response_transcribe_success = "{datetime} -- **{member}** transcribed a voic
 log_response_transcribe_failed = "{datetime} -- **{member}** tried to transcribe a voice message! But something went wrong!"
 log_response_higher_lower_played_won = "{datetime} -- **{member}** played `{game}` and won!"
 log_response_higher_lower_played_loss = "{datetime} -- **{member}** played `{game}` and won!"
+log_response_meme_success = "{datetime} -- **{member}** requested a meme!"
 # Embeds
 rps_embed_title = "Rock, Paper, Scissors game"
 rps_embed_user_ones_turn = "{user_one} is choosing...\n {user_two} is waiting..."
@@ -697,6 +698,7 @@ host_embed_gateway_latency_description = "Latency is a measure of delay. In a ne
 host_embed_field_gateway_latency_high = "Gateway latency high:"
 host_embed_field_gateway_latency_avg = "Gateway latency average:"
 host_embed_field_gateway_latency_low = "Gateway latency low:"
+meme_footer = "Visit to Reddit to view top new memes!"
 
 # ------------------------------------------------------------------------- #
 # Mod_Server #
