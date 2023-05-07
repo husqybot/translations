@@ -642,12 +642,16 @@ info_embed_description_select_user = "Please select the user you want info about
 # ------------------------------------------------------------------------- #
 # Misc #
 # ------------------------------------------------------------------------- #
+higher_lower_higher = "Higher"
+higher_lower_equal = "Equal"
+higher_lower_lower = "Lower"
 # Responses
 response_games_heads_or_tails_heads = "It's `heads`!"
 response_games_heads_or_tails_tails = "It's `tails`!"
 response_rps_timeout = "{user} didn't respond quick enough. The game has timed out!"
 response_rps_users_turn = "{user}, your turn!"
 response_rps_winner = "Congratulations {user}! You won the Rock, Paper, Scissors game!"
+response_higher_lower_timeout = "The Higher/Lower game has timed out!"
 response_host_information_failed = "Oops! Something went wrong while trying to retrieve host information!"
 response_host_information_timeout = "The host information reached a timeout!"
 response_ping_success = "Pong! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
@@ -661,10 +665,16 @@ log_response_host_information = "{datetime} -- **{member}** requested host infor
 log_response_ping_requested = "{datetime} -- **{member}** used `/ping`! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
 log_response_transcribe_success = "{datetime} -- **{member}** transcribed a voice message!"
 log_response_transcribe_failed = "{datetime} -- **{member}** tried to transcribe a voice message! But something went wrong!"
+log_response_higher_lower_played_won = "{datetime} -- **{member}** played `{game}` and won!"
+log_response_higher_lower_played_loss = "{datetime} -- **{member}** played `{game}` and won!"
 # Embeds
 rps_embed_title = "Rock, Paper, Scissors game"
 rps_embed_user_ones_turn = "{user_one} is choosing...\n {user_two} is waiting..."
 rps_embed_user_twos_turn = "{user_one} is waiting...\n {user_two} is choosing..."
+higher_lower_embed_title = "Higher/Lower"
+higher_lower_embed_description = "Hello {member}! I have picked a number between 0 and 100! Do you think this number is higher, lower or equal to `{hint_number}`?"
+higher_lower_embed_description_win = "Congratulations {member}! You are **correct**!\n\nThe secret number was {secret_number}\nThe hint number was {hint_number}\nYou chose {chosen_option}"
+higher_lower_embed_description_loss = "Too bad {member}! You are **wrong**!\n\nThe secret number was {secret_number}\nThe hint number was {hint_number}\nYou chose {chosen_option}"
 host_embed_title = "24 hours host information"
 host_embed_cpu_description = "A CPU (Central Processing Unit) is responsible for oricessing and executing a set of instructions and act as the brain of a device."
 host_embed_field_cpu_high = "Processor high:"
