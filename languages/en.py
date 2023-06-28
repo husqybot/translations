@@ -904,7 +904,7 @@ response_reminder_added = "I have added the reminder!"
 response_reminder_delete_failed_no_reminder_found = "I am sorry! I didn't find a reminder with that ID!"
 response_reminder_delete_failed_not_target_user = "I am sorry! You are not the target of the reminder! Only the target user can delete their own reminder!"
 response_reminder_deleted = "I have deleted the reminder!"
-response_reminder_list_no_reminders = "You don't have any reminders in this server!"
+response_reminder_list_no_reminders = "There are no reminders in this server!"
 response_reminder_list_timeout = "Reminder list reached a timeout!"
 # Log Responses
 log_response_reminder_add_failed_not_a_valid_wait_duration = "{datetime} -- **{member}** tried to add a reminder! But the provided wait duration was an invalid format!"
@@ -920,8 +920,8 @@ reminder_embed_title = "Reminder"
 reminder_embed_field_title_linked_message = "Linked Message:"
 reminder_embed_field_value_linked_message = "Jump to message"
 reminder_list_embed_title = "Reminders"
-reminder_list_embed_description = "You have {reminders} reminders! Showing your active reminders:"
-reminder_list_embed_field_reminders = "Your reminders:"
+reminder_list_embed_description = "There are {reminders} reminders in this server! Showing active reminders:"
+reminder_list_embed_field_reminders = "Reminders:"
 
 # ------------------------------------------------------------------------- #
 # Giveaway #
