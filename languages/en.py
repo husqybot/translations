@@ -929,7 +929,7 @@ reminder_list_embed_field_reminders = "Reminders:"
 # Responses
 response_giveaway_create_failed_not_a_valid_time = "The given time duration is not in the valid format, please use the format {delay}{h/m/s} - f.e. 1h or 20m"
 response_giveaway_created = "I have created the giveaway!"
-giveaway_ended_winner = "Congratulations <@{winner}>! You have won the giveaway! Your prize: `{prize}`"
+giveaway_ended_winner = "Congratulations {winner}! You have won the giveaway! Your prize: `{prize}`"
 response_giveaway_ended_no_winner = "The giveaway with the prize: `{prize}` has ended! Sadly there were no participants and thus no winners."
 response_giveaway_delete_failed_no_giveaway_found = "There is no giveaway with that ID."
 response_giveaway_delete_failed_not_owner = "You can't delete the giveaway because you are not the owner."
