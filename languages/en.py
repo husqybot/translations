@@ -160,6 +160,8 @@ message_id = "Message ID"
 back = "Back"
 website = "Website"
 support_server = "Support Server"
+dashboard = "Dashboard"
+api = "API"
 # Dicts
 STATUS_CODES = {
     "200": "API Request OK!",
