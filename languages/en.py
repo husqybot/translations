@@ -1455,7 +1455,7 @@ module_socials_rss_discription = "Please select what you want to do with the RSS
 module_socials_rss_embed_description_add = "Please enter the url of the RSS Feed you want to add!"
 module_socials_rss_embed_description_remove = "Please enter the url of the RSS Feed you want to remove!"
 module_socials_rss_new_entry_embed = "New entry!"
-module_socials_rss_new_embed_description = "**Title:** {rss_title}\n\n**Description:**\n{rss_description}"
+module_socials_rss_new_embed_description = "**Title:** {rss_title}\n\n**Description:**\n{rss_description}..."
 
 # ------------------------------------------------------------------------- #
 # REACTION ROLES #
