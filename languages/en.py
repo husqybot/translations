@@ -210,9 +210,6 @@ error_response_not_a_valid_id = (
 error_response_not_a_valid_emoji = (
     "Oops! It looks like that the given emoji is not a valid emoji!"
 )
-error_response_settings_update_insert_at_least_1 = (
-    "You must give at least one parameter to change!"
-)
 error_response_invalid_int_found_in_list = (
     "Oops! It looks like that a value is not a valid integer/number!"
 )
@@ -1391,52 +1388,10 @@ giveaway_list_embed_field_giveaways = "Your giveways (Active/Finished):"
 # Settings Update #
 # ------------------------------------------------------------------------- #
 # Responses
-response_settings_update_general_failed = (
-    "Oops! Something went wrong while trying to update the general setting(s)!"
-)
-response_settings_update_general_success = "I have changed the general setting(s)!"
-response_settings_update_moderation_failed = (
-    "Oops! Something went wrong while trying to update the moderation setting(s)!"
-)
-response_settings_update_moderation_success = (
-    "I have changed the moderation setting(s)!"
-)
-response_settings_update_invite_link_remove_failed = (
-    "Something went wrong while trying to remove the invite link!"
-)
-response_settings_update_invite_link_removed = (
-    "I have removed the invite link from the configuration!"
-)
-response_settings_update_invite_link_set_failed = (
-    "Something went wrong while trying update the invite link!"
-)
-response_settings_update_invite_link_set_success = (
-    "I have updated the invite server link!"
-)
-response_settings_update_invite_link_set_failed_not_a_discord_invite_link_url = (
-    "The given URL does not look like a Discord invite link!"
-)
 # Log Responses
 log_response_settings_updated = (
-    "{datetime} -- **{member}** had updated the settings wrong!"
+    "{datetime} -- **{member}** has updated the settings wrong!"
 )
-log_response_settings_update_general_failed = "{datetime} -- **{member}** tried updating general setting(s)! But something went wrong!"
-log_response_settings_update_general_success = (
-    "{datetime} -- **{member}** updated general setting(s)!"
-)
-log_response_settings_update_moderation_failed = "{datetime} -- **{member}** tried updating moderation setting(s)! But something went wrong!"
-log_response_settings_update_moderation_success = (
-    "{datetime} -- **{member}** updated moderation setting(s)!"
-)
-log_response_settings_update_invite_link_remove_failed = "{datetime} -- **{member}** tried to remove the configured invite link! But something went wrong!"
-log_response_settings_update_invite_link_removed = (
-    "{datetime} -- **{member}** has removed the invite link from the configuration!"
-)
-log_response_settings_update_invite_link_set_failed = "{datetime} -- **{member}** tried to update the configured invite link! But something went wrong!"
-log_response_settings_update_invite_link_set_success = (
-    "{datetime} -- **{member}** has updated the invite link!"
-)
-log_response_settings_update_invite_link_set_failed_not_a_discord_invite_link_url = "{datetime} -- **{member}** tried to change the configured invite link! But the given invite link does not look like a Discord invite link!"
 
 # ------------------------------------------------------------------------- #
 # Support #
