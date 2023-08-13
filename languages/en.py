@@ -5,12 +5,6 @@
 embed_footer = (
     "Info requested by: {member}! This embed will show for {auto_delete} seconds!"
 )
-# Module translations
-module_logging = "Logging module"
-module_greetings = "Greetings module"
-module_tempchannels = "Temporary Channels module"
-module_socials = "Socials module"
-module_reaction_roles = "Reaction Roles module"
 # Logging translations
 log_errors = "Errors"
 log_info = "Info requests"
@@ -164,6 +158,8 @@ website = "Website"
 support_server = "Support Server"
 dashboard = "Dashboard"
 api = "API"
+allowed = "Allowed"
+not_allowed = "Not allowed"
 # Dicts
 STATUS_CODES = {
     "200": "API Request OK!",
@@ -1272,6 +1268,55 @@ poll_list_embed_description = "You have {polls} polls! Showing your active polls
 poll_list_embed_field_polls = "Your active polls:"
 
 # ------------------------------------------------------------------------- #
+# Privacy #
+# ------------------------------------------------------------------------- #
+privacy_data_overview = "View my data"
+privacy_data_collection = "Data collection"
+privacy_data_collection_enable_all = "Allow data collection in all servers"
+privacy_data_collection_enable_specific = "Allow data collection in this servers"
+privacy_data_collection_disable_all = "Disallow data collection in all servers"
+privacy_data_collection_disable_specific = "Disallow data collection in this server"
+privacy_data_collection_quick_delete_server = "Quick data delete (this server)"
+privacy_data_collection_quick_delete_all = "Quick data delete (all servers)"
+# Responses
+response_privacy_timeout = (
+    "The privacy command reached a timeout! Nothing will be changed!"
+)
+response_privacy_allow_all_servers_failed = "I am sorry! Something went wrong while allowing {bot_name} to collect your data in all servers you share with {bot_name}!"
+response_privacy_allow_specific_server_failed = "I am sorry! Something went wrong while allowing {bot_name} to collect your data in this server!"
+response_privacy_disable_all_servers_failed = "I am sorry! Something went wrong while disallowing {bot_name} to collect your data in all servers you share with {bot_name}!"
+response_privacy_disable_specific_server_failed = "I am sorry! Something went wrong while disallowing {bot_name} to collect your data in this server!"
+response_privacy_allow_all_servers_success = "Your privacy configuration has changed! {bot_name} is now allowed to collect your data in servers you share with {bot_name}!"
+response_privacy_allow_specific_server_success = "Your privacy configuration has changed! {bot_name} is now allowed to collect your data in this server!"
+response_privacy_disable_all_servers_success = "Your privacy configuration has changed! {bot_name} is now disallowed to collect your data in servers you share with {bot_name}!"
+response_privacy_disable_specific_server_success = "Your privacy configuration has changed! {bot_name} is now disallowed to collect your data in this server!"
+# Log Responses
+# Embeds
+privacy_embed_title = "{bot_name} privacy configurator"
+privacy_embed_description = "Welcome to the {bot_name} privacy configurator. This is the place to configure your privacy settings for this server or for all servers at once! Currently, {bot_name} is `{status}` to collect data from you in this server!\n\nThe data that is shown using this command is ALL data {bot_name} has of you to provide you with its services. Important to know, the data shown in this command is ALL data across ALL servers you share with {bot_name}. You are free to delete this data or (dis)allow {bot_name} of gathering more data using this configurator but beware: any changes in these settings or in the data can result in loss of functionality, loss of existing services or other inconvinience for you, and in some cases, the servers you are in!\n\n Some data (f.e. some channel names or mentions in the logging channel) are not saved, so if you personal data is used in these names, descriptions, etc. you need to contact the servers administrator to change this!\n\n If you have any further questions about {bot_name} and privacy, please visit https://husqy.xyz/ for more info!"
+privacy_embed_data_collection_description = (
+    "Please select which action you want to perform."
+)
+privacy_embed_data_collection_field_1_value = "This option turns data collection by {bot_name} ON for you in all servers you share with {bot_name}."
+privacy_embed_data_collection_field_2_value = (
+    "This option turns data collection by {bot_name} ON for you in this server)."
+)
+privacy_embed_data_collection_field_3_value = "This option turns data collection by {bot_name} OFF for you in all servers you share with {bot_name}. This will also delete all data associated with you and these servers."
+privacy_embed_data_collection_field_4_value = "This option turns data collection by {bot_name} OFF for you in this server. This will also delete all data associated with you and this servers."
+privacy_embed_data_overview_description = "Your data has been found in association with **{bot_service}** a total of `{total_times} times`.\n\nUser ID: `{user_id_times} times`\nUsername: `{username_times} times`"
+privacy_embed_data_overview_description_home = "All shown data is the data that {bot_name} has stored of you to deliver you its services. It is important to know that this data is across all servers you share with {bot_name}.\n\nUsing the buttons below you can search through all services Husqy offer and find out how much data {bot_name} has saved."
+privacy_embed_data_overview_footer = (
+    "NOTE: The data shown is across ALL servers shared with {bot_name}!"
+)
+privacy_embed_data_collection_validation_delete = (
+    "Are you sure you want to delete the data? This action can not be reversed!"
+)
+privacy_embed_data_collection_validation_delete_confirmed = "The delete action has been requested and will be executed, it can take some time before your data is deleted! If you think that not all of your data has been deleted, please contact our support!"
+privacy_embed_data_collection_validation_delete_cancelled = (
+    "The delete action has been cancelled! No data will be deleted!"
+)
+
+# ------------------------------------------------------------------------- #
 # Reminders #
 # ------------------------------------------------------------------------- #
 reminder_delete = "☑"
@@ -1292,9 +1337,11 @@ response_reminder_delete_failed_not_target_user = "I am sorry! You are not the t
 response_reminder_deleted = "I have deleted the reminder!"
 response_reminder_list_no_reminders = "There are no reminders in this server!"
 response_reminder_list_timeout = "Reminder list reached a timeout!"
+response_reminder_add_dm_destination_is_not_target_user = "The destination of the reminder can't be the DM of a user who is not the target user."
 # Log Responses
 log_response_reminder_add_failed_not_a_valid_wait_duration = "{datetime} -- **{member}** tried to add a reminder! But the provided wait duration was an invalid format!"
 log_response_reminder_add_not_a_url = "{datetime} -- **{member}** tried to add a reminder! But the provided linked message was not a valid URL!"
+log_response_reminder_add_dm_destination_is_not_target_user = "{datetime} -- **{member}** tried to add a reminder! But they provided a DM of a user who is not the target user as the destination!"
 log_response_reminder_add_failed = (
     "{datetime} -- **{member}** tried to add a reminder! But something went wrong!"
 )
@@ -1873,15 +1920,11 @@ log_response_reactionrole_delete_success = (
 log_response_settings_module_enable_autoresponder_success = (
     "{datetime} -- **{member}** has enabled the `Autoresponder` module!"
 )
-log_response_settings_module_autoresponder_configuration_failed = (
-    "{datetime} -- **{member}** tried to add a new entry to the `Autoresponder` module! But something went wrong!"
-)
+log_response_settings_module_autoresponder_configuration_failed = "{datetime} -- **{member}** tried to add a new entry to the `Autoresponder` module! But something went wrong!"
 log_response_settings_module_autoresponder_configuration_success = (
     "{datetime} -- **{member}** has added an entry to the `Autoresponder` module!"
 )
-log_response_settings_module_autoresponder_configuration_delete_failed = (
-    "{datetime} -- **{member}** tried to delete an entry from the `Autoresponder` module! But something went wrong!"
-)
+log_response_settings_module_autoresponder_configuration_delete_failed = "{datetime} -- **{member}** tried to delete an entry from the `Autoresponder` module! But something went wrong!"
 log_response_settings_module_autoresponder_configuration_delete_success = (
     "{datetime} -- **{member}** has deleted an entry from the `Autoresponder` module!"
 )
@@ -1915,11 +1958,17 @@ module_tickets_create_a_ticket = "create-a-ticket"
 module_tickets_view_tickets = "view-tickets"
 module_tickets_default_modal = """{'custom_id': '260666db-aa41-422d-b7ae-4b906cd35054', 'title': 'New ticket', 'components': ["{'type': 1, 'components': [{'type': 4, 'style': 1, 'custom_id': 'bf835028-1c56-4537-b4d2-bfa667135d19', 'label': 'Ticket title', 'placeholder': 'Please insert the title of your ticket'}]}", "{'type': 1, 'components': [{'type': 4, 'style': 2, 'custom_id': '78f400da-f670-411e-9658-9b109a46cbbc', 'label': 'Ticket description', 'placeholder': 'Please describe why you are submitting this ticket'}]}"]}"""
 module_tickets_default_ticket_creation_message = """{"title": "Create a ticket", "description": "If you are experiencing problems or are in need of help, feel free to create a ticket!", "footer": {"text": "Tickets made possible by: Husqy"}}"""
-module_tickets_please_select_default_type_to_create = "Please select a default type to create a ticket"
-module_tickets_please_select_custom_type_to_create = "Please select a custom type to create a ticket"
+module_tickets_please_select_default_type_to_create = (
+    "Please select a default type to create a ticket"
+)
+module_tickets_please_select_custom_type_to_create = (
+    "Please select a custom type to create a ticket"
+)
 # Responses
 # Log Responses
-log_response_ticket_module_enabled = "{datetime} -- **{member}** has enabled the `Ticket` Module!"
+log_response_ticket_module_enabled = (
+    "{datetime} -- **{member}** has enabled the `Ticket` Module!"
+)
 log_response_ticket_module_configured = (
     "{datetime} -- **{member}** has changed the configuration of the `Ticket` Module!"
 )
@@ -1936,9 +1985,7 @@ module_serverstats_default_boost_number_name = "🚀 Boosters: {value}"
 starboard_message = "You're a ⭐! x{value}!"
 # Responses
 # #  Log Responses
-log_response_settings_module_serverstats_change_all_success = (
-    "{datetime} -- **{member}** has changed the configuration of the `ServerStats` module!"
-)
+log_response_settings_module_serverstats_change_all_success = "{datetime} -- **{member}** has changed the configuration of the `ServerStats` module!"
 log_response_settings_module_enable_serverstats_success = (
     "{datetime} -- **{member}** has enabled the `ServerStats` module!"
 )
