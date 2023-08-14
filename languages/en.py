@@ -1186,6 +1186,8 @@ warn_delete_to_user_embed_description = "A previous warning in `{guild}` has bee
 # Polls #
 # ------------------------------------------------------------------------- #
 # Responses
+response_poll_create_failed_privacy_mode_enabled = "You can't create a poll in this server because you have prevented {bot_name} from collecting your data!"
+response_poll_vote_failed_privacy_mode_enabled = "You can't vote on a poll in this server because you have prevented {bot_name} from collecting your data!"
 response_poll_clear_votes_failed_no_poll_found = "I didn't find a poll with that ID!"
 response_poll_clear_votes = "I have cleared your votes!"
 response_poll_create_failed_anwers_in_wrong_order = "The answers are not in the right order! (if more than the required two anwers are used, make sure it is in the order answer3, answer4 and answer5)!"
@@ -1322,6 +1324,8 @@ privacy_embed_data_collection_validation_delete_cancelled = (
 reminder_delete = "☑"
 reminder_repeat = "🔁"
 # Responses
+response_reminder_create_failed_privacy_mode_enabled = "You can't create a reminder in this server because you have prevented {bot_name} from collecting your data!"
+response_reminder_create_failed_privacy_mode_enabled_target = "You can't create a reminder in this server for that member because they have prevented {bot_name} from collecting their data!"
 response_reminder_timeout = "Response timeout, reminder deleted!"
 response_reminder_deleted = "I have deleted the reminder!"
 response_reminder_when_to_repeat = "When would you like me to repeat the reminder (Please use format: {delay}{h/m/s} - f.e. 1h or 20m)?"
@@ -1372,6 +1376,8 @@ reminder_list_embed_field_reminders = "Reminders:"
 # Giveaway #
 # ------------------------------------------------------------------------- #
 # Responses
+response_giveaway_create_failed_privacy_mode_enabled = "You can't create a giveaway in this server because you have prevented {bot_name} from collecting your data!"
+response_giveaway_vote_failed_privacy_mode_enabled = "You can't vote on a giveaway in this server because you have prevented {bot_name} from collecting your data!"
 response_giveaway_create_failed_not_a_valid_time = "The given time duration is not in the valid format, please use the format {delay}{h/m/s} - f.e. 1h or 20m"
 response_giveaway_created = "I have created the giveaway!"
 giveaway_ended_winner = (
