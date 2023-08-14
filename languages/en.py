@@ -1305,7 +1305,7 @@ privacy_embed_data_collection_field_2_value = (
 )
 privacy_embed_data_collection_field_3_value = "This option turns data collection by {bot_name} OFF for you in all servers you share with {bot_name}. This will also delete all data associated with you and these servers."
 privacy_embed_data_collection_field_4_value = "This option turns data collection by {bot_name} OFF for you in this server. This will also delete all data associated with you and this servers."
-privacy_embed_data_overview_description = "Your data has been found in association with **{bot_service}** a total of `{total_times} times`.\n\nUser ID: `{user_id_times} times`\nUsername: `{username_times} times`"
+privacy_embed_data_overview_description = "Your data has been found in association with **{bot_service}** a total of `{total_times} times`.\n\nUser ID: `{user_id_times} times`\nUsername: `{username_times} times`\nDisplay name: `{display_name_times} times`\nGlobal name: `{global_name_times} times`\nNickname: `{nickname_times} times`"
 privacy_embed_data_overview_description_home = "All shown data is the data that {bot_name} has stored of you to deliver you its services. It is important to know that this data is across all servers you share with {bot_name}.\n\nUsing the buttons below you can search through all services Husqy offer and find out how much data {bot_name} has saved."
 privacy_embed_data_overview_footer = (
     "NOTE: The data shown is across ALL servers shared with {bot_name}!"
