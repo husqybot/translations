@@ -1443,7 +1443,7 @@ giveaway_list_embed_field_giveaways = "Your giveways (Active/Finished):"
 # Responses
 # Log Responses
 log_response_settings_updated = (
-    "{datetime} -- **{member}** has updated the settings wrong!"
+    "{datetime} -- **{member}** has updated the settings!"
 )
 
 # ------------------------------------------------------------------------- #
