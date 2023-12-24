@@ -1463,6 +1463,7 @@ support_embed_description = "If you are in need of support, please follow one of
 # ------------------------------------------------------------------------- #
 # Responses
 response_tag_create_failed_already_exists = "A tag with that name already exists!"
+response_tag_create_failed = "Something went wrong while trying to create the tag!"
 response_tag_create_fetch_message = "Please send the content of the tag!"
 response_tag_create_timeout = "The tag creation timed out!"
 response_tag_create_success = "I have created the tag!"
