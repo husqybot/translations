@@ -1191,7 +1191,6 @@ response_poll_vote_failed_privacy_mode_enabled = "You can't vote on a poll in th
 response_poll_clear_votes_failed_no_poll_found = "I didn't find a poll with that ID!"
 response_poll_clear_votes = "I have cleared your votes!"
 response_poll_create_failed_anwers_in_wrong_order = "The answers are not in the right order! (if more than the required two anwers are used, make sure it is in the order answer3, answer4 and answer5)!"
-response_poll_create_failed_exceeded_max_choices = "The maximum amount of choices per person in this configuration is {max_choices} choices!"
 response_poll_create_failed_not_a_valid_time = "The given time duration is not in the valid format, please use the format {delay}{h/m/s} - f.e. 1h or 20m"
 response_poll_create_failed_no_time = (
     "When using a Timed poll, please insert the time for it to be active!"
@@ -1216,7 +1215,6 @@ log_response_poll_clear_votes = (
     "{datetime} -- **{member}** cleared their votes from a poll!"
 )
 log_response_poll_create_failed_anwers_in_wrong_order = "{datetime} -- **{member}** tried to create a poll! But the extra answers are not in order (if more than the required two anwers are used, make sure it is in the order answer3, answer4 and answer5)!"
-log_response_poll_create_failed_exceeded_max_choices = "{datetime} -- **{member}** tried to create a poll! But the maximum amount of choices per person exceeded the maximum amount!"
 log_response_poll_create_failed_not_a_valid_time = "{datetime} -- **{member}** tried to create a timed poll! But they gave an invalid time duration!"
 log_response_poll_create_failed_no_time = "{datetime} -- **{member}** tried to create a timed poll! But they didn't insert a time duration!"
 log_response_poll_create_failed = (
