@@ -534,6 +534,20 @@ response_role_updated = (
     "{datetime} -- **{member}** updated the role {role}!\n`[Reason]` -- {reason}"
 )
 
+## Module Autoresponder
+### Disable
+response_module_autoresponder_disabled = "{datetime} -- **{member}** has disabled the `autoresponder` module! All related settings are removed!"
+response_module_autoresponder_disable_failed = "{datetime} -- **{member}** tried to disable the `autoresponder` module but something went wrong! I have not changed the configuration!"
+### Enable
+response_module_autoresponder_enabled = "{datetime} -- **{member}** has enabled the `autoresponder` module!"
+response_module_autoresponder_enable_failed = "{datetime} -- **{member}** tried to enable the `autoresponder` module but something went wrong!"
+### Create
+response_module_autoresponder_create_entry_success = "{datetime} -- **{member}** has created an entry for the `autoresponder` module!"
+response_module_autoresponder_create_entry_failed = "{datetime} -- **{member}** tried to create an entry for the `autoresponder` module but something went wrong!"
+### Delete
+response_module_autoresponder_delete_entry_success = "{datetime} -- **{member}** has deleted an entry from the `autoresponder` module!"
+response_module_autoresponder_create_entry_failed = "{datetime} -- **{member}** tried to delete an entry from the `autoresponder` module but something went wrong!"
+
 ## Module Tempchannel
 ### tempchannel edit
 response_tempchannel_edit_failed_not_a_temporary_channel = "{datetime} -- **{member}** tried to edit a temporary channel but the inserted channel isn't a temporary channel!"
