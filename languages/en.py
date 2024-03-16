@@ -524,7 +524,7 @@ log_response_music_seek_nothing_playing = (
 )
 log_response_music_seek_failed_radio_playing = "{datetime} -- **{member}** tried to forward a radio station! But this is not possible!"
 log_response_music_seek_success = (
-    "{datetime} -- **{member}** jumped the track tp `{time}`!"
+    "{datetime} -- **{member}** jumped the track to `{time}`!"
 )
 log_response_music_restart_nothing_playing = "{datetime} -- **{member}** tried to restart the song! But there is no song playing!"
 log_response_music_restart_failed_radio_playing = "{datetime} -- **{member}** tried to restart a radio station! But this is not possible!"
@@ -1440,9 +1440,7 @@ giveaway_list_embed_field_giveaways = "Your giveways (Active/Finished):"
 # ------------------------------------------------------------------------- #
 # Responses
 # Log Responses
-log_response_settings_updated = (
-    "{datetime} -- **{member}** has updated the settings!"
-)
+log_response_settings_updated = "{datetime} -- **{member}** has updated the settings!"
 
 # ------------------------------------------------------------------------- #
 # Support #
