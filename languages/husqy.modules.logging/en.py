@@ -602,3 +602,9 @@ response_tempchannel_edit_name_success = (
     "{datetime} -- **{member}** changed the name of a temporary channel to `{name}`!"
 )
 response_tempchannel_edit_name_failed = "{datetime} -- **{member}** tried to edit the name of a temporary channel but something went wrong!"
+### Disable
+response_module_tempchannel_disabled = "{datetime} -- **{member}** has disabled the `tempchannel` module! All related settings are removed!"
+response_module_tempchannel_disable_failed = "{datetime} -- **{member}** tried to disable the `tempchannel` module but something went wrong! I have not changed the configuration!"
+### Enable
+response_module_tempchannel_enabled = "{datetime} -- **{member}** has enabled the `tempchannel` module!"
+response_module_tempchannel_enable_failed = "{datetime} -- **{member}** tried to enable the `tempchannel` module but something went wrong!"
