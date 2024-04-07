@@ -608,3 +608,13 @@ response_module_tempchannel_disable_failed = "{datetime} -- **{member}** tried t
 ### Enable
 response_module_tempchannel_enabled = "{datetime} -- **{member}** has enabled the `tempchannel` module!"
 response_module_tempchannel_enable_failed = "{datetime} -- **{member}** tried to enable the `tempchannel` module but something went wrong!"
+
+## Module Greetings
+### Disable
+response_module_greetings_disabled = "{datetime} -- **{member}** has disabled the `greetings` module! All related settings are removed!"
+response_module_greetings_disable_failed = "{datetime} -- **{member}** tried to disable the `greetings` module but something went wrong! I have not changed the configuration!"
+### Enable
+response_module_greetings_enabled = "{datetime} -- **{member}** has enabled the `greetings` module!"
+response_module_greetings_enable_failed = "{datetime} -- **{member}** tried to enable the `greetings` module but something went wrong!"
+### Settings
+response_module_greetings_settings_changed = "{datetime} -- **{member}** has changed the settings of the `greetings` module!"
