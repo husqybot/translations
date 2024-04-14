@@ -539,13 +539,19 @@ response_role_updated = (
 response_module_autoresponder_disabled = "{datetime} -- **{member}** has disabled the `autoresponder` module! All related settings are removed!"
 response_module_autoresponder_disable_failed = "{datetime} -- **{member}** tried to disable the `autoresponder` module but something went wrong! I have not changed the configuration!"
 ### Enable
-response_module_autoresponder_enabled = "{datetime} -- **{member}** has enabled the `autoresponder` module!"
+response_module_autoresponder_enabled = (
+    "{datetime} -- **{member}** has enabled the `autoresponder` module!"
+)
 response_module_autoresponder_enable_failed = "{datetime} -- **{member}** tried to enable the `autoresponder` module but something went wrong!"
 ### Create
-response_module_autoresponder_create_entry_success = "{datetime} -- **{member}** has created an entry for the `autoresponder` module!"
+response_module_autoresponder_create_entry_success = (
+    "{datetime} -- **{member}** has created an entry for the `autoresponder` module!"
+)
 response_module_autoresponder_create_entry_failed = "{datetime} -- **{member}** tried to create an entry for the `autoresponder` module but something went wrong!"
 ### Delete
-response_module_autoresponder_delete_entry_success = "{datetime} -- **{member}** has deleted an entry from the `autoresponder` module!"
+response_module_autoresponder_delete_entry_success = (
+    "{datetime} -- **{member}** has deleted an entry from the `autoresponder` module!"
+)
 response_module_autoresponder_create_entry_failed = "{datetime} -- **{member}** tried to delete an entry from the `autoresponder` module but something went wrong!"
 
 ## Module Tempchannel
@@ -603,18 +609,57 @@ response_tempchannel_edit_name_success = (
 )
 response_tempchannel_edit_name_failed = "{datetime} -- **{member}** tried to edit the name of a temporary channel but something went wrong!"
 ### Disable
-response_module_tempchannel_disabled = "{datetime} -- **{member}** has disabled the `tempchannel` module! All related settings are removed!"
+response_module_tempchannel_disabled = "{datetime} -- **{member}** has disabled the `tempchannel` module! All related settings are removed! This includes all known tempchannels, existing tempchannels will therefore not be deleted automatically!"
 response_module_tempchannel_disable_failed = "{datetime} -- **{member}** tried to disable the `tempchannel` module but something went wrong! I have not changed the configuration!"
 ### Enable
-response_module_tempchannel_enabled = "{datetime} -- **{member}** has enabled the `tempchannel` module!"
+response_module_tempchannel_enabled = (
+    "{datetime} -- **{member}** has enabled the `tempchannel` module!"
+)
 response_module_tempchannel_enable_failed = "{datetime} -- **{member}** tried to enable the `tempchannel` module but something went wrong!"
+### Enable
+response_module_tempchannel_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `tempchannel` module!"
+)
+response_module_tempchannel_settings_changed_failed = "{datetime} -- **{member}** tried to change the settings of the `tempchannel` module but something went wrong!"
 
 ## Module Greetings
 ### Disable
 response_module_greetings_disabled = "{datetime} -- **{member}** has disabled the `greetings` module! All related settings are removed!"
 response_module_greetings_disable_failed = "{datetime} -- **{member}** tried to disable the `greetings` module but something went wrong! I have not changed the configuration!"
 ### Enable
-response_module_greetings_enabled = "{datetime} -- **{member}** has enabled the `greetings` module!"
+response_module_greetings_enabled = (
+    "{datetime} -- **{member}** has enabled the `greetings` module!"
+)
 response_module_greetings_enable_failed = "{datetime} -- **{member}** tried to enable the `greetings` module but something went wrong!"
 ### Settings
-response_module_greetings_settings_changed = "{datetime} -- **{member}** has changed the settings of the `greetings` module!"
+response_module_greetings_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `greetings` module!"
+)
+response_module_greetings_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `greetings` module but something has gone wrong! Not all settings may have been changed!"
+
+## Module Reactionroles
+### Disable
+response_module_reactionroles_disabled = "{datetime} -- **{member}** has disabled the `reactionroles` module! All related settings are removed and you can safely remove existing reaction roles managed by me!"
+response_module_reactionroles_disable_failed = "{datetime} -- **{member}** tried to disable the `reactionroles` module but something went wrong! I have not changed the configuration!"
+### Enable
+response_module_reactionroles_enabled = (
+    "{datetime} -- **{member}** has enabled the `reactionroles` module!"
+)
+response_module_reactionroles_enable_failed = "{datetime} -- **{member}** tried to enable the `reactionroles` module but something went wrong!"
+### Settings
+response_module_reactionroles_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `reactionroles` module!"
+)
+response_module_reactionroles_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `reactionroles` module but something has gone wrong! Not all settings may have been changed!"
+### Create
+response_module_reactionroles_reactionrole_created = (
+    "{datetime} -- **{member}** created a reactionrole!"
+)
+response_module_reactionroles_reactionrole_create_failed = (
+    "{datetime} -- **{member}** tried to create a reactionrole but someting went wrong!"
+)
+### Delete
+response_module_reactionroles_reactionrole_deleted = "{datetime} -- **{member}** deleted a reactionrole! The reaction should be removed from the message, if this is not the case, this can safely be removed!"
+response_module_reactionroles_reactionrole_delete_failed = (
+    "{datetime} -- **{member}** tried to delete a reactionrole but someting went wrong!"
+)
