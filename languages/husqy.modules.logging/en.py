@@ -663,3 +663,18 @@ response_module_reactionroles_reactionrole_deleted = "{datetime} -- **{member}**
 response_module_reactionroles_reactionrole_delete_failed = (
     "{datetime} -- **{member}** tried to delete a reactionrole but someting went wrong!"
 )
+
+## Module Tickets
+### Disable
+response_module_tickets_disabled = "{datetime} -- **{member}** has disabled the `tickets` module! All related settings are removed! The `ticket` module channels and roles should be removed, if this is not the case, these can safely be removed!"
+response_module_tickets_disable_failed = "{datetime} -- **{member}** tried to disable the `tickets` module but something went wrong! I have not changed the configuration!"
+### Enable
+response_module_tickets_enabled = (
+    "{datetime} -- **{member}** has enabled the `tickets` module!"
+)
+response_module_tickets_enable_failed = "{datetime} -- **{member}** tried to enable the `tickets` module but something went wrong!"
+### Settings
+response_module_tickets_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `tickets` module!"
+)
+response_module_tickets_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `tickets` module but something has gone wrong! Not all settings may have been changed!"
