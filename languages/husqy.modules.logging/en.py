@@ -678,3 +678,18 @@ response_module_tickets_settings_changed = (
     "{datetime} -- **{member}** has changed the settings of the `tickets` module!"
 )
 response_module_tickets_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `tickets` module but something has gone wrong! Not all settings may have been changed!"
+
+## Module Serverstats
+### Disable
+response_module_serverstats_disabled = "{datetime} -- **{member}** has disabled the `serverstats` module! All related settings are removed!"
+response_module_serverstats_disable_failed = "{datetime} -- **{member}** tried to disable the `serverstats` module but something went wrong! I have not changed the configuration!"
+### Enable
+response_module_serverstats_enabled = (
+    "{datetime} -- **{member}** has enabled the `serverstats` module!"
+)
+response_module_serverstats_enable_failed = "{datetime} -- **{member}** tried to enable the `serverstats` module but something went wrong!"
+### Settings
+response_module_serverstats_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `serverstats` module!"
+)
+response_module_serverstats_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `serverstats` module but something has gone wrong! Not all settings may have been changed!"
