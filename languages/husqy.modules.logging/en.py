@@ -693,3 +693,39 @@ response_module_serverstats_settings_changed = (
     "{datetime} -- **{member}** has changed the settings of the `serverstats` module!"
 )
 response_module_serverstats_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `serverstats` module but something has gone wrong! Not all settings may have been changed!"
+
+## Module Socials
+### Disable
+response_module_socials_disabled = "{datetime} -- **{member}** has disabled the `socials` module! All related settings are removed!"
+response_module_socials_disable_failed = "{datetime} -- **{member}** tried to disable the `socials` module but something went wrong! I have not changed the configuration!"
+### Enable
+response_module_socials_enabled = (
+    "{datetime} -- **{member}** has enabled the `socials` module!"
+)
+response_module_socials_enable_failed = "{datetime} -- **{member}** tried to enable the `socials` module but something went wrong!"
+### Settings
+response_module_socials_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `socials` module!"
+)
+response_module_socials_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `socials` module but something has gone wrong! Not all settings may have been changed!"
+### Twitch
+response_module_twitch_added = "{datetime} -- **{member}** added Twitch account: `{twitch_account}` to the configuration of the `socials` module!"
+response_module_twitch_add_failed = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the configuration of the `socials` module but something went wrong!"
+response_module_twitch_add_failed_limit_reached = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the configuration of the `socials` module but the limit of Twitch accounts is reached!"
+response_module_twitch_add_failed_already_added = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the configuration of the `socials` module but the Twitch account is already in the list!"
+response_module_twitch_removed = "{datetime} -- **{member}** removed Twitch account: `{twitch_account}` from the configuration of the `socials` module!"
+response_module_twitch_remove_failed = "{datetime} -- **{member}** tried to remove Twitch account: `{twitch_account}` from the configuration of the `socials` module but something went wrong!"
+### RSS
+response_module_rss_added = "{datetime} -- **{member}** added the RSS Feed: `{feed}` to the configuration of the `socials` module!"
+response_module_rss_add_failed = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the configuration of the `socials` module but something went wrong!"
+response_module_rss_add_failed_limit_reached = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the configuration of the `socials` module but the limit of RSS feeds is reached!"
+response_module_rss_add_failed_already_added = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the configuration of the `socials` module but the RSS feeds is already in the list!"
+response_module_rss_removed = "{datetime} -- **{member}** removed RSS Feed: `{feed}` from the configuration of the `socials` module!"
+response_module_rss_remove_failed = "{datetime} -- **{member}** tried to remove RSS Feed: `{feed}` from the configuration of the `socials` module but something went wrong!"
+### Reddit
+response_module_reddit_added = "{datetime} -- **{member}** added Subreddit: `{subreddit}` to the configuration of the `socials` module!"
+response_module_reddit_add_failed = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the configuration of the `socials` module but something went wrong!"
+response_module_reddit_add_failed_limit_reached = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the configuration of the `socials` module but the limit of Subreddits is reached!"
+response_module_reddit_add_failed_already_added = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the configuration of the `socials` module but the Subreddit is already in the list!"
+response_module_reddit_removed = "{datetime} -- **{member}** removed Subreddit: `{subreddit}` from the configuration of the `socials` module!"
+response_module_reddit_remove_failed = "{datetime} -- **{member}** tried to remove Subreddit: `{subreddit}` from the configuration of the `socials` module but something went wrong!"
