@@ -565,6 +565,7 @@ response_tempchannel_edit_user_limit_off_success = (
 response_tempchannel_edit_user_limit_failed = "{datetime} -- **{member}** tried to change the user limit of a temporary channel but something went wrong!"
 response_tempchannel_edit_user_limit_failed_not_a_valid_range = "{datetime} -- **{member}** tried to change the user limit of a temporary channel but the number wasn't in the valid range (0 - 99)!"
 response_tempchannel_edit_user_limit_failed_not_a_valid_number = "{datetime} -- **{member}** tried to change the user limit of a temporary channel but didn't insert a valid number!"
+response_tempchannel_edit_user_limit_failed_not_a_tempchannel = "{datetime} -- **{member}** tried to change the user limit of a temporary channel but the target channel was not a tempchannel!"
 ### tempchannel edit transfer
 response_tempchannel_edit_transfer_success = (
     "{datetime} -- **{member}** transferred ownership of a temporary channel!"
@@ -572,6 +573,7 @@ response_tempchannel_edit_transfer_success = (
 response_tempchannel_edit_transfer_failed = "{datetime} -- **{member}** tried to transfer ownership of a temporary channel but something went wrong!"
 response_tempchannel_edit_transfer_failed_not_a_valid_member = "{datetime} -- **{member}** tried to transfer ownership of a temporary channel but didn't insert a valid server memmber!"
 response_tempchannel_edit_transfer_cancelled = "{datetime} -- **{member}** cancelled the ownership transfer of a temporary channel!"
+response_tempchannel_edit_transfer_failed_not_a_tempchannel = "{datetime} -- **{member}** tried to transfer ownership of a temporary channel but the target channel was not a tempchannel!"
 ### Slowmode
 response_tempchannel_edit_slowmode_success = "{datetime} -- **{member}** changed the slowmode delay of a temporary channel to `{slowmode} seconds`!"
 response_tempchannel_edit_slowmode_off_success = (
@@ -579,21 +581,25 @@ response_tempchannel_edit_slowmode_off_success = (
 )
 response_tempchannel_edit_slowmode_failed = "{datetime} -- **{member}** tried to change the slowmode delay of a temporary channel but something went wrong!"
 response_tempchannel_edit_slowmode_failed_not_a_valid_number = "{datetime} -- **{member}** tried to change the slowmode delay of a temporary channel but didn't insert a valid number!"
+response_tempchannel_edit_slowmode_failed_not_a_tempchannel = "{datetime} -- **{member}** tried to change the slowmode delay of a temporary channel but the target channel was not a tempchannel!"
 ### Onlyfor
 response_tempchannel_onlyfor_block_success = (
     "{datetime} -- **{member}** has limited a temporary channel to a role!"
 )
 response_tempchannel_onlyfor_block_failed = "{datetime} -- **{member}** tried to limit a temporary channel to a role but something went wrong!"
+response_tempchannel_onlyfor_block_failed_not_a_tempchannel = "{datetime} -- **{member}** tried to limit a temporary channel to a role but the target channel was not a tempchannel!"
 ### Block
 response_tempchannel_edit_block_success = (
     "{datetime} -- **{member}** has blocked users from a temporary channel!"
 )
 response_tempchannel_edit_block_failed = "{datetime} -- **{member}** tried to block one or more users from a temporary channel but something went wrong!"
+response_tempchannel_edit_block_failed_not_a_tempchannel = "{datetime} -- **{member}** tried to block one or more users from a temporary channel but the target channel was not a tempchannel!"
 ### Unblock
 response_tempchannel_edit_unblock_success = (
     "{datetime} -- **{member}** has unblocked users from a temporary channel!"
 )
 response_tempchannel_edit_unblock_failed = "{datetime} -- **{member}** tried to unblock one or more users from a temporary channel but something went wrong!"
+response_tempchannel_edit_unblock_failed_not_a_tempchannel = "{datetime} -- **{member}** tried to unblock one or more users from a temporary channel but the target channel was not a tempchannel!"
 ### Claim
 response_tempchannel_edit_claim_success = (
     "{datetime} -- **{member}** claimed ownership of a temporary channel!"
@@ -603,11 +609,13 @@ response_tempchannel_edit_claim_cancelled = (
     "{datetime} -- **{member}** cancelled the ownership claim of a temporary channel!"
 )
 response_tempchannel_edit_claim_not_possible = "{datetime} -- **{member}** tried to claim ownership of a temporary channel but there was still an owner!"
+response_tempchannel_edit_claim_failed_not_a_tempchannel = "{datetime} -- **{member}** tried to claim ownership of a temporary channel but the target channel was not a tempchannel!"
 ### Name
 response_tempchannel_edit_name_success = (
     "{datetime} -- **{member}** changed the name of a temporary channel to `{name}`!"
 )
 response_tempchannel_edit_name_failed = "{datetime} -- **{member}** tried to edit the name of a temporary channel but something went wrong!"
+response_tempchannel_edit_name_failed_not_a_tempchannel = "{datetime} -- **{member}** tried to edit the name of a temporary channel but the target channel was not a tempchannel!"
 ### Disable
 response_module_tempchannel_disabled = "{datetime} -- **{member}** has disabled the `tempchannel` module! All related settings are removed! This includes all known tempchannels, existing tempchannels will therefore not be deleted automatically!"
 response_module_tempchannel_disable_failed = "{datetime} -- **{member}** tried to disable the `tempchannel` module but something went wrong! I have not changed the configuration!"
