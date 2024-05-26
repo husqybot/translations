@@ -290,30 +290,6 @@ response_reminder_list_requested = (
 )
 response_reminder_list_no_reminders = "{datetime} -- **{member}** requested their reminders but they don't have any reminders!"
 
-## Tags
-### Create
-response_tag_create_success = (
-    "{datetime} -- **{member}** has created a tag named `{tag_name}`!"
-)
-response_tag_create_failed = "{datetime} -- **{member}** tried to create a tag named `{tag_name}` but something went wrong!"
-response_tag_create_failed_already_exists = "{datetime} -- **{member}** tried to create a tag named `{tag_name}` but that name already exists!"
-### Delete
-response_tag_delete_success = "{datetime} -- **{member}** deleted the tag `{tag_name}`!"
-response_tag_delete_failed = "{datetime} -- **{member}** tried to delete the tag `{tag_name}` but something went wrong!"
-response_tag_delete_failed_tag_does_not_exist = "{datetime} -- **{member}** tried to delete the tag `{tag_name}` but that tag did not exist!"
-### Edit
-response_tag_edit_success = (
-    "{datetime} -- **{member}** edited a tag named `{tag_name}`!"
-)
-response_tag_edit_failed = "{datetime} -- **{member}** tried to edit a tag named `{tag_name}` but something went wrong!"
-response_tag_edit_failed_tag_does_not_exist = "{datetime} -- **{member}** tried to edit a tag named `{tag_name}` but that tag does not exist!"
-### List
-response_tags_list_requested = "{datetime} -- **{member}** viewed the list of tags!"
-response_tags_list_empty = "{datetime} -- **{member}** tried to view the list of tags but there are no tags available in this server!"
-### Send
-response_tag_send_success = "{datetime} -- **{member}** used the tag `{tag_name}`!"
-response_tag_send_failed_no_such_tag = "{datetime} -- **{member}** tried to send a tag with the name `{tag_name}` but it does not exist!"
-
 ## Utils
 ### Color view
 response_color_viewed_success = "{datetime} -- **{member}** has viewed a color with the HEX or RGB value: `{color}`!"
@@ -737,3 +713,32 @@ response_module_reddit_add_failed_limit_reached = "{datetime} -- **{member}** tr
 response_module_reddit_add_failed_already_added = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the configuration of the `socials` module but the Subreddit is already in the list!"
 response_module_reddit_removed = "{datetime} -- **{member}** removed Subreddit: `{subreddit}` from the configuration of the `socials` module!"
 response_module_reddit_remove_failed = "{datetime} -- **{member}** tried to remove Subreddit: `{subreddit}` from the configuration of the `socials` module but something went wrong!"
+
+## Module tags
+### Disable
+response_module_tags_disabled = "{datetime} -- **{member}** has disabled the `tags` module! All related settings are removed!"
+response_module_tags_disable_failed = "{datetime} -- **{member}** tried to disable the `tags` module but something went wrong! I have not changed the configuration!"
+### Enable
+response_module_tags_enabled = (
+    "{datetime} -- **{member}** has enabled the `tags` module!"
+)
+response_module_tags_enable_failed = "{datetime} -- **{member}** tried to enable the `tags` module but something went wrong!"
+### Create
+response_tag_create_success = (
+    "{datetime} -- **{member}** has created a tag named `{tag_name}`!"
+)
+response_tag_create_failed = "{datetime} -- **{member}** tried to create a tag named `{tag_name}` but something went wrong!"
+response_tag_create_failed_already_exists = "{datetime} -- **{member}** tried to create a tag named `{tag_name}` but that name already exists!"
+### Delete
+response_tag_delete_success = "{datetime} -- **{member}** deleted the tag `{tag_name}`!"
+response_tag_delete_failed = "{datetime} -- **{member}** tried to delete the tag `{tag_name}` but something went wrong!"
+response_tag_delete_failed_tag_does_not_exist = "{datetime} -- **{member}** tried to delete the tag `{tag_name}` but that tag did not exist!"
+### Edit
+response_tag_edit_success = (
+    "{datetime} -- **{member}** edited a tag named `{tag_name}`!"
+)
+response_tag_edit_failed = "{datetime} -- **{member}** tried to edit a tag named `{tag_name}` but something went wrong!"
+response_tag_edit_failed_tag_does_not_exist = "{datetime} -- **{member}** tried to edit a tag named `{tag_name}` but that tag does not exist!"
+### Send
+response_tag_send_success = "{datetime} -- **{member}** used the tag `{tag_name}`!"
+response_tag_send_failed_no_such_tag = "{datetime} -- **{member}** tried to send a tag with the name `{tag_name}` but it does not exist!"
