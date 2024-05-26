@@ -738,7 +738,7 @@ response_tag_edit_success = (
     "{datetime} -- **{member}** edited a tag named `{tag_name}`!"
 )
 response_tag_edit_failed = "{datetime} -- **{member}** tried to edit a tag named `{tag_name}` but something went wrong!"
-response_tag_edit_failed_tag_does_not_exist = "{datetime} -- **{member}** tried to edit a tag named `{tag_name}` but that tag does not exist!"
+response_tag_edit_failed_tag_does_not_exist = "{datetime} -- **{member}** tried to edit a tag with ID `{tag_id}` but that tag does not exist!"
 ### Send
 response_tag_send_success = "{datetime} -- **{member}** used the tag `{tag_name}`!"
 response_tag_send_failed_no_such_tag = "{datetime} -- **{member}** tried to send a tag with the name `{tag_name}` but it does not exist!"
