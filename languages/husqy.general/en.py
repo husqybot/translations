@@ -1,4 +1,4 @@
-# MODULE AUTORESPONDER
+# GENERAL TRANSLATIONS
 not_in_use = "Not in use!"
 unknown = "Unknown"
 no_timeout_for_user = "Not timed-out"
