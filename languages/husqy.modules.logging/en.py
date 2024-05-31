@@ -183,6 +183,9 @@ response_giveaway_reroll_failed_not_owner = "{datetime} -- **{member}** tried to
 response_giveaway_reroll_failed_no_giveaway_found = "{datetime} -- **{member}** tried to reroll a winner for a giveaway but there is no giveaway with the given ID!"
 
 ## General
+### Settings
+response_settings_changed = "{datetime} -- **{member}** has changed my settings!"
+response_settings_changed_not_all_success = "{datetime} -- **{member}** has changed my settings, but not all settings may have been changed successfully!"
 ### Info
 response_info_bot_requested = "{datetime} -- **{member}** requested my information!"
 response_info_user_requested = (
