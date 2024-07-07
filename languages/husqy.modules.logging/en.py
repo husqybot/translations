@@ -281,18 +281,19 @@ response_reminder_add_failed_not_a_valid_wait_duration = "{datetime} -- **{membe
 response_reminder_add_dm_destination_is_not_target_user = "{datetime} -- **{member}** tried to add a reminder but they provided a DM of a user who is not the target user as the destination!"
 response_reminder_add_not_a_url = "{datetime} -- **{member}** tried to add a reminder but the provided linked message was not a valid URL!"
 response_reminder_added = "{datetime} -- **{member}** added a new reminder!"
+response_reminder_add_failed = "{datetime} -- **{member}** tried to add a new reminder but something went wrong!"
 ### Delete
 response_reminder_deleted = (
-    "{datetime} -- **{member}** tried to deleted one of their reminders!"
+    "{datetime} -- **{member}** deleted one of their reminders!"
 )
 response_reminder_delete_failed_not_target_user = "{datetime} -- **{member}** tried to delete a reminder but they aren't the target user!"
 response_reminder_delete_failed_no_reminder_found = "{datetime} -- **{member}** tried to delete a reminder but I didn't find a remidner with the specified ID!"
+response_reminder_delete_failed = "{datetime} -- **{member}** tried to delete a reminder but something went wrong!"
 ### List
 response_reminder_list_requested = (
     "{datetime} -- **{member}** requested their reminders!"
 )
 response_reminder_list_no_reminders = "{datetime} -- **{member}** requested their reminders but they don't have any reminders!"
-
 ## Utils
 ### Color view
 response_color_viewed_success = "{datetime} -- **{member}** has viewed a color with the HEX or RGB value: `{color}`!"
