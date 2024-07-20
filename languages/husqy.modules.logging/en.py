@@ -163,12 +163,18 @@ response_search_no_results_found = "{datetime} -- **{member}** searched YouTube 
 ### Create
 response_giveaway_created = "{datetime} -- **{member}** has created a giveaway!"
 response_giveaway_create_failed_not_a_valid_time = "{datetime} -- **{member}** tried to create a giveaway but they gave me an invalid time duration!"
+response_giveaway_create_failed = (
+    "{datetime} -- **{member}** tried to create a giveaway but something went wrong!"
+)
 ### Delete
 response_giveaway_delete = "{datetime} -- **{member}** has deleted a giveaway!"
 response_giveaway_delete_failed_not_owner = (
     "{datetime} -- **{member}** tried to delete a giveaway but they are not the owner!"
 )
 response_giveaway_delete_failed_no_giveaway_found = "{datetime} -- **{member}** tried to delete a giveaway but I don't know of a giveaway with the given ID!"
+response_giveaway_delete_failed = (
+    "{datetime} -- **{member}** tried to delete a giveaway but something went wrong!"
+)
 ### List
 response_giveaway_list_requested = (
     "{datetime} -- **{member}** has requested their giveaways in this server!"
@@ -181,6 +187,7 @@ response_giveaway_reroll = (
 response_giveaway_reroll_failed_no_winner_yet = "{datetime} -- **{member}** tried to reroll a winner for a giveaway but there is no winner yet!"
 response_giveaway_reroll_failed_not_owner = "{datetime} -- **{member}** tried to reroll a winner for a giveaway but they are not the owner!"
 response_giveaway_reroll_failed_no_giveaway_found = "{datetime} -- **{member}** tried to reroll a winner for a giveaway but there is no giveaway with the given ID!"
+response_giveaway_reroll_failed = "{datetime} -- **{member}** tried to reroll a winner for a giveaway but something went wrong!"
 
 ## General
 ### Settings
@@ -213,7 +220,7 @@ response_module_socials_reddit_list = (
     "{datetime} -- **{member}** requested the Subreddit list!"
 )
 ### Ping
-response_ping_requested = "{datetime} -- **{member}** used `/ping`! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
+response_ping_requested = "{datetime} -- **{member}** used `/info ping`! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
 ### Invite link
 response_invite_link_requested = (
     "{datetime} -- **{member}** requested the configured invite link!"
@@ -222,9 +229,7 @@ response_invite_link_not_set = (
     "{datetime} -- **{member}** requested the configured invite link but none was set!"
 )
 ### Support
-response_support = (
-    "{datetime} -- **{member}** has requested information regarding my support!"
-)
+response_support = "{datetime} -- **{member}** has requested information regarding my support using `/info support`!"
 
 ## Misc
 ### Games
@@ -244,51 +249,22 @@ response_meme_success = "{datetime} -- **{member}** requested a meme!"
 response_transcribe_failed = "{datetime} -- **{member}** tried to transcribe a voice message but something went wrong!"
 response_transcribe_success = "{datetime} -- **{member}** transcribed a voice message!"
 
-## Polls
-### Clear votes
-response_poll_clear_votes_failed_no_poll_found = "{datetime} -- **{member}** tried to delete a poll but the given poll ID was not found!"
-response_poll_clear_votes = (
-    "{datetime} -- **{member}** cleared their votes from a poll!"
-)
-### Create
-response_poll_created = "{datetime} -- **{member}** created a poll!"
-response_poll_create_failed_no_time = "{datetime} -- **{member}** tried to create a timed poll but they didn't insert a time duration!"
-response_poll_create_failed_not_a_valid_time = "{datetime} -- **{member}** tried to create a timed poll but they gave an invalid time duration!"
-response_poll_create_failed_anwers_in_wrong_order = "{datetime} -- **{member}** tried to create a poll but the extra answers are not in order (if more than the required two anwers are used, make sure it is in the order answer3, answer4 and answer5)!"
-### Delete
-response_poll_delete = "{datetime} -- **{member}** deleted a poll!"
-response_poll_delete_failed_not_owner = (
-    "{datetime} -- **{member}** tried to delete a poll but they are not the owner!"
-)
-response_poll_delete_failed_no_poll_found = "{datetime} -- **{member}** tried to delete a poll but the given poll ID was not found!"
-### Details
-response_poll_details_requested = (
-    "{datetime} -- **{member}** requested the details/results of a poll!"
-)
-### List
-response_poll_list_requested = "{datetime} -- **{member}** requested their poll list!"
-response_polls_list_no_polls = "{datetime} -- **{member}** requested their poll list but they don't have any active polls!"
-### Stop
-response_poll_stop = "{datetime} -- **{member}** stopped a poll!"
-response_poll_stop_failed_not_owner = (
-    "{datetime} -- **{member}** tried to stop a poll but they are not the owner!"
-)
-response_poll_stop_failed_no_poll_found = "{datetime} -- **{member}** tried to stop a poll but the given poll ID was not found!"
-
 ## Reminders
 ### Add
 response_reminder_add_failed_not_a_valid_wait_duration = "{datetime} -- **{member}** tried to add a reminder but the provided wait duration was an invalid format!"
 response_reminder_add_dm_destination_is_not_target_user = "{datetime} -- **{member}** tried to add a reminder but they provided a DM of a user who is not the target user as the destination!"
 response_reminder_add_not_a_url = "{datetime} -- **{member}** tried to add a reminder but the provided linked message was not a valid URL!"
 response_reminder_added = "{datetime} -- **{member}** added a new reminder!"
-response_reminder_add_failed = "{datetime} -- **{member}** tried to add a new reminder but something went wrong!"
-### Delete
-response_reminder_deleted = (
-    "{datetime} -- **{member}** deleted one of their reminders!"
+response_reminder_add_failed = (
+    "{datetime} -- **{member}** tried to add a new reminder but something went wrong!"
 )
+### Delete
+response_reminder_deleted = "{datetime} -- **{member}** deleted one of their reminders!"
 response_reminder_delete_failed_not_target_user = "{datetime} -- **{member}** tried to delete a reminder but they aren't the target user!"
 response_reminder_delete_failed_no_reminder_found = "{datetime} -- **{member}** tried to delete a reminder but I didn't find a remidner with the specified ID!"
-response_reminder_delete_failed = "{datetime} -- **{member}** tried to delete a reminder but something went wrong!"
+response_reminder_delete_failed = (
+    "{datetime} -- **{member}** tried to delete a reminder but something went wrong!"
+)
 ### List
 response_reminder_list_requested = (
     "{datetime} -- **{member}** requested their reminders!"
