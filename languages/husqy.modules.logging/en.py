@@ -16,9 +16,6 @@ response_module_logging_settings_change_success_new_channel = "{datetime} -- **{
 ### Join
 response_join_success = "{datetime} -- **{member}** joined me to {channel}!"
 response_join_failed = "{datetime} -- **{member}** tried joining me to `{channel}` but something went wrong!"
-response_join_failed_not_a_voice_channel = (
-    "{datetime} -- **{member}** tried joining me to a channel but didn't gave a valid voice channel!"
-)
 response_join_failed_not_enough_permissions = (
     "{datetime} -- **{member}** tried joining me to a channel where I don't have enough permissions for!"
 )
@@ -394,9 +391,6 @@ response_move_failed_missing_permissions = (
 )
 response_move_failed_user_not_in_a_voice_channel = (
     "{datetime} -- **{member}** tried to move {user} to {channel} but this user is not in a voice channel!"
-)
-response_move_failed_not_a_voice_channel = (
-    "{datetime} -- **{member}** tried to move {user} to {channel} but this channel is not a voice channel!"
 )
 ### Tempmute
 response_tempmute_success = "{datetime} -- **{member}** temporary muted {user} for `{seconds} seconds`!"
