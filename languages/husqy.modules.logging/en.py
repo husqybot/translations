@@ -238,11 +238,13 @@ response_giveaway_reroll_failed = (
 
 ## General
 ### Settings
+response_failed_no_event_manager = "{datetime} -- **{member}** tried to run the command: `/{command}` but something went wrong! If this issue persist, please contact my support!"
 response_settings_changed = "{datetime} -- **{member}** has changed my settings!"
 response_settings_changed_not_all_success = (
     "{datetime} -- **{member}** has changed my settings, but not all settings may have been changed successfully!"
 )
 ### Info
+response_info_failed = "{datetime} -- **{member}** requested information but something went wrong!"
 response_info_bot_requested = "{datetime} -- **{member}** requested my information!"
 response_info_user_requested = "{datetime} -- **{member}** requested information about {user}!"
 response_info_role_requested = "{datetime} -- **{member}** requested information about the role {role}!"
@@ -270,6 +272,7 @@ response_games_played_rps = (
 )
 response_games_played_higher_lower_played_won = "{datetime} -- **{member}** played `Higher/Lower` and won!"
 response_games_played_higher_lower_played_loss = "{datetime} -- **{member}** played `Higher/Lower` and lost!"
+response_games_played_higher_lower_played_failed = "{datetime} -- **{member}** tried to play `Higher/Lower` but something went wrong while starting!"
 ### Meme
 response_meme_success = "{datetime} -- **{member}** requested a meme!"
 ### Transcribe audio message
@@ -518,6 +521,9 @@ response_module_autoresponder_delete_entry_failed = (
 
 ## Module Tempchannel
 ### tempchannel edit
+response_tempchannel_edit_failed = (
+    "{datetime} -- **{member}** tried to edit a temporary channel but something went wrong!"
+)
 response_tempchannel_edit_failed_not_a_temporary_channel = (
     "{datetime} -- **{member}** tried to edit a temporary channel but the inserted channel isn't a temporary channel!"
 )
