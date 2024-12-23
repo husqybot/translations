@@ -1,4 +1,5 @@
 # MODULE TICKETS
+removed_user = "(removed_user)"
 # Enable
 module_tickets_support_type_general = "🛠️ General Support"
 module_tickets_support_type_account = "📩 Account support"

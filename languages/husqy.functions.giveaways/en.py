@@ -1,4 +1,5 @@
 # GIVEAWAYS
+removed_user = "(removed_user)"
 response_giveaway_create_failed_privacy_mode_enabled = (
     "You can't create a giveaway in this server because you have prevented {bot_name} from collecting your data!"
 )

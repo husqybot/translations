@@ -1,4 +1,5 @@
 # REMINDERS
+removed_user = "(removed_user)"
 reminder_delete = "☑"
 reminder_repeat = "🔁"
 response_reminder_create_failed_privacy_mode_enabled = (
