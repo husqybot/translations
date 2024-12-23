@@ -658,35 +658,108 @@ warn_delete_to_user_embed_description = "A previous warning in `{guild}` has bee
 # ------------------------------------------------------------------------- #
 # Privacy #
 # ------------------------------------------------------------------------- #
-privacy_data_collection = "Data collection"
-privacy_data_collection_enable_all = "Allow data collection in all servers"
-privacy_data_collection_enable_specific = "Allow data collection in this servers"
-privacy_data_collection_disable_all = "Disallow data collection in all servers"
-privacy_data_collection_disable_specific = "Disallow data collection in this server"
+privacy_data_collection = "Change data collection preferences"
+privacy_get_data = "Get your data"
+privacy_delete_data = "Delete your data"
+privacy_shared_servers = "Get servers shared with {bot_name}"
+privacy_enable_data_collection = "Enable data collection"
+privacy_disable_data_collection = "Disable data collection"
+privacy_delete_my_data = "Delete my data"
+privacy_delete_my_data_cancel = "Cancel action"
 # Responses
-response_privacy_timeout = (
-    "The privacy command reached a timeout! Nothing will be changed!"
+response_privacy_timeout = "The privacy command reached a timeout! Nothing will be changed!"
+response_data_collection_enabled = (
+    "Data collection in this server is now `enabled`. You will return to the main privacy configurator view."
 )
-response_privacy_allow_all_servers_failed = "I am sorry! Something went wrong while allowing {bot_name} to collect your data in all servers you share with {bot_name}!"
-response_privacy_allow_specific_server_failed = "I am sorry! Something went wrong while allowing {bot_name} to collect your data in this server!"
-response_privacy_disable_all_servers_failed = "I am sorry! Something went wrong while disallowing {bot_name} to collect your data in all servers you share with {bot_name}!"
-response_privacy_disable_specific_server_failed = "I am sorry! Something went wrong while disallowing {bot_name} to collect your data in this server!"
-response_privacy_allow_all_servers_success = "Your privacy configuration has changed! {bot_name} is now allowed to collect your data in servers you share with {bot_name}!"
-response_privacy_allow_specific_server_success = "Your privacy configuration has changed! {bot_name} is now allowed to collect your data in this server!"
-response_privacy_disable_all_servers_success = "Your privacy configuration has changed! {bot_name} is now disallowed to collect your data in servers you share with {bot_name}!"
-response_privacy_disable_specific_server_success = "Your privacy configuration has changed! {bot_name} is now disallowed to collect your data in this server!"
+response_data_collection_disabled = (
+    "Data collection in this server is now `disabled`. You will return to the main privacy configurator view."
+)
+response_delete_started = "The deletion has started! You will soon return to the main privacy configurator view."
 # Embeds
-privacy_embed_title = "{bot_name} privacy configurator"
-privacy_embed_description = "Welcome to the {bot_name} privacy configurator. This is the place to configure your privacy settings for this server or for all servers at once! Currently, {bot_name} is `{status}` to collect data from you in this server!\n\nYou are free to delete this data, for which you need to contact our support, or (dis)allow {bot_name} of gathering more data using this configurator but beware: any changes in these settings or in the data can result in loss of functionality, loss of existing services or other inconvinience for you, and in some cases, the servers you are in!\n\n Some data (f.e. some channel names or mentions in the logging channel) are not saved, so if you personal data is used in these names, descriptions, etc. you need to contact the servers administrator to change this!\n\n If you have any further questions about {bot_name} and privacy, please visit https://husqy.xyz/ for more info!"
-privacy_embed_data_collection_description = (
-    "Please select which action you want to perform."
+privacy_embed_title_shared = "{bot_name} privacy configurator"
+privacy_embed_description = "Welcome to the {bot_name} privacy configurator.\nCurrently, {bot_name} is `{status}` to collect data from you in this server!"
+privacy_embed_field_1_name = "About this configurator"
+privacy_embed_field_1_value = "This privacy configurator is the place to configure your privacy related settings in {bot_name}.\n\nYou are free to retrieve your data and delete this data and instruct {bot_name} to not collect your data to deliver its services.\n`BEWARE: Deleting your data or restricting {bot_name} in collecting your data will result in loss of functionality for you and may result in loss of functionality or configuration changes to Husqy for other server members!`\n\nPlease use the buttons below to configure or get your privacy settings! If you are getting you data, beware that it may take a few seconds before it starts showing up!\n\nIf you have any further questions, please visit: {bot_website} or contact our support!"
+privacy_embed_field_2_name = "Note"
+privacy_embed_field_2_value = "- {bot_name} does not store all data, some data (like sent messages, f.e. mentions in the logging channel) will still exist in Discord, please contact the server administrator if you want to remove these entries.\n- Not all data can be deleted, some data is required (f.e. for settings the data collection preference or warnings)."
+privacy_embed_footer_value = "DISCLAIMER: This configurator works on a per server basis! Want to get or delete information in other servers, use this privacy configurator in the other servers!"
+privacy_embed_shared_servers_description = "Below you can find the list of server you share with {bot_name}!"
+privacy_embed_shared_servers_field_1_name = "Shared servers list:"
+privacy_embed_data_collection_description = "Here you can change your data collection preferences for {bot_name}. Please select, using the buttons below, which action you want to perform.\n\n- **Disable data collection:** This option prevents {bot_name} from collecting your information to provide you with its services (IN THIS SERVER).\n`BEWARE: restricting {bot_name} in collecting your data will result in loss of functionality for you and may result in loss of functionality`\n- **Enable data collection:** This option allows {bot_name} to collect your information to provide you with its services (IN THIS SERVER).\n"
+privacy_embed_get_data_description = "We have gathered the amount of times your user ID, username, user nickname, user global name and user display name occur in the data we know.\n`BEWARE: Your nickname, global name, display name and username may all have the same value!`\n\n It is split across the different services, please use the buttons below to page through the amount of occurences per service.\n"
+privacy_embed_get_data_global_description = (
+    "For global {bot_name} data related to this server, we have found the following:\n{data}"
 )
-privacy_embed_data_collection_field_1_value = "This option turns data collection by {bot_name} ON for you in all servers you share with {bot_name}."
-privacy_embed_data_collection_field_2_value = (
-    "This option turns data collection by {bot_name} ON for you in this server)."
+privacy_embed_get_data_global_something_went_wrong = (
+    "Something went wrong while checking you references for global {bot_name} data."
 )
-privacy_embed_data_collection_field_3_value = "This option turns data collection by {bot_name} OFF for you in all servers you share with {bot_name}. This will also delete all data associated with you and these servers."
-privacy_embed_data_collection_field_4_value = "This option turns data collection by {bot_name} OFF for you in this server. This will also delete all data associated with you and this servers."
+privacy_embed_get_data_modules_logging_description = (
+    "For the {bot_name} logging module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_logging_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} logging module data."
+)
+privacy_embed_get_data_modules_autoresponder_description = (
+    "For the {bot_name} autoreponder module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_autoresponder_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} autoresponder module data."
+)
+privacy_embed_get_data_modules_tempchannels_description = (
+    "For the {bot_name} tempchannels module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_tempchannels_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} tempchannels module data."
+)
+privacy_embed_get_data_modules_greetings_description = (
+    "For the {bot_name} greetings module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_greetings_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} greetings module data."
+)
+privacy_embed_get_data_modules_reactionroles_description = (
+    "For the {bot_name} reactionroles module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_reactionroles_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} reactionroles module data."
+)
+privacy_embed_get_data_modules_tickets_description = (
+    "For the {bot_name} tickets module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_tickets_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} tickets module data."
+)
+privacy_embed_get_data_modules_serverstats_description = (
+    "For the {bot_name} serverstats module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_serverstats_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} serverstats module data."
+)
+privacy_embed_get_data_modules_socials_description = (
+    "For the {bot_name} socials module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_socials_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} socials module data."
+)
+privacy_embed_get_data_modules_tags_description = (
+    "For the {bot_name} tags module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_tags_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} tags module data."
+)
+privacy_embed_get_data_functions_giveaways_description = (
+    "For the {bot_name} giveaways functions data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_functions_giveaways_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} giveaways functions data."
+)
+privacy_embed_get_data_functions_reminders_description = (
+    "For the {bot_name} reminders functions data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_functions_reminders_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} reminders functions data."
+)
+privacy_embed_delete_data_description = "Here you can choose to delete your data {bot_name} has related to you. Please select, using the buttons below, which action you want to perform.\n\n- **Cancel:** Returns to the main privacy configurator view and doesn't remove any data.\n- **Delete my data:** This option starts the deletion of you data (where possible) immediately (IN THIS SERVER).\n`BEWARE: deleting your data can result in loss of functionality for you and may result in loss of functionality for others.`\n"
 
 # ------------------------------------------------------------------------- #
 # Reminders #
