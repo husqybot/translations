@@ -2,9 +2,7 @@
 # GLOBAL VARIABLES #
 # ------------------------------------------------------------------------- #
 # Footer
-embed_footer = (
-    "Info requested by: {member}! This embed will show for {auto_delete} seconds!"
-)
+embed_footer = "Info requested by: {member}! This embed will show for {auto_delete} seconds!"
 # Other
 unknown = "Unknown"
 no_nickname = "No nickname"
@@ -72,9 +70,12 @@ LOGGABLE_TRANSLATIONS = {
     "log_role_create": "Role creations",
     "log_role_delete": "Role deletions",
     "log_role_update": "Role updates",
-    "log_reaction_roles_create": "Reaction Role creations",
-    "log_reaction_roles_delete": "Reaction Role deletions",
-    "log_reaction_roles_info": "Reaction Role info requests",
+    "log_reactionroles_panel_create": "Reactionrole panel created",
+    "log_reactionroles_panel_delete": "Reactionrole panel deleted",
+    "log_reactionroles_panel_edit": "Reactionrole panel edited",
+    "log_reactionroles_panel_entry_create": "Reactionrole entry added to panel",
+    "log_reactionroles_panel_entry_delete": "Reactionrole entry deleted from panel",
+    "log_reactionroles_panel_entry_edit": "Reactionrole entry edited",
     "log_user_warn_create": "Warn create",
     "log_user_warn_delete": "Warn delete",
     "log_kick_event": "Kicked users",
@@ -112,9 +113,10 @@ LOGGABLE_TRANSLATIONS = {
     "log_reminder_add": "Reminders added",
     "log_reminder_delete": "Reminders deleted",
     "log_tag_create": "Tag created",
-    "log_tag_edit": "Tag edited",
     "log_tag_delete": "Tag deleted",
-    "log_tag_used": "Tag used",
+    "log_tag_edit": "Tag edited",
+    "log_tag_send": "Tag send",
+    "log_tag_preview": "Tag previewed",
     "log_reddit_add": "Subreddit added",
     "log_reddit_remove": "Subreddit removed",
     "log_autoresponder_response_created": "Autoresponder response created",
@@ -153,7 +155,9 @@ LOGGABLE_TRANSLATIONS = {
 # ------------------------------------------------------------------------- #
 # GLOBAL ERRORS #
 # ------------------------------------------------------------------------- #
-error_response_not_recognised = "Oops! I do not recogise this entity! If this issue persists, please contact our support!"
+error_response_not_recognised = (
+    "Oops! I do not recogise this entity! If this issue persists, please contact our support!"
+)
 # ------------------------------------------------------------------------- #
 # EVENTS - FUNCTIONS #
 # ------------------------------------------------------------------------- #
@@ -162,17 +166,11 @@ error_response_not_recognised = "Oops! I do not recogise this entity! If this is
 # ------------------------------------------------------------------------- #
 # Embeds
 user_events_ban_create_embed_title = "You have been banned!"
-user_events_ban_create_embed_description = (
-    "You have been banned from `{guild}`!\n\n[Reason] -- {reason}"
-)
+user_events_ban_create_embed_description = "You have been banned from `{guild}`!\n\n[Reason] -- {reason}"
 user_events_ban_delete_embed_title = "You have been unbanned!"
-user_events_ban_delete_embed_description = (
-    "You have been unbanned from `{guild}`!\n\n[Reason] -- {reason}"
-)
+user_events_ban_delete_embed_description = "You have been unbanned from `{guild}`!\n\n[Reason] -- {reason}"
 user_events_kick_embed_title = "You have been kicked!"
-user_events_kick_embed_description = (
-    "You have been kicked from `{guild}`!\n\n[Reason] -- {reason}"
-)
+user_events_kick_embed_description = "You have been kicked from `{guild}`!\n\n[Reason] -- {reason}"
 
 # ------------------------------------------------------------------------- #
 # FUNCTIONS #
@@ -181,7 +179,9 @@ user_events_kick_embed_description = (
 # Audio #
 # ------------------------------------------------------------------------- #
 # Responses
-response_join_failed_no_channel_given = "Oops! It looks like you aren't in a voice channel! Please join one first or give the channel as an argument!"
+response_join_failed_no_channel_given = (
+    "Oops! It looks like you aren't in a voice channel! Please join one first or give the channel as an argument!"
+)
 response_join_failed = "Oops! Something went wrong while trying to join `{channel}`!"
 response_join_success = "I joined {channel}!"
 response_leave_failed = "Oops! Something went wrong while trying to leave!"
@@ -189,54 +189,34 @@ response_leave_success = "I left the channel!"
 response_stop_failed = "Oops! Something went wrong while trying to stop audio playback!"
 response_stop_success = "I stopped audio playback!"
 response_pause_failed_nothing_playing = "There is nothing to pause!"
-response_pause_failed_radio_playing = "Oops! It looks like radio station is playing, I can't pause those since it is live!"
-response_pause_failed = (
-    "Oops! Something went wrong while trying to pause audio playback!"
+response_pause_failed_radio_playing = (
+    "Oops! It looks like radio station is playing, I can't pause those since it is live!"
 )
+response_pause_failed = "Oops! Something went wrong while trying to pause audio playback!"
 response_pause_success = "I have paused audio playback!"
 response_resume_failed_nothing_playing = "There is nothing to resume!"
-response_resume_failed_radio_playing = (
-    "Oops! It looks like radio station is playing, these can't be resumed!"
-)
+response_resume_failed_radio_playing = "Oops! It looks like radio station is playing, these can't be resumed!"
 response_resume_failed = "Oops! Something went wrong while trying to resume the audio!"
 response_resume_success = "I have resumed audio playback!"
-response_music_shuffle_not_playing_anything = (
-    "Oops! It looks like there is nothing to shuffle!"
-)
-response_music_shuffle_playing_radio = (
-    "Oops! I can't shuffle when a radio station is playing!"
-)
-response_music_shuffle_failed = (
-    "Oops! Something went wrong while trying to shuffle the queue!"
-)
+response_music_shuffle_not_playing_anything = "Oops! It looks like there is nothing to shuffle!"
+response_music_shuffle_playing_radio = "Oops! I can't shuffle when a radio station is playing!"
+response_music_shuffle_failed = "Oops! Something went wrong while trying to shuffle the queue!"
 response_music_shuffle_success = "I have shuffled the queue!"
 response_music_skip_failed = "Something went wrong while trying to skip!"
-response_music_skip_loop_enabled = (
-    "I can't skip because loop is `enabled`! Please disable loop and try again"
-)
+response_music_skip_loop_enabled = "I can't skip because loop is `enabled`! Please disable loop and try again"
 response_music_skip_failed_radio_playing = "I am sorry! I can't skip a radio station!"
 response_music_skip_nothing_to_skip = "There is nothing to skip!"
 response_music_skip_song_success = "I have skipped `{title}`."
-response_music_seek_failed = (
-    "Something went wrong while trying to seek the song to the timestamp!"
-)
+response_music_seek_failed = "Something went wrong while trying to seek the song to the timestamp!"
 response_music_seek_wrong_time_format = "I am sorry! The time is in the wrong format!"
 response_music_seek_nothing_playing = "There is nothing playing!"
-response_music_seek_failed_radio_playing = (
-    "I am sorry! I can't forward a radio station!"
-)
+response_music_seek_failed_radio_playing = "I am sorry! I can't forward a radio station!"
 response_music_seek_success = "I have jumped to `{time}`!"
 response_music_restart_failed = "Something went wrong whule trying to restart the song!"
-response_music_restart_nothing_playing = (
-    "I am sorry! I can't restart a song because there is no song playing!"
-)
-response_music_restart_failed_radio_playing = (
-    "I am sorry! I can't restart a radio station!"
-)
+response_music_restart_nothing_playing = "I am sorry! I can't restart a song because there is no song playing!"
+response_music_restart_failed_radio_playing = "I am sorry! I can't restart a radio station!"
 response_music_restart_success = "I have restarted the song!"
-response_nowplaying_failed = (
-    "Something went wrong while trying to get the currently playing song!"
-)
+response_nowplaying_failed = "Something went wrong while trying to get the currently playing song!"
 response_nowplaying_not_playing_anything = "I am not playing anything!"
 response_queue_failed = "Something went wrong while trying to get the queue!"
 response_queue_empty = "There is nothing in the queue."
@@ -245,55 +225,41 @@ response_loop_failed_not_in_voicechannel = (
     "Oops! I can't loop because it looks like you are not in the (right) voice channel!"
 )
 response_loop_failed = "Something went wrong while enabling loop!"
-response_loop_failed_queue_empty = (
-    "Oops! I can't toggle loop because there is nothing playing!"
-)
+response_loop_failed_queue_empty = "Oops! I can't toggle loop because there is nothing playing!"
 response_loop_failed_radio_playing = "I can't toggle loop because radio is playing!"
 response_loop_disabled = "I have `disabled` loop!"
 response_loop_enabled = "I have `enabled` loop!"
 response_volume_changed = "I have changed the volume to `{level}%`!"
 response_music_play_failed = "Oops! Something went wrong while trying to add the song/playlist/album to the queue!"
-response_music_play_failed_radio_playing = "Oops! It looks like a radio station is playing! Please stop this before trying to play a different song!"
-response_music_play_adding_song_playlist_album = (
-    "I am adding the song/playlist/album to the queue."
+response_music_play_failed_radio_playing = (
+    "Oops! It looks like a radio station is playing! Please stop this before trying to play a different song!"
 )
+response_music_play_adding_song_playlist_album = "I am adding the song/playlist/album to the queue."
 response_music_play_failed_no_youtube = "Oops! I am not allowed to play YouTube URLs!"
 response_music_play_added_playlist = "I have added the playlist to the queue, enjoy!"
 response_music_play_added_song = "I have added `{title}` to the queue, enjoy!"
-response_music_playtts_failed = (
-    "Oops! Something went wrong while trying to add the text-to-speech message!"
+response_music_playtts_failed = "Oops! Something went wrong while trying to add the text-to-speech message!"
+response_music_playtts_failed_radio_playing = (
+    "Oops! It looks like a radio station is playing! Please stop this before trying to use a text-to-speech message!"
 )
-response_music_playtts_failed_radio_playing = "Oops! It looks like a radio station is playing! Please stop this before trying to use a text-to-speech message!"
-response_music_playtts_adding_song_playlist_album = (
-    "I am adding the text-to-speech message to the queue."
-)
+response_music_playtts_adding_song_playlist_album = "I am adding the text-to-speech message to the queue."
 response_music_playtts_added_song = "I have added the text-to-speech message!"
-response_radio_play_failed_http_error = "Oops! Something went wrong while trying to play `{radiostation}`! Got status code: `{status_code}`"
-response_radio_play_failed = (
-    "Oops! Something went wrong while trying to play `{radiostation}`!"
+response_radio_play_failed_http_error = (
+    "Oops! Something went wrong while trying to play `{radiostation}`! Got status code: `{status_code}`"
 )
+response_radio_play_failed = "Oops! Something went wrong while trying to play `{radiostation}`!"
 response_radio_play_success = "Playing `{radiostation}`! Provided by TuneIn!"
-response_music_remove_failed_nothing_to_remove = (
-    "Oops! It looks like there is nothing to remove!"
-)
-response_music_remove_failed = (
-    "Oops! Something went wrong while trying to remove the song/playlist/album!"
-)
-response_music_remove_failed_radio_playing = (
-    "Oops! I can't delete the song! I am playing radio!"
-)
-response_music_remove_removing_song_playlist_album = (
-    "I am removing the song/playlist/album from the queue."
-)
-response_music_remove_failed_no_youtube = (
-    "Oops! I am not allowed to remove YouTube URLs!"
-)
+response_music_remove_failed_nothing_to_remove = "Oops! It looks like there is nothing to remove!"
+response_music_remove_failed = "Oops! Something went wrong while trying to remove the song/playlist/album!"
+response_music_remove_failed_radio_playing = "Oops! I can't delete the song! I am playing radio!"
+response_music_remove_removing_song_playlist_album = "I am removing the song/playlist/album from the queue."
+response_music_remove_failed_no_youtube = "Oops! I am not allowed to remove YouTube URLs!"
 response_music_remove_removed_playlist = "I have removed the playlist from the queue!"
 response_music_remove_removed_song = "I have removed the song from the queue!"
-response_search_no_results_found = (
-    "I am sorry! I didn't find any results for the query: `{query}`!"
+response_search_no_results_found = "I am sorry! I didn't find any results for the query: `{query}`!"
+response_music_playradio_failed_already_playing = (
+    "I am sorry! It looks like there is already something playing, please stop this first to listing to radio!"
 )
-response_music_playradio_failed_already_playing = "I am sorry! It looks like there is already something playing, please stop this first to listing to radio!"
 # Embeds
 nowplaying_embed_title = "Now playing"
 nowplaying_embed_field_title_radio = "Radiostation"
@@ -302,9 +268,7 @@ nowplaying_embed_field_title_artist = "Artist"
 nowplaying_embed_field_title_position = "Position"
 queue_embed_title = "Queue"
 queue_embed_field_title_now_playing = "Now playing"
-queue_embed_field_value_now_playing_loop_enabled = (
-    "Loop is `enabled` therefore this song will also show next in queue!"
-)
+queue_embed_field_value_now_playing_loop_enabled = "Loop is `enabled` therefore this song will also show next in queue!"
 queue_embed_field_title_queue = "Queue"
 queue_embed_field_value_queue = "There is nothing else in the queue!"
 search_yt_embed_title = "YouTube search results"
@@ -334,32 +298,28 @@ module_serverstats = "Serverstats module"
 module_tags = "Tags module"
 # Responses
 support_embed_title = "{bot_name} Support"
-support_embed_description = "If you are in need of support, please follow one of the links below and contact us! We would like to help you!"
+support_embed_description = (
+    "If you are in need of support, please follow one of the links below and contact us! We would like to help you!"
+)
 response_info_failed = "Something went wrong while getting the information!"
 response_info_bot_module_logging_disabled = "The `Logging` module is disabled!"
 response_info_bot_module_greetings_disabled = "The `Greetings` module is disabled!"
-response_info_bot_module_tempchannels_disabled = (
-    "The `Tempchannels` module is disabled!"
-)
+response_info_bot_module_tempchannels_disabled = "The `Tempchannels` module is disabled!"
 response_info_bot_module_socials_disabled = "The `Socials` module is disabled!"
-response_info_bot_module_reactionroles_disabled = (
-    "The `Reaction Roles` module is disabled!"
-)
+response_info_bot_module_reactionroles_disabled = "The `Reactionroles` module is disabled!"
+response_info_bot_module_reactionroles_enabled = "The `Reactionroles` module is enabled but details about this module can not be viewed in Discord. Please ask a server administrator for more information about this module!"
 response_invite_link_not_set = "The server has not set an invite link for users to use!"
 response_info_bot_module_tickets_disabled = "The `Tickets` module is disabled!"
-response_info_bot_module_autoresponder_disabled = (
-    "The `Autoresponder` module is disabled!"
-)
+response_info_bot_module_autoresponder_disabled = "The `Autoresponder` module is disabled!"
 response_info_bot_module_tags_disabled = "The `Tags` module is disabled!"
+response_info_bot_module_tags_enabled = "The `Tags` module is enabled! Please use the `/tags list` command to get information about the tags or ask your server administrator!"
 response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available! For the status of the `Autoresponder` module, please check the General info page!"
-response_module_tags_no_info = "The `Tags` module does not have information available! For the status of the `Tags` module, please check the General info page!"
 response_info_bot_module_serverstats_disabled = "The `Serverstats` module is disabled!"
 response_info_timeout = "The info command reached a timeout!"
 response_info_tempchannels_list_failed = "Something went wrong while trying to get an overview of all tempchannels in this server, returning to info tempchannels view."
 response_info_reddit_list_failed = "Something went wrong while trying to get an overview of all monitored subreddits in this server, returning to info socials view."
 response_info_twitch_list_failed = "Something went wrong while trying to get an overview of all monitored twitch accounts in this server, returning to info socials view."
 response_info_rss_list_failed = "Something went wrong while trying to get an overview of all monitored rss feeds in this server, returning to info socials view."
-response_info_reactionroles_list_failed = "Something went wrong while trying to get an overview of all reactionroles in this server, returning to info reactionrole view."
 response_info_autoresponder_list_failed = "Something went wrong while trying to get an overview of all autoresponder entries in this server, returning to info autoresponder view."
 # Embeds
 info_bot_embed_title = "Welcome to {bot_name}!"
@@ -382,43 +342,23 @@ info_bot_embed_field_title_logging_events_3 = "Events that are logged (3/3):"
 info_bot_embed_field_title_enabled_components = "Enabled components:"
 info_bot_embed_field_title_greetings_in_guild_embed = "Embed for in server greetings:"
 info_bot_embed_field_title_greetings_to_user_embed = "Embed for user DM greetings:"
-info_bot_embed_field_title_leave_taking_in_guild_embed = (
-    "Embed for in server leave taking:"
-)
+info_bot_embed_field_title_leave_taking_in_guild_embed = "Embed for in server leave taking:"
 info_bot_embed_field_title_greetings_in_guild_channel = "Greetings in server channel:"
-info_bot_embed_field_title_leave_taking_in_guild_channel = (
-    "Leave taking in server channel:"
-)
+info_bot_embed_field_title_leave_taking_in_guild_channel = "Leave taking in server channel:"
 info_bot_embed_field_title_greetings_in_guild_content = "Greetings content in server:"
 info_bot_embed_field_title_greetings_to_user_content = "Greetings content to users:"
 info_bot_embed_field_title_greetings_role_add_role = "Role that gets added to users:"
-info_bot_embed_field_title_leave_taking_in_guild_content = (
-    "Leave taking content in server:"
-)
+info_bot_embed_field_title_leave_taking_in_guild_content = "Leave taking content in server:"
 info_bot_embed_field_title_tempchannels_list = "Current server tempchannels:"
-info_bot_embed_field_title_tempchannels_voice_create_channel = (
-    "Channel to create temporary channel:"
-)
-info_bot_embed_field_title_tempchannels_voice_category = (
-    "The category where voice channels are created:"
-)
+info_bot_embed_field_title_tempchannels_voice_create_channel = "Channel to create temporary channel:"
+info_bot_embed_field_title_tempchannels_voice_category = "The category where voice channels are created:"
 info_bot_embed_field_title_tempchannels_create_text = "Create text channels:"
-info_bot_embed_field_title_tempchannels_text_category = (
-    "The category where text channels are created:"
-)
-info_bot_embed_field_title_tempchannels_voice_channel_name = (
-    "Name of the voice channels that get created:"
-)
-info_bot_embed_field_title_tempchannels_text_channel_name = (
-    "Name of the text channels that get created:"
-)
+info_bot_embed_field_title_tempchannels_text_category = "The category where text channels are created:"
+info_bot_embed_field_title_tempchannels_voice_channel_name = "Name of the voice channels that get created:"
+info_bot_embed_field_title_tempchannels_text_channel_name = "Name of the text channels that get created:"
 info_bot_embed_field_title_socials_monitor_reddit = "Monitor Reddit:"
 info_bot_embed_field_title_socials_monitor_rss = "Monitor RSS Feeds:"
 info_bot_embed_field_title_socials_monitor_twitch = "Monitor Twitch accounts:"
-info_bot_embed_field_title_reaction_roles_delete_unrelated = "Delete unrelated emoji's"
-info_bot_embed_field_title_reaction_roles_remove_role_from_users_on_delete = (
-    "Remove roles from users on reactions role delete:"
-)
 module_socials_reddit_embed_field_list = "Monitored Subreddits:"
 module_socials_rss_embed_field_list = "Monitored RSS Feeds:"
 module_socials_twitch_embed_field_list = "Monitored Twitch accounts:"
@@ -428,22 +368,12 @@ info_bot_embed_field_title_tickets_creation_channel = "Creation Channel"
 info_bot_embed_field_title_tickets_creation_message = "Creation Message"
 info_bot_embed_field_title_tickets_thread_mode = "Thread mode"
 info_bot_embed_field_title_tickets_post_channel = "Post channel"
-info_bot_embed_field_title_tickets_is_custom_creation_message = (
-    "Custom creation is message?"
-)
-info_bot_embed_field_title_tickets_is_custom_creation_embed = (
-    "Custom creation is embed?"
-)
-info_bot_embed_field_title_tickets_is_custom_creation_content = (
-    "Custom creation content"
-)
+info_bot_embed_field_title_tickets_is_custom_creation_message = "Custom creation is message?"
+info_bot_embed_field_title_tickets_is_custom_creation_embed = "Custom creation is embed?"
+info_bot_embed_field_title_tickets_is_custom_creation_content = "Custom creation content"
 info_bot_embed_field_title_tickets_is_custom_creation_modal = "Custom creation modal"
 info_bot_embed_field_title_tickets_default_types = "Used default types"
 info_bot_embed_field_title_tickets_custom_types = "Used custom types"
-info_bot_embed_field_title_reaction_roles_delete_unrelated = "Delete unrelated emoji's"
-info_bot_embed_field_title_reaction_roles_remove_role_from_users_on_delete = (
-    "Remove roles from users on reactions role delete:"
-)
 info_channel_embed_title = "Information about {channel}"
 info_channel_embed_description = "Hi! Welcome to the `{channel}` information panel!"
 info_channel_embed_field_title_channel = "Channel:"
@@ -461,9 +391,7 @@ info_role_embed_field_title_createdat = "Role created at:"
 info_role_embed_field_title_permissions = "Permissions of this role:"
 info_role_embed_field_value_permissions_1_value = "Permissions value: "
 info_server_embed_title = "Information about {guild}"
-info_server_embed_no_description = (
-    "Hi! Welcome to `{guild}` information panel! There is no server description set!"
-)
+info_server_embed_no_description = "Hi! Welcome to `{guild}` information panel! There is no server description set!"
 info_server_embed_field_title_owner = "Owner:"
 info_server_embed_field_title_ownerid = "Owner ID:"
 info_server_embed_field_title_afkchannel = "AFK Channel:"
@@ -473,7 +401,9 @@ info_server_embed_field_title_roles = "Role count:"
 info_server_embed_field_title_members = "Members (excl. Bots):"
 info_server_embed_field_title_createdat = "Server created at:"
 info_user_embed_title = "Information about {user}"
-info_user_embed_description = "Hi! Welcome to the `{user}` information panel! This user has `{warn_points} warnings` in this server!"
+info_user_embed_description = (
+    "Hi! Welcome to the `{user}` information panel! This user has `{warn_points} warnings` in this server!"
+)
 info_user_embed_field_title_user = "User:"
 info_user_embed_field_title_userid = "User ID:"
 info_user_embed_field_title_userdiscriminator = "Discriminator:"
@@ -484,16 +414,10 @@ info_user_embed_field_title_joinedat = "Joined Server at:"
 info_user_embed_field_title_createdat = "Joined Discord at:"
 info_user_embed_field_title_roles = "Roles:"
 info_bot_embed_field_title_serverstats_counter_panel_enabled = "Counter Panel:"
-info_bot_embed_field_title_serverstats_counter_panel_category = (
-    "Counter Panel Category:"
-)
+info_bot_embed_field_title_serverstats_counter_panel_category = "Counter Panel Category:"
 info_bot_embed_field_title_serverstats_panel_member_count = "Member Count panel:"
-info_bot_embed_field_title_serverstats_panel_online_member_count = (
-    "Online Member Count panel:"
-)
-info_bot_embed_field_title_serverstats_panel_online_members_with_role = (
-    "Online with role panel:"
-)
+info_bot_embed_field_title_serverstats_panel_online_member_count = "Online Member Count panel:"
+info_bot_embed_field_title_serverstats_panel_online_members_with_role = "Online with role panel:"
 info_bot_embed_field_title_serverstats_panel_boost = "Boost panel"
 info_bot_embed_field_title_serverstats_starboard_enabled = "Starboard:"
 info_bot_embed_field_title_serverstats_starboard_channel = "Starboard Channel:"
@@ -504,9 +428,7 @@ info_embed_description_select_channel = "Please select the channel you want info
 info_embed_description_select_role = "Please select the role you want info about."
 info_embed_description_select_user = "Please select the user you want info about."
 tempchannels_list = "Tempchannels list"
-reactionroles_list = "Reactionroles list"
 autoresponder_list = "Autoresponder list"
-tags_list = "Tags list"
 
 # ------------------------------------------------------------------------- #
 # Misc #
@@ -521,13 +443,9 @@ response_rps_timeout = "{user} didn't respond quick enough. The game has timed o
 response_rps_users_turn = "{user}, your turn!"
 response_rps_winner = "Congratulations {user}! You won the Rock, Paper, Scissors game!"
 response_higher_lower_timeout = "The Higher/Lower game has timed out!"
-response_ping_success = (
-    "Pong! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
-)
+response_ping_success = "Pong! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
 response_transcribe_success = "***Transcription:*** ```{transcribed_message}```"
-response_transcribe_failed = (
-    "Something went wrong while trying to transcribe the message!"
-)
+response_transcribe_failed = "Something went wrong while trying to transcribe the message!"
 # Embeds
 rps_embed_title = "Rock, Paper, Scissors game"
 rps_embed_user_ones_turn = "{user_one} is choosing...\n {user_two} is waiting..."
@@ -545,36 +463,22 @@ reason_default_channel_lock = "**{member}** asked for channel lock -> {reason}"
 reason_default_channel_unlock = "**{member}** asked for channel unlock -> {reason}"
 # Responses
 response_channel_create_success = "I have created the `{channel_type}`! -> {channel}."
-response_channel_create_failed = (
-    "I am sorry! Something went wrong while trying to create the channel!"
+response_channel_create_failed = "I am sorry! Something went wrong while trying to create the channel!"
+response_channel_create_news_stage_forum_failed = (
+    "I am sorry! Something went wrong while trying to create the channel! Does this server support this channel type?"
 )
-response_channel_create_news_stage_forum_failed = "I am sorry! Something went wrong while trying to create the channel! Does this server support this channel type?"
-response_channel_delete_failed = (
-    "I am sorry! Something went wrong while trying to delete the `{channel}`!"
-)
+response_channel_delete_failed = "I am sorry! Something went wrong while trying to delete the `{channel}`!"
 response_channel_delete_success = "I have deleted `{channel}`!"
-response_clear_messages_failed_over_14_days = (
-    "I am sorry! I can't bulk delete messages that are over 14 days old!"
-)
+response_clear_messages_failed_over_14_days = "I am sorry! I can't bulk delete messages that are over 14 days old!"
 response_slowmode_set_failed = "Something went wrong while trying to set slowmode for `{channel}` to `{delay} seconds`!"
-response_slowmode_set_success = (
-    "I have set the slowmode in `{channel}` to `{delay} seconds`!"
-)
-response_lock_failed = (
-    "I am sorry! Something went wrong while trying to lock {channel}!"
-)
+response_slowmode_set_success = "I have set the slowmode in `{channel}` to `{delay} seconds`!"
+response_lock_failed = "I am sorry! Something went wrong while trying to lock {channel}!"
 response_lock_success = "I have locked {channel}!"
-response_unlock_failed = (
-    "I am sorry! Something went wrong while trying to unlock {channel}!"
-)
+response_unlock_failed = "I am sorry! Something went wrong while trying to unlock {channel}!"
 response_unlock_success = "I have unlocked {channel}!"
-response_role_create_failed = (
-    "I am sorry! Something went wrong while trying to create the role!"
-)
+response_role_create_failed = "I am sorry! Something went wrong while trying to create the role!"
 response_role_create_success = "I have created the `{role_name}` role! -> {role}."
-response_role_delete_failed = (
-    "I am sorry! Something went wrong while trying to delete the `{role}`!"
-)
+response_role_delete_failed = "I am sorry! Something went wrong while trying to delete the `{role}`!"
 response_role_delete_success = "I have deleted `{role}`!"
 # Embeds
 clear_messages_started_embed_title = "Clear messages process started!"
@@ -593,22 +497,14 @@ vckick_default_reason = "**{member}** asked for vckick -> {reason}"
 move_default_reason = "**{member}** asked for move -> {reason}"
 tempmute_default_reason = "**{member}** asked for tempmute -> {reason}"
 temptimeout_default_reason = "**{member}** asked for temptimeout -> {reason}"
-reason_auto_kick_role_added_warn = (
-    "*User reached/went over maximum warning limit set for this server!*"
-)
-reason_auto_kick_role_removed_warn = (
-    "*User is not longer over maximum warning limit set for this server!*"
-)
+reason_auto_kick_role_added_warn = "*User reached/went over maximum warning limit set for this server!*"
+reason_auto_kick_role_removed_warn = "*User is not longer over maximum warning limit set for this server!*"
 # Responses
 response_ban_create_failed_no_bot_ban = "I am sorry! I can't ban a bot!"
-response_ban_create_failed = (
-    "I am sorry! Something went wrong while trying to ban `{user}`!"
-)
+response_ban_create_failed = "I am sorry! Something went wrong while trying to ban `{user}`!"
 response_ban_create_success = "I have banned `{user}`!"
 response_ban_delete_failed_no_bot_unban = "I am sorry! I can't unban a bot!"
-response_ban_delete_failed = (
-    "I am sorry! Something went wrong while trying to unban `{user}`!"
-)
+response_ban_delete_failed = "I am sorry! Something went wrong while trying to unban `{user}`!"
 response_ban_delete_success = "I have unbanned `{user}`!"
 response_kick_failed_no_bot_kick = "I am sorry! I can't kick a bot!"
 response_kick_failed = "I am sorry! Something went wrong while trying to kick {user}!"
@@ -616,38 +512,20 @@ response_kick_success = "I have kicked {user}!"
 response_vckick_failed = "I am sorry! Something went wrong while trying to kick {user} from the voice channel!"
 response_vckick_success = "I have kicked {user} from the voice channel!"
 response_move_failed_user_not_in_a_voice_channel = "{user} is not in a voice channel!"
-response_move_failed_missing_permissions = (
-    "I am sorry! It looks like either I or the user is missing permissions!"
-)
-response_move_failed = (
-    "I am sorry! Something went wrong while trying to move {user} to {channel}!"
-)
+response_move_failed_missing_permissions = "I am sorry! It looks like either I or the user is missing permissions!"
+response_move_failed = "I am sorry! Something went wrong while trying to move {user} to {channel}!"
 response_move_success = "I have moved {user} to {channel}!"
 response_tempmute_failed_no_bot_tempmute = "I am sorry! I can't temporary mute a bot!"
-response_tempmute_failed = (
-    "I am sorry! Something went wrong while trying to temporary mute {user}!"
-)
+response_tempmute_failed = "I am sorry! Something went wrong while trying to temporary mute {user}!"
 response_tempmute_success = "I have temporary muted {user} for `{seconds} seconds`!"
-response_temptimeout_failed_no_bot_temptimeout = (
-    "I am sorry! I can't temporary timeout a bot!"
-)
-response_temptimeout_failed = (
-    "I am sorry! Something went wrong while trying to temporary timeout {user}!"
-)
-response_temptimeout_success = (
-    "I have temporary timedout {user} for `{seconds} seconds`!"
-)
+response_temptimeout_failed_no_bot_temptimeout = "I am sorry! I can't temporary timeout a bot!"
+response_temptimeout_failed = "I am sorry! Something went wrong while trying to temporary timeout {user}!"
+response_temptimeout_success = "I have temporary timedout {user} for `{seconds} seconds`!"
 response_warn_create_failed_no_bot_warn = "I am sorry! I can't warn a bot!"
-response_warn_create_failed = (
-    "I am sorry! Something went wrong while trying to warn `{member}`!"
-)
+response_warn_create_failed = "I am sorry! Something went wrong while trying to warn `{member}`!"
 response_warn_create_success = "I have warned `{user}`!"
-response_warn_delete_failed_no_bot_warn_delete = (
-    "I am sorry! I can't delete a warn from bot!"
-)
-response_warn_delete_failed = (
-    "I am sorry! Something went wrong while trying to delete a warn from `{member}`!"
-)
+response_warn_delete_failed_no_bot_warn_delete = "I am sorry! I can't delete a warn from bot!"
+response_warn_delete_failed = "I am sorry! Something went wrong while trying to delete a warn from `{member}`!"
 response_warn_delete_success = "I have deleted a warn from `{user}`!"
 # Embeds
 warn_create_to_user_embed_title = "You have been warned!"
@@ -767,37 +645,27 @@ privacy_embed_delete_data_description = "Here you can choose to delete your data
 # Responses
 response_reminder_adding = "I am adding the reminder, please wait!"
 response_reminder_deleting = "I am deleting the reminder, please wait!"
-response_reminder_list_failed = (
-    "Something went wrong while fetching this servers reminders!"
-)
+response_reminder_list_failed = "Something went wrong while fetching this servers reminders!"
 response_reminder_list_no_reminders = "There are no reminders in this server!"
 response_reminder_list_timeout = "Reminder list reached a timeout!"
 # Embeds
 reminder_list_embed_title = "Reminders"
-reminder_list_embed_description = (
-    "There are {reminders} reminders in this server! Showing active reminders:"
-)
+reminder_list_embed_description = "There are {reminders} reminders in this server! Showing active reminders:"
 reminder_list_embed_field_reminders = "Reminders:"
 
 # ------------------------------------------------------------------------- #
 # Giveaway #
 # ------------------------------------------------------------------------- #
 # Responses
-response_giveaway_list_failed = (
-    "Something went wrong while fetching this servers giveaways!"
-)
-response_giveaway_list_no_giveaways = (
-    "You don't have any active giveaways in this server!"
-)
+response_giveaway_list_failed = "Something went wrong while fetching this servers giveaways!"
+response_giveaway_list_no_giveaways = "You don't have any active giveaways in this server!"
 response_giveaway_list_timeout = "Giveaway list reached a timeout!"
 response_giveaway_creating = "I am creating the giveaway, please wait!"
 response_giveaway_deleting = "I am deleting the giveaway, please wait!"
 response_giveaway_rerolling = "I am rerolling the giveaway, please wait!"
 # Embeds
 giveaway_list_embed_title = "Your giveaways"
-giveaway_list_embed_description = (
-    "You have {giveaways} giveaways! Showing your active giveaways:"
-)
+giveaway_list_embed_description = "You have {giveaways} giveaways! Showing your active giveaways:"
 giveaway_list_embed_field_giveaways = "Your giveways (Active/Finished):"
 
 # ------------------------------------------------------------------------- #
@@ -846,27 +714,29 @@ custom_modal_remove_text_field = "Remove text field"
 custom_modal_reset = "Reset modal"
 custom_modal_finish = "Finish modal"
 custom_modal_preview = "Preview modal"
-custom_modal_create_this_can_be_safely_removed = "<NOTE: Everything inside the (double) quotation marks can be safely removed! The trailing , too>"
+custom_modal_create_this_can_be_safely_removed = (
+    "<NOTE: Everything inside the (double) quotation marks can be safely removed! The trailing , too>"
+)
 custom_modal_change_title_new_title = "New title"
 custom_modal_add_text_field_text_field_title = "Field title"
 custom_modal_add_text_field_text_field_description = "Field description"
 custom_modal_add_text_field_text_field_type = "Field type (Long/Short)"
 custom_modal_add_text_field_title = "Text field"
 # Responses
-response_color_viewed_failed_no_values_given = (
-    "I am sorry! I require one value, either the HEX value or the RGB value!"
-)
+response_color_viewed_failed_no_values_given = "I am sorry! I require one value, either the HEX value or the RGB value!"
 response_color_viewed_failed_only_one_value_allowed = (
     "I am sorry! You are only allowed to insert one of the two values!"
 )
-response_color_viewed_failed = (
-    "I am sorry! Something went wrong while trying to view the color!"
+response_color_viewed_failed = "I am sorry! Something went wrong while trying to view the color!"
+response_custom_embed_finished_timeout = (
+    "The custom embed creation reached a timeout! The JSON of your embed is: ```{embed_json}```"
 )
-response_custom_embed_finished_timeout = "The custom embed creation reached a timeout! The JSON of your embed is: ```{embed_json}```"
 response_custom_embed_finished = "The custom embed creation is finished, the JSON of your embed is: ```{embed_json}```"
 response_custom_embed_create_starting = "Within a few seconds, you can start to create your own embed (only you can see this) and retrieve the JSON code of it. This JSON code can be used in different {bot_name} commands!\nNote: If you cancel a modal response, there is a change new interactions will fail, please wait up to 60 seconds for this issue to go away!"
 response_custom_embed_send_success = "I have sent the custom embed to {channel}"
-response_custom_modal_finished = "The custom modal creation is finished, the JSON of your modal is: \n```{modal_json}```"
+response_custom_modal_finished = (
+    "The custom modal creation is finished, the JSON of your modal is: \n```{modal_json}```"
+)
 response_custom_modal_create_starting = "Within a few seconds, you can start to create your own modal (only you can see this) and retrieve the JSON code of it. This JSON code can be used in different {bot_name} commands!\nNote: If you cancel a modal response, there is a change new interactions will fail, please wait up to 60 seconds for this issue to go away!"
 response_custom_modal_preview = "By pressing Continue I will show the preview of the custom modal! This modal can be interacted with but no data will be saved!"
 response_custom_modal_preview_failed = "The custom modal preview reached a timeout!"
@@ -875,14 +745,16 @@ response_custom_modal_preview_success = "Custom modal has been previewed!"
 response_domain_validate_safety_success_is_safe = "🟩 The domain is safe!"
 response_domain_validate_safety_success_not_safe = "🟥 The domain is NOT safe!"
 response_domain_validate_safety_failed_http_code = "Something went wrong while checking the domain, got HTTP error: {http_code}! Please try again later! If this issue persists, please contact our support!"
-response_time_converted_success = "{days} days, {hours} hours, {minutes} minutes and {seconds} seconds totals to `{total_seconds}` seconds!"
+response_time_converted_success = (
+    "{days} days, {hours} hours, {minutes} minutes and {seconds} seconds totals to `{total_seconds}` seconds!"
+)
 # Embeds
 color_view_embed_title = "Color"
-color_view_embed_description = (
-    "Here is the color you requested, with color value: `{color}`"
-)
+color_view_embed_description = "Here is the color you requested, with color value: `{color}`"
 custom_embed_default_embed_title = "Custom embed creation"
-custom_embed_default_embed_description = "Welcome to the custom embed creation. Using the buttons below, you can configure this embed and retrieve the JSON."
+custom_embed_default_embed_description = (
+    "Welcome to the custom embed creation. Using the buttons below, you can configure this embed and retrieve the JSON."
+)
 custom_modal_default_embed_title = "Custom modal creation"
 custom_modal_embed_description = "Welcome to the custom modal creation. Using the buttons below, you can configure the modal and preview it. When finished, select Finish to retrieve the JSON.\n **When previewing the modal, press cancel or fill in the form and press submit to continue modal creation!**"
 qr_generate_embed_title = "Your QR-code"
@@ -894,16 +766,12 @@ qr_generate_embed_footer = "QR generated by: {member}!"
 # ------------------------------------------------------------------------- #
 # LOGGING #
 # ------------------------------------------------------------------------- #
-response_module_logging_settings_failed = (
-    "Something went wrong while getting the settings of the `logging` module!"
-)
+response_module_logging_settings_failed = "Something went wrong while getting the settings of the `logging` module!"
 
 # ------------------------------------------------------------------------- #
 # GREETINGS #
 # ------------------------------------------------------------------------- #
-response_module_greetings_settings_failed = (
-    "Something went wrong while getting the settings of the `greetings` module!"
-)
+response_module_greetings_settings_failed = "Something went wrong while getting the settings of the `greetings` module!"
 module_greetings_in_guild = "In server greetings"
 module_greetings_to_user = "User DM Greetings"
 module_greetings_role_add = "Role on join"
@@ -924,25 +792,15 @@ tempchannels_block_access = "Block users"
 tempchannels_unblock_access = "Unblock users"
 tempchannels_onlyfor = "Only for {role}"
 # Responses
-response_tempchannel_edit_failed_not_a_temporary_channel = (
-    "I am sorry! The selected channel isn't a temporary channel!"
-)
-response_tempchannel_edit_timeout = (
-    "The editing of the temporary channel failed, the timeout was reached!"
-)
+response_tempchannel_edit_failed_not_a_temporary_channel = "I am sorry! The selected channel isn't a temporary channel!"
+response_tempchannel_edit_timeout = "The editing of the temporary channel failed, the timeout was reached!"
 response_tempchannel_edit_claim_not_possible = "You cannot claim ownership of this temporary channel because this channel already has an owner. The owner is {owner}, they can transfer the channel to you they wish!"
 response_tempchannel_edit_claim_cancelled = "I have cancelled the ownership claim!"
-response_tempchannel_edit_transfer_cancelled = (
-    "I have cancelled the ownership transfer!"
-)
-response_tempchannel_edit_failed = (
-    "Oh no! Something went wrong! Please try again later."
-)
+response_tempchannel_edit_transfer_cancelled = "I have cancelled the ownership transfer!"
+response_tempchannel_edit_failed = "Oh no! Something went wrong! Please try again later."
 # Embeds
 tempchannels_edit_embed_title = "Tempchannel edit wizard"
-tempchannels_edit_embed_description = (
-    "Please select the attribute of the channel you want to edit!"
-)
+tempchannels_edit_embed_description = "Please select the attribute of the channel you want to edit!"
 tempchannels_edit_embed_footer = "Editing: {channel}, timeout: {timeout}"
 tempchannels_edit_block_embed_title = "Tempchannel block users"
 tempchannels_edit_block_embed_description = "Please select the user(s) you want to block from this channel (there is a max. of 25 users, if you want to block more users, please run the command again!)!\nIf the user is not there, please start typing for autocomplete!"
@@ -953,20 +811,22 @@ tempchannels_edit_claim_embed_description = (
     "Are you sure you want to claim ownership of the following channels: {channels}"
 )
 tempchannels_edit_name_embed_title = "Tempchannel name change"
-tempchannels_edit_name_embed_description = (
-    "Please enter the new name to give the channel!"
-)
+tempchannels_edit_name_embed_description = "Please enter the new name to give the channel!"
 tempchannels_edit_onlyfor_embed_title = "Tempchannel onlyfor role"
 tempchannels_edit_onlyfor_embed_description = "Please select the role you want to allow to this channel, other roles will be blocked! \nIf the role is not there, please start typing for autocomplete!"
 tempchannels_edit_slowmode_embed_title = "Tempchannel (text) slowmode change"
-tempchannels_edit_slowmode_embed_description = "Please enter the new slowmode delay (in seconds) of the channel! If you don't want slowmode, please insert 0!"
+tempchannels_edit_slowmode_embed_description = (
+    "Please enter the new slowmode delay (in seconds) of the channel! If you don't want slowmode, please insert 0!"
+)
 tempchannels_edit_transfer_embed_title = "Tempchannel transfer ownership"
 tempchannels_edit_transfer_embed_description = (
     "Are you sure you want to transfer ownership of the following channels: {channels}"
 )
 tempchannels_edit_transfer_user_embed_description = "Please select the user you want to transfer ownership to! \nIf the user is not there, please start typing for autocomplete!"
 tempchannels_edit_user_limit_embed_title = "Tempchannel (voice) user limit change"
-tempchannels_edit_user_limit_embed_description = "Please enter the new user limit of the channel! If you don't want a limit, please insert 0!"
+tempchannels_edit_user_limit_embed_description = (
+    "Please enter the new user limit of the channel! If you don't want a limit, please insert 0!"
+)
 
 # ------------------------------------------------------------------------- #
 # SOCIALS #
@@ -978,9 +838,7 @@ module_socials_twitch_list = "Get Twitch account list"
 # ------------------------------------------------------------------------- #
 # TICKETS #
 # ------------------------------------------------------------------------- #
-response_module_tickets_settings_failed = (
-    "Something went wrong while getting the settings of the `tickets` module!"
-)
+response_module_tickets_settings_failed = "Something went wrong while getting the settings of the `tickets` module!"
 
 # ------------------------------------------------------------------------- #
 # SERVERSTATS #
@@ -988,3 +846,16 @@ response_module_tickets_settings_failed = (
 response_module_serverstats_settings_failed = (
     "Something went wrong while getting the settings of the `serverstats` module!"
 )
+
+# ------------------------------------------------------------------------- #
+# TAGS #
+# ------------------------------------------------------------------------- #
+response_tags_edit_provide_content = "Please provide the new content of the tag by sending the new content in the chat."
+response_tags_create_provide_content = "Please provide the tags content of the tag by sending the content in the chat."
+response_tags_list_failed = "Something went wrong while getting the list of tags!"
+response_tags_list_no_tags = "There are no tags based on the given selection!"
+response_tags_list_timeout = "Tags list reached a timeout."
+# Embeds
+tags_list_embed_title = "Tags list"
+tags_list_embed_description = "Here are the tags based on your selected! Tag count: {tags}!"
+tags_list_embed_field_tags = "Tags based on selection:"
