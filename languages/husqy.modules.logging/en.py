@@ -495,23 +495,58 @@ response_role_updated = (
 
 ## Module Autoresponder
 ### Disable
-response_module_autoresponder_disabled = "{datetime} -- **{member}** has disabled the `autoresponder` module! All related settings are removed!"
+response_module_autoresponder_disabled = (
+    "{datetime} -- **{member}** has disabled the `autoresponder` module! All related settings are removed!"
+)
 response_module_autoresponder_disable_failed = "{datetime} -- **{member}** tried to disable the `autoresponder` module but something went wrong! I have not changed the configuration!"
 ### Enable
-response_module_autoresponder_enabled = (
-    "{datetime} -- **{member}** has enabled the `autoresponder` module!"
+response_module_autoresponder_enabled = "{datetime} -- **{member}** has enabled the `autoresponder` module!"
+response_module_autoresponder_enable_failed = (
+    "{datetime} -- **{member}** tried to enable the `autoresponder` module but something went wrong!"
 )
-response_module_autoresponder_enable_failed = "{datetime} -- **{member}** tried to enable the `autoresponder` module but something went wrong!"
-### Create
-response_module_autoresponder_create_entry_success = (
-    "{datetime} -- **{member}** has created an entry for the `autoresponder` module!"
+### Trigger Create
+response_module_autoresponder_create_trigger_success = (
+    "{datetime} -- **{member}** has created a new trigger for the `autoresponder` module!"
 )
-response_module_autoresponder_create_entry_failed = "{datetime} -- **{member}** tried to create an entry for the `autoresponder` module but something went wrong!"
-### Delete
-response_module_autoresponder_delete_entry_success = (
-    "{datetime} -- **{member}** has deleted an entry from the `autoresponder` module!"
+response_module_autoresponder_create_trigger_failed = (
+    "{datetime} -- **{member}** tried to create a new trigger for the `autoresponder` module but something went wrong!"
 )
-response_module_autoresponder_delete_entry_failed = "{datetime} -- **{member}** tried to delete an entry from the `autoresponder` module but something went wrong!"
+response_module_autoresponder_create_trigger_failed_trigger_limit_reached = "{datetime} -- **{member}** tried to create a new trigger for the `autoresponder` module but the limit has already been reached!"
+response_module_autoresponder_create_trigger_failed_invalid_trigger_type = "{datetime} -- **{member}** tried to create a new trigger for the `autoresponder` module but they didn't provide a correct trigger type!"
+### Trigger Edit
+response_module_autoresponder_edit_trigger_success = (
+    "{datetime} -- **{member}** has edited a trigger from the `autoresponder` module!"
+)
+response_module_autoresponder_edit_trigger_failed = (
+    "{datetime} -- **{member}** tried to edit a trigger from the `autoresponder` module but something went wrong!"
+)
+### Trigger Delete
+response_module_autoresponder_delete_trigger_success = (
+    "{datetime} -- **{member}** has deleted a trigger from the `autoresponder` module!"
+)
+response_module_autoresponder_delete_trigger_failed = (
+    "{datetime} -- **{member}** tried to delete a trigger from the `autoresponder` module but something went wrong!"
+)
+### Trigger Hit
+response_module_autoresponder_trigger_hit = (
+    "{datetime} -- **{member}** hit an autoresponder trigger. If configured, the response(s) should be send!"
+)
+### Response Create
+response_module_autoresponder_create_response_success = (
+    "{datetime} -- **{member}** has created a new response for the `autoresponder` module!"
+)
+response_module_autoresponder_create_response_failed = (
+    "{datetime} -- **{member}** tried to create a new response for the `autoresponder` module but something went wrong!"
+)
+response_module_autoresponder_create_response_failed_response_limit_reached = "{datetime} -- **{member}** tried to create a new response for the `autoresponder` module but the limit has already been reached!"
+response_module_autoresponder_create_response_failed_invalid_response_type = "{datetime} -- **{member}** tried to create a new response for the `autoresponder` module but they didn't provide a correct response type!"
+### Response Delete
+response_module_autoresponder_delete_response_success = (
+    "{datetime} -- **{member}** has deleted a response from the `autoresponder` module!"
+)
+response_module_autoresponder_delete_response_failed = (
+    "{datetime} -- **{member}** tried to delete a response from the `autoresponder` module but something went wrong!"
+)
 
 ## Module Tempchannel
 ### tempchannel edit
