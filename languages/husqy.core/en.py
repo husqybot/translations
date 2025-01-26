@@ -149,6 +149,15 @@ LOGGABLE_TRANSLATIONS = {
     "log_twitch_remove": "Twitch account removed",
     "log_meme": "Meme requests",
     "log_kick_events": "Users being kicked",
+    "log_welcoming_response_create": "Welcoming response created",
+    "log_welcoming_response_delete": "Welcoming response delete",
+    "log_welcoming_timedrole_create": "Welcoming timedrole created",
+    "log_welcoming_timedrole_delete": "Welcoming timedrole delete",
+    "log_welcoming_check_welcome_dm": "Welcome messages in DM checked",
+    "log_welcoming_check_welcome_channel": "Welcome messages in channel checked",
+    "log_welcoming_check_leave_channel": "Leave messages in channel checked",
+    "log_welcoming_check_role_on_join": "Autorole checked",
+    "log_welcoming_check_role_timed": "Timedrole checked",
 }
 
 
@@ -286,7 +295,7 @@ search_sp_embed_field_title_top_5 = "Top five results:"
 # Info #
 # ------------------------------------------------------------------------- #
 module_logging = "Logging module"
-module_greetings = "Greetings module"
+module_welcoming = "Welcoming module"
 module_tempchannels = "Tempchannels module"
 module_socials = "Socials module"
 module_reactionroles = "Reactionroles module"
@@ -303,7 +312,7 @@ support_embed_description = (
 )
 response_info_failed = "Something went wrong while getting the information!"
 response_info_bot_module_logging_disabled = "The `Logging` module is disabled!"
-response_info_bot_module_greetings_disabled = "The `Greetings` module is disabled!"
+response_info_bot_module_welcoming_disabled = "The `Welcoming` module is disabled!"
 response_info_bot_module_tempchannels_disabled = "The `Tempchannels` module is disabled!"
 response_info_bot_module_socials_disabled = "The `Socials` module is disabled!"
 response_info_bot_module_reactionroles_disabled = "The `Reactionroles` module is disabled!"
@@ -321,6 +330,8 @@ response_info_reddit_list_failed = "Something went wrong while trying to get an 
 response_info_twitch_list_failed = "Something went wrong while trying to get an overview of all monitored twitch accounts in this server, returning to info socials view."
 response_info_rss_list_failed = "Something went wrong while trying to get an overview of all monitored rss feeds in this server, returning to info socials view."
 response_info_autoresponder_list_failed = "Something went wrong while trying to get an overview of all autoresponder entries in this server, returning to info autoresponder view."
+response_info_welcoming_responses_list_failed = "Something went wrong while trying to get an overview of all welcoming responses in this server, returning to info welcoming view."
+response_info_welcoming_timedroles_list_failed = "Something went wrong while trying to get an overview of all welcoming timedroles in this server, returning to info welcoming view."
 # Embeds
 info_bot_embed_title = "Welcome to {bot_name}!"
 info_bot_embed_discription = "Hi! Welcome to the `{bot_name}` information panel! Here you will find all settings done for this server, the current version and some external links! Make sure to have a look around!\n\n *Note: Use the navigation buttons below to view module info.*"
@@ -340,15 +351,16 @@ info_bot_embed_field_title_logging_events_1 = "Events that are logged (1/3):"
 info_bot_embed_field_title_logging_events_2 = "Events that are logged (2/3):"
 info_bot_embed_field_title_logging_events_3 = "Events that are logged (3/3):"
 info_bot_embed_field_title_enabled_components = "Enabled components:"
-info_bot_embed_field_title_greetings_in_guild_embed = "Embed for in server greetings:"
-info_bot_embed_field_title_greetings_to_user_embed = "Embed for user DM greetings:"
-info_bot_embed_field_title_leave_taking_in_guild_embed = "Embed for in server leave taking:"
-info_bot_embed_field_title_greetings_in_guild_channel = "Greetings in server channel:"
-info_bot_embed_field_title_leave_taking_in_guild_channel = "Leave taking in server channel:"
-info_bot_embed_field_title_greetings_in_guild_content = "Greetings content in server:"
-info_bot_embed_field_title_greetings_to_user_content = "Greetings content to users:"
-info_bot_embed_field_title_greetings_role_add_role = "Role that gets added to users:"
-info_bot_embed_field_title_leave_taking_in_guild_content = "Leave taking content in server:"
+info_bot_embed_field_title_welcoming_welcome_messages_dm_randomized = "Welcome DM responses randomized:"
+info_bot_embed_field_title_welcoming_welcome_messages_randomized = "Welcome channel responses randomized:"
+info_bot_embed_field_title_welcoming_leave_messages_randomized = "Leave channel responses randomized:"
+info_bot_embed_field_title_welcoming_welcome_messages_dm_response_id = "Welcome DM response ID:"
+info_bot_embed_field_title_welcoming_welcome_messages_response_id = "Welcome channel response ID:"
+info_bot_embed_field_title_welcoming_leave_messages_response_id = "Leave channel response ID:"
+info_bot_embed_field_title_welcoming_welcome_messages_channel = "Welcome message in server channel:"
+info_bot_embed_field_title_welcoming_leave_messages_channel = "Leave message in server channel:"
+info_bot_embed_field_title_welcoming_role_add_role = "Autorole roles:"
+info_bot_embed_field_title_welcoming_responses_list = "Current server responses:"
 info_bot_embed_field_title_tempchannels_list = "Current server tempchannels:"
 info_bot_embed_field_title_tempchannels_voice_create_channel = "Channel to create temporary channel:"
 info_bot_embed_field_title_tempchannels_voice_category = "The category where voice channels are created:"
@@ -429,6 +441,8 @@ info_embed_description_select_role = "Please select the role you want info about
 info_embed_description_select_user = "Please select the user you want info about."
 tempchannels_list = "Tempchannels list"
 autoresponder_list = "Autoresponder list"
+welcoming_responses_list = "Responses list"
+welcoming_timedroles_list = "Timedroles list"
 
 # ------------------------------------------------------------------------- #
 # Misc #
@@ -589,11 +603,11 @@ privacy_embed_get_data_modules_tempchannels_description = (
 privacy_embed_get_data_modules_tempchannels_something_went_wrong = (
     "Something went wrong while checking you references for the {bot_name} tempchannels module data."
 )
-privacy_embed_get_data_modules_greetings_description = (
-    "For the {bot_name} greetings module data related to this server, we have found the following:\n{data}"
+privacy_embed_get_data_modules_welcoming_description = (
+    "For the {bot_name} welcoming module data related to this server, we have found the following:\n{data}"
 )
-privacy_embed_get_data_modules_greetings_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} greetings module data."
+privacy_embed_get_data_modules_welcoming_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} welcoming module data."
 )
 privacy_embed_get_data_modules_reactionroles_description = (
     "For the {bot_name} reactionroles module data related to this server, we have found the following:\n{data}"
@@ -769,13 +783,14 @@ qr_generate_embed_footer = "QR generated by: {member}!"
 response_module_logging_settings_failed = "Something went wrong while getting the settings of the `logging` module!"
 
 # ------------------------------------------------------------------------- #
-# GREETINGS #
+# WELCOMING #
 # ------------------------------------------------------------------------- #
-response_module_greetings_settings_failed = "Something went wrong while getting the settings of the `greetings` module!"
-module_greetings_in_guild = "In server greetings"
-module_greetings_to_user = "User DM Greetings"
-module_greetings_role_add = "Role on join"
-module_greetings_leave_taking_in_guild = "In server leave taking"
+response_module_welcoming_settings_failed = "Something went wrong while getting the settings of the `welcoming` module!"
+module_welcoming_welcome_messages_dm = "Welcome messages DM"
+module_welcoming_welcome_messages = "Welcome messages channel"
+module_welcoming_leave_messages = "Leave messages channel"
+module_welcoming_autorole = "Autorole"
+module_welcoming_timedroles = "Timedroles"
 
 # ------------------------------------------------------------------------- #
 # TEMPCHANNELS #

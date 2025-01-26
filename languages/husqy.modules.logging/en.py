@@ -495,58 +495,40 @@ response_role_updated = (
 
 ## Module Autoresponder
 ### Disable
-response_module_autoresponder_disabled = (
-    "{datetime} -- **{member}** has disabled the `autoresponder` module! All related settings are removed!"
-)
+response_module_autoresponder_disabled = "{datetime} -- **{member}** has disabled the `autoresponder` module! All related settings are removed!"
 response_module_autoresponder_disable_failed = "{datetime} -- **{member}** tried to disable the `autoresponder` module but something went wrong! I have not changed the configuration!"
 ### Enable
-response_module_autoresponder_enabled = "{datetime} -- **{member}** has enabled the `autoresponder` module!"
-response_module_autoresponder_enable_failed = (
-    "{datetime} -- **{member}** tried to enable the `autoresponder` module but something went wrong!"
+response_module_autoresponder_enabled = (
+    "{datetime} -- **{member}** has enabled the `autoresponder` module!"
 )
+response_module_autoresponder_enable_failed = "{datetime} -- **{member}** tried to enable the `autoresponder` module but something went wrong!"
 ### Trigger Create
-response_module_autoresponder_create_trigger_success = (
-    "{datetime} -- **{member}** has created a new trigger for the `autoresponder` module!"
-)
-response_module_autoresponder_create_trigger_failed = (
-    "{datetime} -- **{member}** tried to create a new trigger for the `autoresponder` module but something went wrong!"
-)
+response_module_autoresponder_create_trigger_success = "{datetime} -- **{member}** has created a new trigger for the `autoresponder` module!"
+response_module_autoresponder_create_trigger_failed = "{datetime} -- **{member}** tried to create a new trigger for the `autoresponder` module but something went wrong!"
 response_module_autoresponder_create_trigger_failed_trigger_limit_reached = "{datetime} -- **{member}** tried to create a new trigger for the `autoresponder` module but the limit has already been reached!"
 response_module_autoresponder_create_trigger_failed_invalid_trigger_type = "{datetime} -- **{member}** tried to create a new trigger for the `autoresponder` module but they didn't provide a correct trigger type!"
 ### Trigger Edit
 response_module_autoresponder_edit_trigger_success = (
     "{datetime} -- **{member}** has edited a trigger from the `autoresponder` module!"
 )
-response_module_autoresponder_edit_trigger_failed = (
-    "{datetime} -- **{member}** tried to edit a trigger from the `autoresponder` module but something went wrong!"
-)
+response_module_autoresponder_edit_trigger_failed = "{datetime} -- **{member}** tried to edit a trigger from the `autoresponder` module but something went wrong!"
 ### Trigger Delete
 response_module_autoresponder_delete_trigger_success = (
     "{datetime} -- **{member}** has deleted a trigger from the `autoresponder` module!"
 )
-response_module_autoresponder_delete_trigger_failed = (
-    "{datetime} -- **{member}** tried to delete a trigger from the `autoresponder` module but something went wrong!"
-)
+response_module_autoresponder_delete_trigger_failed = "{datetime} -- **{member}** tried to delete a trigger from the `autoresponder` module but something went wrong!"
 ### Trigger Hit
-response_module_autoresponder_trigger_hit = (
-    "{datetime} -- **{member}** hit an autoresponder trigger. If configured, the response(s) should be send!"
-)
+response_module_autoresponder_trigger_hit = "{datetime} -- **{member}** hit an autoresponder trigger. If configured, the response(s) should be send!"
 ### Response Create
-response_module_autoresponder_create_response_success = (
-    "{datetime} -- **{member}** has created a new response for the `autoresponder` module!"
-)
-response_module_autoresponder_create_response_failed = (
-    "{datetime} -- **{member}** tried to create a new response for the `autoresponder` module but something went wrong!"
-)
+response_module_autoresponder_create_response_success = "{datetime} -- **{member}** has created a new response for the `autoresponder` module!"
+response_module_autoresponder_create_response_failed = "{datetime} -- **{member}** tried to create a new response for the `autoresponder` module but something went wrong!"
 response_module_autoresponder_create_response_failed_response_limit_reached = "{datetime} -- **{member}** tried to create a new response for the `autoresponder` module but the limit has already been reached!"
 response_module_autoresponder_create_response_failed_invalid_response_type = "{datetime} -- **{member}** tried to create a new response for the `autoresponder` module but they didn't provide a correct response type!"
 ### Response Delete
 response_module_autoresponder_delete_response_success = (
     "{datetime} -- **{member}** has deleted a response from the `autoresponder` module!"
 )
-response_module_autoresponder_delete_response_failed = (
-    "{datetime} -- **{member}** tried to delete a response from the `autoresponder` module but something went wrong!"
-)
+response_module_autoresponder_delete_response_failed = "{datetime} -- **{member}** tried to delete a response from the `autoresponder` module but something went wrong!"
 
 ## Module Tempchannel
 ### tempchannel edit
@@ -625,20 +607,57 @@ response_module_tempchannel_settings_changed = (
 )
 response_module_tempchannel_settings_changed_failed = "{datetime} -- **{member}** tried to change the settings of the `tempchannel` module but something went wrong!"
 
-## Module Greetings
+## Module Welcoming
 ### Disable
-response_module_greetings_disabled = "{datetime} -- **{member}** has disabled the `greetings` module! All related settings are removed!"
-response_module_greetings_disable_failed = "{datetime} -- **{member}** tried to disable the `greetings` module but something went wrong! I have not changed the configuration!"
+response_module_welcoming_disabled = "{datetime} -- **{member}** has disabled the `welcoming` module! All related settings are removed!"
+response_module_welcoming_disable_failed = "{datetime} -- **{member}** tried to disable the `welcoming` module but something went wrong! I have not changed the configuration!"
 ### Enable
-response_module_greetings_enabled = (
-    "{datetime} -- **{member}** has enabled the `greetings` module!"
+response_module_welcoming_enabled = (
+    "{datetime} -- **{member}** has enabled the `welcoming` module!"
 )
-response_module_greetings_enable_failed = "{datetime} -- **{member}** tried to enable the `greetings` module but something went wrong!"
+response_module_welcoming_enable_failed = "{datetime} -- **{member}** tried to enable the `welcoming` module but something went wrong!"
 ### Settings
-response_module_greetings_settings_changed = (
-    "{datetime} -- **{member}** has changed the settings of the `greetings` module!"
+response_module_welcoming_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `welcoming` module!"
 )
-response_module_greetings_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `greetings` module but something has gone wrong! Not all settings may have been changed!"
+response_module_welcoming_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `welcoming` module but something has gone wrong! Not all settings may have been changed!"
+### Responses
+response_module_welcoming_response_created = (
+    "{datetime} -- **{member}** has created a new response for the `welcoming` module!"
+)
+response_module_welcoming_response_create_failed = "{datetime} -- **{member}** tried to create a new response for the `welcoming` module but something has gone wrong!"
+response_module_welcoming_response_create_failed_response_type_limit_reached = "{datetime} -- **{member}** tried to create a new response for the `welcoming` module but the limit for the given response type has been reached!"
+response_module_welcoming_response_create_failed_invalid_response_type = "{datetime} -- **{member}** tried to create a new response for the `welcoming` module but the given response type is invalid!"
+response_module_welcoming_response_deleted = (
+    "{datetime} -- **{member}** has deleted a response for the `welcoming` module!"
+)
+response_module_welcoming_response_delete_failed = "{datetime} -- **{member}** tried to delete a response for the `welcoming` module but something has gone wrong!"
+### Timedroles
+response_module_welcoming_timedrole_created = (
+    "{datetime} -- **{member}** has created a new timedrole for the `welcoming` module!"
+)
+response_module_welcoming_timedrole_create_failed = "{datetime} -- **{member}** tried to create a new timedrole for the `welcoming` module but something has gone wrong!"
+response_module_welcoming_timedrole_create_failed_limit_reached = "{datetime} -- **{member}** tried to create a new timedrole for the `welcoming` module but the limit has been reached!"
+response_module_welcoming_timedrole_deleted = (
+    "{datetime} -- **{member}** has deleted a timedrole for the `welcoming` module!"
+)
+response_module_welcoming_timedrole_delete_failed = "{datetime} -- **{member}** tried to delete a timedrole for the `welcoming` module but something has gone wrong!"
+### Check
+response_module_welcoming_check_dm = (
+    "{datetime} -- Checked welcoming message in DM for new member: **{member}**!"
+)
+response_module_welcoming_check_channel = (
+    "{datetime} -- Checked welcoming message in channel for new member: **{member}**!"
+)
+response_module_leaving_check_channel = (
+    "{datetime} -- Checked leaving message in channel for member: **{member}**!"
+)
+response_module_welcoming_check_role_on_join = (
+    "{datetime} -- Checked autorole for new member: **{member}**!"
+)
+response_module_welcoming_check_role_timed = (
+    "{datetime} -- Added timedrole to member: **{member}**!"
+)
 
 ## Module Reactionroles
 ### Disable
