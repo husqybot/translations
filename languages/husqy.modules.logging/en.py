@@ -650,7 +650,7 @@ response_module_welcoming_check_channel = (
     "{datetime} -- Checked welcoming message in channel for new member: **{member}**!"
 )
 response_module_leaving_check_channel = (
-    "{datetime} -- Checked leaving message in channel for new member: **{member}**!"
+    "{datetime} -- Checked leaving message in channel for member: **{member}**!"
 )
 response_module_welcoming_check_role_on_join = (
     "{datetime} -- Checked autorole for new member: **{member}**!"
