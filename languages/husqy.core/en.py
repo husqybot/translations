@@ -70,12 +70,6 @@ LOGGABLE_TRANSLATIONS = {
     "log_role_create": "Role creations",
     "log_role_delete": "Role deletions",
     "log_role_update": "Role updates",
-    "log_reactionroles_panel_create": "Reactionrole panel created",
-    "log_reactionroles_panel_delete": "Reactionrole panel deleted",
-    "log_reactionroles_panel_edit": "Reactionrole panel edited",
-    "log_reactionroles_panel_entry_create": "Reactionrole entry added to panel",
-    "log_reactionroles_panel_entry_delete": "Reactionrole entry deleted from panel",
-    "log_reactionroles_panel_entry_edit": "Reactionrole entry edited",
     "log_user_warn_create": "Warn create",
     "log_user_warn_delete": "Warn delete",
     "log_kick_event": "Kicked users",
@@ -112,15 +106,6 @@ LOGGABLE_TRANSLATIONS = {
     "log_custommodal_preview": "Cuustom Modal Previewed",
     "log_reminder_add": "Reminders added",
     "log_reminder_delete": "Reminders deleted",
-    "log_tag_create": "Tag created",
-    "log_tag_delete": "Tag deleted",
-    "log_tag_edit": "Tag edited",
-    "log_tag_send": "Tag send",
-    "log_tag_preview": "Tag previewed",
-    "log_reddit_add": "Subreddit added",
-    "log_reddit_remove": "Subreddit removed",
-    "log_autoresponder_response_created": "Autoresponder response created",
-    "log_autoresponder_response_deleted": "Autoresponder response deleted",
     "log_user_server_muted": "User got server muted",
     "log_user_server_unmuted": "User got server unmuted",
     "log_user_server_deafend": "User got server deafend",
@@ -143,12 +128,25 @@ LOGGABLE_TRANSLATIONS = {
     "log_qr_generated": "QR-code generated",
     "log_time_converted": "Time converted to seconds",
     "log_voice_message_transcribe": "Voice message transcribed",
-    "log_rss_add": "RSS Feed added",
-    "log_rss_remove": "RSS Feed removed",
-    "log_twitch_add": "Twitch account added",
-    "log_twitch_remove": "Twitch account removed",
     "log_meme": "Meme requests",
     "log_kick_events": "Users being kicked",
+    "log_reactionroles_panel_create": "Reactionrole panel created",
+    "log_reactionroles_panel_delete": "Reactionrole panel deleted",
+    "log_reactionroles_panel_edit": "Reactionrole panel edited",
+    "log_reactionroles_panel_entry_create": "Reactionrole entry added to panel",
+    "log_reactionroles_panel_entry_delete": "Reactionrole entry deleted from panel",
+    "log_reactionroles_panel_entry_edit": "Reactionrole entry edited",
+    "log_tag_create": "Tag created",
+    "log_tag_delete": "Tag deleted",
+    "log_tag_edit": "Tag edited",
+    "log_tag_send": "Tag send",
+    "log_tag_preview": "Tag previewed",
+    "log_autoresponder_trigger_created": "Autoresponder trigger created",
+    "log_autoresponder_trigger_deleted": "Autoresponder trigger deleted",
+    "log_autoresponder_trigger_edited": "Autoresponder trigger edited",
+    "log_autoresponder_trigger_hit": "Autoresponder trigger hit",
+    "log_autoresponder_response_created": "Autoresponder response created",
+    "log_autoresponder_response_deleted": "Autoresponder response deleted",
     "log_welcoming_response_create": "Welcoming response created",
     "log_welcoming_response_delete": "Welcoming response delete",
     "log_welcoming_timedrole_create": "Welcoming timedrole created",
@@ -158,6 +156,14 @@ LOGGABLE_TRANSLATIONS = {
     "log_welcoming_check_leave_channel": "Leave messages in channel checked",
     "log_welcoming_check_role_on_join": "Autorole checked",
     "log_welcoming_check_role_timed": "Timedrole checked",
+    "log_socials_reddit_remove": "Subreddit removed",
+    "log_socials_reddit_add": "Subreddit added",
+    "log_socials_rss_remove": "RSS feed removed",
+    "log_socials_rss_add": "RSS feed added",
+    "log_socials_twitch_remove": "Twitch account removed",
+    "log_socials_twitch_add": "Twitch account added",
+    "log_socials_youtube_remove": "YouTube channel removed",
+    "log_socials_youtube_add": "YouTube channel added",
 }
 
 
@@ -326,9 +332,10 @@ response_module_autoresponder_no_info = "The `Autoresponder` module does not hav
 response_info_bot_module_serverstats_disabled = "The `Serverstats` module is disabled!"
 response_info_timeout = "The info command reached a timeout!"
 response_info_tempchannels_list_failed = "Something went wrong while trying to get an overview of all tempchannels in this server, returning to info tempchannels view."
-response_info_reddit_list_failed = "Something went wrong while trying to get an overview of all monitored subreddits in this server, returning to info socials view."
-response_info_twitch_list_failed = "Something went wrong while trying to get an overview of all monitored twitch accounts in this server, returning to info socials view."
-response_info_rss_list_failed = "Something went wrong while trying to get an overview of all monitored rss feeds in this server, returning to info socials view."
+response_info_reddit_list_failed = "Something went wrong while trying to get an overview of all monitored Subreddits in this server, returning to info socials view."
+response_info_twitch_list_failed = "Something went wrong while trying to get an overview of all monitored Twitch accounts in this server, returning to info socials view."
+response_info_rss_list_failed = "Something went wrong while trying to get an overview of all monitored RSS feeds in this server, returning to info socials view."
+response_info_youtube_list_failed = "Something went wrong while trying to get an overview of all monitored YouTube channels in this server, returning to info socials view."
 response_info_autoresponder_list_failed = "Something went wrong while trying to get an overview of all autoresponder entries in this server, returning to info autoresponder view."
 response_info_welcoming_responses_list_failed = "Something went wrong while trying to get an overview of all welcoming responses in this server, returning to info welcoming view."
 response_info_welcoming_timedroles_list_failed = "Something went wrong while trying to get an overview of all welcoming timedroles in this server, returning to info welcoming view."
@@ -371,9 +378,15 @@ info_bot_embed_field_title_tempchannels_text_channel_name = "Name of the text ch
 info_bot_embed_field_title_socials_monitor_reddit = "Monitor Reddit:"
 info_bot_embed_field_title_socials_monitor_rss = "Monitor RSS Feeds:"
 info_bot_embed_field_title_socials_monitor_twitch = "Monitor Twitch accounts:"
+info_bot_embed_field_title_socials_monitor_youtube = "Monitor YouTube channels:"
 module_socials_reddit_embed_field_list = "Monitored Subreddits:"
+module_socials_reddit_embed_field_list_empty = "No Subreddits monitored"
 module_socials_rss_embed_field_list = "Monitored RSS Feeds:"
+module_socials_rss_embed_field_list_empty = "No RSS Feeds monitored"
 module_socials_twitch_embed_field_list = "Monitored Twitch accounts:"
+module_socials_twitch_embed_field_list_empty = "No Twitch accounts monitored"
+module_socials_youtube_embed_field_list = "Monitored YouTube channels:"
+module_socials_youtube_embed_field_list_empty = "No YouTube channels monitored"
 info_bot_embed_field_title_tickets_support_role = "Ticket Support Role"
 info_bot_embed_field_title_tickets_creation_category = "Creation Category"
 info_bot_embed_field_title_tickets_creation_channel = "Creation Channel"
@@ -843,12 +856,6 @@ tempchannels_edit_user_limit_embed_description = (
     "Please enter the new user limit of the channel! If you don't want a limit, please insert 0!"
 )
 
-# ------------------------------------------------------------------------- #
-# SOCIALS #
-# ------------------------------------------------------------------------- #
-module_socials_reddit_list = "Get Subreddit list"
-module_socials_rss_list = "Get RSS Feed list"
-module_socials_twitch_list = "Get Twitch account list"
 
 # ------------------------------------------------------------------------- #
 # TICKETS #
@@ -874,3 +881,25 @@ response_tags_list_timeout = "Tags list reached a timeout."
 tags_list_embed_title = "Tags list"
 tags_list_embed_description = "Here are the tags based on your selected! Tag count: {tags}!"
 tags_list_embed_field_tags = "Tags based on selection:"
+
+# ------------------------------------------------------------------------- #
+# SOCIALS #
+# ------------------------------------------------------------------------- #
+module_socials_reddit_list = "Get Subreddit list"
+module_socials_rss_list = "Get RSS Feed list"
+module_socials_twitch_list = "Get Twitch account list"
+module_socials_youtube_list = "Get YouTube channel list"
+# Responses
+response_socials_component_list_failed = (
+    "Something went wrong while getting the entries list of the {component} component of the `socials` module!"
+)
+response_socials_component_list_failed_component_disabled = (
+    "The {component} component of the `socials` module is disabled!"
+)
+response_socials_component_list_no_entries = (
+    "There are no entries for the {component} component of the `socials` module!"
+)
+# Embeds
+socials_component_list_embed_title = "Socials {component} list"
+socials_component_list_embed_description = "Here are the entries! Entry count: {entries}!"
+socials_component_list_embed_field_entries = "Entries:"
