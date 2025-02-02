@@ -1,8 +1,8 @@
 # MODULE LOGGING CONFIGURATION
 response_module_logging_enabled = "{datetime} -- **{member}** has enabled the `logging` module! I will now log all supported events to the new logging channel!"
 response_module_logging_disabled = "{datetime} -- **{member}** has disabled the `logging` module! All related settings are removed!"
-response_module_logging_disable_failed = "{datetime} -- **{member}** tried to disable the `logging` module but something went wrong! I have not changed the configuration!"
-response_module_logging_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `logging` module but something went wrong! I have not changed the configuration!"
+response_module_logging_disable_failed = "{datetime} -- **{member}** tried to disable the `logging` module but something went wrong! Some of the configuration might be changed!!"
+response_module_logging_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `logging` module but something went wrong! Some of the configuration might be changed!!"
 response_module_logging_settings_change_success = (
     "{datetime} -- **{member}** changed the settings of the `logging` module!"
 )
@@ -249,6 +249,7 @@ response_games_played_higher_lower_played_loss = (
 response_games_played_higher_lower_played_failed = "{datetime} -- **{member}** tried to play `Higher/Lower` but something went wrong while starting!"
 ### Meme
 response_meme_success = "{datetime} -- **{member}** requested a meme!"
+response_meme_failed = "{datetime} -- **{member}** requested a meme but something went wrong while sending!"
 ### Transcribe audio message
 response_transcribe_failed = "{datetime} -- **{member}** tried to transcribe a voice message but something went wrong!"
 response_transcribe_success = "{datetime} -- **{member}** transcribed a voice message!"
@@ -496,7 +497,7 @@ response_role_updated = (
 ## Module Autoresponder
 ### Disable
 response_module_autoresponder_disabled = "{datetime} -- **{member}** has disabled the `autoresponder` module! All related settings are removed!"
-response_module_autoresponder_disable_failed = "{datetime} -- **{member}** tried to disable the `autoresponder` module but something went wrong! I have not changed the configuration!"
+response_module_autoresponder_disable_failed = "{datetime} -- **{member}** tried to disable the `autoresponder` module but something went wrong! Some of the configuration might be changed!!"
 ### Enable
 response_module_autoresponder_enabled = (
     "{datetime} -- **{member}** has enabled the `autoresponder` module!"
@@ -595,7 +596,7 @@ response_tempchannel_edit_name_failed = "{datetime} -- **{member}** tried to edi
 response_tempchannel_edit_name_failed_not_a_tempchannel = "{datetime} -- **{member}** tried to edit the name of a temporary channel but the target channel was not a tempchannel!"
 ### Disable
 response_module_tempchannel_disabled = "{datetime} -- **{member}** has disabled the `tempchannel` module! All related settings are removed! This includes all known tempchannels, existing tempchannels will therefore not be deleted automatically!"
-response_module_tempchannel_disable_failed = "{datetime} -- **{member}** tried to disable the `tempchannel` module but something went wrong! I have not changed the configuration!"
+response_module_tempchannel_disable_failed = "{datetime} -- **{member}** tried to disable the `tempchannel` module but something went wrong! Some of the configuration might be changed!!"
 ### Enable
 response_module_tempchannel_enabled = (
     "{datetime} -- **{member}** has enabled the `tempchannel` module!"
@@ -610,7 +611,7 @@ response_module_tempchannel_settings_changed_failed = "{datetime} -- **{member}*
 ## Module Welcoming
 ### Disable
 response_module_welcoming_disabled = "{datetime} -- **{member}** has disabled the `welcoming` module! All related settings are removed!"
-response_module_welcoming_disable_failed = "{datetime} -- **{member}** tried to disable the `welcoming` module but something went wrong! I have not changed the configuration!"
+response_module_welcoming_disable_failed = "{datetime} -- **{member}** tried to disable the `welcoming` module but something went wrong! Some of the configuration might be changed!!"
 ### Enable
 response_module_welcoming_enabled = (
     "{datetime} -- **{member}** has enabled the `welcoming` module!"
@@ -662,7 +663,7 @@ response_module_welcoming_check_role_timed = (
 ## Module Reactionroles
 ### Disable
 response_module_reactionroles_disabled = "{datetime} -- **{member}** has disabled the `reactionroles` module! All related settings are removed any left over reactionrole panels can safely be removed!"
-response_module_reactionroles_disable_failed = "{datetime} -- **{member}** tried to disable the `reactionroles` module but something went wrong! I have not changed the configuration!"
+response_module_reactionroles_disable_failed = "{datetime} -- **{member}** tried to disable the `reactionroles` module but something went wrong! Some of the configuration might be changed!!"
 ### Enable
 response_module_reactionroles_enabled = (
     "{datetime} -- **{member}** has enabled the `reactionroles` module!"
@@ -711,7 +712,7 @@ response_module_reactionroles_reactionrole_entry_edit_failed = "{datetime} -- **
 ## Module Tickets
 ### Disable
 response_module_tickets_disabled = "{datetime} -- **{member}** has disabled the `tickets` module! All related settings are removed! The `ticket` module channels and roles should be removed, if this is not the case, these can safely be removed!"
-response_module_tickets_disable_failed = "{datetime} -- **{member}** tried to disable the `tickets` module but something went wrong! I have not changed the configuration!"
+response_module_tickets_disable_failed = "{datetime} -- **{member}** tried to disable the `tickets` module but something went wrong! Some of the configuration might be changed!!"
 ### Enable
 response_module_tickets_enabled = (
     "{datetime} -- **{member}** has enabled the `tickets` module!"
@@ -726,7 +727,7 @@ response_module_tickets_settings_change_failed = "{datetime} -- **{member}** tri
 ## Module Serverstats
 ### Disable
 response_module_serverstats_disabled = "{datetime} -- **{member}** has disabled the `serverstats` module! All related settings are removed!"
-response_module_serverstats_disable_failed = "{datetime} -- **{member}** tried to disable the `serverstats` module but something went wrong! I have not changed the configuration!"
+response_module_serverstats_disable_failed = "{datetime} -- **{member}** tried to disable the `serverstats` module but something went wrong! Some of the configuration might be changed!!"
 ### Enable
 response_module_serverstats_enabled = (
     "{datetime} -- **{member}** has enabled the `serverstats` module!"
@@ -741,7 +742,7 @@ response_module_serverstats_settings_change_failed = "{datetime} -- **{member}**
 ## Module Socials
 ### Disable
 response_module_socials_disabled = "{datetime} -- **{member}** has disabled the `socials` module! All related settings are removed!"
-response_module_socials_disable_failed = "{datetime} -- **{member}** tried to disable the `socials` module but something went wrong! I have not changed the configuration!"
+response_module_socials_disable_failed = "{datetime} -- **{member}** tried to disable the `socials` module but something went wrong! Some of the configuration might be changed!"
 ### Enable
 response_module_socials_enabled = (
     "{datetime} -- **{member}** has enabled the `socials` module!"
@@ -753,31 +754,42 @@ response_module_socials_settings_changed = (
 )
 response_module_socials_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `socials` module but something has gone wrong! Not all settings may have been changed!"
 ### Twitch
-response_module_twitch_added = "{datetime} -- **{member}** added Twitch account: `{twitch_account}` to the configuration of the `socials` module!"
-response_module_twitch_add_failed = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the configuration of the `socials` module but something went wrong!"
-response_module_twitch_add_failed_limit_reached = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the configuration of the `socials` module but the limit of Twitch accounts is reached!"
-response_module_twitch_add_failed_already_added = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the configuration of the `socials` module but the Twitch account is already in the list!"
-response_module_twitch_removed = "{datetime} -- **{member}** removed Twitch account: `{twitch_account}` from the configuration of the `socials` module!"
-response_module_twitch_remove_failed = "{datetime} -- **{member}** tried to remove Twitch account: `{twitch_account}` from the configuration of the `socials` module but something went wrong!"
+response_module_twitch_added = "{datetime} -- **{member}** added Twitch account: `{twitch_account}` to the `socials` module monitored Twitch accounts list!"
+response_module_twitch_add_failed = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the `socials` module monitored Twitch accounts list but something went wrong!"
+response_module_twitch_add_failed_limit_reached = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the `socials` module monitored Twitch accounts list but the limit of Twitch accounts is reached!"
+response_module_twitch_add_failed_already_added = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the `socials` module monitored Twitch accounts list but the Twitch account is already in the list!"
+response_module_twitch_add_failed_component_disabled = "{datetime} -- **{member}** tried to add Twitch account: `{twitch_account}` to the `socials` module monitored Twitch accounts list but the Twitch component is disabled!"
+response_module_twitch_removed = "{datetime} -- **{member}** removed Twitch account: `{twitch_account}` from the `socials` module monitored Twitch accounts list!"
+response_module_twitch_remove_failed = "{datetime} -- **{member}** tried to remove Twitch account: `{twitch_account}` from the `socials` module monitored Twitch accounts list but something went wrong!"
+### YouTube
+response_module_youtube_added = "{datetime} -- **{member}** added YouTube channel: `{youtube_channel}` to the `socials` module monitored YouTube channel list!"
+response_module_youtube_add_failed = "{datetime} -- **{member}** tried to add YouTube channel: `{youtube_channel}` to the `socials` module monitored YouTube channel list but something went wrong!"
+response_module_youtube_add_failed_limit_reached = "{datetime} -- **{member}** tried to add YouTube channel: `{youtube_channel}` to the `socials` module monitored YouTube channel list but the limit of YouTube accounts is reached!"
+response_module_youtube_add_failed_already_added = "{datetime} -- **{member}** tried to add YouTube channel: `{youtube_channel}` to the `socials` module monitored YouTube channel list but the YouTube account is already in the list!"
+response_module_youtube_add_failed_component_disabled = "{datetime} -- **{member}** tried to add YouTube channel: `{youtube_channel}` to the `socials` module monitored YouTube channel list but the YouTube component is disabled!"
+response_module_youtube_removed = "{datetime} -- **{member}** removed YouTube channel: `{youtube_channel}` from the `socials` module monitored YouTube channel list!"
+response_module_youtube_remove_failed = "{datetime} -- **{member}** tried to remove YouTube channel: `{youtube_channel}` from the `socials` module monitored YouTube channel list but something went wrong!"
 ### RSS
-response_module_rss_added = "{datetime} -- **{member}** added the RSS Feed: `{feed}` to the configuration of the `socials` module!"
-response_module_rss_add_failed = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the configuration of the `socials` module but something went wrong!"
-response_module_rss_add_failed_limit_reached = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the configuration of the `socials` module but the limit of RSS feeds is reached!"
-response_module_rss_add_failed_already_added = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the configuration of the `socials` module but the RSS feeds is already in the list!"
-response_module_rss_removed = "{datetime} -- **{member}** removed RSS Feed: `{feed}` from the configuration of the `socials` module!"
-response_module_rss_remove_failed = "{datetime} -- **{member}** tried to remove RSS Feed: `{feed}` from the configuration of the `socials` module but something went wrong!"
+response_module_rss_added = "{datetime} -- **{member}** added the RSS Feed: `{feed}` to the `socials` module monitored rss feeds list!"
+response_module_rss_add_failed = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the `socials` module monitored rss feeds list but something went wrong!"
+response_module_rss_add_failed_limit_reached = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the `socials` module monitored rss feeds list but the limit of RSS feeds is reached!"
+response_module_rss_add_failed_already_added = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the `socials` module monitored rss feeds list but the RSS feeds is already in the list!"
+response_module_rss_add_failed_component_disabled = "{datetime} -- **{member}** tried to add RSS Feed: `{feed}` to the `socials` module monitored rss feeds list but the RSS component is disabled!"
+response_module_rss_removed = "{datetime} -- **{member}** removed RSS Feed: `{feed}` from the `socials` module monitored rss feeds list!"
+response_module_rss_remove_failed = "{datetime} -- **{member}** tried to remove RSS Feed: `{feed}` from the `socials` module monitored rss feeds list but something went wrong!"
 ### Reddit
-response_module_reddit_added = "{datetime} -- **{member}** added Subreddit: `{subreddit}` to the configuration of the `socials` module!"
-response_module_reddit_add_failed = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the configuration of the `socials` module but something went wrong!"
-response_module_reddit_add_failed_limit_reached = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the configuration of the `socials` module but the limit of Subreddits is reached!"
-response_module_reddit_add_failed_already_added = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the configuration of the `socials` module but the Subreddit is already in the list!"
-response_module_reddit_removed = "{datetime} -- **{member}** removed Subreddit: `{subreddit}` from the configuration of the `socials` module!"
-response_module_reddit_remove_failed = "{datetime} -- **{member}** tried to remove Subreddit: `{subreddit}` from the configuration of the `socials` module but something went wrong!"
+response_module_reddit_added = "{datetime} -- **{member}** added Subreddit: `{subreddit}` to the `socials` module monitored subreddits list!"
+response_module_reddit_add_failed = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the `socials` module monitored subreddits list but something went wrong!"
+response_module_reddit_add_failed_limit_reached = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the `socials` module monitored subreddits list but the limit of Subreddits is reached!"
+response_module_reddit_add_failed_already_added = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the `socials` module monitored subreddits list but the Subreddit is already in the list!"
+response_module_reddit_add_failed_component_disabled = "{datetime} -- **{member}** tried to add Subreddit: `{subreddit}` to the `socials` module monitored subreddits list but the reddit component is disabled!"
+response_module_reddit_removed = "{datetime} -- **{member}** removed Subreddit: `{subreddit}` from the `socials` module monitored subreddits list!"
+response_module_reddit_remove_failed = "{datetime} -- **{member}** tried to remove the Subreddit: `{subreddit}` from the `socials` module monitored subreddits list but something went wrong!"
 
 ## Module tags
 ### Disable
 response_module_tags_disabled = "{datetime} -- **{member}** has disabled the `tags` module! All related settings are removed!"
-response_module_tags_disable_failed = "{datetime} -- **{member}** tried to disable the `tags` module but something went wrong! I have not changed the configuration!"
+response_module_tags_disable_failed = "{datetime} -- **{member}** tried to disable the `tags` module but something went wrong! Some of the configuration might be changed!!"
 ### Enable
 response_module_tags_enabled = (
     "{datetime} -- **{member}** has enabled the `tags` module!"
@@ -785,20 +797,49 @@ response_module_tags_enabled = (
 response_module_tags_enable_failed = "{datetime} -- **{member}** tried to enable the `tags` module but something went wrong!"
 ### Create
 response_tag_create_success = (
-    "{datetime} -- **{member}** has created a tag named `{tag_name}`!"
+    "{datetime} -- **{member}** has created a new tag. Tag ID: `{tag_id}`!"
 )
-response_tag_create_failed = "{datetime} -- **{member}** tried to create a tag named `{tag_name}` but something went wrong!"
-response_tag_create_failed_already_exists = "{datetime} -- **{member}** tried to create a tag named `{tag_name}` but that name already exists!"
+response_tag_create_failed_settings_not_found = "{datetime} -- **{member}** tried to create a new tag but something went wrong with getting the servers settings!"
+response_tag_create_failed_invalid_visibility = "{datetime} -- **{member}** tried to create a new tag but provided a wrong visibility!"
+response_tag_create_failed_limit_reached = "{datetime} -- **{member}** tried to create a new tag but the servers tags limit has been reached!"
+response_tag_create_failed = (
+    "{datetime} -- **{member}** tried to create a tag but something went wrong!"
+)
+response_tag_create_failed_names = "{datetime} -- **{member}** tried to create a tag but something went wrong with registering the names. However the tag itself has been created!"
 ### Delete
-response_tag_delete_success = "{datetime} -- **{member}** deleted the tag `{tag_name}`!"
-response_tag_delete_failed = "{datetime} -- **{member}** tried to delete the tag `{tag_name}` but something went wrong!"
-response_tag_delete_failed_tag_does_not_exist = "{datetime} -- **{member}** tried to delete the tag `{tag_name}` but that tag did not exist!"
+response_tag_delete_success = (
+    "{datetime} -- **{member}** deleted the tag with ID: `{tag_id}`!"
+)
+response_tag_delete_failed_settings_not_found = "{datetime} -- **{member}** tried to delete the tag with ID: `{tag_id}` but something went wrong with getting the servers settings!"
+response_tag_delete_failed_no_tag_given = (
+    "{datetime} -- **{member}** tried to delete a tag but didn't provide the ID!"
+)
+response_tag_delete_failed_no_tag_found = "{datetime} -- **{member}** tried to delete the tag with ID: `{tag_id}` but that tag did not exist!"
+response_tag_delete_failed_not_owner = "{datetime} -- **{member}** tried to delete the tag with ID: `{tag_id}` but they are not the owner of the tag!"
+response_tag_delete_failed = "{datetime} -- **{member}** tried to delete the tag with ID: `{tag_id}` but something went wrong!"
 ### Edit
 response_tag_edit_success = (
-    "{datetime} -- **{member}** edited a tag named `{tag_name}`!"
+    "{datetime} -- **{member}** edited a tag with ID: `{tag_id}`!"
 )
-response_tag_edit_failed = "{datetime} -- **{member}** tried to edit a tag named `{tag_name}` but something went wrong!"
-response_tag_edit_failed_tag_does_not_exist = "{datetime} -- **{member}** tried to edit a tag with ID `{tag_id}` but that tag does not exist!"
+response_tag_edit_failed_settings_not_found = "{datetime} -- **{member}** tried to edit the tag with ID: `{tag_id}` but something went wrong with getting the servers settings!"
+response_tag_edit_failed_no_tag_given = (
+    "{datetime} -- **{member}** tried to edit a tag but didn't provide the ID!"
+)
+response_tag_edit_failed_no_tag_found = "{datetime} -- **{member}** tried to edit the tag with ID: `{tag_id}` but that tag did not exist!"
+response_tag_edit_failed_not_owner = "{datetime} -- **{member}** tried to edit the tag with ID: `{tag_id}` but they are not the owner of the tag!"
+response_tag_edit_failed = "{datetime} -- **{member}** tried to edit a tag with ID: `{tag_id}` but something went wrong!"
 ### Send
-response_tag_send_success = "{datetime} -- **{member}** used the tag `{tag_name}`!"
-response_tag_send_failed_no_such_tag = "{datetime} -- **{member}** tried to send a tag with the name `{tag_name}` but it does not exist!"
+response_tag_send_success = (
+    "{datetime} -- **{member}** used the tag with ID: `{tag_id}`!"
+)
+response_tag_send_failed_settings_not_found = "{datetime} -- **{member}** tried to send the tag with ID: `{tag_id}` but something went wrong with getting the servers settings!"
+response_tag_send_failed_module_disabled = "{datetime} -- **{member}** tried to send the tag with ID: `{tag_id}` but the tags module is disabled!"
+response_tag_send_failed_no_such_tag = "{datetime} -- **{member}** tried to send a tag with ID: `{tag_id}` but it does not exist!"
+response_tag_send_failed_not_owner_and_private = "{datetime} -- **{member}** tried to send a tag with ID: `{tag_id}` but they are not the owner of the tag and the owner has set the tag to private!"
+### Preview
+response_tag_preview_success = (
+    "{datetime} -- **{member}** has previewed a tag with ID: `{tag_id}`!"
+)
+response_tag_preview_failed_settings_not_found = "{datetime} -- **{member}** tried to preview the tag with ID: `{tag_id}` but something went wrong with getting the servers settings!"
+response_tag_preview_failed_module_disabled = "{datetime} -- **{member}** tried to preview the tag with ID: `{tag_id}` but the tags module is disabled!"
+response_tag_preview_failed_no_such_tag = "{datetime} -- **{member}** tried to preview a tag with ID: `{tag_id}` but it does not exist!"
