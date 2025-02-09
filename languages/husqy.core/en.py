@@ -99,7 +99,6 @@ LOGGABLE_TRANSLATIONS = {
     "log_radio_play": "Radio played",
     "log_support": "Support commands",
     "log_modules": "Module changes",
-    "log_tempchannels": "Tempchannel events",
     "log_customembed_send": "Custom Embeds Sent",
     "log_customembed_create": "Custom Embeds Creations",
     "log_custommodal_create": "Custom Modal Creations",
@@ -164,6 +163,24 @@ LOGGABLE_TRANSLATIONS = {
     "log_socials_twitch_add": "Twitch account added",
     "log_socials_youtube_remove": "YouTube channel removed",
     "log_socials_youtube_add": "YouTube channel added",
+    "log_creation_channel_create": "Tempchannels creation channels created",
+    "log_creation_channel_delete": "Tempchannels creation channels deleted",
+    "log_creation_channel_edit": "Tempchannels creation channels edited",
+    "log_tempchannel_check_create": "Checked for tempchannel creation",
+    "log_tempchannel_check_delete": "Checked for tempchannel deletion",
+    "log_tempchannel_name_edited": "Tempchannel name edited",
+    "log_tempchannel_user_limit_edited": "Tempchannel user limit edited",
+    "log_tempchannel_slowmode_edited": "Tempchannel slowmode edited",
+    "log_tempchannel_bitrate_edited": "Tempchannel bitrate edited",
+    "log_tempchannel_age_restriction_edited": "Tempchannel age restriction setting edited",
+    "log_tempchannel_region_edited": "Tempchannel region edited",
+    "log_tempchannel_claimed": "Tempchannel claimed",
+    "log_tempchannel_transferred": "Tempchannel transferred",
+    "log_tempchannel_deleted": "Tempchannel set deleted",
+    "log_tempchannel_block_rule_added": "Tempchannel block rule added",
+    "log_tempchannel_block_rule_removed": "Tempchannel block rule removed",
+    "log_tempchannel_trust_rule_added": "Tempchannel trust rule added",
+    "log_tempchannel_trust_rule_removed": "Tempchannel trust rule removed",
 }
 
 
@@ -320,6 +337,7 @@ response_info_failed = "Something went wrong while getting the information!"
 response_info_bot_module_logging_disabled = "The `Logging` module is disabled!"
 response_info_bot_module_welcoming_disabled = "The `Welcoming` module is disabled!"
 response_info_bot_module_tempchannels_disabled = "The `Tempchannels` module is disabled!"
+response_info_bot_module_tempchannels_enabled = "The `Tempchannels` module is enabled. Please use the `/tempchannels list` command to get information about creation channels or active tempchannels or ask your server administrator!"
 response_info_bot_module_socials_disabled = "The `Socials` module is disabled!"
 response_info_bot_module_reactionroles_disabled = "The `Reactionroles` module is disabled!"
 response_info_bot_module_reactionroles_enabled = "The `Reactionroles` module is enabled but details about this module can not be viewed in Discord. Please ask a server administrator for more information about this module!"
@@ -331,7 +349,6 @@ response_info_bot_module_tags_enabled = "The `Tags` module is enabled! Please us
 response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available! For the status of the `Autoresponder` module, please check the General info page!"
 response_info_bot_module_serverstats_disabled = "The `Serverstats` module is disabled!"
 response_info_timeout = "The info command reached a timeout!"
-response_info_tempchannels_list_failed = "Something went wrong while trying to get an overview of all tempchannels in this server, returning to info tempchannels view."
 response_info_reddit_list_failed = "Something went wrong while trying to get an overview of all monitored Subreddits in this server, returning to info socials view."
 response_info_twitch_list_failed = "Something went wrong while trying to get an overview of all monitored Twitch accounts in this server, returning to info socials view."
 response_info_rss_list_failed = "Something went wrong while trying to get an overview of all monitored RSS feeds in this server, returning to info socials view."
@@ -354,9 +371,11 @@ info_bot_embed_field_title_auto_kick_role = "Auto kick role:"
 info_bot_embed_field_title_modules_enabled = "Enabled Modules:"
 info_bot_embed_field_title_modules_disabled = "Disabled Modules:"
 info_bot_embed_field_title_logging_channel = "Logging Channel:"
-info_bot_embed_field_title_logging_events_1 = "Events that are logged (1/3):"
-info_bot_embed_field_title_logging_events_2 = "Events that are logged (2/3):"
-info_bot_embed_field_title_logging_events_3 = "Events that are logged (3/3):"
+info_bot_embed_field_title_logging_events_1 = "Events that are logged (1/5):"
+info_bot_embed_field_title_logging_events_2 = "Events that are logged (2/5):"
+info_bot_embed_field_title_logging_events_3 = "Events that are logged (3/5):"
+info_bot_embed_field_title_logging_events_4 = "Events that are logged (4/5):"
+info_bot_embed_field_title_logging_events_5 = "Events that are logged (5/5):"
 info_bot_embed_field_title_enabled_components = "Enabled components:"
 info_bot_embed_field_title_welcoming_welcome_messages_dm_randomized = "Welcome DM responses randomized:"
 info_bot_embed_field_title_welcoming_welcome_messages_randomized = "Welcome channel responses randomized:"
@@ -368,13 +387,6 @@ info_bot_embed_field_title_welcoming_welcome_messages_channel = "Welcome message
 info_bot_embed_field_title_welcoming_leave_messages_channel = "Leave message in server channel:"
 info_bot_embed_field_title_welcoming_role_add_role = "Autorole roles:"
 info_bot_embed_field_title_welcoming_responses_list = "Current server responses:"
-info_bot_embed_field_title_tempchannels_list = "Current server tempchannels:"
-info_bot_embed_field_title_tempchannels_voice_create_channel = "Channel to create temporary channel:"
-info_bot_embed_field_title_tempchannels_voice_category = "The category where voice channels are created:"
-info_bot_embed_field_title_tempchannels_create_text = "Create text channels:"
-info_bot_embed_field_title_tempchannels_text_category = "The category where text channels are created:"
-info_bot_embed_field_title_tempchannels_voice_channel_name = "Name of the voice channels that get created:"
-info_bot_embed_field_title_tempchannels_text_channel_name = "Name of the text channels that get created:"
 info_bot_embed_field_title_socials_monitor_reddit = "Monitor Reddit:"
 info_bot_embed_field_title_socials_monitor_rss = "Monitor RSS Feeds:"
 info_bot_embed_field_title_socials_monitor_twitch = "Monitor Twitch accounts:"
@@ -452,7 +464,6 @@ info_embed_title = "Info"
 info_embed_description_select_channel = "Please select the channel you want info about."
 info_embed_description_select_role = "Please select the role you want info about."
 info_embed_description_select_user = "Please select the user you want info about."
-tempchannels_list = "Tempchannels list"
 autoresponder_list = "Autoresponder list"
 welcoming_responses_list = "Responses list"
 welcoming_timedroles_list = "Timedroles list"
@@ -806,58 +817,6 @@ module_welcoming_autorole = "Autorole"
 module_welcoming_timedroles = "Timedroles"
 
 # ------------------------------------------------------------------------- #
-# TEMPCHANNELS #
-# ------------------------------------------------------------------------- #
-response_module_tempchannels_settings_failed = (
-    "Something went wrong while getting the settings of the `tempchannels` module!"
-)
-tempchannels_edit_name = "Change channel name"
-tempchannels_edit_user_limit = "Change channel user limit"
-tempchannels_edit_slowmode = "Change channel slowmode delay"
-tempchannels_claim = "Claim ownership"
-tempchannels_transfer = "Transfer ownership"
-tempchannels_block_access = "Block users"
-tempchannels_unblock_access = "Unblock users"
-tempchannels_onlyfor = "Only for {role}"
-# Responses
-response_tempchannel_edit_failed_not_a_temporary_channel = "I am sorry! The selected channel isn't a temporary channel!"
-response_tempchannel_edit_timeout = "The editing of the temporary channel failed, the timeout was reached!"
-response_tempchannel_edit_claim_not_possible = "You cannot claim ownership of this temporary channel because this channel already has an owner. The owner is {owner}, they can transfer the channel to you they wish!"
-response_tempchannel_edit_claim_cancelled = "I have cancelled the ownership claim!"
-response_tempchannel_edit_transfer_cancelled = "I have cancelled the ownership transfer!"
-response_tempchannel_edit_failed = "Oh no! Something went wrong! Please try again later."
-# Embeds
-tempchannels_edit_embed_title = "Tempchannel edit wizard"
-tempchannels_edit_embed_description = "Please select the attribute of the channel you want to edit!"
-tempchannels_edit_embed_footer = "Editing: {channel}, timeout: {timeout}"
-tempchannels_edit_block_embed_title = "Tempchannel block users"
-tempchannels_edit_block_embed_description = "Please select the user(s) you want to block from this channel (there is a max. of 25 users, if you want to block more users, please run the command again!)!\nIf the user is not there, please start typing for autocomplete!"
-tempchannels_edit_unblock_embed_title = "Tempchannel unblock users"
-tempchannels_edit_unblock_embed_description = "Please select the user(s) you want to unblock from this channel (there is a max. of 25 users, if you want to unblock more users, please run the command again!)!\nIf the user is not there, please start typing for autocomplete!"
-tempchannels_edit_claim_embed_title = "Tempchannel claim ownership"
-tempchannels_edit_claim_embed_description = (
-    "Are you sure you want to claim ownership of the following channels: {channels}"
-)
-tempchannels_edit_name_embed_title = "Tempchannel name change"
-tempchannels_edit_name_embed_description = "Please enter the new name to give the channel!"
-tempchannels_edit_onlyfor_embed_title = "Tempchannel onlyfor role"
-tempchannels_edit_onlyfor_embed_description = "Please select the role you want to allow to this channel, other roles will be blocked! \nIf the role is not there, please start typing for autocomplete!"
-tempchannels_edit_slowmode_embed_title = "Tempchannel (text) slowmode change"
-tempchannels_edit_slowmode_embed_description = (
-    "Please enter the new slowmode delay (in seconds) of the channel! If you don't want slowmode, please insert 0!"
-)
-tempchannels_edit_transfer_embed_title = "Tempchannel transfer ownership"
-tempchannels_edit_transfer_embed_description = (
-    "Are you sure you want to transfer ownership of the following channels: {channels}"
-)
-tempchannels_edit_transfer_user_embed_description = "Please select the user you want to transfer ownership to! \nIf the user is not there, please start typing for autocomplete!"
-tempchannels_edit_user_limit_embed_title = "Tempchannel (voice) user limit change"
-tempchannels_edit_user_limit_embed_description = (
-    "Please enter the new user limit of the channel! If you don't want a limit, please insert 0!"
-)
-
-
-# ------------------------------------------------------------------------- #
 # TICKETS #
 # ------------------------------------------------------------------------- #
 response_module_tickets_settings_failed = "Something went wrong while getting the settings of the `tickets` module!"
@@ -903,3 +862,18 @@ response_socials_component_list_no_entries = (
 socials_component_list_embed_title = "Socials {component} list"
 socials_component_list_embed_description = "Here are the entries! Entry count: {entries}!"
 socials_component_list_embed_field_entries = "Entries:"
+
+# ------------------------------------------------------------------------- #
+# TEMPCHANNELS #
+# ------------------------------------------------------------------------- #
+response_tempchannels_list_failed = "Something went wrong while getting the list. Is the list type valid?"
+response_tempchannels_list_creation_channels_failed = (
+    "Something went wrong while gettint the list of creation channels!"
+)
+response_tempchannels_list_tempchannels_failed = "Something went wrong while gettint the list of tempchannels!"
+response_tempchannels_list_no_items = "There are no items based on the request list type and selection."
+# Embeds
+tempchannels_list_embed_title = "{list_type} list"
+tempchannels_list_embed_description = "Here are the {list_type} based on your selection! Item count: {items}!"
+tempchannels_list_embed_field_creation_channels = "Creation channels:"
+tempchannels_list_embed_field_tempchannels = "Tempchannels:"
