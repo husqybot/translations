@@ -711,7 +711,7 @@ response_module_tempchannels_transfer_failed = (
     "{datetime} -- **{member}** tried to transfer ownership of a tempchannel but something went wrong!"
 )
 response_module_tempchannels_transfer_failed_data_collection_enabled = "{datetime} -- **{member}** tried to transfer ownership of a tempchannel but the new owner has data collection disabled!"
-response_module_tempchannels_transfer_failed_member_is_bot = "{datetime} -- **{member}** tried to transfer ownership of a tempchannel but the new owner is a bot!"
+response_module_tempchannels_transfer_failed_member_is_bot = "{datetime} -- **{member}** tried to transfer ownership of a tempchannel but the new owner has data collection disabled!"
 response_module_tempchannels_transfer_failed_not_owner = (
     "{datetime} -- **{member}** tried to transfer ownership of a tempchannel but they are not the owner!"
 )
@@ -1055,6 +1055,9 @@ response_tag_create_failed_limit_reached = (
 )
 response_tag_create_failed = "{datetime} -- **{member}** tried to create a tag but something went wrong!"
 response_tag_create_failed_names = "{datetime} -- **{member}** tried to create a tag but something went wrong with registering the names. However the tag itself has been created!"
+response_tag_create_failed_prevent_data_collection_enabled = (
+    "{datetime} -- **{member}** tried to create a tag but they have disabled data collection in this server!"
+)
 ### Delete
 response_tag_delete_success = "{datetime} -- **{member}** deleted the tag with ID: `{tag_id}`!"
 response_tag_delete_failed_settings_not_found = "{datetime} -- **{member}** tried to delete the tag with ID: `{tag_id}` but something went wrong with getting the servers settings!"
@@ -1099,4 +1102,43 @@ response_tag_preview_failed_module_disabled = (
 )
 response_tag_preview_failed_no_such_tag = (
     "{datetime} -- **{member}** tried to preview a tag with ID: `{tag_id}` but it does not exist!"
+)
+
+## Module verifier
+### Disable
+response_module_verifier_disabled = (
+    "{datetime} -- **{member}** has disabled the `verifier` module! All related settings are removed!"
+)
+response_module_verifier_disable_failed = "{datetime} -- **{member}** tried to disable the `verifier` module but something went wrong! I have not changed the configuration!"
+### Enable
+response_module_verifier_enabled = "{datetime} -- **{member}** has enabled the `verifier` module!"
+response_module_verifier_enable_failed = (
+    "{datetime} -- **{member}** tried to enable the `verifier` module but something went wrong!"
+)
+### Settings
+response_module_verifier_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `verifier` module!"
+)
+response_module_verifier_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `verifier` module but not all changes could be completed!"
+response_module_verifier_settings_change_failed_invalid_verifier_type = "{datetime} -- **{member}** tried to change the settings of the `verifier` module but they did not provide a valid verifier type!"
+### Create verification
+response_module_verifier_verification_created = "{datetime} -- A verification has been created for: **{member}**!"
+response_module_verifier_verification_create_failed = (
+    "{datetime} -- Something went wrong while creating a verification for: **{member}**!"
+)
+response_module_verifier_verification_create_failed_invalid_member = (
+    "{datetime} -- Something went wrong while creating a verification. The target member was not valid!"
+)
+response_module_verifier_verification_create_failed_not_administrator = "{datetime} -- **{member}** tried to create a verification using the `/verifier entry retrigger` command but they are not an administrator!"
+### Handle verifiation
+response_module_verifier_verification_handle_success = "{datetime} -- **{member}** has been verified!"
+response_module_verifier_verification_handle_failed = (
+    "{datetime} -- **{member}** tried to verify themself but something went wrong!"
+)
+response_module_verifier_verification_handle_failed_not_target_user = "{datetime} -- **{member}** tried to verify themself but they were not the user that needed to verify with the entry!"
+response_module_verifier_verification_handle_failed_already_verified = (
+    "{datetime} -- **{member}** tried to verify themself but the entry verification was already completed!"
+)
+response_module_verifier_verification_handle_failed_invalid_member = (
+    "{datetime} -- Something went wrong while handling the verification. The target member was not valid!"
 )
