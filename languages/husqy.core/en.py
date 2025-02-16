@@ -181,6 +181,8 @@ LOGGABLE_TRANSLATIONS = {
     "log_tempchannel_block_rule_removed": "Tempchannel block rule removed",
     "log_tempchannel_trust_rule_added": "Tempchannel trust rule added",
     "log_tempchannel_trust_rule_removed": "Tempchannel trust rule removed",
+    "log_verifier_verification_create": "Verifier verification created",
+    "log_verifier_verification_handle": "Verifier verification handled",
 }
 
 
@@ -328,6 +330,7 @@ module_ticket_view_types = "View ticket types"
 module_ticket_view_generals_settings = "View settings"
 module_serverstats = "Serverstats module"
 module_tags = "Tags module"
+module_verifier = "Verifier module"
 # Responses
 support_embed_title = "{bot_name} Support"
 support_embed_description = (
@@ -346,6 +349,7 @@ response_info_bot_module_tickets_disabled = "The `Tickets` module is disabled!"
 response_info_bot_module_autoresponder_disabled = "The `Autoresponder` module is disabled!"
 response_info_bot_module_tags_disabled = "The `Tags` module is disabled!"
 response_info_bot_module_tags_enabled = "The `Tags` module is enabled! Please use the `/tags list` command to get information about the tags or ask your server administrator!"
+response_info_bot_module_verifier_disabled = "The `Verifier` module is disabled!"
 response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available! For the status of the `Autoresponder` module, please check the General info page!"
 response_info_bot_module_serverstats_disabled = "The `Serverstats` module is disabled!"
 response_info_timeout = "The info command reached a timeout!"
@@ -391,6 +395,15 @@ info_bot_embed_field_title_socials_monitor_reddit = "Monitor Reddit:"
 info_bot_embed_field_title_socials_monitor_rss = "Monitor RSS Feeds:"
 info_bot_embed_field_title_socials_monitor_twitch = "Monitor Twitch accounts:"
 info_bot_embed_field_title_socials_monitor_youtube = "Monitor YouTube channels:"
+info_bot_embed_field_title_verifier_type = "Verifier type:"
+info_bot_embed_field_title_verifier_channel = "Channel:"
+info_bot_embed_field_title_verifier_role_ids = "Verifier role IDs:"
+info_bot_embed_field_title_verifier_is_embed = "Starting message is embed:"
+info_bot_embed_field_title_verifier_success_is_embed = "Completed message is embed:"
+info_bot_embed_field_title_verifier_content = "Starting message:"
+info_bot_embed_field_title_verifier_completed_content = "Completed message:"
+info_bot_embed_field_title_verifier_passphrase = "Passphrase:"
+info_bot_embed_field_title_verifier_passphrase_hidden = "Passphrase is not shown, please refer to the Husqy dashboard!"
 module_socials_reddit_embed_field_list = "Monitored Subreddits:"
 module_socials_reddit_embed_field_list_empty = "No Subreddits monitored"
 module_socials_rss_embed_field_list = "Monitored RSS Feeds:"
@@ -663,6 +676,12 @@ privacy_embed_get_data_modules_tags_description = (
 privacy_embed_get_data_modules_tags_something_went_wrong = (
     "Something went wrong while checking you references for the {bot_name} tags module data."
 )
+privacy_embed_get_data_modules_verifier_description = (
+    "For the {bot_name} verifier module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_verifier_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} verifier module data."
+)
 privacy_embed_get_data_functions_giveaways_description = (
     "For the {bot_name} giveaways functions data related to this server, we have found the following:\n{data}"
 )
@@ -877,3 +896,9 @@ tempchannels_list_embed_title = "{list_type} list"
 tempchannels_list_embed_description = "Here are the {list_type} based on your selection! Item count: {items}!"
 tempchannels_list_embed_field_creation_channels = "Creation channels:"
 tempchannels_list_embed_field_tempchannels = "Tempchannels:"
+
+
+# ------------------------------------------------------------------------- #
+# VERIFIER #
+# ------------------------------------------------------------------------- #
+response_module_verifier_settings_failed = "Something went wrong while getting the settings of the `verifier` module!"
