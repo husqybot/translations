@@ -1,35 +1,144 @@
 # MODULE TICKETS
 removed_user = "(removed_user)"
-# Enable
-module_tickets_support_type_general = "🛠️ General Support"
-module_tickets_support_type_account = "📩 Account support"
-module_tickets_support_type_sales = "💵 Sales/billing support"
-module_tickets_support_type_hardware = "💻 Hardware support"
-module_tickets_support_type_product = "📦 Product Availability support"
-module_tickets_support_type_bug = "🐛 Bug support"
-module_tickets_support_type_fr = "💡 Feature request"
-module_tickets_support_type_fi = "💡 Feature improvement"
-module_tickets_default_types = {
-    "general_support": module_tickets_support_type_general,
-    "account_support": module_tickets_support_type_account,
-    "sales_billing_support": module_tickets_support_type_sales,
-    "hardware_support": module_tickets_support_type_hardware,
-    "product_availability_support": module_tickets_support_type_product,
-    "bug_support": module_tickets_support_type_bug,
-    "feature_request": module_tickets_support_type_fr,
-    "feature_improvement": module_tickets_support_type_fi,
-}
-module_tickets_role_used_for_ticket_module = "This role will be used for the `tickets` module, please DO NOT remove this role from the server without reconfiguring the `tickets` module!"
-module_tickets_channel_used_for_ticket_module = "This channel will be used for the `tickets` module, please DO NOT remove this channel from the server without reconfiguring the `tickets` module!"
-module_tickets_default_ticket_category = "{bot_name} Tickets"
-module_tickets_create_a_ticket = "create-a-ticket"
-module_tickets_view_tickets = "view-tickets"
-module_tickets_default_modal = """{'custom_id': '260666db-aa41-422d-b7ae-4b906cd35054', 'title': 'New ticket', 'components': ["{'type': 1, 'components': [{'type': 4, 'style': 1, 'custom_id': 'bf835028-1c56-4537-b4d2-bfa667135d19', 'label': 'Ticket title', 'placeholder': 'Please insert the title of your ticket'}]}", "{'type': 1, 'components': [{'type': 4, 'style': 2, 'custom_id': '78f400da-f670-411e-9658-9b109a46cbbc', 'label': 'Ticket description', 'placeholder': 'Please describe why you are submitting this ticket'}]}"]}"""
-module_tickets_default_ticket_creation_message = """{"title": "Create a ticket", "description": "If you are experiencing problems or are in need of help, feel free to create a ticket!", "footer": {"text": "Tickets made possible by: Husqy"}}"""
-module_tickets_please_select_default_type_to_create = "Please select a default type to create a ticket"
-module_tickets_please_select_custom_type_to_create = "Please select a custom type to create a ticket"
-response_ticket_created = "your ticket has been created!"
-response_ticket_created_support = "would you mind looking at this?"
-module_tickets_new_ticket_embed_title = "New Ticket!"
-module_tickets_new_ticket_embed_description = "{user} created a new ticket!\n Ticket type: {ticket_type}"
-module_tickets_new_ticket_embed_footer = "Ticket ID: {ticket_id} | Tickets provided by: {bot_name}"
+default_create_ticket_message_content = '{"title": "Create a ticket", "description": "If you are experiencing problems or are in need of help, feel free to create a ticket!", "color": 661809, "footer": {"text": "Tickets provided by: Husqy"}}'
+default_form_content = """{'custom_id': '166a33f5-d51a-490f-ada1-8596cf445a3d', 'title': 'New ticket', 'components': ["{'type': 1, 'components': [{'type': 4, 'style': 2, 'custom_id': '67e8507b-cc15-4131-8e87-645d7f4e0772', 'label': 'Reason', 'placeholder': 'Please describe the reason for opening the ticket', 'required': True, 'min_length': 0, 'max_length': 4000}]}"]}"""
+default_ticket_opened_message = '{"title": "Ticket ID: <ticket_id>", "description": "Thank you for opening a ticket. Our support staff will be with you as soon as possible!", "color": 661809, "footer": {"text": "Tickets provided by: Husqy"}}'
+default_ticket_support_engineer_role_name = "Support engineer"
+default_ticket_create_category_name = "SUPPORT TICKETS"
+default_ticket_create_channel_name = "create-a-ticket"
+create_ticket_button_label = "Create a ticket"
+form_answers = "Form answers:"
+claim_ticket = "Claim ticket (support engineer)"
+transfer_ticket = "Transfer ticket (support engineer)"
+close_ticket = "Close"
+delete_ticket = "Delete"
+reopen_ticket = "Re-open"
+# Responses
+response_ticket_creation_check_failed_no_language = (
+    "I could not check for the creation of the ticket because the servers language is not found!"
+)
+response_ticket_creation_check_failed_no_auto_delete = (
+    "I could not check for the creation of the ticket because the servers auto delete is not found!"
+)
+response_ticket_creation_check_failed_no_timezone = (
+    "I could not check for the creation of the ticket because the servers timezone is not found!"
+)
+response_ticket_creation_check_failed_unable_to_create_thread = (
+    "I could not create the ticket because something went wrong with creating the thread!"
+)
+response_ticket_creation_check_failed_no_open_ticket_categories_configured = (
+    "I could not create the ticket because the server has not configured any category channels for new tickets!"
+)
+response_ticket_creation_check_failed_open_ticket_categories_full = (
+    "I could not create the ticket because the configured ticket categories for new tickets are full!"
+)
+response_ticket_creation_check_failed_sending_message = (
+    "I could not create the ticket because something went wrong with sending the start message to the tickets channel!"
+)
+response_ticket_creation_check_failed = "Something went wrong while creating the ticket!"
+response_ticket_creation_check_success = "The ticket has been created!"
+response_ticket_creation_check_form_failed_no_form_configuration_found = (
+    "I could not show the form because there is not form configuration found!"
+)
+response_ticket_creation_check_form_failed_invalid_form_config = (
+    "I could not show the form because the form configuration is not valid!"
+)
+response_ticket_creation_check_failed_limit_reached = (
+    "The limit of active tickets has been reached! Please wait until a ticket is closed!"
+)
+response_ticket_creation_check_failed_invalid_member = "The target member for the ticket is not valid!"
+response_ticket_delete_failed_no_language = "I could not delete the ticket because the servers language is not found!"
+response_ticket_delete_failed_no_auto_delete = (
+    "I could not delete the ticket because the servers auto delete is not found!"
+)
+response_ticket_delete_failed_no_timezone = "I could not delete the ticket because the servers timezone is not found!"
+response_ticket_delete_failed_not_administrator = (
+    "I could not delete the ticket because you are not a server adminstrator!"
+)
+response_ticket_delete_failed = "Something went wrong while deleting the ticket!"
+response_ticket_delete_failed_ticket_not_found = "I could not delete the ticket because I could not find the ticket!"
+response_ticket_deleted = "I have deleted the ticket!"
+response_ticket_claim_failed_no_language = (
+    "I could not make you claim  the ticket because the servers language is not found!"
+)
+response_ticket_claim_failed_no_auto_delete = (
+    "I could not make you claim  the ticket because the servers auto delete is not found!"
+)
+response_ticket_claim_failed_no_timezone = (
+    "I could not make you claim  the ticket because the servers timezone is not found!"
+)
+response_ticket_claim_failed_ticket_not_found = "I could not make you claim the ticket because the ticket is not found!"
+response_ticket_claim_failed_panel_not_found = (
+    "I could not make you claim the ticket because the ticket panel used to create the ticket is not found!"
+)
+response_ticket_claim_failed_unknown_claimer = "I could not make you claim the ticket because something went wrong!"
+response_ticket_claim_failed_not_support_engineer = (
+    "I could not make you claim the ticket because you are not a support engineer!"
+)
+response_ticket_claim_failed_invalid_member = "The claimer of the ticket can not be Husqy or an API Key!"
+response_ticket_claim_failed = "Something went wrong while claiming the ticket!"
+response_ticket_claimed = "You have claimed the ticket and are now the linked support engineer for this ticket!"
+response_ticket_claimed_notification = "{member} has claimed the ticket and will be with you shortly!"
+response_ticket_transfer_failed_no_language = (
+    "I could not transfer the ticket because the servers language is not found!"
+)
+response_ticket_transfer_failed_no_auto_delete = (
+    "I could not transfer the ticket because the servers auto delete is not found!"
+)
+response_ticket_transfer_failed_no_timezone = (
+    "I could not transfer the ticket because the servers timezone is not found!"
+)
+response_ticket_transfer_failed_ticket_not_found = (
+    "I could not transfer the ticket because I could not find the ticket!"
+)
+response_ticket_transfer_failed_panel_not_found = (
+    "I could not transfer the ticket because I could not find the ticket panel used to create the ticket!"
+)
+response_ticket_transfer_failed_not_current_support_engineer = (
+    "I could not transfer the ticket because you are not the current support engineer!"
+)
+response_ticket_transfer_failed_not_support_engineer = (
+    "I could not transfer the ticket because the target member is not a support engineer!"
+)
+response_ticket_transfer_failed = "Something went wrong while transferring the ticket!"
+response_ticket_transferred_notification = "The ticket has been transferred to {member}!"
+response_ticket_transferred = "The ticket has been transferred!"
+response_ticket_close_failed_no_language = "I could not close the ticket because the servers language is not found!"
+response_ticket_close_failed_no_auto_delete = (
+    "I could not close the ticket because the servers auto delete is not found!"
+)
+response_ticket_close_failed_no_timezone = "I could not close the ticket because the servers timezone is not found!"
+response_ticket_close_failed_ticket_not_found = "I could not close the ticket because I could not find the ticket!"
+response_ticket_close_failed_panel_not_found = (
+    "I could not close the ticket because I could not find the ticket panel used to create the ticket!"
+)
+response_ticket_close_failed_not_current_support_engineer = (
+    "I could not close the ticket because you are not the current support engineer!"
+)
+response_ticket_close_failed = "Something went wrong while closing the ticket!"
+response_ticket_closed_notification = "The ticket has been closed by {member}! If you wish to interact with this ticket, please use the provided `/tickets` commands."
+response_ticket_close_failed_no_closed_ticket_categories = (
+    "The ticket has been closed but could not be moved because there are no categories available for closed tickets!"
+)
+response_ticket_closed = "The ticket has been closed!"
+response_ticket_reopen_failed_no_language = "I could not reopen the ticket because the servers language is not found!"
+response_ticket_reopen_failed_no_auto_delete = (
+    "I could not reopen the ticket because the servers timezone is not found!"
+)
+response_ticket_reopen_failed_no_timezone = "I could not reopen the ticket because the servers timezone is not found!"
+response_ticket_reopen_failed_ticket_not_found = "I could not reopen the ticket because the ticket is not found!"
+response_ticket_reopen_failed_panel_not_found = (
+    "I could not reopen the ticket because the panel used to create the ticket is not found!"
+)
+response_ticket_reopen_failed_not_current_support_engineer = (
+    "I could not reopen the ticket because you are not the current support engineer for the ticket!"
+)
+response_ticket_reopen_failed = "Something went wrong while reopening the ticket!"
+response_ticket_reopen_notification = "The ticket has been reopened by {member}!"
+response_ticket_reopen_failed_no_open_ticket_categories = (
+    "The ticket has been reopened but could not be moved because there are no categories available for open tickets!"
+)
+response_ticket_reopened = "The ticket has been reopened!"
+response_ticket_transcribed = "The ticket has been transcribed and it has been sent to your DM."
+response_ticket_transcribe_failed = "Something went wrong while transcribing the ticket!"
+response_ticket_transcribe_failed_not_allowed = "The ticket can not be transcribed. Only the ticket creator or the current support engineer can transcribe the ticket."
