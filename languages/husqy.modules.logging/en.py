@@ -1357,3 +1357,58 @@ response_module_rules_interaction_check_failed_invalid_member = "{datetime} -- C
 response_module_rules_interaction_check_failed_module_disabled = "{datetime} -- Checking interaction with server rules for **{member}** failed because the `rules` module is disabled!"
 response_module_rules_interaction_check_failed_module_status_unknown = "{datetime} -- Checking interaction with server rules for **{member}** failed because the status of the `rules` module is unknown!"
 response_module_rules_interaction_check_failed_settings_not_found = "{datetime} -- Checking interaction with server rules for **{member}** failed because the servers settings are unknown!"
+
+## Module invite tracker
+### Disable
+response_module_invite_tracker_disabled = (
+    "{datetime} -- **{member}** has disabled the `invite tracker` module! All related settings are removed!"
+)
+response_module_invite_tracker_disable_failed = "{datetime} -- **{member}** tried to disable the `invite tracker` module but something went wrong! Some configuration might have changed!"
+### Enable
+response_module_invite_tracker_enabled = "{datetime} -- **{member}** has enabled the `invite tracker` module!"
+response_module_invite_tracker_enable_failed = (
+    "{datetime} -- **{member}** tried to enable the `invite tracker` module but something went wrong!"
+)
+### Settings
+response_module_invite_tracker_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `invite tracker` module!"
+)
+response_module_invite_tracker_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `invite tracker` module but not all settings could be changed!"
+### Invite create
+response_module_invite_tracker_invite_created = "{datetime} -- **{member}** has created a new invite link!"
+response_module_invite_tracker_invite_create_failed = (
+    "{datetime} -- **{member}** tried to create a new invite link but something went wrong!"
+)
+response_module_invite_tracker_invite_create_failed_to_save = "{datetime} -- **{member}** created an invite but I was not able to correctly save it to the known invites list and it can therefore not be tracked accuratly!"
+response_module_invite_tracker_invite_create_failed_no_invite_found = (
+    "{datetime} -- **{member}** may have created an invite but I could not find the invite in the server!"
+)
+response_module_invite_tracker_invite_create_failed_invalid_max_age = "{datetime} -- **{member}** tried to create a new invite but they didn't provide a correct value for the max age. It must be higher than 0!"
+response_module_invite_tracker_invite_create_failed_invalid_max_uses = "{datetime} -- **{member}** tried to create a new invite but they didn't provide a correct value for the max uses. It must be between 0 (for infinite) and 100!"
+response_module_invite_tracker_invite_create_failed_not_enough_permissions = (
+    "{datetime} -- **{member}** tried to create a new invite but they didn't have enough permissions!"
+)
+response_module_invite_tracker_invite_create_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to create a new invite but it failed because the servers settings are unknown!"
+)
+### Invite delete
+response_module_invite_tracker_invite_deleted = "{datetime} -- **{member}** deleted an invite!"
+response_module_invite_tracker_invite_delete_failed = "{datetime} -- **{member}** tried to delete an invite!"
+response_module_invite_tracker_invite_delete_failed_to_remove = "{datetime} -- **{member}** deleted an invite but I could not remove it from the known invites list. Don't worry this will automatically be dealt with after its set expiry time!"
+response_module_invite_tracker_invite_create_failed_not_an_administrator = (
+    "{datetime} -- **{member}** tried to delete an invite but they are not a server administrator!"
+)
+response_module_invite_tracker_invite_delete_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to delete an invite but it failed because the servers settings are unknown!"
+)
+### Invite based join
+response_module_invite_tracker_joined = (
+    "{datetime} -- **{member}** joined the server. They are invited by: **{inviter}**."
+)
+response_module_invite_tracker_joined_failed_to_track = "{datetime} -- **{member}** joined the server. Inviter: **{inviter}**. The use of the invite link could not be saved and the stats may therefore not be complete for {inviter}!"
+response_module_invite_tracker_join_ignored_joined_is_inviter = "{datetime} -- **{member}** joined the server but they were also the inviter, this join will be ignored because prevent_own_invite_code is enabled!"
+response_module_invite_tracker_join_failed_no_known_invite_found = (
+    "{datetime} -- **{member}** joined the server using an unknown invite, this join will be ignored!"
+)
+### Invite based leave
+response_module_invite_tracker_left = "{datetime} -- **{member}** left the server. They were invited by: **{inviter}**."

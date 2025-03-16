@@ -199,6 +199,11 @@ LOGGABLE_TRANSLATIONS = {
     "log_ticket_reopen": "Ticket reopened",
     "log_ticket_close": "Ticket closed",
     "log_ticket_claim": "Ticket claimed",
+    "log_ticket_transcribe": "Ticket transcribed",
+    "log_invite_created": "Invite link created",
+    "log_invite_deleted": "Invite link deleted",
+    "log_invite_based_join": "Log join with invite",
+    "log_invite_based_leave": "Log leave linked to invite",
 }
 
 
@@ -348,6 +353,7 @@ module_serverstats = "Serverstats module"
 module_tags = "Tags module"
 module_verifier = "Verifier module"
 module_rules = "Rules module"
+module_invite_tracker = "Invite tracker module"
 # Responses
 support_embed_title = "{bot_name} Support"
 support_embed_description = (
@@ -361,7 +367,6 @@ response_info_bot_module_tempchannels_enabled = "The `Tempchannels` module is en
 response_info_bot_module_socials_disabled = "The `Socials` module is disabled!"
 response_info_bot_module_reactionroles_disabled = "The `Reactionroles` module is disabled!"
 response_info_bot_module_reactionroles_enabled = "The `Reactionroles` module is enabled but details about this module can not be viewed in Discord. Please ask a server administrator for more information about this module!"
-response_invite_link_not_set = "The server has not set an invite link for users to use!"
 response_info_bot_module_tickets_disabled = "The `Tickets` module is disabled!"
 response_info_bot_module_tickets_enabled = "The `Tickets` module is enabled but details about this module can not be viewed in Discord. Please ask a server administrator for more information about this module!"
 response_info_bot_module_autoresponder_disabled = "The `Autoresponder` module is disabled!"
@@ -369,6 +374,7 @@ response_info_bot_module_tags_disabled = "The `Tags` module is disabled!"
 response_info_bot_module_tags_enabled = "The `Tags` module is enabled! Please use the `/tags list` command to get information about the tags or ask your server administrator!"
 response_info_bot_module_verifier_disabled = "The `Verifier` module is disabled!"
 response_info_bot_module_rules_disabled = "The `Rules` module is disabled!"
+response_info_bot_module_invite_tracker_disabled = "The `Invite tracker` module is disabled!"
 response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available! For the status of the `Autoresponder` module, please check the General info page!"
 response_info_bot_module_serverstats_disabled = "The `Serverstats` module is disabled!"
 response_info_timeout = "The info command reached a timeout!"
@@ -429,6 +435,13 @@ info_bot_embed_field_title_rules_actions_enabled = "Actions enabled:"
 info_bot_embed_field_title_rules_denied_action = "Denied action:"
 info_bot_embed_field_title_rules_accepted_role_ids = "Accepted roles:"
 info_bot_embed_field_title_rules_denied_role_ids = "Denied roles:"
+info_bot_embed_field_title_invite_tracker_join_message_is_embed = "Join messages is embed"
+info_bot_embed_field_title_invite_tracker_leave_message_is_embed = "Leave messages is embed"
+info_bot_embed_field_title_invite_tracker_join_messages_channel = "Join messages channel"
+info_bot_embed_field_title_invite_tracker_leave_messages_channel = "Leave messages channel"
+info_bot_embed_field_title_invite_tracker_join_message_content = "Join message"
+info_bot_embed_field_title_invite_tracker_leave_message_content = "Leave message"
+info_bot_embed_field_title_invite_tracker_prevent_own_invite_code = "Prevent own invite code from counting"
 module_socials_reddit_embed_field_list = "Monitored Subreddits:"
 module_socials_reddit_embed_field_list_empty = "No Subreddits monitored"
 module_socials_rss_embed_field_list = "Monitored RSS Feeds:"
@@ -455,8 +468,6 @@ info_channel_embed_field_title_channel = "Channel:"
 info_channel_embed_field_title_channelid = "Channel ID:"
 info_channel_embed_field_title_channeltype = "Channel Type:"
 info_channel_embed_field_title_createdat = "Channel created at:"
-invite_link_embed_title = "Server invite link"
-invite_link_embed_description = "Do you want to invite other friends? Please use the following invite link:\n {link}"
 info_role_embed_title = "Information about {role}"
 info_role_embed_description = "Hi! Welcome to the `{role}` information panel!"
 info_role_embed_field_title_role = "Role:"
@@ -713,6 +724,12 @@ privacy_embed_get_data_modules_rules_description = (
 privacy_embed_get_data_modules_rules_something_went_wrong = (
     "Something went wrong while checking you references for the {bot_name} rules module data."
 )
+privacy_embed_get_data_modules_invite_tracker_description = (
+    "For the {bot_name} invite tracker module data related to this server, we have found the following:\n{data}"
+)
+privacy_embed_get_data_modules_invite_tracker_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} invite tracker module data."
+)
 privacy_embed_get_data_functions_giveaways_description = (
     "For the {bot_name} giveaways functions data related to this server, we have found the following:\n{data}"
 )
@@ -947,3 +964,28 @@ response_rules_list_timeout = "Rules list reached a timeout."
 rules_list_embed_title = "Rules list"
 rules_list_embed_description = "Here are the servers rules! Rule count: {rules}!"
 rules_list_embed_field_rules = "Rules:"
+
+# ------------------------------------------------------------------------- #
+# INVITE_TRACKER #
+# ------------------------------------------------------------------------- #
+response_module_invite_tracker_settings_failed = (
+    "Something went wrong while getting the settings of the `invite tracker` module!"
+)
+response_invite_link_failed = "Something went wrong while fetching the servers shared invite link!"
+response_invite_link_failed_no_invite_link_configured = "This server has not set a shared invite link!"
+response_invite_link_list_failed = "Something went wrong while fetching the server known invite link list!"
+response_invite_links_list_empty = "There are not known invite links in this server!"
+response_invite_link_stats_failed = "Something went wrong while fetching the stats for the inviter!"
+module_invite_tracker_join_messages = "Join messages"
+module_invite_tracker_leave_messages = "Leave message"
+# Embeds
+invite_link_embed_title = "Server invite link"
+invite_link_embed_description = "Do you want to invite other friends? Please use the following invite link:\n {link}"
+invite_link_list_embed_title = "Invite links"
+invite_link_list_embed_description = "Here are the known invite links! Invite link count: {invite_links}!"
+invite_link_list_embed_field_invite_links = "Invite links:"
+invite_link_stats_embed_title = "Invite tracker stats"
+invite_link_stats_embed_description = (
+    "{member} has a total of {total_invites} over the pas 31 days! View the details below!"
+)
+invite_link_stats_embed_field_details = "Stats details:"
