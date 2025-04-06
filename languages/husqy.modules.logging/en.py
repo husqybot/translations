@@ -1,4 +1,5 @@
 # MODULE LOGGING CONFIGURATION
+default_logging_channel_name = "{bot_name} logging"
 response_module_logging_enabled = "{datetime} -- **{member}** has enabled the `logging` module! I will now log all supported events to the new logging channel!"
 response_module_logging_disabled = (
     "{datetime} -- **{member}** has disabled the `logging` module! All related settings are removed!"
@@ -1115,6 +1116,34 @@ response_module_serverstats_settings_changed = (
     "{datetime} -- **{member}** has changed the settings of the `serverstats` module!"
 )
 response_module_serverstats_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `serverstats` module but something has gone wrong! Not all settings may have been changed!"
+### Starboard
+response_module_serverstats_starboard_check_edit = (
+    "{datetime} -- **{member}** has caused a check for the starboard, causing an edit of an existing message!"
+)
+response_module_serverstats_starboard_check_create = (
+    "{datetime} -- **{member}** has caused a check for the starboard, causing the creation of a new starboard message!"
+)
+response_module_serverstats_starboard_check_delete = (
+    "{datetime} -- **{member}** has caused a check for the starboard, causing the deletion of a starboard message!"
+)
+
+### Counters
+response_module_serverstats_counters_updated = "{datetime} -- The counters for this server have been updated!"
+response_module_serverstats_counter_created = "{datetime} -- **{member}** has created a new counter!"
+response_module_serverstats_counter_create_failed = (
+    "{datetime} -- **{member}** tried to create a new counter but something went wrong!"
+)
+response_module_serverstats_counter_create_failed_invalid_counter_type = (
+    "{datetime} -- **{member}** tried to create a new counter but they gave an invalid counter type!"
+)
+response_module_serverstats_counter_create_failed_max_counters_reached = "{datetime} -- **{member}** tried to create a new counter but the maximum number of counters has already been reached!"
+response_module_serverstats_counter_create_failed_counters_disabled = (
+    "{datetime} -- **{member}** tried to create a new counter but counters are disabled!"
+)
+response_module_serverstats_counter_deleted = "{datetime} -- **{member}** has deleted a counter!"
+response_module_serverstats_counter_delete_failed = (
+    "{datetime} -- **{member}** tried to delete a counter but something went wrong!"
+)
 
 ## Module Socials
 ### Disable
