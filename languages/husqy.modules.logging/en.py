@@ -1441,3 +1441,115 @@ response_module_invite_tracker_join_failed_no_known_invite_found = (
 )
 ### Invite based leave
 response_module_invite_tracker_left = "{datetime} -- **{member}** left the server. They were invited by: **{inviter}**."
+
+## Module Polls
+### Disable
+response_module_polls_disabled = "{datetime} -- **{member}** has disabled the `polls` module! All related settings are removed any left over polls can safely be removed!"
+response_module_polls_disable_failed = "{datetime} -- **{member}** tried to disable the `polls` module but something went wrong! Some of the configuration might be changed!"
+### Enable
+response_module_polls_enabled = "{datetime} -- **{member}** has enabled the `polls` module!"
+response_module_polls_enable_failed = (
+    "{datetime} -- **{member}** tried to enable the `polls` module but something went wrong!"
+)
+### Settings
+response_module_polls_settings_changed = "{datetime} -- **{member}** has changed the settings of the `polls` module!"
+response_module_polls_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `polls` module but something has gone wrong! Not all settings may have been changed!"
+### Create
+response_module_polls_poll_created = "{datetime} -- **{member}** has created a new poll!"
+response_module_polls_poll_create_failed = "{datetime} -- **{member}** tried to create a poll but something went wrong!"
+response_module_polls_poll_create_failed_invalid_discord_poll_wait_duration = "{datetime} -- **{member}** tried to create a discord poll but gave an invalid duration (must be between 1 and 768 hours)!"
+response_module_polls_poll_create_failed_invalid_wait_duration = (
+    "{datetime} -- **{member}** tried to create a poll but gave an invalid duration!"
+)
+response_module_polls_poll_create_failed_discord_poll_duration_required = "{datetime} -- **{member}** tried to create a discord poll but didn't provide a duration which is required for Discord polls!"
+response_module_polls_poll_create_failed_answer_limit_reached = (
+    "{datetime} -- **{member}** tried to create a poll but they went over the answer limit for this poll!"
+)
+response_module_polls_poll_create_failed_no_answer_provided = "{datetime} -- **{member}** tried to create a poll but they didn't provide an answer. At least one answer is required!"
+response_module_polls_poll_create_failed_limit_reached = (
+    "{datetime} -- **{member}** tried to create a poll but the poll limit has already been reached!"
+)
+response_module_polls_poll_create_failed_invalid_answer_type = (
+    "{datetime} -- **{member}** tried to create a poll but they didn't provide a valid answer type!"
+)
+response_module_polls_poll_create_failed_invalid_poll_type = (
+    "{datetime} -- **{member}** tried to create a poll but they didn't provide a valid poll type!"
+)
+response_module_polls_poll_create_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to create a poll but failed because the servers settings are unknown!"
+)
+### EDIT
+response_module_polls_poll_edited = "{datetime} -- **{member}** has edited a poll!"
+response_module_polls_poll_edit_failed = "{datetime} -- **{member}** tried to edit a poll but something went wrong!"
+response_module_polls_poll_edit_failed_unable_to_edit_discord_poll = (
+    "{datetime} -- **{member}** tried to edit a poll but I can not change Discord polls!"
+)
+response_module_polls_poll_edit_failed_no_poll_given = (
+    "{datetime} -- **{member}** tried to edit a poll but they didn't provide a poll!"
+)
+response_module_polls_poll_edit_failed_not_owner = (
+    "{datetime} -- **{member}** tried to edit a poll but they are not the poll owner!"
+)
+response_module_polls_poll_edit_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to edit a poll but the servers settings are unknown!"
+)
+### DELETE
+response_module_polls_poll_deleted = "{datetime} -- **{member}** has deleted a poll!"
+response_module_polls_poll_delete_failed = "{datetime} -- **{member}** tried to delete a poll but something went wrong!"
+response_module_polls_poll_delete_failed_no_poll_given = (
+    "{datetime} -- **{member}** tried to delete a poll but they didn't provide a poll!"
+)
+response_module_polls_poll_delete_failed_not_owner = (
+    "{datetime} -- **{member}** tried to delete a poll but they are not the owner!"
+)
+response_module_polls_poll_delete_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to delete a poll but the servers settings are unknown!"
+)
+### CLOSE MANUALLY
+response_module_polls_poll_closed_manually = "{datetime} -- **{member}** has manually closed a poll!"
+response_module_polls_poll_close_failed = (
+    "{datetime} -- **{member}** tried to manually close a poll but something went wrong!"
+)
+response_module_polls_poll_close_failed_not_owner = (
+    "{datetime} -- **{member}** tried to manually close a poll but they are not the owner!"
+)
+response_module_polls_poll_close_failed_no_poll_given = (
+    "{datetime} -- **{member}** tried to manually close a poll but they didn't provide a poll!"
+)
+response_module_polls_poll_close_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to manually close a poll but the servers settings are unknown!"
+)
+### CLOSE
+response_module_polls_poll_closed = "{datetime} -- Poll with ID: {poll_id} has ended!"
+### VOTE ADD
+response_module_polls_vote_added = "{datetime} -- **{member}** added a vote to a poll!"
+response_module_polls_vote_add_failed = (
+    "{datetime} -- **{member}** tried to add a vote for a poll but something went wrong!"
+)
+response_module_polls_vote_add_failed_answer_vote_limit_reached = "{datetime} -- **{member}** tried to add a vote for a poll to an answer but they have already reached the maximum number of votes for that answer!"
+response_module_polls_vote_add_failed_answer_no_multi_select = "{datetime} -- **{member}** tried to add a vote for a poll to an answer but they have already voted for another question and multi select is turned off!"
+response_module_polls_vote_add_failed_answer_not_found = (
+    "{datetime} -- **{member}** tried to add a vote for a poll but the answer that was voted for was not found!"
+)
+response_module_polls_vote_add_failed_poll_not_found = (
+    "{datetime} -- **{member}** tried to add a vote for a poll but the poll was not found!"
+)
+response_module_polls_vote_add_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to add a vote for a poll but the servers settings are unknown!"
+)
+### VOTE REMOVE
+response_module_polls_vote_removed = "{datetime} -- **{member}** removed a vote to a poll!"
+response_module_polls_vote_remove_failed = (
+    "{datetime} -- **{member}** tried to remove a vote for a poll but something went wrong!"
+)
+response_module_polls_vote_remove_failed_answer_vote_limit_reached = "{datetime} -- **{member}** tried to remove a vote for a poll to an answer but they have already reached the maximum number of votes for that answer!"
+response_module_polls_vote_remove_failed_answer_no_multi_select = "{datetime} -- **{member}** tried to remove a vote for a poll to an answer but they have already voted for another question and multi select is turned off!"
+response_module_polls_vote_remove_failed_answer_not_found = (
+    "{datetime} -- **{member}** tried to remove a vote for a poll but the answer that was voted for was not found!"
+)
+response_module_polls_vote_remove_failed_poll_not_found = (
+    "{datetime} -- **{member}** tried to remove a vote for a poll but the poll was not found!"
+)
+response_module_polls_vote_remove_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to remove a vote for a poll but the servers settings are unknown!"
+)
