@@ -4,6 +4,8 @@
 # Footer
 embed_footer = "Info requested by: {member}! This embed will show for {auto_delete} seconds!"
 # Other
+add = "Add"
+remove = "Remove"
 unknown = "Unknown"
 no_nickname = "No nickname"
 no_timeout_for_user = "Not timed-out"
@@ -19,6 +21,8 @@ enabled = "Enabled"
 disabled = "Disabled"
 no_modules_enabled = "There are no modules enabled"
 no_modules_disabled = "There are no modules disabled"
+no_stats_enabled = "There are no statistics enabled"
+no_stats_disabled = "There are no statistics disabled"
 continue_message = "Continue"
 cancel_message = "Cancel"
 not_in_use = "Not in use!"
@@ -354,6 +358,23 @@ module_tags = "Tags module"
 module_verifier = "Verifier module"
 module_rules = "Rules module"
 module_invite_tracker = "Invite tracker module"
+stats_messages_enabled = "Message stats"
+stats_members_enabled = "Member stats"
+stats_commands_enabled = "Command stats"
+stats_activities_enabled = "Activities stats"
+stats_voice_enabled = "Voice stats"
+stats_modules_autoresponder_enabled = "Module autoresponder stats"
+stats_modules_tags_enabled = "Module tags stats"
+stats_modules_verifier_enabled = "Module verifier stats"
+stats_modules_socials_enabled = "Module socials stats"
+stats_modules_rules_enabled = "Module rules stats"
+stats_modules_invite_tracker_enabled = "Module invite tracker stats"
+stats_modules_reactionroles_enabled = "Module reactionroles stats"
+stats_modules_welcoming_enabled = "Module welcoming stats"
+stats_modules_tempchannels_enabled = "Module tempchannels stats"
+stats_modules_tickets_enabled = "Module tickets stats"
+stats_functions_reminders_enabled = "Function reminders stats"
+stats_functions_giveaways_enabled = "Function giveaways stats"
 # Responses
 support_embed_title = "{bot_name} Support"
 support_embed_description = (
@@ -508,6 +529,8 @@ info_bot_embed_field_title_serverstats_panel_boost = "Boost panel"
 info_bot_embed_field_title_serverstats_starboard_enabled = "Starboard:"
 info_bot_embed_field_title_serverstats_starboard_channel = "Starboard Channel:"
 info_bot_embed_field_title_serverstats_starboard_count = "Starboard minimum stars:"
+info_bot_embed_field_title_serverstats_enabled_stats = "Enabled stats:"
+info_bot_embed_field_title_serverstats_disabled_stats = "Disabled stats:"
 info_bot_embed_field_title_autoresponder_list = "Current autoresponder entries:"
 info_embed_title = "Info"
 info_embed_description_select_channel = "Please select the channel you want info about."
@@ -523,6 +546,9 @@ welcoming_timedroles_list = "Timedroles list"
 higher_lower_higher = "Higher"
 higher_lower_equal = "Equal"
 higher_lower_lower = "Lower"
+rps_rock = "Rock"
+rps_paper = "Paper"
+rps_scissors = "Scissors"
 # Responses
 response_games_heads_or_tails_heads = "It's `heads`!"
 response_games_heads_or_tails_tails = "It's `tails`!"
@@ -783,6 +809,7 @@ custom_embed_edit_footer_text = "Edit footer text"
 custom_embed_edit_field = "Edit field"
 custom_embed_add_inline_field = "Add inline field"
 custom_embed_add_non_inline_field = "Add non-inline field"
+custom_embed_edit_thumbnail_image_field = "Edit thumbnail or image"
 custom_embed_thumbnail_none = "None"
 custom_embed_thumbnail_avatar = "My Avatar"
 custom_embed_thumbnail_banner = "My Banner"
@@ -809,6 +836,7 @@ custom_embed_add_non_inline_field_new_title = "Non-inline field title"
 custom_embed_add_non_inline_field_new_value = "Non-inline field value"
 custom_embed_thumbnail_custom_url_modal_title = "Thumbnail Custom URL"
 custom_modal_change_title = "Change modal title"
+custom_modal_edit_text_field = "Edit modal text field"
 custom_modal_add_text_field = "Add modal text field"
 custom_modal_remove_text_field_1 = "First text field"
 custom_modal_remove_text_field_2 = "Second text field"
@@ -826,6 +854,7 @@ custom_modal_change_title_new_title = "New title"
 custom_modal_add_text_field_text_field_title = "Field title"
 custom_modal_add_text_field_text_field_description = "Field description"
 custom_modal_add_text_field_text_field_type = "Field type (Long/Short)"
+custom_modal_add_text_field_text_field_required = "Required (True/False)"
 custom_modal_add_text_field_title = "Text field"
 # Responses
 response_color_viewed_failed_no_values_given = "I am sorry! I require one value, either the HEX value or the RGB value!"
@@ -837,12 +866,10 @@ response_custom_embed_finished_timeout = (
     "The custom embed creation reached a timeout! The JSON of your embed is: ```{embed_json}```"
 )
 response_custom_embed_finished = "The custom embed creation is finished, the JSON of your embed is: ```{embed_json}```"
-response_custom_embed_create_starting = "Within a few seconds, you can start to create your own embed (only you can see this) and retrieve the JSON code of it. This JSON code can be used in different {bot_name} commands!\nNote: If you cancel a modal response, there is a change new interactions will fail, please wait up to 60 seconds for this issue to go away!"
 response_custom_embed_send_success = "I have sent the custom embed to {channel}"
 response_custom_modal_finished = (
     "The custom modal creation is finished, the JSON of your modal is: \n```{modal_json}```"
 )
-response_custom_modal_create_starting = "Within a few seconds, you can start to create your own modal (only you can see this) and retrieve the JSON code of it. This JSON code can be used in different {bot_name} commands!\nNote: If you cancel a modal response, there is a change new interactions will fail, please wait up to 60 seconds for this issue to go away!"
 response_custom_modal_preview = "By pressing Continue I will show the preview of the custom modal! This modal can be interacted with but no data will be saved!"
 response_custom_modal_preview_failed = "The custom modal preview reached a timeout!"
 response_custom_modal_preview_failed_canceled = "The custom modal preview was canceled!"
@@ -935,6 +962,7 @@ socials_component_list_embed_field_entries = "Entries:"
 # TEMPCHANNELS #
 # ------------------------------------------------------------------------- #
 response_tempchannels_list_failed = "Something went wrong while getting the list. Is the list type valid?"
+response_tempchannels_list_timeout = "The tempchannel list reached a timeout!"
 response_tempchannels_list_creation_channels_failed = (
     "Something went wrong while gettint the list of creation channels!"
 )
@@ -951,7 +979,6 @@ tempchannels_list_embed_field_tempchannels = "Tempchannels:"
 # VERIFIER #
 # ------------------------------------------------------------------------- #
 response_module_verifier_settings_failed = "Something went wrong while getting the settings of the `verifier` module!"
-
 
 # ------------------------------------------------------------------------- #
 # RULES #
@@ -975,6 +1002,7 @@ response_invite_link_failed = "Something went wrong while fetching the servers s
 response_invite_link_failed_no_invite_link_configured = "This server has not set a shared invite link!"
 response_invite_link_list_failed = "Something went wrong while fetching the server known invite link list!"
 response_invite_links_list_empty = "There are not known invite links in this server!"
+response_invite_links_list_timeout = "The invite tracker list reached a timeout!"
 response_invite_link_stats_failed = "Something went wrong while fetching the stats for the inviter!"
 module_invite_tracker_join_messages = "Join messages"
 module_invite_tracker_leave_messages = "Leave message"
@@ -989,3 +1017,43 @@ invite_link_stats_embed_description = (
     "{member} has a total of {total_invites} over the pas 31 days! View the details below!"
 )
 invite_link_stats_embed_field_details = "Stats details:"
+
+# ------------------------------------------------------------------------- #
+# POLLS #
+# ------------------------------------------------------------------------- #
+polls_determine_action_timeout = (
+    "The poll vote determine action has reached a timeout. No vote will be placed or removed!"
+)
+polls_response_choose_poll_action = "What action do you want to perform on the answer? Add = Add vote & Remove = Remove all of your votes for that answer."
+response_poll_details_failed = "Something went wrong while getting the details of the poll!"
+response_poll_provide_details_failed = (
+    "Timeout while waiting for details of the poll answer! Cancelling poll create....."
+)
+response_poll_add_answer = "Do you want to add an extra answer to the list? Please keep in mind the answer limits of the server, these will only be checked when finishing this command."
+response_poll_provide_answer_text = (
+    "Please provide the text of the answer by sending it in the chat. Please only insert the answer text in one line."
+)
+response_poll_provide_answer_emoji = (
+    "Please provide the emoji of the answer by sending it in the chat. Please only send the emoji."
+)
+response_poll_provide_answer_label = (
+    "Please provide the label of the answer by sending it in the chat. Please only send the emoji."
+)
+response_poll_provide_answer_description = (
+    "Please provide the description of the answer by sending it in the chat. Please only send the emoji."
+)
+response_poll_add_label_to_answer = (
+    "Do you want to add a label to the button? If no, an emoji is required. If yes, an emoji is optional."
+)
+response_poll_add_description_to_answer = "Do you want to add a description to the button (not visible in discord)?"
+response_poll_add_emoji_to_answer = "Do you want to add a emoji to the button?"
+
+# Embeds
+poll_until_manually_closed = "`until manually closed`"
+no_description_given = "No description given"
+poll_description = "Poll is active for: {countdown}!\n`{description}`"
+poll_answers_embed_field = "Poll answers:"
+poll_footer = "Poll ID: {poll_id}. Poll provided by Husqy!"
+poll_results_embed_field = "Poll results:"
+poll_voters_embed_field = "Voters:"
+poll_footer = "Poll ID: {poll_id}. Poll provided by Husqy!"
