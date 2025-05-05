@@ -283,31 +283,6 @@ response_meme_failed = "{datetime} -- **{member}** requested a meme but somethin
 response_transcribe_failed = "{datetime} -- **{member}** tried to transcribe a voice message but something went wrong!"
 response_transcribe_success = "{datetime} -- **{member}** transcribed a voice message!"
 
-## Reminders
-### Add
-response_reminder_add_failed_not_a_valid_wait_duration = (
-    "{datetime} -- **{member}** tried to add a reminder but the provided wait duration was an invalid format!"
-)
-response_reminder_add_dm_destination_is_not_target_user = "{datetime} -- **{member}** tried to add a reminder but they provided a DM of a user who is not the target user as the destination!"
-response_reminder_add_not_a_url = (
-    "{datetime} -- **{member}** tried to add a reminder but the provided linked message was not a valid URL!"
-)
-response_reminder_added = "{datetime} -- **{member}** added a new reminder!"
-response_reminder_add_failed = "{datetime} -- **{member}** tried to add a new reminder but something went wrong!"
-### Delete
-response_reminder_deleted = "{datetime} -- **{member}** deleted one of their reminders!"
-response_reminder_delete_failed_not_target_user = (
-    "{datetime} -- **{member}** tried to delete a reminder but they aren't the target user!"
-)
-response_reminder_delete_failed_no_reminder_found = (
-    "{datetime} -- **{member}** tried to delete a reminder but I didn't find a remidner with the specified ID!"
-)
-response_reminder_delete_failed = "{datetime} -- **{member}** tried to delete a reminder but something went wrong!"
-### List
-response_reminder_list_requested = "{datetime} -- **{member}** requested their reminders!"
-response_reminder_list_no_reminders = (
-    "{datetime} -- **{member}** requested their reminders but they don't have any reminders!"
-)
 ## Utils
 ### Color view
 response_color_viewed_success = "{datetime} -- **{member}** has viewed a color with the HEX or RGB value: `{color}`!"
@@ -1002,6 +977,9 @@ response_module_ticket_create_failed_max_active_ticket_reached = (
 response_module_ticket_create_failed_settings_not_found = (
     "{datetime} -- **{member}** tried to create a ticket but the servers settings could not be found!"
 )
+response_module_ticket_create_failed_prevent_data_collection = (
+    "{datetime} -- **{member}** tried to create a ticket but they have prevent data collection enabled!"
+)
 ### Form show
 response_module_ticket_form_showed = "{datetime} -- The ticket form has been showed to **{member}**!"
 response_module_ticket_form_show_failed_invalid_form_config = (
@@ -1034,6 +1012,7 @@ response_module_ticket_transfer_failed_ticket_not_found = (
     "{datetime} -- **{member}** tried to transfer a ticket to another support engineer but the ticket is not found!"
 )
 response_module_ticket_transfer_failed_settings_not_found = "{datetime} -- **{member}** tried to transfer a ticket to another support engineer but the servers settings are not found!"
+response_module_ticket_transfer_failed_prevent_data_collection = "{datetime} -- **{member}** tried to transfer a ticket to another support engineer but the other engineer has prevent data collection enabled!"
 ### Reopen
 response_module_ticket_reopened = "{datetime} -- **{member}** reopened a ticket!"
 response_module_ticket_reopen_failed = "{datetime} -- **{member}** tried to reopen a ticket but something went wrong!"
@@ -1085,6 +1064,9 @@ response_module_ticket_claim_failed_ticket_not_found = (
 )
 response_module_ticket_claim_failed_settings_not_found = (
     "{datetime} -- **{member}** tried to claim a ticket but the servers settings are not found!"
+)
+response_module_ticket_claim_failed_prevent_data_collection = (
+    "{datetime} -- **{member}** tried to claim a ticket but they have prevent data collection enabled!"
 )
 ### Transcribe
 response_module_ticket_transcribed = "{datetime} -- **{member}** transcribed a ticket!"
@@ -1420,6 +1402,7 @@ response_module_invite_tracker_invite_create_failed_not_enough_permissions = (
 response_module_invite_tracker_invite_create_failed_settings_not_found = (
     "{datetime} -- **{member}** tried to create a new invite but it failed because the servers settings are unknown!"
 )
+response_module_invite_tracker_invite_create_failed_prevent_data_collection = "{datetime} -- **{member}** tried to create a new invite (or created one using discord that could not be saved) but have prevent data collection enabled!"
 ### Invite delete
 response_module_invite_tracker_invite_deleted = "{datetime} -- **{member}** deleted an invite!"
 response_module_invite_tracker_invite_delete_failed = "{datetime} -- **{member}** tried to delete an invite!"
@@ -1477,6 +1460,9 @@ response_module_polls_poll_create_failed_invalid_poll_type = (
 )
 response_module_polls_poll_create_failed_settings_not_found = (
     "{datetime} -- **{member}** tried to create a poll but failed because the servers settings are unknown!"
+)
+response_module_polls_poll_create_failed_prevent_data_collection = (
+    "{datetime} -- **{member}** tried to create a poll but they have prevent data collection enabled!"
 )
 ### EDIT
 response_module_polls_poll_edited = "{datetime} -- **{member}** has edited a poll!"
@@ -1537,6 +1523,9 @@ response_module_polls_vote_add_failed_poll_not_found = (
 response_module_polls_vote_add_failed_settings_not_found = (
     "{datetime} -- **{member}** tried to add a vote for a poll but the servers settings are unknown!"
 )
+response_module_polls_vote_add_failed_prevent_data_collection = (
+    "{datetime} -- **{member}** tried to add a vote for a poll but they have prevent data collection enabled!"
+)
 ### VOTE REMOVE
 response_module_polls_vote_removed = "{datetime} -- **{member}** removed a vote to a poll!"
 response_module_polls_vote_remove_failed = (
@@ -1552,4 +1541,93 @@ response_module_polls_vote_remove_failed_poll_not_found = (
 )
 response_module_polls_vote_remove_failed_settings_not_found = (
     "{datetime} -- **{member}** tried to remove a vote for a poll but the servers settings are unknown!"
+)
+response_module_polls_vote_remove_failed_prevent_data_collection = (
+    "{datetime} -- **{member}** tried to remove a vote for a poll but they have prevent data collection enabled!"
+)
+
+## Module remiders
+### Disable
+response_module_reminders_disabled = "{datetime} -- **{member}** has disabled the `reminders` module! All related settings are removed any left over reminders can safely be removed!"
+response_module_reminders_disable_failed = "{datetime} -- **{member}** tried to disable the `reminders` module but something went wrong! Some of the configuration might be changed!"
+### Enable
+response_module_reminders_enabled = "{datetime} -- **{member}** has enabled the `reminders` module!"
+response_module_reminders_enable_failed = (
+    "{datetime} -- **{member}** tried to enable the `reminders` module but something went wrong!"
+)
+### CREATE
+response_module_reminders_created = "{datetime} -- **{member}** has created a new reminder!"
+response_module_reminders_create_failed = (
+    "{datetime} -- **{member}** tried to create a reminder but something went wrong!"
+)
+response_module_reminders_create_failed_invalid_dm_channel = (
+    "{datetime} -- **{member}** tried to create a reminder but gave a DM channel that is not the owners DM channel!"
+)
+response_module_reminders_create_failed_invalid_run_date = (
+    "{datetime} -- **{member}** tried to create a reminder but gave an invalid run date!"
+)
+response_module_reminders_create_failed_invalid_schedule = (
+    "{datetime} -- **{member}** tried to create a reminder but gave invalid schedule info!"
+)
+response_module_reminders_create_failed_invalid_schedule_type = (
+    "{datetime} -- **{member}** tried to create a reminder but gave invalid schedule type!"
+)
+response_module_reminders_create_failed_invalid_duration = (
+    "{datetime} -- **{member}** tried to create a reminder but gave invalid duration!"
+)
+response_module_reminders_create_failed_scheduled_reminders_limit_reached = "{datetime} -- **{member}** tried to create a scheduled reminder but the limit of scheduled reminders has already been reached!"
+response_module_reminders_create_failed_repeated_reminders_limit_reached = "{datetime} -- **{member}** tried to create a repeated reminder but the limit of repeated reminders has already been reached!"
+response_module_reminders_create_failed_quick_reminders_limit_reached = "{datetime} -- **{member}** tried to create a quick reminder but the limit of quick reminders has already been reached in this server for this user!"
+response_module_reminders_create_failed_not_administrator = (
+    "{datetime} -- **{member}** tried to create a repeated or scheduled reminder but they are not an administrator!"
+)
+response_module_reminders_create_failed_invalid_reminder_type = (
+    "{datetime} -- **{member}** tried to create a reminder but they didn't provide a valid reminder type!"
+)
+response_module_reminders_create_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to create a reminder but the servers settings are unknown!"
+)
+response_module_reminders_create_failed_no_destination = (
+    "{datetime} -- **{member}** tried to create a reminder but they didn't provide a valid destination!"
+)
+response_module_reminders_create_failed_prevent_data_collection_enabled = (
+    "{datetime} -- **{member}** tried to create a reminder but they have prevent data collection enabled!"
+)
+### DELETE
+response_module_reminders_deleted = "{datetime} -- **{member}** has deleted a reminder!"
+response_module_reminders_delete_failed = (
+    "{datetime} -- **{member}** tried to delete a reminder but someting went wrong!"
+)
+response_module_reminders_delete_failed_not_administrator = (
+    "{datetime} -- **{member}** tried to delete a repeated or scheduled reminder but they are not an administrator!"
+)
+response_module_reminders_delete_failed_not_owner = (
+    "{datetime} -- **{member}** tried to delete a quick reminder but they are not the owner of the reminder!"
+)
+response_module_reminders_delete_failed_not_found = (
+    "{datetime} -- **{member}** tried to delete a reminder but the reminder is not found!"
+)
+response_module_reminders_delete_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to delete a reminder but the servers settings are unknown!"
+)
+### SEND
+response_module_reminders_send = "{datetime} -- I have send a reminder!"
+### COMPLETED
+response_module_reminders_completed = "{datetime} -- **{member}** has completed a reminder!"
+### REMINDED
+response_module_reminders_reminded_later = (
+    "{datetime} -- **{member}** has marked a reminder as remind later. A new reminder is/will be created!"
+)
+### INTERACT
+response_module_reminders_interact_failed_not_owner = (
+    "{datetime} -- **{member}** tried to interact with a reminder but they are not the owner!"
+)
+response_module_reminders_interact_failed_not_a_quick_reminder = (
+    "{datetime} -- **{member}** tried to interact with a reminder but the reminder is not a quick reminder!"
+)
+response_module_reminders_interact_failed_not_found = (
+    "{datetime} -- **{member}** tried to interact with a reminder but the reminder is not found!"
+)
+response_module_reminders_interact_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to interact with a reminder but the servers settings are unknown!"
 )

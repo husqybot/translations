@@ -358,6 +358,8 @@ module_tags = "Tags module"
 module_verifier = "Verifier module"
 module_rules = "Rules module"
 module_invite_tracker = "Invite tracker module"
+module_polls = "Polls module"
+module_reminders = "Reminders module"
 stats_messages_enabled = "Message stats"
 stats_members_enabled = "Member stats"
 stats_commands_enabled = "Command stats"
@@ -373,7 +375,8 @@ stats_modules_reactionroles_enabled = "Module reactionroles stats"
 stats_modules_welcoming_enabled = "Module welcoming stats"
 stats_modules_tempchannels_enabled = "Module tempchannels stats"
 stats_modules_tickets_enabled = "Module tickets stats"
-stats_functions_reminders_enabled = "Function reminders stats"
+stats_modules_polls_enabled = "Module polls stats"
+stats_modules_reminders_enabled = "Module reminders stats"
 stats_functions_giveaways_enabled = "Function giveaways stats"
 # Responses
 support_embed_title = "{bot_name} Support"
@@ -396,6 +399,10 @@ response_info_bot_module_tags_enabled = "The `Tags` module is enabled! Please us
 response_info_bot_module_verifier_disabled = "The `Verifier` module is disabled!"
 response_info_bot_module_rules_disabled = "The `Rules` module is disabled!"
 response_info_bot_module_invite_tracker_disabled = "The `Invite tracker` module is disabled!"
+response_info_bot_module_polls_disabled = "The `Polls` module is disabled!"
+response_info_bot_module_polls_enabled = "The `Polls` module is enabled! Please use the `polls` commands to get information about the polls or ask your server administrator!"
+response_info_bot_module_reminders_disabled = "The `Reminders` module is disabled!"
+response_info_bot_module_reminders_enabled = "The `Reminders` module is enabled! Please use the `/reminders list` command to get information about the reminders or ask your server administrator!"
 response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available! For the status of the `Autoresponder` module, please check the General info page!"
 response_info_bot_module_serverstats_disabled = "The `Serverstats` module is disabled!"
 response_info_timeout = "The info command reached a timeout!"
@@ -762,27 +769,13 @@ privacy_embed_get_data_functions_giveaways_description = (
 privacy_embed_get_data_functions_giveaways_something_went_wrong = (
     "Something went wrong while checking you references for the {bot_name} giveaways functions data."
 )
-privacy_embed_get_data_functions_reminders_description = (
-    "For the {bot_name} reminders functions data related to this server, we have found the following:\n{data}"
+privacy_embed_get_data_modules_reminders_description = (
+    "For the {bot_name} reminders module data related to this server, we have found the following:\n{data}"
 )
-privacy_embed_get_data_functions_reminders_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} reminders functions data."
+privacy_embed_get_data_modules_reminders_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} reminders module data."
 )
 privacy_embed_delete_data_description = "Here you can choose to delete your data {bot_name} has related to you. Please select, using the buttons below, which action you want to perform.\n\n- **Cancel:** Returns to the main privacy configurator view and doesn't remove any data.\n- **Delete my data:** This option starts the deletion of you data (where possible) immediately (IN THIS SERVER).\n`BEWARE: deleting your data can result in loss of functionality for you and may result in loss of functionality for others.`\n"
-
-# ------------------------------------------------------------------------- #
-# Reminders #
-# ------------------------------------------------------------------------- #
-# Responses
-response_reminder_adding = "I am adding the reminder, please wait!"
-response_reminder_deleting = "I am deleting the reminder, please wait!"
-response_reminder_list_failed = "Something went wrong while fetching this servers reminders!"
-response_reminder_list_no_reminders = "There are no reminders in this server!"
-response_reminder_list_timeout = "Reminder list reached a timeout!"
-# Embeds
-reminder_list_embed_title = "Reminders"
-reminder_list_embed_description = "There are {reminders} reminders in this server! Showing active reminders:"
-reminder_list_embed_field_reminders = "Reminders:"
 
 # ------------------------------------------------------------------------- #
 # Giveaway #
@@ -1057,3 +1050,21 @@ poll_footer = "Poll ID: {poll_id}. Poll provided by Husqy!"
 poll_results_embed_field = "Poll results:"
 poll_voters_embed_field = "Voters:"
 poll_footer = "Poll ID: {poll_id}. Poll provided by Husqy!"
+
+# ------------------------------------------------------------------------- #
+# Reminders #
+# ------------------------------------------------------------------------- #
+# Responses
+response_reminders_new_duration = (
+    "Please provide the new duration for the reminder. Please use format: {delay}{d/h/m/s} - f.e. 1h or 20m)"
+)
+response_reminder_adding = "I am adding the reminder, please wait!"
+response_reminder_deleting = "I am deleting the reminder, please wait!"
+response_reminder_list_failed = "Something went wrong while fetching the reminders based on your selection!"
+response_reminder_list_no_reminders = "There are no reminders in this server based on your selection!"
+response_reminder_list_timeout = "Reminder list reached a timeout!"
+response_quick_reminder_create_failed = "When creating a quick reminder. You cannot have destination_member and destination_channel both. You must choose between a DM (destination_member) or a channel (destination_channel)."
+# Embeds
+reminder_list_embed_title = "Reminders list"
+reminder_list_embed_description = "Here are the reminder based on your selection! Reminder count: {reminders}!"
+reminder_list_embed_field_reminders = "Reminders based on selection:"
