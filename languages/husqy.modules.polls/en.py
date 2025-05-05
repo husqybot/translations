@@ -15,6 +15,9 @@ response_poll_create_failed_invalid_poll_type = "I could not create the poll bec
 response_poll_create_failed_invalid_poll_answer_type = (
     "I could not create the poll because the given poll answer type is invalid!"
 )
+response_poll_create_failed_prevent_data_collection = (
+    "I could not create the poll because you have prevent data collection enabled!"
+)
 response_poll_create_failed_poll_limit_reached = (
     "I could not create the poll because the limit of active polls has already been reached!"
 )
@@ -58,6 +61,9 @@ response_poll_vote_failed_no_timezone = (
 )
 response_poll_vote_failed_poll_not_found = (
     "I could not vote for the poll answer because the poll with that ID is not found!"
+)
+response_poll_vote_failed_prevent_data_collection = (
+    "I could not vote for the poll answer because you have prevent data collection enabled!"
 )
 response_poll_vote_failed_answer_not_found = (
     "I could not vote for the poll answer because the poll answer is not found!"

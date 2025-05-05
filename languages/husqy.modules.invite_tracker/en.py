@@ -27,6 +27,9 @@ response_invite_create_failed_invalid_max_uses = (
 response_invite_create_failed_invalid_max_age = "The max age for an invite link must be higher than 0!"
 response_invite_create_failed_not_enough_permissions = "You do not have the right permissions to create the invite!"
 response_invite_create_failed = "Something went wrong while trying to create the invite!"
+response_invite_create_failed_prevent_data_collection = (
+    "I was not able to create the invite because you have prevent data collection enabled!"
+)
 response_invite_created = "The invite has been created. Invite code: `{code}`. URL: `{url}`."
 response_invite_delete_failed_no_language = (
     "I was not able to delete the invite because the server language is not found!"
