@@ -1631,3 +1631,132 @@ response_module_reminders_interact_failed_not_found = (
 response_module_reminders_interact_failed_settings_not_found = (
     "{datetime} -- **{member}** tried to interact with a reminder but the servers settings are unknown!"
 )
+
+## Module Giveaways
+### Disable
+response_module_giveaways_disabled = "{datetime} -- **{member}** has disabled the `giveaways` module! All related settings are removed any left over giveaways can safely be removed!"
+response_module_giveaways_disable_failed = "{datetime} -- **{member}** tried to disable the `giveaways` module but something went wrong! Some of the configuration might be changed!"
+### Enable
+response_module_giveaways_enabled = "{datetime} -- **{member}** has enabled the `giveaways` module!"
+response_module_giveaways_enable_failed = (
+    "{datetime} -- **{member}** tried to enable the `giveaways` module but something went wrong!"
+)
+### Settings
+response_module_giveaways_settings_changed = (
+    "{datetime} -- **{member}** has changed the settings of the `giveaways` module!"
+)
+response_module_giveaways_settings_change_failed = "{datetime} -- **{member}** tried to change the settings of the `giveaways` module but something has gone wrong! Not all settings may have been changed!"
+### Create
+response_module_giveaway_created = "{datetime} -- **{member}** has created a new giveaway!"
+response_module_giveaway_create_failed = (
+    "{datetime} -- **{member}** tried to create a new giveaway but something went wrong!"
+)
+response_module_giveaway_create_failed_unknown_end_delete_time = (
+    "{datetime} -- **{member}** tried to create a new giveaway but the end time and/or delete time is unknown!"
+)
+response_module_giveaway_create_failed_invalid_wait_duration = (
+    "{datetime} -- **{member}** tried to create a new giveaway but the given wait duration is invalid!"
+)
+response_module_giveaway_create_failed_end_time_in_past = (
+    "{datetime} -- **{member}** tried to create a new giveaway but the given end time is in the past!"
+)
+response_module_giveaway_create_failed_max_giveaways_reached = "{datetime} -- **{member}** tried to create a new giveaway but the maximum amount of giveaways has already been reached!"
+response_module_giveaway_create_failed_invalid_winner_count = (
+    "{datetime} -- **{member}** tried to create a new giveaway but the given winner count must be at least 1!"
+)
+response_module_giveaway_create_failed_prevent_data_collection_enabled = (
+    "{datetime} -- **{member}** tried to create a new giveaway but they have prevent data collection enabled!"
+)
+response_module_giveaway_create_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to create a new giveaway but the servers settings are unknown!"
+)
+### Delete
+response_module_giveaway_deleted = "{datetime} -- **{member}** has deleted a giveaway!"
+response_module_giveaway_delete_failed = (
+    "{datetime} -- **{member}** tried to delete a giveaway but something went wrong!"
+)
+response_module_giveaway_delete_failed_not_owner = (
+    "{datetime} -- **{member}** tried to delete a giveaway but they are not the owner!"
+)
+response_module_giveaway_delete_failed_not_found = (
+    "{datetime} -- **{member}** tried to delete a giveaway but the giveaway was not found!"
+)
+response_module_giveaway_delete_failed_no_giveaway_given = (
+    "{datetime} -- **{member}** tried to delete a giveaway but the giveaway was not given!"
+)
+response_module_giveaway_delete_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to delete a giveaway but the servers settings are unknown!"
+)
+### Edit
+response_module_giveaway_edited = "{datetime} -- **{member}** has edited a giveaway!"
+response_module_giveaway_edit_failed = "{datetime} -- **{member}** tried to edit a giveaway but something went wrong!"
+response_module_giveaway_edit_failed_not_owner = (
+    "{datetime} -- **{member}** tried to edit a giveaway but they are not the owner!"
+)
+response_module_giveaway_edit_failed_not_found = (
+    "{datetime} -- **{member}** tried to edit a giveaway but the giveaway was not found!"
+)
+response_module_giveaway_edit_failed_no_giveaway_given = (
+    "{datetime} -- **{member}** tried to edit a giveaway but the giveaway was not given!"
+)
+response_module_giveaway_edit_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to edit a giveaway but the servers settings are unknown!"
+)
+response_module_giveaway_edit_failed_invalid_winner_count = (
+    "{datetime} -- **{member}** tried to edit a giveaway but the new winner count must be at least 1!"
+)
+### Reroll
+response_module_giveaway_rerolled = "{datetime} -- **{member}** has rerolled a giveaway!"
+response_module_giveaway_reroll_failed = (
+    "{datetime} -- **{member}** tried to reroll a giveaway but something went wrong!"
+)
+response_module_giveaway_reroll_failed_not_owner = (
+    "{datetime} -- **{member}** tried to reroll a giveaway but they are not the owner!"
+)
+response_module_giveaway_reroll_failed_not_found = (
+    "{datetime} -- **{member}** tried to reroll a giveaway but the giveaway was not found!"
+)
+response_module_giveaway_reroll_failed_no_giveaway_given = (
+    "{datetime} -- **{member}** tried to reroll a giveaway but the giveaway was not given!"
+)
+response_module_giveaway_reroll_failed_still_active = (
+    "{datetime} -- **{member}** tried to reroll a giveaway but the giveaway was still active!"
+)
+response_module_giveaway_reroll_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to reroll a giveaway but the servers settings are unknown!"
+)
+### Enter
+response_module_giveaway_entered = "{datetime} -- **{member}** has entered a giveaway!"
+response_module_giveaway_enter_failed = "{datetime} -- **{member}** tried to enter a giveaway but something went wrong!"
+response_module_giveaway_enter_failed_already_entered = (
+    "{datetime} -- **{member}** tried to enter a giveaway but they already entered the giveaway!"
+)
+response_module_giveaway_enter_failed_not_found = (
+    "{datetime} -- **{member}** tried to enter a giveaway but the giveaway was not found!"
+)
+response_module_giveaway_enter_failed_no_giveaway_given = (
+    "{datetime} -- **{member}** tried to enter a giveaway but the giveaway was not given!"
+)
+response_module_giveaway_enter_failed_prevent_data_collection = (
+    "{datetime} -- **{member}** tried to enter a giveaway but they have prevent data collection enabled!"
+)
+response_module_giveaway_enter_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to enter a giveaway but the servers settings are not found!"
+)
+### Leave
+response_module_giveaway_left = "{datetime} -- **{member}** has left a giveaway!"
+response_module_giveaway_leave_failed = "{datetime} -- **{member}** tried to leave a giveaway but something went wrong!"
+response_module_giveaway_leave_failed_not_found = (
+    "{datetime} -- **{member}** tried to leave a giveaway but the giveaway was not found!"
+)
+response_module_giveaway_leave_failed_no_giveaway_given = (
+    "{datetime} -- **{member}** tried to leave a giveaway but the giveaway was not given!"
+)
+response_module_giveaway_leave_failed_prevent_data_collection = (
+    "{datetime} -- **{member}** tried to leave a giveaway but they have prevent data collection enabled!"
+)
+response_module_giveaway_leave_failed_settings_not_found = (
+    "{datetime} -- **{member}** tried to leave a giveaway but the servers settings are not found!"
+)
+### Finish
+response_module_giveaway_finished = "{datetime} -- The giveaway with ID: `{giveaway_id}` is finished!"
