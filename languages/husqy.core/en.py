@@ -208,6 +208,29 @@ LOGGABLE_TRANSLATIONS = {
     "log_invite_deleted": "Invite link deleted",
     "log_invite_based_join": "Log join with invite",
     "log_invite_based_leave": "Log leave linked to invite",
+    "log_serverstats_counter_created": "Log counters created",
+    "log_serverstats_counter_deleted": "Log counters deleted",
+    "log_serverstats_starboard_check": "Log starboard checked",
+    "log_serverstats_counters_updated": "Log counters updated",
+    "log_polls_created": "Log polls created",
+    "log_polls_edited": "Log polls edited",
+    "log_polls_deleted": "Log polls deleted",
+    "log_polls_closed": "Log polls closed",
+    "log_polls_closed_manually": "Log polls closed manually",
+    "log_polls_vote_added": "Log polls vote added",
+    "log_polls_vote_removed": "Log polls vote removed",
+    "log_reminders_created": "Log reminders created",
+    "log_reminders_deleted": "Log reminders deleted",
+    "log_reminders_send": "Log reminders send",
+    "log_reminders_completed": "Log reminders completed",
+    "log_reminders_reminded_later": "Log reminders reminded later",
+    "log_giveaways_created": "Log giveaways created",
+    "log_giveaways_deleted": "Log giveaways deleted",
+    "log_giveaways_edited": "Log giveaways edited",
+    "log_giveaways_rerolled": "Log giveaways rerolled",
+    "log_giveaways_entered": "Log giveaways entered",
+    "log_giveaways_leaves": "Log giveaway leaved",
+    "log_giveaways_finished": "Log giveaways finished",
 }
 
 
@@ -360,6 +383,7 @@ module_rules = "Rules module"
 module_invite_tracker = "Invite tracker module"
 module_polls = "Polls module"
 module_reminders = "Reminders module"
+module_giveaways = "Giveaways module"
 stats_messages_enabled = "Message stats"
 stats_members_enabled = "Member stats"
 stats_commands_enabled = "Command stats"
@@ -377,7 +401,7 @@ stats_modules_tempchannels_enabled = "Module tempchannels stats"
 stats_modules_tickets_enabled = "Module tickets stats"
 stats_modules_polls_enabled = "Module polls stats"
 stats_modules_reminders_enabled = "Module reminders stats"
-stats_functions_giveaways_enabled = "Function giveaways stats"
+stats_modules_giveaways_enabled = "Module giveaways stats"
 # Responses
 support_embed_title = "{bot_name} Support"
 support_embed_description = (
@@ -403,6 +427,8 @@ response_info_bot_module_polls_disabled = "The `Polls` module is disabled!"
 response_info_bot_module_polls_enabled = "The `Polls` module is enabled! Please use the `polls` commands to get information about the polls or ask your server administrator!"
 response_info_bot_module_reminders_disabled = "The `Reminders` module is disabled!"
 response_info_bot_module_reminders_enabled = "The `Reminders` module is enabled! Please use the `/reminders list` command to get information about the reminders or ask your server administrator!"
+response_info_bot_module_giveaways_disabled = "The `Giveaways` module is disabled!"
+response_info_bot_module_giveaways_enabled = "The `Giveaways` module is enabled! Please use the `/giveaways list` command to get information about the giveaways or ask your server administrator!"
 response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available! For the status of the `Autoresponder` module, please check the General info page!"
 response_info_bot_module_serverstats_disabled = "The `Serverstats` module is disabled!"
 response_info_timeout = "The info command reached a timeout!"
@@ -428,11 +454,12 @@ info_bot_embed_field_title_auto_kick_role = "Auto kick role:"
 info_bot_embed_field_title_modules_enabled = "Enabled Modules:"
 info_bot_embed_field_title_modules_disabled = "Disabled Modules:"
 info_bot_embed_field_title_logging_channel = "Logging Channel:"
-info_bot_embed_field_title_logging_events_1 = "Events that are logged (1/5):"
-info_bot_embed_field_title_logging_events_2 = "Events that are logged (2/5):"
-info_bot_embed_field_title_logging_events_3 = "Events that are logged (3/5):"
-info_bot_embed_field_title_logging_events_4 = "Events that are logged (4/5):"
-info_bot_embed_field_title_logging_events_5 = "Events that are logged (5/5):"
+info_bot_embed_field_title_logging_events_1 = "Events that are logged (1/6):"
+info_bot_embed_field_title_logging_events_2 = "Events that are logged (2/6):"
+info_bot_embed_field_title_logging_events_3 = "Events that are logged (3/6):"
+info_bot_embed_field_title_logging_events_4 = "Events that are logged (4/6):"
+info_bot_embed_field_title_logging_events_5 = "Events that are logged (5/6):"
+info_bot_embed_field_title_logging_events_6 = "Events that are logged (6/6):"
 info_bot_embed_field_title_enabled_components = "Enabled components:"
 info_bot_embed_field_title_welcoming_welcome_messages_dm_randomized = "Welcome DM responses randomized:"
 info_bot_embed_field_title_welcoming_welcome_messages_randomized = "Welcome channel responses randomized:"
@@ -456,7 +483,9 @@ info_bot_embed_field_title_verifier_success_is_embed = "Completed message is emb
 info_bot_embed_field_title_verifier_content = "Starting message:"
 info_bot_embed_field_title_verifier_completed_content = "Completed message:"
 info_bot_embed_field_title_verifier_passphrase = "Passphrase:"
-info_bot_embed_field_title_verifier_passphrase_hidden = "Passphrase is not shown, please refer to the Husqy dashboard!"
+info_bot_embed_field_title_verifier_passphrase_hidden = (
+    "Passphrase is not shown, please refer to the {bot_name} dashboard!"
+)
 info_bot_embed_field_title_rules_channel = "Rules channel:"
 info_bot_embed_field_title_rules_message = "Rules message:"
 info_bot_embed_field_title_rules_actions_enabled = "Actions enabled:"
@@ -677,7 +706,7 @@ response_delete_started = "The deletion has started! You will soon return to the
 privacy_embed_title_shared = "{bot_name} privacy configurator"
 privacy_embed_description = "Welcome to the {bot_name} privacy configurator.\nCurrently, {bot_name} is `{status}` to collect data from you in this server!"
 privacy_embed_field_1_name = "About this configurator"
-privacy_embed_field_1_value = "This privacy configurator is the place to configure your privacy related settings in {bot_name}.\n\nYou are free to retrieve your data and delete this data and instruct {bot_name} to not collect your data to deliver its services.\n`BEWARE: Deleting your data or restricting {bot_name} in collecting your data will result in loss of functionality for you and may result in loss of functionality or configuration changes to Husqy for other server members!`\n\nPlease use the buttons below to configure or get your privacy settings! If you are getting you data, beware that it may take a few seconds before it starts showing up!\n\nIf you have any further questions, please visit: {bot_website} or contact our support!"
+privacy_embed_field_1_value = "This privacy configurator is the place to configure your privacy related settings in {bot_name}.\n\nYou are free to retrieve your data and delete this data and instruct {bot_name} to not collect your data to deliver its services.\n`BEWARE: Deleting your data or restricting {bot_name} in collecting your data will result in loss of functionality for you and may result in loss of functionality or configuration changes to {bot_name} for other server members!`\n\nPlease use the buttons below to configure or get your privacy settings! If you are getting you data, beware that it may take a few seconds before it starts showing up!\n\nIf you have any further questions, please visit: {bot_website} or contact our support!"
 privacy_embed_field_2_name = "Note"
 privacy_embed_field_2_value = "- {bot_name} does not store all data, some data (like sent messages, f.e. mentions in the logging channel) will still exist in Discord, please contact the server administrator if you want to remove these entries.\n- Not all data can be deleted, some data is required (f.e. for settings the data collection preference or warnings)."
 privacy_embed_footer_value = "DISCLAIMER: This configurator works on a per server basis! Want to get or delete information in other servers, use this privacy configurator in the other servers!"
@@ -763,11 +792,11 @@ privacy_embed_get_data_modules_invite_tracker_description = (
 privacy_embed_get_data_modules_invite_tracker_something_went_wrong = (
     "Something went wrong while checking you references for the {bot_name} invite tracker module data."
 )
-privacy_embed_get_data_functions_giveaways_description = (
-    "For the {bot_name} giveaways functions data related to this server, we have found the following:\n{data}"
+privacy_embed_get_data_modules_giveaways_description = (
+    "For the {bot_name} giveaways module data related to this server, we have found the following:\n{data}"
 )
-privacy_embed_get_data_functions_giveaways_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} giveaways functions data."
+privacy_embed_get_data_modules_giveaways_something_went_wrong = (
+    "Something went wrong while checking you references for the {bot_name} giveaways module data."
 )
 privacy_embed_get_data_modules_reminders_description = (
     "For the {bot_name} reminders module data related to this server, we have found the following:\n{data}"
@@ -776,21 +805,6 @@ privacy_embed_get_data_modules_reminders_something_went_wrong = (
     "Something went wrong while checking you references for the {bot_name} reminders module data."
 )
 privacy_embed_delete_data_description = "Here you can choose to delete your data {bot_name} has related to you. Please select, using the buttons below, which action you want to perform.\n\n- **Cancel:** Returns to the main privacy configurator view and doesn't remove any data.\n- **Delete my data:** This option starts the deletion of you data (where possible) immediately (IN THIS SERVER).\n`BEWARE: deleting your data can result in loss of functionality for you and may result in loss of functionality for others.`\n"
-
-# ------------------------------------------------------------------------- #
-# Giveaway #
-# ------------------------------------------------------------------------- #
-# Responses
-response_giveaway_list_failed = "Something went wrong while fetching this servers giveaways!"
-response_giveaway_list_no_giveaways = "You don't have any active giveaways in this server!"
-response_giveaway_list_timeout = "Giveaway list reached a timeout!"
-response_giveaway_creating = "I am creating the giveaway, please wait!"
-response_giveaway_deleting = "I am deleting the giveaway, please wait!"
-response_giveaway_rerolling = "I am rerolling the giveaway, please wait!"
-# Embeds
-giveaway_list_embed_title = "Your giveaways"
-giveaway_list_embed_description = "You have {giveaways} giveaways! Showing your active giveaways:"
-giveaway_list_embed_field_giveaways = "Your giveways (Active/Finished):"
 
 # ------------------------------------------------------------------------- #
 # Utils #
@@ -1046,10 +1060,9 @@ poll_until_manually_closed = "`until manually closed`"
 no_description_given = "No description given"
 poll_description = "Poll is active for: {countdown}!\n`{description}`"
 poll_answers_embed_field = "Poll answers:"
-poll_footer = "Poll ID: {poll_id}. Poll provided by Husqy!"
+poll_footer = "Poll ID: {poll_id}. Poll provided by {bot_name}!"
 poll_results_embed_field = "Poll results:"
 poll_voters_embed_field = "Voters:"
-poll_footer = "Poll ID: {poll_id}. Poll provided by Husqy!"
 
 # ------------------------------------------------------------------------- #
 # Reminders #
@@ -1068,3 +1081,14 @@ response_quick_reminder_create_failed = "When creating a quick reminder. You can
 reminder_list_embed_title = "Reminders list"
 reminder_list_embed_description = "Here are the reminder based on your selection! Reminder count: {reminders}!"
 reminder_list_embed_field_reminders = "Reminders based on selection:"
+
+# ------------------------------------------------------------------------- #
+# GIVEAWAYS #
+# ------------------------------------------------------------------------- #
+response_giveaways_list_failed = "Something went wrong while getting the list of giveaways!"
+response_giveaways_list_no_tags = "There are no giveaways in this server!"
+response_giveaways_list_timeout = "Giveaways list reached a timeout."
+# Embeds
+giveaways_list_embed_title = "Giveaways list"
+giveaways_list_embed_description = "Here are the giveaways! Giveaways count: {giveaways}!"
+giveaways_list_embed_field_giveaways = "Giveaways:"

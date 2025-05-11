@@ -78,8 +78,10 @@ response_ticket_claim_failed_unknown_claimer = "I could not make you claim the t
 response_ticket_claim_failed_not_support_engineer = (
     "I could not make you claim the ticket because you are not a support engineer!"
 )
-response_ticket_claim_failed_invalid_member = "The claimer of the ticket can not be Husqy or an API Key!"
-response_ticket_claim_failed_prevent_data_collection = "I could not make you claim the ticket because you have prevent data collection enabled!"
+response_ticket_claim_failed_invalid_member = "The claimer of the ticket can not be {bot_name} or an API Key!"
+response_ticket_claim_failed_prevent_data_collection = (
+    "I could not make you claim the ticket because you have prevent data collection enabled!"
+)
 response_ticket_claim_failed = "Something went wrong while claiming the ticket!"
 response_ticket_claimed = "You have claimed the ticket and are now the linked support engineer for this ticket!"
 response_ticket_claimed_notification = "{member} has claimed the ticket and will be with you shortly!"
