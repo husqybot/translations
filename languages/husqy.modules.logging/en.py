@@ -1,4 +1,5 @@
 # MODULE LOGGING CONFIGURATION
+unknown_user = "an unknown user"
 default_logging_channel_name = "{bot_name} logging"
 response_module_logging_enabled = "{datetime} -- **{member}** has enabled the `logging` module! I will now log all supported events to the new logging channel!"
 response_module_logging_disabled = (
