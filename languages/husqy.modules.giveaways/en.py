@@ -1,9 +1,13 @@
 # MODULES GIVEAWAYS
 removed_user = "(removed_user)"
-giveaway_embed_title = "Active giveaway: {prize}!"
-giveaway_embed_footer = "Giveaway ID: {giveaway_id}. Giveaway provided by {bot_name}"
-giveaway_embed_details_field_title = "Giveaway details:"
-giveaway_embed_details_field_value = "Giveaway is active for: {countdown}\n Giveaway participants: {participants}\n Giveaway winner count: {winner_count}\n Owner: {owner}"
+giveaway_response_component_title = "Active giveaway"
+giveaway_response_component_description_giveaway_id = "Giveaway ID"
+giveaway_response_component_description_giveaway_description = "Description"
+giveaway_response_component_description_giveaway_no_description = "No description provided"
+giveaway_response_component_description_giveaway_owner = "Owner"
+giveaway_response_component_description_giveaway_winner_count = "Winner count"
+giveaway_response_component_description_giveaway_participants = "Participants"
+giveaway_response_component_description_giveaway_active_for = "Giveaway is active for: {countdown}"
 enter_giveaway = "Enter giveaway"
 leave_giveaway = "Leave giveaway"
 response_giveaway_create_failed_no_language = (

@@ -19,10 +19,6 @@ yes = "Yes"
 no = "No"
 enabled = "Enabled"
 disabled = "Disabled"
-no_modules_enabled = "There are no modules enabled"
-no_modules_disabled = "There are no modules disabled"
-no_stats_enabled = "There are no statistics enabled"
-no_stats_disabled = "There are no statistics disabled"
 continue_message = "Continue"
 cancel_message = "Cancel"
 not_in_use = "Not in use!"
@@ -34,29 +30,593 @@ website = "Website"
 documentation = "Documentation"
 support_server = "Support Server"
 dashboard = "Dashboard"
-allowed = "Allowed"
-not_allowed = "Not allowed"
-# Dicts
-CHANNEL_TYPES = {
-    "DM": "DM channel",
-    "GROUP_DM": "Group DM channel",
-    "GUILD_CATEGORY": "Category channel",
-    "GUILD_NEWS": "News channel",
-    "GUILD_STAGE": "Stage channel",
-    "GUILD_TEXT": "Text channel",
-    "GUILD_VOICE": "Voice channel",
-    "GUILD_FORUM": "Forum channel",
+
+# ------------------------------------------------------------------------- #
+# GENERAL #
+# ------------------------------------------------------------------------- #
+response_db_user_not_found = "Something went wrong while getting your user information! Please try again later."
+
+# ------------------------------------------------------------------------- #
+# UTILS QR GENERATE #
+# ------------------------------------------------------------------------- #
+qr_generate_response_component_title_info = "### Your QR-code"
+response_time_converted_success = (
+    "{days} days, {hours} hours, {minutes} minutes and {seconds} seconds totals to `{total_seconds}` seconds!"
+)
+
+# ------------------------------------------------------------------------- #
+# UTILS CUSTOM EMBED SEND #
+# ------------------------------------------------------------------------- #
+response_custom_embed_send_success = "The embed has been send to {channel}!"
+response_custom_embed_send_failed = "Something went wrong while sending the embed to {channel}!"
+
+# ------------------------------------------------------------------------- #
+# UTILS CUSTOM MODAL CREATE/PREVIEW #
+# ------------------------------------------------------------------------- #
+custom_modal_change_title = "Change modal title"
+custom_modal_edit_text_field = "Edit modal text field"
+custom_modal_add_text_field = "Add modal text field"
+custom_modal_remove_text_field_1 = "First text field"
+custom_modal_remove_text_field_2 = "Second text field"
+custom_modal_remove_text_field_3 = "Third text field"
+custom_modal_remove_text_field_4 = "Fourth text field"
+custom_modal_remove_text_field_5 = "Fifth text field"
+custom_modal_remove_text_field = "Remove text field"
+custom_modal_reset = "Reset modal"
+custom_modal_finish = "Finish modal"
+custom_modal_preview = "Preview modal"
+custom_modal_create_this_can_be_safely_removed = (
+    "<NOTE: Everything inside the (double) quotation marks can be safely removed! The trailing , too>"
+)
+custom_modal_change_title_new_title = "title"
+custom_modal_add_text_field_text_field_title = "Field title"
+custom_modal_add_text_field_text_field_description = "Field description"
+custom_modal_add_text_field_text_field_type = "Field type (Long/Short)"
+custom_modal_add_text_field_text_field_required = "Required (True/False)"
+custom_modal_add_text_field_title = "Text field"
+# Responses
+response_custom_modal_finished = (
+    "The custom modal creation is finished, the JSON of your modal is: \n```{modal_json}```"
+)
+response_custom_modal_preview = "By pressing Continue I will show the preview of the custom modal! This modal can be interacted with but no data will be saved!"
+response_custom_modal_preview_failed = "The custom modal preview reached a timeout!"
+response_custom_modal_preview_failed_canceled = "The custom modal preview was canceled!"
+response_custom_modal_preview_success = "Custom modal has been previewed!"
+# Embeds
+custom_modal_default_embed_title = "Custom modal creation"
+custom_modal_embed_description = "Welcome to the custom modal creation. Using the buttons below, you can configure the modal and preview it. When finished, select Finish to retrieve the JSON.\n **When previewing the modal, press cancel or fill in the form and press submit to continue modal creation!**"
+
+# ------------------------------------------------------------------------- #
+# INFO #
+# ------------------------------------------------------------------------- #
+info_response_channel_not_found = "The channel with that ID is not found!"
+info_response_channel_unknown = "Unknown channel!"
+info_response_component_title_info = "Info"
+info_response_component_title_general_channel_info = "General info"
+info_response_component_title_general_channel_id = "ID"
+info_response_component_title_general_channel_name = "Name"
+info_response_component_title_general_channel_created_at = "Created at"
+info_response_component_title_general_channel_type = "Type"
+info_response_component_title_specific_channel_info = "Specific info"
+info_response_component_title_specific_channel_nsfw = "NSFW"
+info_response_component_title_specific_channel_last_message = "Last message"
+info_response_component_title_specific_channel_parent_id = "Parent"
+info_response_component_description_no_parent = "No parent"
+info_response_component_title_specific_channel_last_thread_id = "Last thread"
+info_response_component_description_specific_channel_no_last_thread_id = "No last thread"
+info_response_component_title_specific_channel_last_pin_timestamp = "Last pin timestamp"
+info_response_component_title_specific_channel_position = "Position"
+info_response_component_title_specific_channel_topic = "Topic"
+info_response_component_title_specific_channel_default_auto_archive_duration = "Default auto archive duration"
+info_response_component_title_specific_channel_rate_limit_per_user = "Rate limit (per user)"
+info_response_component_title_specific_channel_available_tags = "Available tags"
+info_response_component_title_specific_channel_default_layout = "Default layout"
+info_response_component_description_specific_channel_default_layouts = {
+    "NOT_SET": "Not set",
+    "LIST_VIEW": "List view",
+    "GALLERY_VIEW": "Gallery view",
 }
-CHANNEL_TYPES_INT = {
-    1: "DM channel",
-    3: "Group DM channel",
-    4: "Category channel",
-    5: "News channel",
-    13: "Stage channel",
-    0: "Text channel",
-    2: "Voice channel",
-    15: "Forum channel",
+info_response_component_title_specific_channel_default_reaction_emoji = "Default reaction emoji (or emoji ID)"
+info_response_component_description_specific_channel_no_default_reaction_emoji = "No default reaction emoji"
+info_response_component_title_specific_channel_default_sort_order = "Default sort order"
+info_response_component_description_specific_channel_default_sort_orders = {
+    "LATEST_ACTIVITY": "Latest activity",
+    "CREATION_DATE": "Creation date",
 }
+info_response_component_title_specific_channel_default_thread_rate_limit_per_user = "Threat rate limit (per user)"
+info_response_component_title_specific_channel_bitrate = "Bitrate"
+info_response_component_title_specific_channel_region = "Region"
+info_response_component_description_specific_channel_region_auto = "Region automatically determined"
+info_response_component_title_specific_channel_user_limit = "User limit"
+info_response_component_description_specific_channel_no_user_limit = "No limit set"
+info_response_component_title_specific_channel_video_quality_mode = "Video quality mode"
+info_response_component_description_specific_channel_video_quality_modes = {"AUTO": "Auto", "FULL": "720p"}
+info_response_component_title_specific_channel_approximate_member_count = "Member count (aprox.)"
+info_response_component_title_specific_channel_approximate_message_count = "Message count (aprox.)"
+info_response_component_title_specific_channel_archive_timestamp = "Archive timestamp"
+info_response_component_title_specific_channel_auto_archive_duration = "Auto archive duration"
+info_response_component_title_specific_channel_is_archived = "Archived"
+info_response_component_title_specific_channel_is_locked = "Locked"
+info_response_component_title_specific_channel_owner_id = "Owner"
+info_response_component_title_specific_channel_thread_created_at = "Thread created at"
+info_response_component_description_specific_channel_thread_created_at_unknown = "Unknown"
+info_response_role_not_found = "The role with that ID is not found!"
+info_response_component_title_general_role_info = "General info"
+info_response_component_title_general_role_id = "ID"
+info_response_component_title_general_role_name = "Name"
+info_response_component_title_general_role_created_at = "Created at"
+info_response_component_title_general_role_color = "Color"
+info_response_component_title_general_role_position = "Position"
+info_response_component_title_general_role_unicode_emoji = "Emoji"
+info_response_component_title_general_role_is_guild_linked_role = "Linked role"
+info_response_component_title_general_role_is_hoisted = "Hoisted"
+info_response_component_title_management_role_info = "Management info"
+info_response_component_title_general_role_is_managed = "Managed by integration or application"
+info_response_component_title_general_role_bot_id = "Bot"
+info_response_component_description_general_role_no_bot_id = "Not managed by an integration or application"
+info_response_component_title_general_role_integration_id = "Integration ID"
+info_response_component_title_general_role_is_mentionable = "Mentionable"
+info_response_component_title_general_role_is_premium_subscriber_role = "Premium subscriber role"
+info_response_component_title_monetization_role_info = "Monetization info"
+info_response_component_title_general_role_is_available_for_purchase = "Available for purchase"
+info_response_component_title_general_role_subscription_listing_id = "Subscription SKU ID"
+info_response_component_description_general_role_no_subscription_listing_id = "Not available for purchase"
+info_response_guild_not_found = "The server is not found!"
+info_response_component_title_general_guild_info = "General info"
+info_response_component_title_general_guild_id = "ID"
+info_response_component_title_general_guild_name = "Name"
+info_response_component_title_general_guild_created_at = "Created at"
+info_response_component_title_general_guild_owner_id = "Onwer"
+info_response_component_title_general_guild_description = "Description"
+info_response_component_description_general_guild_no_description = "No description"
+info_response_component_title_general_guild_preferred_locale = "Preferred locale"
+info_response_component_title_general_guild_vanity_url = "Vanity URL code"
+info_response_component_description_general_guild_no_vanity_url = "No vanity URL code"
+info_response_component_title_general_guild_max_video_channel_users = "Max video channel users"
+info_response_component_title_general_guild_nsfw_level = "NSFW Level"
+info_response_component_description_general_guild_nsfw_levels = {
+    "DEFAULT": "Default",
+    "EXPLICIT": "Explicit",
+    "SAFE": "Safe",
+    "AGE_RESTRICTED": "Age restricted",
+}
+info_response_component_title_general_guild_afk_timeout = "AFK timeout"
+info_response_component_title_general_guild_afk_channel = "AFK channel"
+info_response_component_description_general_guild_no_afk_channel = "No AFK channel"
+info_response_component_title_general_invites_disabled = "Invites disabled"
+info_response_component_title_general_default_message_notifications = "Default message notifications"
+info_response_component_description_general_default_message_notifications = {
+    "ALL_MESSAGES": "All messages",
+    "ONLY_MENTIONS": "Notify only users when mentioned",
+}
+info_response_component_title_general_explicit_content_filter = "Explicit content filter"
+info_response_component_description_general_explicit_content_filters = {
+    "DISABLED": "No explicit content filter",
+    "MEMBERS_WITHOUT_ROLES": "Filter all content from members without a role",
+    "ALL_MEMBERS": "Filter all content",
+}
+info_response_component_title_security_guild_info = "Security info"
+info_response_component_title_security_guild_mfa_level = "MFA level"
+info_response_component_description_security_guild_mfa_levels = {"NONE": "No MFA required", "ELEVATED": "MFA required"}
+info_response_component_title_security_guild_verification_level = "Verification level"
+info_response_component_description_security_guild_verification_levels = {
+    "NONE": "Unrestricted",
+    "LOW": "Verifier email required",
+    "MEDIUM": "Must be registered on Discord for more than 5 minutes",
+    "HIGH": "Must be registered on Discord for more than 10 minutes",
+    "VERY_HIGH": "Verifier phone number required",
+}
+info_response_component_title_system_channel_guild_info = "System channel info"
+info_response_component_title_general_guild_public_updates_channel_id = "Public updates channel"
+info_response_component_title_description_guild_no_public_updates_channel_id = "No public updates channel"
+info_response_component_title_general_guild_rules_channel_id = "Rules channel"
+info_response_component_title_description_guild_no_rules_channel_id = "No rules channel"
+info_response_component_title_general_guild_system_channel_id = "System channel"
+info_response_component_title_description_guild_no_system_channel_id = "No system channel"
+info_response_component_title_general_guild_is_widget_enabled = "Widget enabled"
+info_response_component_title_general_guild_widget_channel_id = "Widget channel"
+info_response_component_title_description_guild_no_widget_channel_id = "No system channel"
+info_response_component_title_premium_guild_info = "Premium info"
+info_response_component_title_premium_guild_subscription_count = "Boosts"
+info_response_component_title_premium_guild_premium_tier = "Premium tier"
+info_response_component_description_premium_guild_premium_tiers = {
+    "NONE": "No premium tier",
+    "TIER_2": "Tier 2 nitro",
+    "TIER_1": "Tier 1 nitro",
+    "TIER_3": "Tier 3 nitro",
+}
+info_response_component_title_features_guild_info = "Features"
+info_response_component_title_features_guild_features = {
+    "ANIMATED_ICON": "Able to set an animated guild icon",
+    "BANNER": "Able to set a server banner image",
+    "COMMERCE": "Able to use commerce features",
+    "COMMUNITY": "Community features enabled",
+    "DISCOVERABLE": "Disoverable in directory",
+    "FEATURABLE": "Able to be featured in directory",
+    "INVITE_SPLASH": "Able to set an invite splash background",
+    "MORE_EMOJI": "Can host more custom emojis than normal",
+    "NEWS": "Able to create news channels",
+    "PARTNERED": "Partnered",
+    "RELAY_ENABLED": "Using relays",
+    "VANITY_URL": "Able to set a vanity URL",
+    "VERIFIED": "Verified",
+    "VIP_REGIONS": "VIP regions (384kbps bitrate)",
+    "WELCOME_SCREEN_ENABLED": "Welcome screens enabled",
+    "MEMBER_VERIFICATION_GATE_ENABLED": "Memberschip screening enabled",
+    "PREVIEW_ENABLED": "Server can be viewed before screening is completed",
+    "TICKETED_EVENTS_ENABLED": "Ticketed events enabled",
+    "MONETIZATION_ENABLED": "Monetization enabled",
+    "MORE_STICKERS": "Can have more custom stickers",
+    "CREATOR_MONETIZABLE": "Monetization enabled",
+    "CREATOR_STORE_PAGE": "Store page enabled",
+    "ROLE_SUBSCRIPTIONS_ENABLED": "Role subscriptions enabled",
+    "ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE": "Role subscriptions available for purchase",
+    "INVITES_DISABLED": "Invites paused, no users can join",
+    "RAID_ALERTS_DISABLED": "Raid alerts disabled",
+    "BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE": "Bypass slowmode permissions migration completed",
+    "PIN_PERMISSION_MIGRATION_COMPLETE": "Pin permissions migration completed",
+    "NONE": "Unknown",
+}
+info_response_component_title_icon_guild_info = "Server icon"
+info_response_user_not_found = "The user with that ID is not found!"
+info_response_component_title_general_user_info = "General info"
+info_response_component_title_general_user_id = "ID"
+info_response_component_title_general_user_global_name = "Global name"
+info_response_component_title_general_user_name = "Username"
+info_response_component_title_general_user_created_at = "Created at"
+info_response_component_title_general_user_accent_color = "Accent color"
+info_response_component_title_general_user_flags = "Flags"
+info_response_component_title_general_user_is_bot = "Bot"
+info_response_component_title_general_user_is_system = "System"
+info_response_component_title_general_user_primary_guild = "Primary server ID"
+info_response_component_description_general_user_no_primary_guild = "No primary server"
+info_response_component_title_member_user_info = "Member info"
+info_response_component_title_member_user_joined_at = "Joined at"
+info_response_component_description_member_user_no_joined_at = "Unknown join date"
+info_response_component_title_member_user_premium_since = "Boosted server since"
+info_response_component_description_member_user_no_premium_since = "Has not boosted server"
+info_response_component_title_member_user_nickname = "Nickname"
+info_response_component_description_member_user_no_nickname = "No nickname"
+info_response_component_title_member_user_is_deaf = "Deafend"
+info_response_component_title_member_user_is_mute = "Muted"
+info_response_component_title_member_user_is_pending = "Pending"
+info_response_component_title_member_user_communication_disabled_until = "Communication disabled until"
+info_response_component_description_member_user_no_communication_disabled_until = "Communication not disabled"
+info_response_component_title_member_user_roles = "Roles"
+info_response_component_title_avatar_user_info = "User avatar"
+info_response_ping = "Pong! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
+info_response_component_title_general_bot_info = "General info"
+info_response_component_title_bot_language = "Language"
+info_response_component_title_bot_timezone = "Timezone"
+info_response_component_title_bot_unit_system = "Unit system"
+info_response_component_title_bot_auto_delete = "Auto delete"
+info_response_component_description_bot_auto_delete_seconds = "seconds"
+info_response_component_title_enabled_modules_bot_info = "Enabled modules"
+info_response_component_description_no_enabled_modules_bot_info = "No modules enabled"
+info_response_component_title_disabled_modules_bot_info = "Disabled modules"
+info_response_component_description_no_disabled_modules_bot_info = "No modules disabled"
+module_logging = "Logging module"
+module_welcoming = "Welcoming module"
+module_tempchannels = "Tempchannels module"
+module_socials = "Socials module"
+module_reactionroles = "Reactionroles module"
+module_autoresponder = "Autoresponder module"
+module_tickets = "Tickets module"
+module_ticket_view_types = "View ticket types"
+module_ticket_view_generals_settings = "View settings"
+module_serverstats = "Serverstats module"
+module_tags = "Tags module"
+module_verifier = "Verifier module"
+module_rules = "Rules module"
+module_invite_tracker = "Invite tracker module"
+module_polls = "Polls module"
+module_reminders = "Reminders module"
+module_giveaways = "Giveaways module"
+
+# ------------------------------------------------------------------------- #
+# HELP #
+# ------------------------------------------------------------------------- #
+help_response_title_documentation = "Documentation"
+help_response_description_documentation = "The Husqy documentation is the best place to start. It explains all features and possibilities of Husqy. There is also a FAQ page which maybe can answer the questions you have."
+help_response_button_title_documentation = "Documentation"
+help_response_button_title_faq = "FAQ"
+help_response_title_dashboard = "Dashboard"
+help_response_description_dashboard = "The dashboard is the quick all in one tool to configure Husqy for the server, click the link below to go to the dashboard."
+help_response_button_title_dashboard = "Dashboard"
+help_response_title_still_need_help = "Still need help?"
+help_response_description_still_need_help = "If you are still in need of support, please follow one of the links below and contact us! We would like to help you!"
+help_response_button_title_still_need_help = "Official Husqy Support Server"
+
+# ------------------------------------------------------------------------- #
+# MEME #
+# ------------------------------------------------------------------------- #
+response_meme_getting_meme = "I am getting your meme, please wait!"
+response_meme_request_failed = (
+    "Something went wrong while sending the request to the socials service! Please try again later."
+)
+
+# ------------------------------------------------------------------------- #
+# GAMES #
+# ------------------------------------------------------------------------- #
+response_games_heads_or_tails_heads = "It's `heads`!"
+response_games_heads_or_tails_tails = "It's `tails`!"
+higher_lower_higher = "Higher"
+higher_lower_equal = "Equal"
+higher_lower_lower = "Lower"
+rps_rock = "Rock"
+rps_paper = "Paper"
+rps_scissors = "Scissors"
+higher_lower_response_component_text = "### Higher/lower\nHello {member}! I have picked a number between 0 and 100! Do you think this number is higher, lower or equal to `{hint_number}`?"
+higher_lower_response_component_won_text = "### Higher/lower\nCongratulations {member}! You are **correct**!\n\nThe secret number was {secret_number}\nThe hint number was {hint_number}\nYou chose {chosen_option}"
+higher_lower_response_component_loss_text = "### Higher/lower\nToo bad {member}! You are **wrong**!\n\nThe secret number was {secret_number}\nThe hint number was {hint_number}\nYou chose {chosen_option}"
+rps_response_component_text = "### Rock, Paper, Scissors game\n\n{user_one} is choosing...\n{user_two} is waiting..."
+rps_response_component_winner_text = "Congratulations {user}! You won the Rock, Paper, Scissors game!"
+
+# ------------------------------------------------------------------------- #
+# TICKETS #
+# ------------------------------------------------------------------------- #
+response_module_tickets_request_failed = (
+    "Something went wrong while sending the request to the tickets service! Please try again later."
+)
+response_module_tickets_transfer_select_new_support_engineer = "Please select the support engineer for this ticket!"
+
+# ------------------------------------------------------------------------- #
+# RULES #
+# ------------------------------------------------------------------------- #
+response_module_rules_request_failed = (
+    "Something went wrong while sending the request to the rules service! Please try again later."
+)
+response_module_rules_no_rules_found = "There are no rules based on your selection."
+response_module_rules_invalid_rule_id = "There is no valid rule ID given."
+info_module_rules_button_settings = "Settings"
+info_module_rules_button_rules = "Rules"
+info_module_rules_response_component_title_settings = "Rules module info"
+info_module_rules_response_component_description_settings_rules_channel = "Rules channel"
+info_module_rules_response_component_description_settings_no_rules_channel = "No rules channels configured"
+info_module_rules_response_component_description_settings_rules_message = "Rules message"
+info_module_rules_response_component_description_settings_rules_actions_enabled = "Actions enabled"
+info_module_rules_response_component_description_settings_rules_denied_action = "Denied action"
+info_module_rules_response_component_description_settings_rules_accepted_role_ids = "Accepted roles"
+info_module_rules_response_component_description_settings_rules_denied_role_ids = "Denied roles"
+info_module_rules_response_component_description_settings_rules_no_accepted_role_ids = "No accepted role IDs configured"
+info_module_rules_response_component_description_settings_rules_no_denied_role_ids = "No denied role IDs configured"
+info_module_rules_response_component_title_rules = "Rule"
+info_module_rules_response_component_description_rules_rule_text = "Text"
+info_module_rules_response_component_description_no_rules = "No rules configured"
+
+# ------------------------------------------------------------------------- #
+# REMINDERS #
+# ------------------------------------------------------------------------- #
+response_module_reminders_request_failed = (
+    "Something went wrong while sending the request to the reminders service! Please try again later."
+)
+response_module_reminders_no_reminders_found = "There are no reminders based on your selection."
+response_module_reminders_one_destination_type_allowed = "You cannot have destination channel and member. You must choose between a DM (destination member) or a channel (destination channel)."
+response_module_reminders_new_duration = (
+    "Please provide the duration for the reminder. Please use format: {delay}{d/h/m/s} - f.e. 1h or 20m)"
+)
+list_module_reminders_response_component_description_reminder_id = "Reminder ID"
+list_module_reminders_response_component_description_title = "Title"
+list_module_reminders_response_component_description_description = "Description"
+list_module_reminders_response_component_description_no_description = "No description set"
+list_module_reminders_response_component_description_url = "URL"
+list_module_reminders_response_component_description_no_url = "No url set"
+list_module_reminders_response_component_description_destination = "Destination"
+list_module_reminders_response_component_description_content_is_embed = "Content is embed"
+list_module_reminders_response_component_description_content = "Content"
+list_module_reminders_response_component_title_info_quick = "Quick reminders"
+list_module_reminders_response_component_description_no_quick_reminders = "No quick reminders in this server"
+list_module_reminders_response_component_title_info_repeated = "Repeated reminders"
+list_module_reminders_response_component_description_no_repeated_reminders = "No repeated reminders in this server"
+list_module_reminders_response_component_title_info_scheduled = "Scheduled reminders"
+list_module_reminders_response_component_description_no_scheduled_reminders = "No scheduled reminders in this server"
+
+# ------------------------------------------------------------------------- #
+# POLLS #
+# ------------------------------------------------------------------------- #
+response_module_polls_request_failed = (
+    "Something went wrong while sending the request to the polls service! Please try again later."
+)
+response_module_polls_determine_action_timeout = (
+    "The poll vote determine action has reached a timeout. No vote will be placed or removed!"
+)
+response_module_polls_response_choose_poll_action = "What action do you want to perform on the answer? Add = Add vote & Remove = Remove all of your votes for that answer."
+response_module_polls_provide_details_failed = (
+    "Timeout while waiting for details of the poll answer! Cancelling poll create....."
+)
+response_module_polls_add_answer = "Do you want to add an extra answer to the list? Please keep in mind the answer limits of the server, these will only be checked when finishing this command."
+response_module_polls_provide_answer_text = (
+    "Please provide the text of the answer by sending it in the chat. Please only insert the answer text in one line."
+)
+response_module_polls_provide_answer_emoji = (
+    "Please provide the emoji of the answer by sending it in the chat. Please only send the emoji."
+)
+response_module_polls_provide_answer_label = (
+    "Please provide the label of the answer by sending it in the chat. Please only send the emoji."
+)
+response_module_polls_provide_answer_description = (
+    "Please provide the description of the answer by sending it in the chat. Please only send the emoji."
+)
+response_module_polls_add_label_to_answer = (
+    "Do you want to add a label to the button? If no, an emoji is required. If yes, an emoji is optional."
+)
+response_module_polls_add_description_to_answer = (
+    "Do you want to add a description to the button (not visible in discord)?"
+)
+response_module_polls_add_emoji_to_answer = "Do you want to add a emoji to the button?"
+info_module_polls_response_component_title_settings = "Polls module settings"
+info_module_polls_response_component_description_settings_polls_save_duration = "Save duration"
+info_module_polls_response_component_description_settings_polls_save_duration_seconds = "seconds"
+info_module_polls_response_component_description_settings_polls_delete_ended_discord_polls = (
+    "Delete ended Discord polls"
+)
+info_module_polls_response_component_description_settings_polls_delete_ended_husqy_polls = "Delete ended Husqy polls"
+# Embeds
+details_module_polls_response_component_title_info = "Polls details"
+details_module_polls_response_component_description_info_poll_id = "Poll ID"
+details_module_polls_response_component_description_info_question = "Question"
+details_module_polls_response_component_description_info_description = "Description"
+details_module_polls_response_component_description_info_no_description = "No description set"
+details_module_polls_response_component_description_info_active_for = "Poll is active for: {countdown}"
+details_module_polls_response_component_title_info_poll_results = "Poll results"
+details_module_polls_response_component_description_votes = "Votes"
+details_module_polls_response_component_title_info_poll_votes = "Voters"
+
+# ------------------------------------------------------------------------- #
+# VERIFIER #
+# ------------------------------------------------------------------------- #
+response_module_verifier_request_failed = (
+    "Something went wrong while sending the request to the verifier service! Please try again later."
+)
+info_module_verifier_response_component_title_settings = "Verifier info"
+info_module_verifier_response_component_description_settings_verifier_type = "Verifier type"
+info_module_verifier_response_component_description_settings_verifier_channel = "Channel"
+info_module_verifier_response_component_description_settings_no_verifier_channel = "No verifier channel configured"
+info_module_verifier_response_component_description_settings_verifier_message_is_embed = "Verification message is embed"
+info_module_verifier_response_component_description_settings_verifier_message_content = "Verification message content"
+info_module_verifier_response_component_description_settings_verifier_message_completed_is_embed = (
+    "Verification completed message is embed"
+)
+info_module_verifier_response_component_description_settings_verifier_message_content_success = (
+    "Verification completed message content"
+)
+info_module_verifier_response_component_description_settings_verifier_verified_role_ids = "Verified role IDs"
+info_module_verifier_response_component_description_settings_verifier_no_verified_role_ids = (
+    "No verifier role IDs configured"
+)
+
+# ------------------------------------------------------------------------- #
+# TEMPCHANNELS #
+# ------------------------------------------------------------------------- #
+response_module_tempchannels_request_failed = (
+    "Something went wrong while sending the request to the tempchannels service! Please try again later."
+)
+response_module_tempchannels_request_failed_invalid_selection = (
+    "Something went wrong while sending the request to the tempchannels service! Please enter a valid selection."
+)
+response_module_tempchannels_no_channels_found = "There are no channels based on your selection."
+list_module_tempchannels_response_component_title_info_creation_channels = "Creation channels"
+list_module_tempchannels_response_component_description_creation_channel = "Creation channel"
+list_module_tempchannels_response_component_description_creation_category = "Creation category"
+list_module_tempchannels_response_component_description_no_creation_category = "No creation category specified"
+list_module_tempchannels_response_component_description_create_voice = "Create voice channel"
+list_module_tempchannels_response_component_description_voice_name = "Voice channel name"
+list_module_tempchannels_response_component_description_no_voice_name = "No voice channel created"
+list_module_tempchannels_response_component_description_voice_category = "Voice category"
+list_module_tempchannels_response_component_description_no_voice_category = "No voice category specified"
+list_module_tempchannels_response_component_description_create_text = "Create text channel"
+list_module_tempchannels_response_component_description_text_name = "Text channel name"
+list_module_tempchannels_response_component_description_no_text_name = "No text channel created"
+list_module_tempchannels_response_component_description_text_category = "Text category"
+list_module_tempchannels_response_component_description_no_text_category = "No text category specified"
+list_module_tempchannels_response_component_description_no_creation_channels = "No creation channels"
+list_module_tempchannels_response_component_title_info_tempchannels = "Tempchannels"
+list_module_tempchannels_response_component_description_tempchannel_id = "Tempchannel ID"
+list_module_tempchannels_response_component_description_owner = "Owner"
+list_module_tempchannels_response_component_description_no_owner = "No owner"
+list_module_tempchannels_response_component_description_voice_channel = "Voice channel"
+list_module_tempchannels_response_component_description_no_voice_channel = "No voice channel created"
+list_module_tempchannels_response_component_description_text_channel = "Text channel"
+list_module_tempchannels_response_component_description_no_text_channel = "No text channel created"
+list_module_tempchannels_response_component_description_last_text_activity = "Last text activity"
+list_module_tempchannels_response_component_description_no_last_text_activity = "No activity"
+list_module_tempchannels_response_component_description_used_creation_channel = "Creation channel"
+list_module_tempchannels_response_component_description_no_tempchannels = "No tempchannels in use"
+
+# ------------------------------------------------------------------------- #
+# TAGS #
+# ------------------------------------------------------------------------- #
+response_module_tags_request_failed = (
+    "Something went wrong while sending the request to the tags service! Please try again later."
+)
+response_module_tags_no_tags_found = "There are no tags based on your selection."
+response_module_tags_no_content = "There is no content given."
+response_module_tags_invalid_tag_id = "There is no valid tag ID given."
+response_module_tags_edit_provide_content = "Please provide the content of the tag by sending the content in the chat."
+response_module_tags_create_provide_content = (
+    "Please provide the tags content of the tag by sending the content in the chat."
+)
+list_module_tags_response_component_title_info = "Tags"
+list_module_tags_response_component_description_tag_id = "Tag ID"
+list_module_tag_response_component_description_owner = "Owner"
+list_module_tag_response_component_description_visibility = "Visibility"
+list_module_tag_response_component_description_names = "Names"
+list_module_tags_response_component_description_no_tags = "No tags configured"
+
+# ------------------------------------------------------------------------- #
+# INVITE_TRACKER #
+# ------------------------------------------------------------------------- #
+response_module_invite_tracker_request_failed = (
+    "Something went wrong while sending the request to the invite tracker service! Please try again later."
+)
+response_module_invite_tracker_no_shared_invite_link = "This server has not set a shared invite link!"
+response_module_invite_tracker_no_invite_links = "There are not known invite links in this server!"
+info_module_invite_tracker_button_settings = "Settings"
+info_module_invite_tracker_response_component_description_settings_prevent_own_invite_code = (
+    "Prevent own invite code from couting towards stats"
+)
+info_module_invite_tracker_response_component_description_settings_server_shared_invite_link = (
+    "Server shared invite link"
+)
+info_module_invite_tracker_response_component_description_settings_server_no_shared_invite_link = (
+    "No invite link configured"
+)
+info_module_invite_tracker_response_component_title_settings_join_messages = "Join messages"
+info_module_invite_tracker_response_component_description_join_messages_enabled = "Join messages enabled"
+info_module_invite_tracker_response_component_description_join_messages_channel = "Channel"
+info_module_invite_tracker_response_component_description_no_join_messages_channel = "No channel configured"
+info_module_invite_tracker_response_component_description_join_messages_is_embed = "Join message is embed"
+info_module_invite_tracker_response_component_description_join_messages_content = "Join message content"
+info_module_invite_tracker_response_component_title_settings_leave_messages = "Leave messages"
+info_module_invite_tracker_response_component_description_leave_messages_enabled = "Leave messages enabled"
+info_module_invite_tracker_response_component_description_leave_messages_channel = "Channel"
+info_module_invite_tracker_response_component_description_no_leave_messages_channel = "No channel configured"
+info_module_invite_tracker_response_component_description_leave_messages_is_embed = "Leave message is embed"
+info_module_invite_tracker_response_component_description_leave_messages_content = "Leave message content"
+info_module_invite_tracker_button_invites = "Invites"
+info_module_invite_tracker_response_component_title_settings = "Invite tracker module info"
+info_module_invite_tracker_response_component_title_invites = "Invites"
+info_module_invite_tracker_response_component_description_invite_code = "Invite code"
+info_module_invite_tracker_response_component_description_invite_url = "URL"
+info_module_invite_tracker_response_component_description_no_invites = "No invites configured"
+# Embeds
+stats_module_invite_tracker_response_component_text = "### Invite tracker stats\n{member} has a total of `{total_invites}` invites over the pas 31 days!\n\n✅ Joins: `{joins}`\n❌ Leaves: `{leaves}`"
+invite_link_module_invite_tracker_response_component_text = (
+    "### Server invite link\nDo you want to invite other friends? Please use the following invite link:\n{link}"
+)
+
+# ------------------------------------------------------------------------- #
+# GIVEAWAYS #
+# ------------------------------------------------------------------------- #
+response_module_giveaways_request_failed = (
+    "Something went wrong while sending the request to the giveaways service! Please try again later."
+)
+response_module_giveaways_no_giveaways_found = "There are no giveaways based on your selection."
+info_module_giveaways_button_settings = "Settings"
+info_module_giveaways_button_giveaways = "Giveaways"
+info_module_giveaways_response_component_title_settings = "Giveaways module info"
+info_module_giveaways_response_component_description_settings_giveaways_save_duration = "Save duration"
+info_module_giveaways_response_component_description_settings_giveaways_save_duration_seconds = "seconds"
+info_module_giveaways_response_component_description_settings_giveaways_delete_ended_giveaways = (
+    "Delete ended giveaways"
+)
+info_module_giveaways_response_component_title_giveaways = "Giveaways"
+info_module_giveaways_response_component_description_giveaway_id = "Giveaway ID"
+info_module_giveaways_response_component_description_giveaway_channel = "Channel"
+info_module_giveaways_response_component_description_giveaway_owner = "Owner"
+info_module_giveaways_response_component_description_giveaway_message_id = "Message"
+info_module_giveaways_response_component_description_giveaway_winner_count = "Winner count"
+info_module_giveaways_response_component_description_giveaway_prize = "Prize"
+info_module_giveaways_response_component_description_giveaway_description = "Description"
+info_module_giveaways_response_component_description_giveaway_no_description = "No description configured"
+info_module_giveaways_response_component_description_no_giveaways = "No giveaways active"
+
+# ------------------------------------------------------------------------- #
+# LOGGING #
+# ------------------------------------------------------------------------- #
+response_module_logging_request_failed = (
+    "Something went wrong while sending the request to the logging service! Please try again later."
+)
 LOGGABLE_TRANSLATIONS = {
     "log_errors": "Errors",
     "log_info": "Info requests",
@@ -84,24 +644,7 @@ LOGGABLE_TRANSLATIONS = {
     "log_tempmute": "Tempmute command",
     "log_temptimeout": "Temptimeout command",
     "log_games": "Games played",
-    "log_audio_seek": "Audio seeked to timestamp",
-    "log_audio_join": "Bot joins channel",
-    "log_audio_leave": "Bot leaves channel",
-    "log_audio_stop": "Audio playback stopped",
-    "log_audio_skip": "Song skipped",
-    "log_audio_pause": "Audio paused",
-    "log_audio_resume": "Audio resumed",
-    "log_audio_nowplaying": "Now playing requested",
-    "log_audio_queue": "Queue requested",
-    "log_audio_loop": "Audio looped",
-    "log_music_play": "Song added",
-    "log_music_tts": "Text-to-Speech added",
-    "log_music_playnext": "Song added next",
-    "log_music_remove": "Song removed",
-    "log_music_shuffle": "Queue shuffled",
-    "log_music_search": "Song searched",
-    "log_radio_play": "Radio played",
-    "log_support": "Support commands",
+    "log_help": "Help commands",
     "log_modules": "Module changes",
     "log_customembed_send": "Custom Embeds Sent",
     "log_customembed_create": "Custom Embeds Creations",
@@ -122,15 +665,12 @@ LOGGABLE_TRANSLATIONS = {
     "log_user_camera_stream_started": "User turned on camera",
     "log_user_camera_stream_stopped": "User turned off camera",
     "log_color_viewed": "Color viewed",
-    "log_audio_volume": "Audio volume changes",
-    "log_audio_restart": "Song restarted",
     "log_giveaway_create": "Giveaway create",
     "log_giveaway_delete": "Giveaway delete",
     "log_giveaway_reroll": "Giveaway reroll",
     "log_domain_validated": "Domain validated",
     "log_qr_generated": "QR-code generated",
     "log_time_converted": "Time converted to seconds",
-    "log_voice_message_transcribe": "Voice message transcribed",
     "log_meme": "Meme requests",
     "log_kick_events": "Users being kicked",
     "log_reactionroles_panel_create": "Reactionrole panel created",
@@ -232,158 +772,125 @@ LOGGABLE_TRANSLATIONS = {
     "log_giveaways_leaves": "Log giveaway leaved",
     "log_giveaways_finished": "Log giveaways finished",
 }
-
+info_module_logging_response_component_title_info = "Logging module info"
+info_module_logging_response_component_title_logs_channel = "Logs channel"
+info_module_logging_response_component_description_no_logs_channel = "No logs channel"
+info_module_logging_response_component_title_events = "Events"
 
 # ------------------------------------------------------------------------- #
-# GLOBAL ERRORS #
+# WELCOMING #
 # ------------------------------------------------------------------------- #
-error_response_not_recognised = (
-    "Oops! I do not recogise this entity! If this issue persists, please contact our support!"
+response_module_welcoming_request_failed = (
+    "Something went wrong while sending the request to the welcoming service! Please try again later."
 )
-# ------------------------------------------------------------------------- #
-# EVENTS - FUNCTIONS #
-# ------------------------------------------------------------------------- #
+info_module_welcoming_button_settings = "Settings"
+info_module_welcoming_button_responses = "Responses"
+info_module_welcoming_button_timedroles = "Timedroles"
+info_module_welcoming_response_component_title_info = "Welcoming module info"
+info_module_welcoming_response_component_description_settings_response_randomized = "Responses randomized"
+info_module_welcoming_response_component_description_settings_response = "Response"
+info_module_welcoming_response_component_description_settings_responses_are_randomized = "Responses are randomized"
+info_module_welcoming_response_component_title_settings_dm_welcome = "DM welcoming settings"
+info_module_welcoming_response_component_description_settings_dm_welcome_enabled = "Enabled"
+info_module_welcoming_response_component_title_settings_channel_welcome = "Channel welcoming settings"
+info_module_welcoming_response_component_description_settings_channel_welcome_channel = "Channel"
+info_module_welcoming_response_component_description_settings_no_channel_welcome_channel = "Not configured"
+info_module_welcoming_response_component_description_settings_channel_welcome_enabled = "Enabled"
+info_module_welcoming_response_component_title_settings_channel_leave = "Channel leave settings"
+info_module_welcoming_response_component_description_settings_channel_leave_channel = "Channel"
+info_module_welcoming_response_component_description_settings_no_channel_leave_channel = "Not configured"
+info_module_welcoming_response_component_description_settings_channel_leave_enabled = "Enabled"
+info_module_welcoming_response_component_title_settings_autoroles = "Autoroles settings"
+info_module_welcoming_response_component_description_settings_autoroles_enabled = "Enabled"
+info_module_welcoming_response_component_description_settings_autoroles_not_configured = "No autoroles configured!"
+info_module_welcoming_response_component_description_response_id = "Response ID"
+info_module_welcoming_response_component_description_response_type = "Response type"
+info_module_welcoming_response_component_description_response_content = "Response content"
+info_module_welcoming_response_component_description_no_responses = (
+    "This server does not have any responses configured!"
+)
+info_module_welcoming_response_component_description_timedrole_id = "Timedrole ID"
+info_module_welcoming_response_component_description_timedrole_role = "Role"
+info_module_welcoming_response_component_description_timedrole_add_after = "Added after"
+info_module_welcoming_response_component_description_timedrole_add_after_seconds = "seconds"
+info_module_welcoming_response_component_description_no_timedroles = (
+    "This server does not have any timedroles configured!"
+)
 # ------------------------------------------------------------------------- #
 # Mod_User #
 # ------------------------------------------------------------------------- #
 # Embeds
-user_events_ban_create_embed_title = "You have been banned!"
-user_events_ban_create_embed_description = "You have been banned from `{guild}`!\n\n[Reason] -- {reason}"
-user_events_ban_delete_embed_title = "You have been unbanned!"
-user_events_ban_delete_embed_description = "You have been unbanned from `{guild}`!\n\n[Reason] -- {reason}"
-user_events_kick_embed_title = "You have been kicked!"
-user_events_kick_embed_description = "You have been kicked from `{guild}`!\n\n[Reason] -- {reason}"
+user_events_ban_create_component = (
+    "### You have been banned!\nYou have been banned from `{guild}`!\n\n[Reason] -- {reason}"
+)
+user_events_ban_delete_component = (
+    "### You have been unbanned!\nYou have been unbanned from `{guild}`!\n\n[Reason] -- {reason}"
+)
+user_events_kick_component = "### You have been kicked!\nYou have been kicked from `{guild}`!\n\n[Reason] -- *{reason}*"
 
 # ------------------------------------------------------------------------- #
-# FUNCTIONS #
+# SOCIALS #
 # ------------------------------------------------------------------------- #
-# ------------------------------------------------------------------------- #
-# Audio #
-# ------------------------------------------------------------------------- #
-# Responses
-response_join_failed_no_channel_given = (
-    "Oops! It looks like you aren't in a voice channel! Please join one first or give the channel as an argument!"
+response_module_socials_request_failed = (
+    "Something went wrong while sending the request to the socials service! Please try again later."
 )
-response_join_failed = "Oops! Something went wrong while trying to join `{channel}`!"
-response_join_success = "I joined {channel}!"
-response_leave_failed = "Oops! Something went wrong while trying to leave!"
-response_leave_success = "I left the channel!"
-response_stop_failed = "Oops! Something went wrong while trying to stop audio playback!"
-response_stop_success = "I stopped audio playback!"
-response_pause_failed_nothing_playing = "There is nothing to pause!"
-response_pause_failed_radio_playing = (
-    "Oops! It looks like radio station is playing, I can't pause those since it is live!"
-)
-response_pause_failed = "Oops! Something went wrong while trying to pause audio playback!"
-response_pause_success = "I have paused audio playback!"
-response_resume_failed_nothing_playing = "There is nothing to resume!"
-response_resume_failed_radio_playing = "Oops! It looks like radio station is playing, these can't be resumed!"
-response_resume_failed = "Oops! Something went wrong while trying to resume the audio!"
-response_resume_success = "I have resumed audio playback!"
-response_music_shuffle_not_playing_anything = "Oops! It looks like there is nothing to shuffle!"
-response_music_shuffle_playing_radio = "Oops! I can't shuffle when a radio station is playing!"
-response_music_shuffle_failed = "Oops! Something went wrong while trying to shuffle the queue!"
-response_music_shuffle_success = "I have shuffled the queue!"
-response_music_skip_failed = "Something went wrong while trying to skip!"
-response_music_skip_loop_enabled = "I can't skip because loop is `enabled`! Please disable loop and try again"
-response_music_skip_failed_radio_playing = "I am sorry! I can't skip a radio station!"
-response_music_skip_nothing_to_skip = "There is nothing to skip!"
-response_music_skip_song_success = "I have skipped `{title}`."
-response_music_seek_failed = "Something went wrong while trying to seek the song to the timestamp!"
-response_music_seek_wrong_time_format = "I am sorry! The time is in the wrong format!"
-response_music_seek_nothing_playing = "There is nothing playing!"
-response_music_seek_failed_radio_playing = "I am sorry! I can't forward a radio station!"
-response_music_seek_success = "I have jumped to `{time}`!"
-response_music_restart_failed = "Something went wrong whule trying to restart the song!"
-response_music_restart_nothing_playing = "I am sorry! I can't restart a song because there is no song playing!"
-response_music_restart_failed_radio_playing = "I am sorry! I can't restart a radio station!"
-response_music_restart_success = "I have restarted the song!"
-response_nowplaying_failed = "Something went wrong while trying to get the currently playing song!"
-response_nowplaying_not_playing_anything = "I am not playing anything!"
-response_queue_failed = "Something went wrong while trying to get the queue!"
-response_queue_empty = "There is nothing in the queue."
-response_queue_timeout_reached = "The queue timeout, please initiate the command again!"
-response_loop_failed_not_in_voicechannel = (
-    "Oops! I can't loop because it looks like you are not in the (right) voice channel!"
-)
-response_loop_failed = "Something went wrong while enabling loop!"
-response_loop_failed_queue_empty = "Oops! I can't toggle loop because there is nothing playing!"
-response_loop_failed_radio_playing = "I can't toggle loop because radio is playing!"
-response_loop_disabled = "I have `disabled` loop!"
-response_loop_enabled = "I have `enabled` loop!"
-response_volume_changed = "I have changed the volume to `{level}%`!"
-response_music_play_failed = "Oops! Something went wrong while trying to add the song/playlist/album to the queue!"
-response_music_play_failed_radio_playing = (
-    "Oops! It looks like a radio station is playing! Please stop this before trying to play a different song!"
-)
-response_music_play_adding_song_playlist_album = "I am adding the song/playlist/album to the queue."
-response_music_play_failed_no_youtube = "Oops! I am not allowed to play YouTube URLs!"
-response_music_play_added_playlist = "I have added the playlist to the queue, enjoy!"
-response_music_play_added_song = "I have added `{title}` to the queue, enjoy!"
-response_music_playtts_failed = "Oops! Something went wrong while trying to add the text-to-speech message!"
-response_music_playtts_failed_radio_playing = (
-    "Oops! It looks like a radio station is playing! Please stop this before trying to use a text-to-speech message!"
-)
-response_music_playtts_adding_song_playlist_album = "I am adding the text-to-speech message to the queue."
-response_music_playtts_added_song = "I have added the text-to-speech message!"
-response_radio_play_failed_http_error = (
-    "Oops! Something went wrong while trying to play `{radiostation}`! Got status code: `{status_code}`"
-)
-response_radio_play_failed = "Oops! Something went wrong while trying to play `{radiostation}`!"
-response_radio_play_success = "Playing `{radiostation}`! Provided by TuneIn!"
-response_music_remove_failed_nothing_to_remove = "Oops! It looks like there is nothing to remove!"
-response_music_remove_failed = "Oops! Something went wrong while trying to remove the song/playlist/album!"
-response_music_remove_failed_radio_playing = "Oops! I can't delete the song! I am playing radio!"
-response_music_remove_removing_song_playlist_album = "I am removing the song/playlist/album from the queue."
-response_music_remove_failed_no_youtube = "Oops! I am not allowed to remove YouTube URLs!"
-response_music_remove_removed_playlist = "I have removed the playlist from the queue!"
-response_music_remove_removed_song = "I have removed the song from the queue!"
-response_search_no_results_found = "I am sorry! I didn't find any results for the query: `{query}`!"
-response_music_playradio_failed_already_playing = (
-    "I am sorry! It looks like there is already something playing, please stop this first to listing to radio!"
-)
-# Embeds
-nowplaying_embed_title = "Now playing"
-nowplaying_embed_field_title_radio = "Radiostation"
-nowplaying_embed_field_title_title = "Title"
-nowplaying_embed_field_title_artist = "Artist"
-nowplaying_embed_field_title_position = "Position"
-queue_embed_title = "Queue"
-queue_embed_field_title_now_playing = "Now playing"
-queue_embed_field_value_now_playing_loop_enabled = "Loop is `enabled` therefore this song will also show next in queue!"
-queue_embed_field_title_queue = "Queue"
-queue_embed_field_value_queue = "There is nothing else in the queue!"
-search_yt_embed_title = "YouTube search results"
-search_yt_embed_field_title_top_5 = "Top five results:"
-search_sc_embed_title = "SoundCloud search results"
-search_sc_embed_field_title_top_5 = "Top five results:"
-search_deezer_embed_title = "Deezer search results:"
-search_deezer_embed_field_title_top_5 = "Top five results:"
-search_am_embed_title = "Apple Music search results:"
-search_am_embed_field_title_top_5 = "Top five results:"
-search_sp_embed_title = "Spotify search results:"
-search_sp_embed_field_title_top_5 = "Top five results:"
+info_module_socials_button_reddit = "Reddit"
+info_module_socials_button_twitch = "Twitch"
+info_module_socials_button_rss = "RSS"
+info_module_socials_button_youtube = "YouTube"
+info_module_socials_response_component_title_info = "Socials module info"
+info_module_socials_response_component_description_reddit_enabled = "Reddit monitor enabled"
+info_module_socials_response_component_description_rss_enabled = "RSS monitor enabled"
+info_module_socials_response_component_description_twitch_enabled = "Twitch monitor enabled"
+info_module_socials_response_component_description_youtube_enabled = "YouTube monitor enabled"
+info_module_socials_response_component_description_reddit_subreddit = "Subreddit"
+info_module_socials_response_component_description_reddit_mention_everyone = "Mention everyone"
+info_module_socials_response_component_description_reddit_channel = "Channel"
+info_module_socials_response_component_description_no_reddits = "No monitored subreddits"
+info_module_socials_response_component_description_rss_feed = "RSS Feed"
+info_module_socials_response_component_description_rss_mention_everyone = "Mention everyone"
+info_module_socials_response_component_description_rss_channel = "Channel"
+info_module_socials_response_component_description_no_rss_feeds = "No monitored RSS feeds"
+info_module_socials_response_component_description_twitch_account = "Twitch account"
+info_module_socials_response_component_description_twitch_mention_everyone = "Mention everyone"
+info_module_socials_response_component_description_twitch_channel = "Channel"
+info_module_socials_response_component_description_no_twitch_accounts = "No monitored Twitch accounts"
+info_module_socials_response_component_description_youtube_handle = "YouTube channel"
+info_module_socials_response_component_description_youtube_mention_everyone = "Mention everyone"
+info_module_socials_response_component_description_youtube_channel = "Channel"
+info_module_socials_response_component_description_no_youtube_channels = "No monitored YouTube channels"
 
 # ------------------------------------------------------------------------- #
-# Info #
+# SERVERSTATS #
 # ------------------------------------------------------------------------- #
-module_logging = "Logging module"
-module_welcoming = "Welcoming module"
-module_tempchannels = "Tempchannels module"
-module_socials = "Socials module"
-module_reactionroles = "Reactionroles module"
-module_autoresponder = "Autoresponder module"
-module_tickets = "Tickets module"
-module_ticket_view_types = "View ticket types"
-module_ticket_view_generals_settings = "View settings"
-module_serverstats = "Serverstats module"
-module_tags = "Tags module"
-module_verifier = "Verifier module"
-module_rules = "Rules module"
-module_invite_tracker = "Invite tracker module"
-module_polls = "Polls module"
-module_reminders = "Reminders module"
-module_giveaways = "Giveaways module"
+response_module_serverstats_request_failed = (
+    "Something went wrong while sending the request to the serverstats service! Please try again later."
+)
+info_module_serverstats_button_settings = "Settings"
+info_module_serverstats_button_counters = "Counters"
+info_module_serverstats_response_component_title_info = "Serverstats module info"
+info_module_serverstats_response_component_title_settings_counters = "Counters"
+info_module_serverstats_response_component_description_settings_counters_enabled = "Counters enabled"
+info_module_serverstats_response_component_description_settings_counters_category = "Counters category"
+info_module_serverstats_response_component_description_settings_no_counters_category = "No category configured"
+info_module_serverstats_response_component_title_settings_starboard = "Starboard"
+info_module_serverstats_response_component_description_settings_starboard_enabled = "Starboard enabled"
+info_module_serverstats_response_component_description_settings_starboard_channel_id = "Channel"
+info_module_serverstats_response_component_description_settings_starboard_count = "Stars required"
+info_module_serverstats_response_component_description_settings_no_starboard_channel_id = "No starboard configured"
+info_module_serverstats_response_component_title_settings_stats_enabled = "Enabled stats"
+info_module_serverstats_response_component_title_settings_no_stats_enabled = "No stats enabled"
+info_module_serverstats_response_component_title_settings_stats_disabled = "Disabled stats"
+info_module_serverstats_response_component_title_settings_no_stats_disabled = "No stats disabled"
+info_module_serverstats_response_component_description_no_counters = "No counters configured"
+info_module_serverstats_response_component_description_counter_id = "Counter ID"
+info_module_serverstats_response_component_description_counter_channel = "Channel"
+info_module_serverstats_response_component_description_counter_type = "Type"
+info_module_serverstats_response_component_description_counter_format = "Format"
+info_module_serverstats_response_component_description_counter_goal_count = "Goal count"
+info_module_serverstats_response_component_description_counter_no_goal_count = "No goal count configured"
+info_module_serverstats_response_component_description_counter_role_id = "Role ID"
+info_module_serverstats_response_component_description_no_counter_role_id = "No role ID configured"
 stats_messages_enabled = "Message stats"
 stats_members_enabled = "Member stats"
 stats_commands_enabled = "Command stats"
@@ -402,693 +909,45 @@ stats_modules_tickets_enabled = "Module tickets stats"
 stats_modules_polls_enabled = "Module polls stats"
 stats_modules_reminders_enabled = "Module reminders stats"
 stats_modules_giveaways_enabled = "Module giveaways stats"
-# Responses
-support_embed_title = "{bot_name} Support"
-support_embed_description = (
-    "If you are in need of support, please follow one of the links below and contact us! We would like to help you!"
-)
-response_info_failed = "Something went wrong while getting the information!"
-response_info_bot_module_logging_disabled = "The `Logging` module is disabled!"
-response_info_bot_module_welcoming_disabled = "The `Welcoming` module is disabled!"
-response_info_bot_module_tempchannels_disabled = "The `Tempchannels` module is disabled!"
-response_info_bot_module_tempchannels_enabled = "The `Tempchannels` module is enabled. Please use the `/tempchannels list` command to get information about creation channels or active tempchannels or ask your server administrator!"
-response_info_bot_module_socials_disabled = "The `Socials` module is disabled!"
-response_info_bot_module_reactionroles_disabled = "The `Reactionroles` module is disabled!"
-response_info_bot_module_reactionroles_enabled = "The `Reactionroles` module is enabled but details about this module can not be viewed in Discord. Please ask a server administrator for more information about this module!"
-response_info_bot_module_tickets_disabled = "The `Tickets` module is disabled!"
-response_info_bot_module_tickets_enabled = "The `Tickets` module is enabled but details about this module can not be viewed in Discord. Please ask a server administrator for more information about this module!"
-response_info_bot_module_autoresponder_disabled = "The `Autoresponder` module is disabled!"
-response_info_bot_module_tags_disabled = "The `Tags` module is disabled!"
-response_info_bot_module_tags_enabled = "The `Tags` module is enabled! Please use the `/tags list` command to get information about the tags or ask your server administrator!"
-response_info_bot_module_verifier_disabled = "The `Verifier` module is disabled!"
-response_info_bot_module_rules_disabled = "The `Rules` module is disabled!"
-response_info_bot_module_invite_tracker_disabled = "The `Invite tracker` module is disabled!"
-response_info_bot_module_polls_disabled = "The `Polls` module is disabled!"
-response_info_bot_module_polls_enabled = "The `Polls` module is enabled! Please use the `polls` commands to get information about the polls or ask your server administrator!"
-response_info_bot_module_reminders_disabled = "The `Reminders` module is disabled!"
-response_info_bot_module_reminders_enabled = "The `Reminders` module is enabled! Please use the `/reminders list` command to get information about the reminders or ask your server administrator!"
-response_info_bot_module_giveaways_disabled = "The `Giveaways` module is disabled!"
-response_info_bot_module_giveaways_enabled = "The `Giveaways` module is enabled! Please use the `/giveaways list` command to get information about the giveaways or ask your server administrator!"
-response_module_autoresponder_no_info = "The `Autoresponder` module does not have information available! For the status of the `Autoresponder` module, please check the General info page!"
-response_info_bot_module_serverstats_disabled = "The `Serverstats` module is disabled!"
-response_info_timeout = "The info command reached a timeout!"
-response_info_reddit_list_failed = "Something went wrong while trying to get an overview of all monitored Subreddits in this server, returning to info socials view."
-response_info_twitch_list_failed = "Something went wrong while trying to get an overview of all monitored Twitch accounts in this server, returning to info socials view."
-response_info_rss_list_failed = "Something went wrong while trying to get an overview of all monitored RSS feeds in this server, returning to info socials view."
-response_info_youtube_list_failed = "Something went wrong while trying to get an overview of all monitored YouTube channels in this server, returning to info socials view."
-response_info_autoresponder_list_failed = "Something went wrong while trying to get an overview of all autoresponder entries in this server, returning to info autoresponder view."
-response_info_welcoming_responses_list_failed = "Something went wrong while trying to get an overview of all welcoming responses in this server, returning to info welcoming view."
-response_info_welcoming_timedroles_list_failed = "Something went wrong while trying to get an overview of all welcoming timedroles in this server, returning to info welcoming view."
-# Embeds
-info_bot_embed_title = "Welcome to {bot_name}!"
-info_bot_embed_discription = "Hi! Welcome to the `{bot_name}` information panel! Here you will find all settings done for this server, the current version and some external links! Make sure to have a look around!\n\n *Note: Use the navigation buttons below to view module info.*"
-info_bot_embed_field_title_language = "Language:"
-info_bot_embed_field_title_gmt = "Timezone:"
-info_bot_embed_field_title_unit_system = "Unit system:"
-info_bot_embed_field_title_auto_delete = "Automatically delete bot messages after:"
-info_bot_embed_field_value_auto_delete = "seconds"
-info_bot_embed_field_title_max_warns = "Max warning points:"
-info_bot_embed_field_value_max_warns = "points (per user)"
-info_bot_embed_field_title_auto_kick = "Auto kick:"
-info_bot_embed_field_title_auto_kick_role = "Auto kick role:"
-info_bot_embed_field_title_modules_enabled = "Enabled Modules:"
-info_bot_embed_field_title_modules_disabled = "Disabled Modules:"
-info_bot_embed_field_title_logging_channel = "Logging Channel:"
-info_bot_embed_field_title_logging_events_1 = "Events that are logged (1/6):"
-info_bot_embed_field_title_logging_events_2 = "Events that are logged (2/6):"
-info_bot_embed_field_title_logging_events_3 = "Events that are logged (3/6):"
-info_bot_embed_field_title_logging_events_4 = "Events that are logged (4/6):"
-info_bot_embed_field_title_logging_events_5 = "Events that are logged (5/6):"
-info_bot_embed_field_title_logging_events_6 = "Events that are logged (6/6):"
-info_bot_embed_field_title_enabled_components = "Enabled components:"
-info_bot_embed_field_title_welcoming_welcome_messages_dm_randomized = "Welcome DM responses randomized:"
-info_bot_embed_field_title_welcoming_welcome_messages_randomized = "Welcome channel responses randomized:"
-info_bot_embed_field_title_welcoming_leave_messages_randomized = "Leave channel responses randomized:"
-info_bot_embed_field_title_welcoming_welcome_messages_dm_response_id = "Welcome DM response ID:"
-info_bot_embed_field_title_welcoming_welcome_messages_response_id = "Welcome channel response ID:"
-info_bot_embed_field_title_welcoming_leave_messages_response_id = "Leave channel response ID:"
-info_bot_embed_field_title_welcoming_welcome_messages_channel = "Welcome message in server channel:"
-info_bot_embed_field_title_welcoming_leave_messages_channel = "Leave message in server channel:"
-info_bot_embed_field_title_welcoming_role_add_role = "Autorole roles:"
-info_bot_embed_field_title_welcoming_responses_list = "Current server responses:"
-info_bot_embed_field_title_socials_monitor_reddit = "Monitor Reddit:"
-info_bot_embed_field_title_socials_monitor_rss = "Monitor RSS Feeds:"
-info_bot_embed_field_title_socials_monitor_twitch = "Monitor Twitch accounts:"
-info_bot_embed_field_title_socials_monitor_youtube = "Monitor YouTube channels:"
-info_bot_embed_field_title_verifier_type = "Verifier type:"
-info_bot_embed_field_title_verifier_channel = "Channel:"
-info_bot_embed_field_title_verifier_role_ids = "Verifier role IDs:"
-info_bot_embed_field_title_verifier_is_embed = "Starting message is embed:"
-info_bot_embed_field_title_verifier_success_is_embed = "Completed message is embed:"
-info_bot_embed_field_title_verifier_content = "Starting message:"
-info_bot_embed_field_title_verifier_completed_content = "Completed message:"
-info_bot_embed_field_title_verifier_passphrase = "Passphrase:"
-info_bot_embed_field_title_verifier_passphrase_hidden = (
-    "Passphrase is not shown, please refer to the {bot_name} dashboard!"
-)
-info_bot_embed_field_title_rules_channel = "Rules channel:"
-info_bot_embed_field_title_rules_message = "Rules message:"
-info_bot_embed_field_title_rules_actions_enabled = "Actions enabled:"
-info_bot_embed_field_title_rules_denied_action = "Denied action:"
-info_bot_embed_field_title_rules_accepted_role_ids = "Accepted roles:"
-info_bot_embed_field_title_rules_denied_role_ids = "Denied roles:"
-info_bot_embed_field_title_invite_tracker_join_message_is_embed = "Join messages is embed"
-info_bot_embed_field_title_invite_tracker_leave_message_is_embed = "Leave messages is embed"
-info_bot_embed_field_title_invite_tracker_join_messages_channel = "Join messages channel"
-info_bot_embed_field_title_invite_tracker_leave_messages_channel = "Leave messages channel"
-info_bot_embed_field_title_invite_tracker_join_message_content = "Join message"
-info_bot_embed_field_title_invite_tracker_leave_message_content = "Leave message"
-info_bot_embed_field_title_invite_tracker_prevent_own_invite_code = "Prevent own invite code from counting"
-module_socials_reddit_embed_field_list = "Monitored Subreddits:"
-module_socials_reddit_embed_field_list_empty = "No Subreddits monitored"
-module_socials_rss_embed_field_list = "Monitored RSS Feeds:"
-module_socials_rss_embed_field_list_empty = "No RSS Feeds monitored"
-module_socials_twitch_embed_field_list = "Monitored Twitch accounts:"
-module_socials_twitch_embed_field_list_empty = "No Twitch accounts monitored"
-module_socials_youtube_embed_field_list = "Monitored YouTube channels:"
-module_socials_youtube_embed_field_list_empty = "No YouTube channels monitored"
-info_bot_embed_field_title_tickets_support_role = "Ticket Support Role"
-info_bot_embed_field_title_tickets_creation_category = "Creation Category"
-info_bot_embed_field_title_tickets_creation_channel = "Creation Channel"
-info_bot_embed_field_title_tickets_creation_message = "Creation Message"
-info_bot_embed_field_title_tickets_thread_mode = "Thread mode"
-info_bot_embed_field_title_tickets_post_channel = "Post channel"
-info_bot_embed_field_title_tickets_is_custom_creation_message = "Custom creation is message?"
-info_bot_embed_field_title_tickets_is_custom_creation_embed = "Custom creation is embed?"
-info_bot_embed_field_title_tickets_is_custom_creation_content = "Custom creation content"
-info_bot_embed_field_title_tickets_is_custom_creation_modal = "Custom creation modal"
-info_bot_embed_field_title_tickets_default_types = "Used default types"
-info_bot_embed_field_title_tickets_custom_types = "Used custom types"
-info_channel_embed_title = "Information about {channel}"
-info_channel_embed_description = "Hi! Welcome to the `{channel}` information panel!"
-info_channel_embed_field_title_channel = "Channel:"
-info_channel_embed_field_title_channelid = "Channel ID:"
-info_channel_embed_field_title_channeltype = "Channel Type:"
-info_channel_embed_field_title_createdat = "Channel created at:"
-info_role_embed_title = "Information about {role}"
-info_role_embed_description = "Hi! Welcome to the `{role}` information panel!"
-info_role_embed_field_title_role = "Role:"
-info_role_embed_field_title_roleid = "Role ID:"
-info_role_embed_field_title_rolepos = "Role position (Up ^):"
-info_role_embed_field_title_createdat = "Role created at:"
-info_role_embed_field_title_permissions = "Permissions of this role:"
-info_role_embed_field_value_permissions_1_value = "Permissions value: "
-info_server_embed_title = "Information about {guild}"
-info_server_embed_no_description = "Hi! Welcome to `{guild}` information panel! There is no server description set!"
-info_server_embed_field_title_owner = "Owner:"
-info_server_embed_field_title_ownerid = "Owner ID:"
-info_server_embed_field_title_afkchannel = "AFK Channel:"
-info_server_embed_field_title_member_count = "Member count:"
-info_server_embed_field_title_channels = "Channel count:"
-info_server_embed_field_title_roles = "Role count:"
-info_server_embed_field_title_members = "Members (excl. Bots):"
-info_server_embed_field_title_createdat = "Server created at:"
-info_user_embed_title = "Information about {user}"
-info_user_embed_description = (
-    "Hi! Welcome to the `{user}` information panel! This user has `{warn_points} warnings` in this server!"
-)
-info_user_embed_field_title_user = "User:"
-info_user_embed_field_title_userid = "User ID:"
-info_user_embed_field_title_userdiscriminator = "Discriminator:"
-info_user_embed_field_title_userisbot = "Is bot:"
-info_user_embed_field_title_userismute = "Is muted:"
-info_user_embed_field_title_userisdeaf = "Is deafend:"
-info_user_embed_field_title_joinedat = "Joined Server at:"
-info_user_embed_field_title_createdat = "Joined Discord at:"
-info_user_embed_field_title_roles = "Roles:"
-info_bot_embed_field_title_serverstats_counter_panel_enabled = "Counter Panel:"
-info_bot_embed_field_title_serverstats_counter_panel_category = "Counter Panel Category:"
-info_bot_embed_field_title_serverstats_panel_member_count = "Member Count panel:"
-info_bot_embed_field_title_serverstats_panel_online_member_count = "Online Member Count panel:"
-info_bot_embed_field_title_serverstats_panel_online_members_with_role = "Online with role panel:"
-info_bot_embed_field_title_serverstats_panel_boost = "Boost panel"
-info_bot_embed_field_title_serverstats_starboard_enabled = "Starboard:"
-info_bot_embed_field_title_serverstats_starboard_channel = "Starboard Channel:"
-info_bot_embed_field_title_serverstats_starboard_count = "Starboard minimum stars:"
-info_bot_embed_field_title_serverstats_enabled_stats = "Enabled stats:"
-info_bot_embed_field_title_serverstats_disabled_stats = "Disabled stats:"
-info_bot_embed_field_title_autoresponder_list = "Current autoresponder entries:"
-info_embed_title = "Info"
-info_embed_description_select_channel = "Please select the channel you want info about."
-info_embed_description_select_role = "Please select the role you want info about."
-info_embed_description_select_user = "Please select the user you want info about."
-autoresponder_list = "Autoresponder list"
-welcoming_responses_list = "Responses list"
-welcoming_timedroles_list = "Timedroles list"
 
 # ------------------------------------------------------------------------- #
-# Misc #
+# PRIVACY #
 # ------------------------------------------------------------------------- #
-higher_lower_higher = "Higher"
-higher_lower_equal = "Equal"
-higher_lower_lower = "Lower"
-rps_rock = "Rock"
-rps_paper = "Paper"
-rps_scissors = "Scissors"
-# Responses
-response_games_heads_or_tails_heads = "It's `heads`!"
-response_games_heads_or_tails_tails = "It's `tails`!"
-response_rps_timeout = "{user} didn't respond quick enough. The game has timed out!"
-response_rps_users_turn = "{user}, your turn!"
-response_rps_winner = "Congratulations {user}! You won the Rock, Paper, Scissors game!"
-response_higher_lower_timeout = "The Higher/Lower game has timed out!"
-response_ping_success = "Pong! REST Latency: `{rest_latency} ms` - Gateway Latency: `{gateway_latency} ms`."
-response_transcribe_success = "***Transcription:*** ```{transcribed_message}```"
-response_transcribe_failed = "Something went wrong while trying to transcribe the message!"
-# Embeds
-rps_embed_title = "Rock, Paper, Scissors game"
-rps_embed_user_ones_turn = "{user_one} is choosing...\n {user_two} is waiting..."
-rps_embed_user_twos_turn = "{user_one} is waiting...\n {user_two} is choosing..."
-higher_lower_embed_title = "Higher/Lower"
-higher_lower_embed_description = "Hello {member}! I have picked a number between 0 and 100! Do you think this number is higher, lower or equal to `{hint_number}`?"
-higher_lower_embed_description_win = "Congratulations {member}! You are **correct**!\n\nThe secret number was {secret_number}\nThe hint number was {hint_number}\nYou chose {chosen_option}"
-higher_lower_embed_description_loss = "Too bad {member}! You are **wrong**!\n\nThe secret number was {secret_number}\nThe hint number was {hint_number}\nYou chose {chosen_option}"
-response_meme_getting_meme = "I am getting your meme, please wait!"
+allowed = "Allowed"
+not_allowed = "Not allowed"
+privacy_info_response_component_title = "Privacy configuration"
+privacy_info_response_component_description = """
+Welcome to the Husqy privacy configurator.
+Currently, Husqy is `{status}` to collect data from you in this server!c
+### About this configurator
+This privacy configurator is the place to configure your privacy related settings in Husqy.
+You are free to retrieve your data and delete this data and instruct Husqy to not collect your data to deliver its services.
+BEWARE: Deleting your data or restricting Husqy in collecting your data will result in loss of functionality for you and may result in loss of functionality or configuration changes to Husqy for other server members!
+### Changing privacy configuration
+Please use the other privacy commands (prefixed with `/privacy`) to get or delete privacy related information! Use the buttons below to update the data collection status for you for this server.
+"""
+privacy_info_response_component_questions = """
+### Questions
+If you have any further questions, please visit: [our website](https://www.husqy.xyz/) or contact our support!
+Note: Husqy does not store all data, some data (like sent messages, f.e. mentions in the logging channel) will still exist in Discord, please contact the server administrator if you want to remove these entries.
+Not all data can be deleted, some data is required (f.e. for settings the data collection preference or warnings).
+"""
+enable_data_collection = "Enable data collection"
+disable_data_collection = "Disable data collection"
+privacy_info_response_component_disclaimer = """
+DISCLAIMER: This configurator works on a per server basis! Want to get or delete information in other servers, use this privacy configurator in the other servers!
+"""
+privacy_info_response_data_collection_changed = "The data collection information has been changed to: `{status}`"
+privacy_shared_servers_response_component_title = "Shared servers"
+privacy_get_data_response_component_title = "Privacy data"
+privacy_get_data_response_component_description = """
+These are the amount of times we have found your details:\n
+- ID: {id_counts}
+- Username: {username_counts}
+- Display name: {display_name_counts}
+- Global name: {global_name_counts}
+- Nickname: {nickname_counts}
 
-# ------------------------------------------------------------------------- #
-# Mod_Server #
-# ------------------------------------------------------------------------- #
-reason_default_channel_lock = "**{member}** asked for channel lock -> {reason}"
-reason_default_channel_unlock = "**{member}** asked for channel unlock -> {reason}"
-# Responses
-response_channel_create_success = "I have created the `{channel_type}`! -> {channel}."
-response_channel_create_failed = "I am sorry! Something went wrong while trying to create the channel!"
-response_channel_create_news_stage_forum_failed = (
-    "I am sorry! Something went wrong while trying to create the channel! Does this server support this channel type?"
-)
-response_channel_delete_failed = "I am sorry! Something went wrong while trying to delete the `{channel}`!"
-response_channel_delete_success = "I have deleted `{channel}`!"
-response_clear_messages_failed_over_14_days = "I am sorry! I can't bulk delete messages that are over 14 days old!"
-response_slowmode_set_failed = "Something went wrong while trying to set slowmode for `{channel}` to `{delay} seconds`!"
-response_slowmode_set_success = "I have set the slowmode in `{channel}` to `{delay} seconds`!"
-response_lock_failed = "I am sorry! Something went wrong while trying to lock {channel}!"
-response_lock_success = "I have locked {channel}!"
-response_unlock_failed = "I am sorry! Something went wrong while trying to unlock {channel}!"
-response_unlock_success = "I have unlocked {channel}!"
-response_role_create_failed = "I am sorry! Something went wrong while trying to create the role!"
-response_role_create_success = "I have created the `{role_name}` role! -> {role}."
-response_role_delete_failed = "I am sorry! Something went wrong while trying to delete the `{role}`!"
-response_role_delete_success = "I have deleted `{role}`!"
-# Embeds
-clear_messages_started_embed_title = "Clear messages process started!"
-clear_messages_started_embed_description = "Clear messages process is started. Depening on the amount of messages to delete, this can take some time! Please wait!"
-clear_messages_embed_footer = "Command initialized by: {member}"
-clear_messages_finished_embed_title = "Clear messages process finished!"
-clear_messages_finished_embed_description = (
-    "Clear messages process is finished! I have deleted a total of `{amount}` messages!"
-)
-
-# ------------------------------------------------------------------------- #
-# Mod_User #
-# ------------------------------------------------------------------------- #
-kick_default_reason = "**{member}** asked for kick -> {reason}"
-vckick_default_reason = "**{member}** asked for vckick -> {reason}"
-move_default_reason = "**{member}** asked for move -> {reason}"
-tempmute_default_reason = "**{member}** asked for tempmute -> {reason}"
-temptimeout_default_reason = "**{member}** asked for temptimeout -> {reason}"
-reason_auto_kick_role_added_warn = "*User reached/went over maximum warning limit set for this server!*"
-reason_auto_kick_role_removed_warn = "*User is not longer over maximum warning limit set for this server!*"
-# Responses
-response_ban_create_failed_no_bot_ban = "I am sorry! I can't ban a bot!"
-response_ban_create_failed = "I am sorry! Something went wrong while trying to ban `{user}`!"
-response_ban_create_success = "I have banned `{user}`!"
-response_ban_delete_failed_no_bot_unban = "I am sorry! I can't unban a bot!"
-response_ban_delete_failed = "I am sorry! Something went wrong while trying to unban `{user}`!"
-response_ban_delete_success = "I have unbanned `{user}`!"
-response_kick_failed_no_bot_kick = "I am sorry! I can't kick a bot!"
-response_kick_failed = "I am sorry! Something went wrong while trying to kick {user}!"
-response_kick_success = "I have kicked {user}!"
-response_vckick_failed = "I am sorry! Something went wrong while trying to kick {user} from the voice channel!"
-response_vckick_success = "I have kicked {user} from the voice channel!"
-response_move_failed_user_not_in_a_voice_channel = "{user} is not in a voice channel!"
-response_move_failed_missing_permissions = "I am sorry! It looks like either I or the user is missing permissions!"
-response_move_failed = "I am sorry! Something went wrong while trying to move {user} to {channel}!"
-response_move_success = "I have moved {user} to {channel}!"
-response_tempmute_failed_no_bot_tempmute = "I am sorry! I can't temporary mute a bot!"
-response_tempmute_failed = "I am sorry! Something went wrong while trying to temporary mute {user}!"
-response_tempmute_success = "I have temporary muted {user} for `{seconds} seconds`!"
-response_temptimeout_failed_no_bot_temptimeout = "I am sorry! I can't temporary timeout a bot!"
-response_temptimeout_failed = "I am sorry! Something went wrong while trying to temporary timeout {user}!"
-response_temptimeout_success = "I have temporary timedout {user} for `{seconds} seconds`!"
-response_warn_create_failed_no_bot_warn = "I am sorry! I can't warn a bot!"
-response_warn_create_failed = "I am sorry! Something went wrong while trying to warn `{member}`!"
-response_warn_create_success = "I have warned `{user}`!"
-response_warn_delete_failed_no_bot_warn_delete = "I am sorry! I can't delete a warn from bot!"
-response_warn_delete_failed = "I am sorry! Something went wrong while trying to delete a warn from `{member}`!"
-response_warn_delete_success = "I have deleted a warn from `{user}`!"
-# Embeds
-warn_create_to_user_embed_title = "You have been warned!"
-warn_create_to_user_embed_description = "You have been warned in `{guild}`! They have added `{points} points` to your profile!\nYour total points: {total} points!\n\n[Reason] -- {reason}"
-warn_delete_to_user_embed_title = "Warning revoked!"
-warn_delete_to_user_embed_description = "A previous warning in `{guild}` has been revoked! They have removed `{points} points` from your profile!\nYour total points: {total} points!\n\n[Reason] -- {reason}"
-
-# ------------------------------------------------------------------------- #
-# Privacy #
-# ------------------------------------------------------------------------- #
-privacy_data_collection = "Change data collection preferences"
-privacy_get_data = "Get your data"
-privacy_delete_data = "Delete your data"
-privacy_shared_servers = "Get servers shared with {bot_name}"
-privacy_enable_data_collection = "Enable data collection"
-privacy_disable_data_collection = "Disable data collection"
-privacy_delete_my_data = "Delete my data"
-privacy_delete_my_data_cancel = "Cancel action"
-# Responses
-response_privacy_timeout = "The privacy command reached a timeout! Nothing will be changed!"
-response_data_collection_enabled = (
-    "Data collection in this server is now `enabled`. You will return to the main privacy configurator view."
-)
-response_data_collection_disabled = (
-    "Data collection in this server is now `disabled`. You will return to the main privacy configurator view."
-)
-response_delete_started = "The deletion has started! You will soon return to the main privacy configurator view."
-# Embeds
-privacy_embed_title_shared = "{bot_name} privacy configurator"
-privacy_embed_description = "Welcome to the {bot_name} privacy configurator.\nCurrently, {bot_name} is `{status}` to collect data from you in this server!"
-privacy_embed_field_1_name = "About this configurator"
-privacy_embed_field_1_value = "This privacy configurator is the place to configure your privacy related settings in {bot_name}.\n\nYou are free to retrieve your data and delete this data and instruct {bot_name} to not collect your data to deliver its services.\n`BEWARE: Deleting your data or restricting {bot_name} in collecting your data will result in loss of functionality for you and may result in loss of functionality or configuration changes to {bot_name} for other server members!`\n\nPlease use the buttons below to configure or get your privacy settings! If you are getting you data, beware that it may take a few seconds before it starts showing up!\n\nIf you have any further questions, please visit: {bot_website} or contact our support!"
-privacy_embed_field_2_name = "Note"
-privacy_embed_field_2_value = "- {bot_name} does not store all data, some data (like sent messages, f.e. mentions in the logging channel) will still exist in Discord, please contact the server administrator if you want to remove these entries.\n- Not all data can be deleted, some data is required (f.e. for settings the data collection preference or warnings)."
-privacy_embed_footer_value = "DISCLAIMER: This configurator works on a per server basis! Want to get or delete information in other servers, use this privacy configurator in the other servers!"
-privacy_embed_shared_servers_description = "Below you can find the list of server you share with {bot_name}!"
-privacy_embed_shared_servers_field_1_name = "Shared servers list:"
-privacy_embed_data_collection_description = "Here you can change your data collection preferences for {bot_name}. Please select, using the buttons below, which action you want to perform.\n\n- **Disable data collection:** This option prevents {bot_name} from collecting your information to provide you with its services (IN THIS SERVER).\n`BEWARE: restricting {bot_name} in collecting your data will result in loss of functionality for you and may result in loss of functionality`\n- **Enable data collection:** This option allows {bot_name} to collect your information to provide you with its services (IN THIS SERVER).\n"
-privacy_embed_get_data_description = "We have gathered the amount of times your user ID, username, user nickname, user global name and user display name occur in the data we know.\n`BEWARE: Your nickname, global name, display name and username may all have the same value!`\n\n It is split across the different services, please use the buttons below to page through the amount of occurences per service.\n"
-privacy_embed_get_data_global_description = (
-    "For global {bot_name} data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_global_something_went_wrong = (
-    "Something went wrong while checking you references for global {bot_name} data."
-)
-privacy_embed_get_data_modules_logging_description = (
-    "For the {bot_name} logging module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_logging_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} logging module data."
-)
-privacy_embed_get_data_modules_autoresponder_description = (
-    "For the {bot_name} autoreponder module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_autoresponder_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} autoresponder module data."
-)
-privacy_embed_get_data_modules_tempchannels_description = (
-    "For the {bot_name} tempchannels module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_tempchannels_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} tempchannels module data."
-)
-privacy_embed_get_data_modules_welcoming_description = (
-    "For the {bot_name} welcoming module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_welcoming_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} welcoming module data."
-)
-privacy_embed_get_data_modules_reactionroles_description = (
-    "For the {bot_name} reactionroles module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_reactionroles_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} reactionroles module data."
-)
-privacy_embed_get_data_modules_tickets_description = (
-    "For the {bot_name} tickets module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_tickets_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} tickets module data."
-)
-privacy_embed_get_data_modules_serverstats_description = (
-    "For the {bot_name} serverstats module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_serverstats_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} serverstats module data."
-)
-privacy_embed_get_data_modules_socials_description = (
-    "For the {bot_name} socials module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_socials_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} socials module data."
-)
-privacy_embed_get_data_modules_tags_description = (
-    "For the {bot_name} tags module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_tags_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} tags module data."
-)
-privacy_embed_get_data_modules_verifier_description = (
-    "For the {bot_name} verifier module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_verifier_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} verifier module data."
-)
-privacy_embed_get_data_modules_rules_description = (
-    "For the {bot_name} rules module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_rules_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} rules module data."
-)
-privacy_embed_get_data_modules_invite_tracker_description = (
-    "For the {bot_name} invite tracker module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_invite_tracker_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} invite tracker module data."
-)
-privacy_embed_get_data_modules_giveaways_description = (
-    "For the {bot_name} giveaways module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_giveaways_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} giveaways module data."
-)
-privacy_embed_get_data_modules_reminders_description = (
-    "For the {bot_name} reminders module data related to this server, we have found the following:\n{data}"
-)
-privacy_embed_get_data_modules_reminders_something_went_wrong = (
-    "Something went wrong while checking you references for the {bot_name} reminders module data."
-)
-privacy_embed_delete_data_description = "Here you can choose to delete your data {bot_name} has related to you. Please select, using the buttons below, which action you want to perform.\n\n- **Cancel:** Returns to the main privacy configurator view and doesn't remove any data.\n- **Delete my data:** This option starts the deletion of you data (where possible) immediately (IN THIS SERVER).\n`BEWARE: deleting your data can result in loss of functionality for you and may result in loss of functionality for others.`\n"
-
-# ------------------------------------------------------------------------- #
-# Utils #
-# ------------------------------------------------------------------------- #
-custom_embed_edit_color = "Edit color"
-custom_embed_edit_title = "Edit title"
-custom_embed_edit_description = "Edit description"
-custom_embed_edit_footer_text = "Edit footer text"
-custom_embed_edit_field = "Edit field"
-custom_embed_add_inline_field = "Add inline field"
-custom_embed_add_non_inline_field = "Add non-inline field"
-custom_embed_edit_thumbnail_image_field = "Edit thumbnail or image"
-custom_embed_thumbnail_none = "None"
-custom_embed_thumbnail_avatar = "My Avatar"
-custom_embed_thumbnail_banner = "My Banner"
-custom_embed_thumbnail_custom_url = "Custom URL"
-custom_embed_thumbnail = "Thumbnail"
-custom_embed_image_none = "None"
-custom_embed_image_avatar = "My Avatar"
-custom_embed_image_banner = "My Banner"
-custom_embed_image_custom_url = "Custom URL"
-custom_embed_image = "Image"
-custom_embed_reset = "Reset"
-custom_embed_finish = "Finish"
-custom_embed_edit_color_new_color = "New color"
-custom_embed_edit_color_new_color_description = "New color (HEX code: f.e. #0a1931)"
-custom_embed_edit_title_new_title = "New title"
-custom_embed_edit_description_new_description = "New description"
-custom_embed_edit_footer_text_new_footer_text = "New footer text"
-custom_embed_edit_field_select_field = "Which field no.? Count Left>Right | Up>Down"
-custom_embed_edit_field_new_title = "New field title (empty = no change)"
-custom_embed_edit_field_new_description = "New field description (empty = remove)!"
-custom_embed_add_inline_field_new_title = "Inline field title"
-custom_embed_add_inline_field_new_value = "Inline field value"
-custom_embed_add_non_inline_field_new_title = "Non-inline field title"
-custom_embed_add_non_inline_field_new_value = "Non-inline field value"
-custom_embed_thumbnail_custom_url_modal_title = "Thumbnail Custom URL"
-custom_modal_change_title = "Change modal title"
-custom_modal_edit_text_field = "Edit modal text field"
-custom_modal_add_text_field = "Add modal text field"
-custom_modal_remove_text_field_1 = "First text field"
-custom_modal_remove_text_field_2 = "Second text field"
-custom_modal_remove_text_field_3 = "Third text field"
-custom_modal_remove_text_field_4 = "Fourth text field"
-custom_modal_remove_text_field_5 = "Fifth text field"
-custom_modal_remove_text_field = "Remove text field"
-custom_modal_reset = "Reset modal"
-custom_modal_finish = "Finish modal"
-custom_modal_preview = "Preview modal"
-custom_modal_create_this_can_be_safely_removed = (
-    "<NOTE: Everything inside the (double) quotation marks can be safely removed! The trailing , too>"
-)
-custom_modal_change_title_new_title = "New title"
-custom_modal_add_text_field_text_field_title = "Field title"
-custom_modal_add_text_field_text_field_description = "Field description"
-custom_modal_add_text_field_text_field_type = "Field type (Long/Short)"
-custom_modal_add_text_field_text_field_required = "Required (True/False)"
-custom_modal_add_text_field_title = "Text field"
-# Responses
-response_color_viewed_failed_no_values_given = "I am sorry! I require one value, either the HEX value or the RGB value!"
-response_color_viewed_failed_only_one_value_allowed = (
-    "I am sorry! You are only allowed to insert one of the two values!"
-)
-response_color_viewed_failed = "I am sorry! Something went wrong while trying to view the color!"
-response_custom_embed_finished_timeout = (
-    "The custom embed creation reached a timeout! The JSON of your embed is: ```{embed_json}```"
-)
-response_custom_embed_finished = "The custom embed creation is finished, the JSON of your embed is: ```{embed_json}```"
-response_custom_embed_send_success = "I have sent the custom embed to {channel}"
-response_custom_modal_finished = (
-    "The custom modal creation is finished, the JSON of your modal is: \n```{modal_json}```"
-)
-response_custom_modal_preview = "By pressing Continue I will show the preview of the custom modal! This modal can be interacted with but no data will be saved!"
-response_custom_modal_preview_failed = "The custom modal preview reached a timeout!"
-response_custom_modal_preview_failed_canceled = "The custom modal preview was canceled!"
-response_custom_modal_preview_success = "Custom modal has been previewed!"
-response_domain_validate_safety_success_is_safe = "🟩 The domain is safe!"
-response_domain_validate_safety_success_not_safe = "🟥 The domain is NOT safe!"
-response_domain_validate_safety_failed_http_code = "Something went wrong while checking the domain, got HTTP error: {http_code}! Please try again later! If this issue persists, please contact our support!"
-response_time_converted_success = (
-    "{days} days, {hours} hours, {minutes} minutes and {seconds} seconds totals to `{total_seconds}` seconds!"
-)
-# Embeds
-color_view_embed_title = "Color"
-color_view_embed_description = "Here is the color you requested, with color value: `{color}`"
-custom_embed_default_embed_title = "Custom embed creation"
-custom_embed_default_embed_description = (
-    "Welcome to the custom embed creation. Using the buttons below, you can configure this embed and retrieve the JSON."
-)
-custom_modal_default_embed_title = "Custom modal creation"
-custom_modal_embed_description = "Welcome to the custom modal creation. Using the buttons below, you can configure the modal and preview it. When finished, select Finish to retrieve the JSON.\n **When previewing the modal, press cancel or fill in the form and press submit to continue modal creation!**"
-qr_generate_embed_title = "Your QR-code"
-qr_generate_embed_footer = "QR generated by: {member}!"
-
-# ------------------------------------------------------------------------- #
-# MODULES #
-# ------------------------------------------------------------------------- #
-# ------------------------------------------------------------------------- #
-# LOGGING #
-# ------------------------------------------------------------------------- #
-response_module_logging_settings_failed = "Something went wrong while getting the settings of the `logging` module!"
-
-# ------------------------------------------------------------------------- #
-# WELCOMING #
-# ------------------------------------------------------------------------- #
-response_module_welcoming_settings_failed = "Something went wrong while getting the settings of the `welcoming` module!"
-module_welcoming_welcome_messages_dm = "Welcome messages DM"
-module_welcoming_welcome_messages = "Welcome messages channel"
-module_welcoming_leave_messages = "Leave messages channel"
-module_welcoming_autorole = "Autorole"
-module_welcoming_timedroles = "Timedroles"
-
-# ------------------------------------------------------------------------- #
-# TICKETS #
-# ------------------------------------------------------------------------- #
-response_module_tickets_settings_failed = "Something went wrong while getting the settings of the `tickets` module!"
-tickets_transfer_select_new_support_engineer = "Please select the new support engineer for this ticket!"
-
-# ------------------------------------------------------------------------- #
-# SERVERSTATS #
-# ------------------------------------------------------------------------- #
-response_module_serverstats_settings_failed = (
-    "Something went wrong while getting the settings of the `serverstats` module!"
-)
-
-# ------------------------------------------------------------------------- #
-# TAGS #
-# ------------------------------------------------------------------------- #
-response_tags_edit_provide_content = "Please provide the new content of the tag by sending the new content in the chat."
-response_tags_create_provide_content = "Please provide the tags content of the tag by sending the content in the chat."
-response_tags_list_failed = "Something went wrong while getting the list of tags!"
-response_tags_list_no_tags = "There are no tags based on the given selection!"
-response_tags_list_timeout = "Tags list reached a timeout."
-# Embeds
-tags_list_embed_title = "Tags list"
-tags_list_embed_description = "Here are the tags based on your selected! Tag count: {tags}!"
-tags_list_embed_field_tags = "Tags based on selection:"
-
-# ------------------------------------------------------------------------- #
-# SOCIALS #
-# ------------------------------------------------------------------------- #
-module_socials_reddit_list = "Get Subreddit list"
-module_socials_rss_list = "Get RSS Feed list"
-module_socials_twitch_list = "Get Twitch account list"
-module_socials_youtube_list = "Get YouTube channel list"
-# Responses
-response_socials_component_list_failed = (
-    "Something went wrong while getting the entries list of the {component} component of the `socials` module!"
-)
-response_socials_component_list_failed_component_disabled = (
-    "The {component} component of the `socials` module is disabled!"
-)
-response_socials_component_list_no_entries = (
-    "There are no entries for the {component} component of the `socials` module!"
-)
-# Embeds
-socials_component_list_embed_title = "Socials {component} list"
-socials_component_list_embed_description = "Here are the entries! Entry count: {entries}!"
-socials_component_list_embed_field_entries = "Entries:"
-
-# ------------------------------------------------------------------------- #
-# TEMPCHANNELS #
-# ------------------------------------------------------------------------- #
-response_tempchannels_list_failed = "Something went wrong while getting the list. Is the list type valid?"
-response_tempchannels_list_timeout = "The tempchannel list reached a timeout!"
-response_tempchannels_list_creation_channels_failed = (
-    "Something went wrong while gettint the list of creation channels!"
-)
-response_tempchannels_list_tempchannels_failed = "Something went wrong while gettint the list of tempchannels!"
-response_tempchannels_list_no_items = "There are no items based on the request list type and selection."
-# Embeds
-tempchannels_list_embed_title = "{list_type} list"
-tempchannels_list_embed_description = "Here are the {list_type} based on your selection! Item count: {items}!"
-tempchannels_list_embed_field_creation_channels = "Creation channels:"
-tempchannels_list_embed_field_tempchannels = "Tempchannels:"
-
-
-# ------------------------------------------------------------------------- #
-# VERIFIER #
-# ------------------------------------------------------------------------- #
-response_module_verifier_settings_failed = "Something went wrong while getting the settings of the `verifier` module!"
-
-# ------------------------------------------------------------------------- #
-# RULES #
-# ------------------------------------------------------------------------- #
-response_module_rules_settings_failed = "Something went wrong while getting the settings of the `rules` module!"
-response_rules_list_failed = "Something went wrong while getting the list of rules!"
-response_rules_list_no_rules = "There are no rules in this server!"
-response_rules_list_timeout = "Rules list reached a timeout."
-# Embeds
-rules_list_embed_title = "Rules list"
-rules_list_embed_description = "Here are the servers rules! Rule count: {rules}!"
-rules_list_embed_field_rules = "Rules:"
-
-# ------------------------------------------------------------------------- #
-# INVITE_TRACKER #
-# ------------------------------------------------------------------------- #
-response_module_invite_tracker_settings_failed = (
-    "Something went wrong while getting the settings of the `invite tracker` module!"
-)
-response_invite_link_failed = "Something went wrong while fetching the servers shared invite link!"
-response_invite_link_failed_no_invite_link_configured = "This server has not set a shared invite link!"
-response_invite_link_list_failed = "Something went wrong while fetching the server known invite link list!"
-response_invite_links_list_empty = "There are not known invite links in this server!"
-response_invite_links_list_timeout = "The invite tracker list reached a timeout!"
-response_invite_link_stats_failed = "Something went wrong while fetching the stats for the inviter!"
-module_invite_tracker_join_messages = "Join messages"
-module_invite_tracker_leave_messages = "Leave message"
-# Embeds
-invite_link_embed_title = "Server invite link"
-invite_link_embed_description = "Do you want to invite other friends? Please use the following invite link:\n {link}"
-invite_link_list_embed_title = "Invite links"
-invite_link_list_embed_description = "Here are the known invite links! Invite link count: {invite_links}!"
-invite_link_list_embed_field_invite_links = "Invite links:"
-invite_link_stats_embed_title = "Invite tracker stats"
-invite_link_stats_embed_description = (
-    "{member} has a total of {total_invites} over the pas 31 days! View the details below!"
-)
-invite_link_stats_embed_field_details = "Stats details:"
-
-# ------------------------------------------------------------------------- #
-# POLLS #
-# ------------------------------------------------------------------------- #
-polls_determine_action_timeout = (
-    "The poll vote determine action has reached a timeout. No vote will be placed or removed!"
-)
-polls_response_choose_poll_action = "What action do you want to perform on the answer? Add = Add vote & Remove = Remove all of your votes for that answer."
-response_poll_details_failed = "Something went wrong while getting the details of the poll!"
-response_poll_provide_details_failed = (
-    "Timeout while waiting for details of the poll answer! Cancelling poll create....."
-)
-response_poll_add_answer = "Do you want to add an extra answer to the list? Please keep in mind the answer limits of the server, these will only be checked when finishing this command."
-response_poll_provide_answer_text = (
-    "Please provide the text of the answer by sending it in the chat. Please only insert the answer text in one line."
-)
-response_poll_provide_answer_emoji = (
-    "Please provide the emoji of the answer by sending it in the chat. Please only send the emoji."
-)
-response_poll_provide_answer_label = (
-    "Please provide the label of the answer by sending it in the chat. Please only send the emoji."
-)
-response_poll_provide_answer_description = (
-    "Please provide the description of the answer by sending it in the chat. Please only send the emoji."
-)
-response_poll_add_label_to_answer = (
-    "Do you want to add a label to the button? If no, an emoji is required. If yes, an emoji is optional."
-)
-response_poll_add_description_to_answer = "Do you want to add a description to the button (not visible in discord)?"
-response_poll_add_emoji_to_answer = "Do you want to add a emoji to the button?"
-
-# Embeds
-poll_until_manually_closed = "`until manually closed`"
-no_description_given = "No description given"
-poll_description = "Poll is active for: {countdown}!\n`{description}`"
-poll_answers_embed_field = "Poll answers:"
-poll_footer = "Poll ID: {poll_id}. Poll provided by {bot_name}!"
-poll_results_embed_field = "Poll results:"
-poll_voters_embed_field = "Voters:"
-
-# ------------------------------------------------------------------------- #
-# Reminders #
-# ------------------------------------------------------------------------- #
-# Responses
-response_reminders_new_duration = (
-    "Please provide the new duration for the reminder. Please use format: {delay}{d/h/m/s} - f.e. 1h or 20m)"
-)
-response_reminder_adding = "I am adding the reminder, please wait!"
-response_reminder_deleting = "I am deleting the reminder, please wait!"
-response_reminder_list_failed = "Something went wrong while fetching the reminders based on your selection!"
-response_reminder_list_no_reminders = "There are no reminders in this server based on your selection!"
-response_reminder_list_timeout = "Reminder list reached a timeout!"
-response_quick_reminder_create_failed = "When creating a quick reminder. You cannot have destination_member and destination_channel both. You must choose between a DM (destination_member) or a channel (destination_channel)."
-# Embeds
-reminder_list_embed_title = "Reminders list"
-reminder_list_embed_description = "Here are the reminder based on your selection! Reminder count: {reminders}!"
-reminder_list_embed_field_reminders = "Reminders based on selection:"
-
-# ------------------------------------------------------------------------- #
-# GIVEAWAYS #
-# ------------------------------------------------------------------------- #
-response_giveaways_list_failed = "Something went wrong while getting the list of giveaways!"
-response_giveaways_list_no_tags = "There are no giveaways in this server!"
-response_giveaways_list_timeout = "Giveaways list reached a timeout."
-# Embeds
-giveaways_list_embed_title = "Giveaways list"
-giveaways_list_embed_description = "Here are the giveaways! Giveaways count: {giveaways}!"
-giveaways_list_embed_field_giveaways = "Giveaways:"
+To remove this data please use the `/privacy delete_data` command.
+"""
+privacy_delete_data_response = "Your data is deleted for as far as possible. Not all data can be deleted, some data is required (f.e. for settings the data collection preference)"
