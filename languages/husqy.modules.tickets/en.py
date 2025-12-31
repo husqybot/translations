@@ -1,8 +1,30 @@
 # MODULE TICKETS
 removed_user = "(removed_user)"
-default_create_ticket_message_content = '{"title": "Create a ticket", "description": "If you are experiencing problems or are in need of help, feel free to create a ticket!", "color": 661809, "footer": {"text": "Tickets provided by: Husqy"}}'
+default_create_ticket_message_content = """{
+  "embeds": [
+    {
+      "title": "Create a ticket",
+      "description": "If you are experiencing problems or are in need of help, feel free to create a ticket!",
+      "color": 661809,
+      "footer": {
+        "text": "Tickets provided by: Husqy"
+      }
+    }
+  ]
+}"""
 default_form_content = """{"title": "New ticket", "rows": [{"paragraph": true, "title": "Reason", "description": "What is the reason for your ticket?", "required": true}]}"""
-default_ticket_opened_message = '{"title": "Ticket ID: <ticket_id>", "description": "Thank you for opening a ticket. Our support staff will be with you as soon as possible!", "color": 661809, "footer": {"text": "Tickets provided by: Husqy"}}'
+default_ticket_opened_message = """{
+  "embeds": [
+    {
+      "title": "Ticket ID: <ticket_id>",
+      "description": "Thank you for opening a ticket. Our support staff will be with you as soon as possible!",
+      "color": 661809,
+      "footer": {
+        "text": "Tickets provided by: Husqy"
+      }
+    }
+  ]
+}"""
 default_ticket_support_engineer_role_name = "Support engineer"
 default_ticket_create_category_name = "SUPPORT TICKETS"
 default_ticket_create_channel_name = "create-a-ticket"
